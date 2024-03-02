@@ -1,0 +1,11 @@
+C:\Users\hp\Desktop\HRSystem\HRDomain\bin\Debug\net8.0\HRDomain.deps.json
+C:\Users\hp\Desktop\HRSystem\HRDomain\bin\Debug\net8.0\HRDomain.dll
+C:\Users\hp\Desktop\HRSystem\HRDomain\bin\Debug\net8.0\HRDomain.pdb
+C:\Users\hp\Desktop\HRSystem\HRDomain\obj\Debug\net8.0\HRDomain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\Desktop\HRSystem\HRDomain\obj\Debug\net8.0\HRDomain.AssemblyInfoInputs.cache
+C:\Users\hp\Desktop\HRSystem\HRDomain\obj\Debug\net8.0\HRDomain.AssemblyInfo.cs
+C:\Users\hp\Desktop\HRSystem\HRDomain\obj\Debug\net8.0\HRDomain.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\HRSystem\HRDomain\obj\Debug\net8.0\HRDomain.dll
+C:\Users\hp\Desktop\HRSystem\HRDomain\obj\Debug\net8.0\refint\HRDomain.dll
+C:\Users\hp\Desktop\HRSystem\HRDomain\obj\Debug\net8.0\HRDomain.pdb
+C:\Users\hp\Desktop\HRSystem\HRDomain\obj\Debug\net8.0\ref\HRDomain.dll
