@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using HRDomain.Entities;
 using HRDomain.Repository;
+using HRDomain.Specification;
 using HRRepository.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -33,6 +34,14 @@ namespace HRRepository
         }
 
         public async Task<T> GetByIdAsync(int id) => await context.Set<T>().FindAsync(id);
+        private IQueryable<T> ApplySpecification (ISpecification<T> specification)
+        {
+            return SpecificationEvaluator<T>.BuildQuery(context.Set<T>(), specification);
+        }
+        public async Task<T> GetByIdWithSpecificationAsync(ISpecification<T> specification)
+        {
+            return await ApplySpecification(specification).FirstOrDefaultAsync();
+        }
 
         public async Task UpdateAsync(T entity)
         {
