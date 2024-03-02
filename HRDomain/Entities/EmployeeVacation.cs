@@ -12,7 +12,8 @@ namespace HRDomain.Entities
         // Here Was A inherited Prop "Id" :it Stands for the Employee Id Deal with it as a Foriegn Key and also Part form Compost PK
         // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
         // Foriegn Key From Vacations Table and the Second Part of PK
-        public int VacationId { get; set; }
+        public int? EmployeeId { get; set; }
+        public int? VacationId { get; set; }
         public Vacation Vacation { get; set; } // Navigational Property
         public Employee Employee { get; set; } // Navigational Property
     }

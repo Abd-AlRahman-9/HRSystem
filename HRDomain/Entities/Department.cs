@@ -21,6 +21,6 @@ namespace HRDomain.Entities
         // Foriegn Key of Employees Table
         public int? ManagerId { get; set; }
         public Employee Manager { get; set; } // Navigational Property
-        //public List<Employee> Employees { get; set; } = new List<Employee>(); -> we'll handle it by Fluent API 
+        public List<Employee> Employees { get; set; } = new List<Employee>(); //-> we'll handle it by Fluent API 
     }
 }

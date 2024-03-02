@@ -33,5 +33,6 @@ namespace HRDomain.Entities
         public int? DeptId { get; set; }
         public Department Department { get; set; } // Navigational Property
         public Employee Manager { get; set; } // Navigational Property
+        public List<EmployeeVacation> EmployeeVacations { get; set; } = new List<EmployeeVacation>();
     }
 }

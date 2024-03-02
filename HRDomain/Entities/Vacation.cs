@@ -12,5 +12,6 @@ namespace HRDomain.Entities
         // this bool field indicates this day was a official holiday (Will not Decrease the salary)
         public bool Holiday {  get; set; }
         public DateOnly Date {  get; set; }
+        public List<EmployeeVacation> EmployeeVacations { get; set; } = new List<EmployeeVacation>();
     }
 }
