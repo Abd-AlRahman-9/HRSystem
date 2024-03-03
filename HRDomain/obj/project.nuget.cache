@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QC/Ttx0tjbk69/1cKUjQ2nd1TIwGH1LrZcZZJ0z5J4/D9QR72LSor2Vws4+0kJV5zhcuZjxCej2hhyJnxFbBnA==",
+  "dgSpecHash": "6a7UoR/4hnVnrPt1W42qSyS1vubtFvZfV/XeUVqXdIFdVNOBPo84SS2t2JY7RU6xoMCW5wIeAMzcqStqBTtO/w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\hp\\Desktop\\HRSystem\\HRDomain\\HRDomain.csproj",
+  "projectFilePath": "C:\\Users\\ramad\\Desktop\\Api HR\\HRSystem\\HRDomain\\HRDomain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
