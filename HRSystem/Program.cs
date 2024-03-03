@@ -2,8 +2,12 @@
 using HRDomain.Repository;
 using HRRepository;
 using HRRepository.Data;
+<<<<<<< HEAD
 using HRSystem.Error_Handling;
 using Microsoft.AspNetCore.Mvc;
+=======
+using HRSystem.Helpers;
+>>>>>>> 3bd0c7d448aaf102f734ae36d050836ba6dbe8b2
 using Microsoft.EntityFrameworkCore;
 
 namespace HRSystem
@@ -36,7 +40,7 @@ namespace HRSystem
             builder.Services.AddSwaggerGen();
             builder.Services.AddDbContext<HRContext>(options => { options.UseSqlServer(builder.Configuration.GetConnectionString("Default")); });
             builder.Services.AddScoped(typeof(IRepository<>),typeof(GenericRepository<>));
-
+            builder.Services.AddAutoMapper(typeof(MappingProfiles));
             var app = builder.Build();
             // Making update-database each time you run the project
             using var scope = app.Services.CreateScope();
