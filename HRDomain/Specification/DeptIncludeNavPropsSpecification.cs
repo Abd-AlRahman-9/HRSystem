@@ -7,17 +7,17 @@ using HRDomain.Entities;
 
 namespace HRDomain.Specification
 {
-    public class EmpIncludingDeptAndMngSpecification:GenericSpecification<Employee>
+    public class DeptIncludeNavPropsSpecification:GenericSpecification<Department>
     {
-        public EmpIncludingDeptAndMngSpecification()
+        public DeptIncludeNavPropsSpecification()
         {
-            Includes.Add(E=>E.Department);
             Includes.Add(E => E.Manager);
+            Includes.Add(E => E.Employees);
         }
-        public EmpIncludingDeptAndMngSpecification(int id):base(E=>E.Id == id)
+        public DeptIncludeNavPropsSpecification(int id):base(E=>E.Id==id)
         {
-            Includes.Add(E => E.Department);
             Includes.Add(E => E.Manager);
+            Includes.Add(E => E.Employees);
         }
     }
 }

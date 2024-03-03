@@ -139,3 +139,5 @@ C:\Users\hp\Desktop\HRSystem\HRSystem\bin\Debug\net8.0\HRRepository.dll
 C:\Users\hp\Desktop\HRSystem\HRSystem\bin\Debug\net8.0\HRRepository.pdb
 C:\Users\hp\Desktop\HRSystem\HRSystem\bin\Debug\net8.0\HRDomain.pdb
 C:\Users\hp\Desktop\HRSystem\HRSystem\obj\Debug\net8.0\HRSystem.sourcelink.json
+C:\Users\hp\Desktop\HRSystem\HRSystem\bin\Debug\net8.0\HRSystem.staticwebassets.runtime.json
+C:\Users\hp\Desktop\HRSystem\HRSystem\bin\Debug\net8.0\AutoMapper.dll

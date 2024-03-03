@@ -9,3 +9,4 @@ C:\Users\hp\Desktop\HRSystem\HRService\obj\Debug\net8.0\HRService.dll
 C:\Users\hp\Desktop\HRSystem\HRService\obj\Debug\net8.0\refint\HRService.dll
 C:\Users\hp\Desktop\HRSystem\HRService\obj\Debug\net8.0\HRService.pdb
 C:\Users\hp\Desktop\HRSystem\HRService\obj\Debug\net8.0\ref\HRService.dll
+C:\Users\hp\Desktop\HRSystem\HRService\obj\Debug\net8.0\HRService.sourcelink.json

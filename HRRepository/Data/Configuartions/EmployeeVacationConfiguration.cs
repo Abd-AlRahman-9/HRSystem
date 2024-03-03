@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace HRRepository.Data.Configuartions
 {
-    internal class EmployeeVacationConfiguration : IEntityTypeConfiguration<EmployeeVacation>
+    public class EmployeeVacationConfiguration : IEntityTypeConfiguration<EmployeeVacation>
     {
         public void Configure(EntityTypeBuilder<EmployeeVacation> builder)
         {

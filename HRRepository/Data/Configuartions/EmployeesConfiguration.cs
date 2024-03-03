@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace HRRepository.Data.Configuartions
 {
-    internal class EmployeesConfiguration : IEntityTypeConfiguration<Employee>
+    public class EmployeesConfiguration : IEntityTypeConfiguration<Employee>
     {
         //// Example: Get all employees and their managers
         //var employeesWithManagers = dbContext.Employees

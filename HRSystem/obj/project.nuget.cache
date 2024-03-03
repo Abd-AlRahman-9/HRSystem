@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "m3Cu+GPr89wD1F8JCmHwrfKN4qCXcLPO9rYU3KvtF3SJQGIAxn/mPDvZcsiF8i463e+n6ioMfd5v7/N21vfsXA==",
+  "dgSpecHash": "S3dtz9oO9QFWtB2t4dm5rupjed5LuPh5oE7QRP4ZFlNKxbCmAgv4Hh03z2DZN07kKyCHdpaRMe+eAit7nlXBBA==",
   "success": true,
   "projectFilePath": "C:\\Users\\hp\\Desktop\\HRSystem\\HRSystem\\HRSystem.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\hp\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
