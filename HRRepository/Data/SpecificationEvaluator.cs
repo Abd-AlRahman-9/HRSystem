@@ -19,8 +19,14 @@ namespace HRRepository.Data
             if (Specifications.Criteria != null)
                 query = query.Where(Specifications.Criteria);
 
-            query = Specifications.Includes.Aggregate(query, (CurrentQuery, IncludeExpression) => CurrentQuery.Include(IncludeExpression));
+            if (Specifications.OrderBy != null)
+                query = query.OrderBy(Specifications.OrderBy);
 
+            if (Specifications.OrderByDescending != null)
+                query = query.OrderByDescending(Specifications.OrderByDescending);
+
+            query = Specifications.Includes.Aggregate(query, (CurrentQuery, IncludeExpression) => CurrentQuery.Include(IncludeExpression));
+            
             return query;
 
         }
