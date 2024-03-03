@@ -2,12 +2,9 @@
 using HRDomain.Repository;
 using HRRepository;
 using HRRepository.Data;
-<<<<<<< HEAD
 using HRSystem.Error_Handling;
 using Microsoft.AspNetCore.Mvc;
-=======
 using HRSystem.Helpers;
->>>>>>> 3bd0c7d448aaf102f734ae36d050836ba6dbe8b2
 using Microsoft.EntityFrameworkCore;
 
 namespace HRSystem
