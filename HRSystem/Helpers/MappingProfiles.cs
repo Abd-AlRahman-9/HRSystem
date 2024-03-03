@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using HRDomain.Entities;
+using HRSystem.DTO;
 
 namespace HRSystem.Helpers
 {
@@ -7,9 +8,10 @@ namespace HRSystem.Helpers
     {
         public MappingProfiles()
         {
-            //For each DTO have a Navigation Property and you don't need to send the whole object
-            //CreateMap<Employee,EmployeeDTO>()
-            //    .ForMember(D=>D.Manger,O=>O.MapFrom(M=>M.Manager.Name));
+            // For each DTO have a Navigation Property and you don't need to send the whole object
+            CreateMap<Employee, EmployeesDTO>()
+                .ForMember(D => D.Manager, O => O.MapFrom(M => M.Manager.Name))
+                .ForMember(D => D.Department, O => O.MapFrom(M => M.Department.Name));
         }
     }
 }
