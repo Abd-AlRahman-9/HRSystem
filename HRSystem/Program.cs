@@ -2,7 +2,12 @@
 using HRDomain.Repository;
 using HRRepository;
 using HRRepository.Data;
+<<<<<<< HEAD
+using HRSystem.Error_Handling;
+using Microsoft.AspNetCore.Mvc;
+=======
 using HRSystem.Helpers;
+>>>>>>> 3bd0c7d448aaf102f734ae36d050836ba6dbe8b2
 using Microsoft.EntityFrameworkCore;
 
 namespace HRSystem
@@ -14,6 +19,20 @@ namespace HRSystem
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+
+            //Handling Validation Response
+            builder.Services.Configure<ApiBehaviorOptions>(options => options.InvalidModelStateResponseFactory = (actionContext) =>
+            {
+                var errors = actionContext.ModelState.Where(m => m.Value.Errors.Count() > 0).SelectMany(m => m.Value.Errors).Select(m => m.ErrorMessage).ToArray();
+
+                var validationErrorResponse = new ValidationErrorResponse() 
+                { 
+                    Errors = errors 
+                };
+                return new BadRequestObjectResult(validationErrorResponse);
+            });
+
+
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

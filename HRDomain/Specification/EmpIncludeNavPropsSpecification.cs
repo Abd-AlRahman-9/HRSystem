@@ -9,7 +9,13 @@ namespace HRDomain.Specification
 {
     public class EmpIncludeNavPropsSpecification:GenericSpecification<Employee>
     {
-        public EmpIncludeNavPropsSpecification(string? sort = null)
+        public EmpIncludeNavPropsSpecification(string sort,int? DeptId,int? ManagerId)
+            :base
+            (
+                E => 
+                    (!DeptId.HasValue || E.DeptId == DeptId.Value) &&
+                    (!ManagerId.HasValue || E.ManagerId == ManagerId.Value)
+            )
         {
             Includes.Add(E=>E.Department);
             Includes.Add(E => E.Manager);
