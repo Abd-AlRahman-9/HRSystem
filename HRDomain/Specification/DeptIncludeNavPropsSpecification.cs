@@ -12,12 +12,12 @@ namespace HRDomain.Specification
         public DeptIncludeNavPropsSpecification()
         {
             Includes.Add(E => E.Manager);
-            Includes.Add(E => E.Employees);
+            //Includes.Add(E => E.Employees);
         }
         public DeptIncludeNavPropsSpecification(int id):base(E=>E.Id==id)
         {
             Includes.Add(E => E.Manager);
-            Includes.Add(E => E.Employees);
+            //Includes.Add(E => E.Employees);
         }
     }
 }
