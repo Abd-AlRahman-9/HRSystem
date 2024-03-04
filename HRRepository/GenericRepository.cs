@@ -42,7 +42,7 @@ namespace HRRepository
         {
             return await ApplySpecification(specification).FirstOrDefaultAsync();
         }
-
+        public async Task<IEnumerable<T>> GetAllWithSpecificationsAsync(ISpecification<T> specification) =>  await ApplySpecification(specification).ToListAsync(); 
         public async Task UpdateAsync(T entity)
         {
             context.Set<T>().Update(entity);

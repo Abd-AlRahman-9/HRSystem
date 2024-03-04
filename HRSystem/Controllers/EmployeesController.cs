@@ -7,9 +7,5 @@ namespace HRSystem.Controllers
 {
     public class EmployeesController : HRBaseController
     {
-        public EmployeesController()
-        {
-            
-        }
     }
 }
