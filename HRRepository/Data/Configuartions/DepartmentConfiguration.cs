@@ -16,8 +16,8 @@ namespace HRRepository.Data.Configuartions
             builder.Property(P => P.Deleted).HasColumnType("bit");
             builder.Property(P => P.Name).HasMaxLength(25);
             builder.Property(P => P.WorkDays).HasColumnType("tinyint").HasMaxLength(2);
-            builder.Property(P => P.DeductHour).HasColumnType("decimal(18,2)");
-            builder.Property(P => P.BonusHour).HasColumnType("decimal(18,2)");
+            builder.Property(P => P.DeductHour).HasColumnType("decimal(1,2)");
+            builder.Property(P => P.BonusHour).HasColumnType("decimal(1,2)");
             builder.Property(P => P.ComingTime).HasColumnType("time");
             builder.Property(P => P.LeaveTime).HasColumnType("time");
             builder.HasOne(D => D.Manager).WithOne().HasForeignKey<Department>(D => D.ManagerId).OnDelete(DeleteBehavior.NoAction);

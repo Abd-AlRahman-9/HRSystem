@@ -10,8 +10,6 @@ namespace HRDomain.Repository
 {
     public interface IRepository<T> where T : BaseTable
     {
-        Task<T> GetByIdAsync(int id);
-        Task<T> GetByIdWithSpecificationAsync(ISpecification<T> specification);
         Task AddAsync(T entity);
         Task UpdateAsync(T entity);
         Task DeleteAsync(int id);

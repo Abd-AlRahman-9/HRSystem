@@ -8,6 +8,10 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = HRDomain
+<<<<<<< HEAD
 build_property.ProjectDir = C:\Users\ramad\Desktop\ApiHR\HRSystem\HRDomain\
+=======
+build_property.ProjectDir = C:\Users\hp\Desktop\HRSystem\HRDomain\
+>>>>>>> 7ce98665f62b3854daf24d5637cacea6603be958
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

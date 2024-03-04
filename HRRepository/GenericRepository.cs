@@ -13,7 +13,7 @@ namespace HRRepository
 {
     public class GenericRepository<T> : IRepository<T> where T : BaseTable
     {
-        private HRContext context;
+        protected HRContext context;
 
         public GenericRepository(HRContext context) 
         {
@@ -32,16 +32,11 @@ namespace HRRepository
             context.Set<T>().Update(entity);
             await context.SaveChangesAsync(); 
         }
-
-        public async Task<T> GetByIdAsync(int id) => await context.Set<T>().FindAsync(id);
-        private IQueryable<T> ApplySpecification (ISpecification<T> specification)
-        {
-            return SpecificationEvaluator<T>.BuildQuery(context.Set<T>(), specification);
-        }
-        public async Task<T> GetByIdWithSpecificationAsync(ISpecification<T> specification)
-        {
-            return await ApplySpecification(specification).FirstOrDefaultAsync();
-        }
+        //public async Task<T> GetByIdWithSpecificationAsync(ISpecification<T> specification)
+        //{
+        //    return await ApplySpecification(specification).FirstOrDefaultAsync();
+        //}
+        //public async Task<IEnumerable<T>> GetAllWithSpecificationsAsync(ISpecification<T> specification) => await ApplySpecification(specification).ToListAsync();
 
         public async Task UpdateAsync(T entity)
         {

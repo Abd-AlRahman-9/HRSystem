@@ -8,19 +8,27 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\ramad\\.nuget\\packages\\": {}
+    "C:\\Users\\hp\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\ramad\\Desktop\\ApiHR\\HRSystem\\HRService\\HRService.csproj",
       "projectName": "HRService",
       "projectPath": "C:\\Users\\ramad\\Desktop\\ApiHR\\HRSystem\\HRService\\HRService.csproj",
       "packagesPath": "C:\\Users\\ramad\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\ramad\\Desktop\\ApiHR\\HRSystem\\HRService\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\hp\\Desktop\\HRSystem\\HRService\\HRService.csproj",
+      "projectName": "HRService",
+      "projectPath": "C:\\Users\\hp\\Desktop\\HRSystem\\HRService\\HRService.csproj",
+      "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\hp\\Desktop\\HRSystem\\HRService\\obj\\",
+>>>>>>> 7ce98665f62b3854daf24d5637cacea6603be958
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ramad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
