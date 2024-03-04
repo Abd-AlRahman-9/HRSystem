@@ -9,20 +9,20 @@ namespace HRDomain.Specification
 {
     public class EmpIncludeNavPropsSpecification:GenericSpecification<Employee>
     {
-        public EmpIncludeNavPropsSpecification(string sort,int? DeptId,int? ManagerId)
+        public EmpIncludeNavPropsSpecification(GetAllEmpsParams getAllEmpsParams)
             :base
             (
                 E => 
-                    (!DeptId.HasValue || E.DeptId == DeptId.Value) &&
-                    (!ManagerId.HasValue || E.ManagerId == ManagerId.Value)
+                    (!getAllEmpsParams.DeptId.HasValue || E.DeptId == getAllEmpsParams.DeptId.Value) &&
+                    (!getAllEmpsParams.MngId.HasValue || E.ManagerId == getAllEmpsParams.MngId.Value)
             )
         {
             Includes.Add(E=>E.Department);
             Includes.Add(E => E.Manager);
 
-            if (!string.IsNullOrEmpty(sort))
+            if (!string.IsNullOrEmpty(getAllEmpsParams.sort))
             {
-                switch (sort)
+                switch (getAllEmpsParams.sort)
                 {
                     case "hiringAsc":
                         AddOrderBy(E => E.HireData); 
