@@ -11,17 +11,16 @@ using Microsoft.EntityFrameworkCore;
 
 namespace HRRepository
 {
-    public class DepartmentRepository : GenericRepository<Department>,IGetByIdRepoLSP<Department>,IGetAllSpecsRepoLSP<Employee>,IGetAllRepoLSP<Department>
+    public class DepartmentRepository : GenericRepository<Department>,IGetByIdRepoLSP<Department>,IGetAllSpecsRepoLSP<Department>
     {
         public DepartmentRepository(HRContext context) : base(context){}
         public async Task<Department> GetByIdAsync(int id) => await context.Departments.FindAsync(id);
-        public async Task<IEnumerable<Employee>> GetAllWithSpecificationsAsync(ISpecification<Employee> specification) => 
+        public async Task<IEnumerable<Department>> GetAllWithSpecificationsAsync(ISpecification<Department> specification) => 
             await ApplySpecification(specification).ToListAsync();
-        private IQueryable<Employee> ApplySpecification(ISpecification<Employee> specification)
+        private IQueryable<Department> ApplySpecification(ISpecification<Department> specification)
         {
-            return SpecificationEvaluator<Employee>.BuildQuery(context.Set<Employee>(), specification);
+            return SpecificationEvaluator<Department>.BuildQuery(context.Set<Department>(), specification);
         }
 
-        public async Task<IEnumerable<Department>> GetAllAsync() => await context.Departments.Include(D => D.Manager.Name).ToListAsync();
     }
 }

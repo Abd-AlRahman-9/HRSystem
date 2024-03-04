@@ -1,6 +1,8 @@
-﻿using HRDomain.Entities;
+﻿using AutoMapper;
+using HRDomain.Entities;
 using HRDomain.Specification;
 using HRRepository;
+using HRSystem.DTO;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,17 +11,21 @@ namespace HRSystem.Controllers
     public class DepartmentsController : HRBaseController
     {
         private readonly DepartmentRepository _DeptRepo;
+        private readonly Mapper mapper;
 
-        public DepartmentsController(DepartmentRepository repository)
+        public DepartmentsController(DepartmentRepository repository,Mapper mapper)
         {
             this._DeptRepo = repository;
+            this.mapper = mapper;
         }
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Department>>> GetAllDepts() 
+        public async Task<ActionResult<IEnumerable<GetDeptsDTO>>> GetAllDepts(GetAllDeptsParams P) 
         {
-            var Depts = await _DeptRepo.GetAllAsync();
-            return Ok(Depts);
+            var specification = new DeptIncludeNavPropsSpecification(P);
+            var Depts = await _DeptRepo.GetAllWithSpecificationsAsync(specification);
+            return Ok(mapper.Map<IEnumerable<Department>,IEnumerable<GetDeptsDTO>>(Depts));
         }
+
 
     }
 }
