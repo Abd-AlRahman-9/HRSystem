@@ -4571,19 +4571,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "C:\\Users\\ramad\\Desktop\\ApiHR\\HRSystem\\HRSystem\\HRSystem.csproj",
-      "projectName": "HRSystem",
-      "projectPath": "C:\\Users\\ramad\\Desktop\\ApiHR\\HRSystem\\HRSystem\\HRSystem.csproj",
-      "packagesPath": "C:\\Users\\ramad\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ramad\\Desktop\\ApiHR\\HRSystem\\HRSystem\\obj\\",
-=======
       "projectUniqueName": "C:\\Users\\hp\\Desktop\\HRSystem\\HRSystem\\HRSystem.csproj",
       "projectName": "HRSystem",
       "projectPath": "C:\\Users\\hp\\Desktop\\HRSystem\\HRSystem\\HRSystem.csproj",
       "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\hp\\Desktop\\HRSystem\\HRSystem\\obj\\",
->>>>>>> 7ce98665f62b3854daf24d5637cacea6603be958
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4600,13 +4592,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-<<<<<<< HEAD
-            "C:\\Users\\ramad\\Desktop\\ApiHR\\HRSystem\\HRRepository\\HRRepository.csproj": {
-              "projectPath": "C:\\Users\\ramad\\Desktop\\ApiHR\\HRSystem\\HRRepository\\HRRepository.csproj"
-=======
             "C:\\Users\\hp\\Desktop\\HRSystem\\HRRepository\\HRRepository.csproj": {
               "projectPath": "C:\\Users\\hp\\Desktop\\HRSystem\\HRRepository\\HRRepository.csproj"
->>>>>>> 7ce98665f62b3854daf24d5637cacea6603be958
             }
           }
         }
@@ -4664,11 +4651,7 @@
       "code": "Undefined",
       "level": "Warning",
       "warningLevel": 1,
-<<<<<<< HEAD
-      "message": "Problem reading the cache file C:\\Users\\ramad\\Desktop\\ApiHR\\HRSystem\\HRSystem\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-=======
       "message": "Problem reading the cache file C:\\Users\\hp\\Desktop\\HRSystem\\HRSystem\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
->>>>>>> 7ce98665f62b3854daf24d5637cacea6603be958
     }
   ]
 }

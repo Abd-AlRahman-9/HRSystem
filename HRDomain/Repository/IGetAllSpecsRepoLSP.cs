@@ -8,7 +8,7 @@ using HRDomain.Specification;
 
 namespace HRDomain.Repository
 {
-    public interface IGetAllSpecsRepoLSP<T> where T : BaseTables
+    public interface IGetAllSpecsRepoLSP<T> where T : BaseTable
     {
         Task<IEnumerable<T>> GetAllWithSpecificationsAsync(ISpecification<T> specification);
     }

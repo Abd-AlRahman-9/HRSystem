@@ -1,14 +1,8 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "o6oZEBTyUq0QiSFCWEBSawupgWO+2PZnCUZjRnZDXk8S9v9XbigQ0KAwgijQd1vpzk1V24omfXVWI9MeYuSFiA==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\ramad\\Desktop\\ApiHR\\HRSystem\\HRRepository\\HRRepository.csproj",
-=======
   "dgSpecHash": "SWMay9S2TnoHgr9ULj1c9RX3QzLNKHWnnahQNvGfQ7dkbv6KQRyZNqwC5Su5V3slDXGJamt1mGR7ill0E7Y/2A==",
   "success": true,
   "projectFilePath": "C:\\Users\\hp\\Desktop\\HRSystem\\HRRepository\\HRRepository.csproj",
->>>>>>> 7ce98665f62b3854daf24d5637cacea6603be958
   "expectedPackageFiles": [
     "C:\\Users\\hp\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
@@ -66,5 +60,12 @@
     "C:\\Users\\hp\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\hp\\Desktop\\HRSystem\\HRRepository\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

@@ -3,14 +3,11 @@ using HRDomain.Repository;
 using HRRepository;
 using HRRepository.Data;
 using HRSystem.Error_Handling;
-<<<<<<< HEAD
 using HRSystem.Helpers;
 //using HRSystem.Middlewares;
 using Microsoft.AspNetCore.Mvc;
-=======
 using Microsoft.AspNetCore.Mvc;
 using HRSystem.Helpers;
->>>>>>> 7ce98665f62b3854daf24d5637cacea6603be958
 using Microsoft.EntityFrameworkCore;
 
 namespace HRSystem

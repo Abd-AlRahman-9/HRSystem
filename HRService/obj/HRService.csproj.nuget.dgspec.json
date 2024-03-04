@@ -1,19 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
-    "C:\\Users\\ramad\\Desktop\\ApiHR\\HRSystem\\HRService\\HRService.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\ramad\\Desktop\\ApiHR\\HRSystem\\HRService\\HRService.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\ramad\\Desktop\\ApiHR\\HRSystem\\HRService\\HRService.csproj",
-        "projectName": "HRService",
-        "projectPath": "C:\\Users\\ramad\\Desktop\\ApiHR\\HRSystem\\HRService\\HRService.csproj",
-        "packagesPath": "C:\\Users\\ramad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ramad\\Desktop\\ApiHR\\HRSystem\\HRService\\obj\\",
-=======
     "C:\\Users\\hp\\Desktop\\HRSystem\\HRService\\HRService.csproj": {}
   },
   "projects": {
@@ -25,7 +12,6 @@
         "projectPath": "C:\\Users\\hp\\Desktop\\HRSystem\\HRService\\HRService.csproj",
         "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\hp\\Desktop\\HRSystem\\HRService\\obj\\",
->>>>>>> 7ce98665f62b3854daf24d5637cacea6603be958
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -7,7 +7,7 @@ using HRDomain.Entities;
 
 namespace HRDomain.Repository
 {
-    public interface IGetByIdRepoLSP<T> where T : BaseTables
+    public interface IGetByIdRepoLSP<T> where T : BaseTable
     {
         public Task<T> GetByIdAsync(int id);
     }

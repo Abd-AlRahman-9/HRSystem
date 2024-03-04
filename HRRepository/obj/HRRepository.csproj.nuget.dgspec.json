@@ -1,19 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
-    "C:\\Users\\ramad\\Desktop\\ApiHR\\HRSystem\\HRRepository\\HRRepository.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\ramad\\Desktop\\ApiHR\\HRSystem\\HRDomain\\HRDomain.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\ramad\\Desktop\\ApiHR\\HRSystem\\HRDomain\\HRDomain.csproj",
-        "projectName": "HRDomain",
-        "projectPath": "C:\\Users\\ramad\\Desktop\\ApiHR\\HRSystem\\HRDomain\\HRDomain.csproj",
-        "packagesPath": "C:\\Users\\ramad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ramad\\Desktop\\ApiHR\\HRSystem\\HRDomain\\obj\\",
-=======
     "C:\\Users\\hp\\Desktop\\HRSystem\\HRRepository\\HRRepository.csproj": {}
   },
   "projects": {
@@ -25,7 +12,6 @@
         "projectPath": "C:\\Users\\hp\\Desktop\\HRSystem\\HRDomain\\HRDomain.csproj",
         "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\hp\\Desktop\\HRSystem\\HRDomain\\obj\\",
->>>>>>> 7ce98665f62b3854daf24d5637cacea6603be958
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -73,16 +59,6 @@
         }
       }
     },
-<<<<<<< HEAD
-    "C:\\Users\\ramad\\Desktop\\ApiHR\\HRSystem\\HRRepository\\HRRepository.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\ramad\\Desktop\\ApiHR\\HRSystem\\HRRepository\\HRRepository.csproj",
-        "projectName": "HRRepository",
-        "projectPath": "C:\\Users\\ramad\\Desktop\\ApiHR\\HRSystem\\HRRepository\\HRRepository.csproj",
-        "packagesPath": "C:\\Users\\ramad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ramad\\Desktop\\ApiHR\\HRSystem\\HRRepository\\obj\\",
-=======
     "C:\\Users\\hp\\Desktop\\HRSystem\\HRRepository\\HRRepository.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -91,7 +67,6 @@
         "projectPath": "C:\\Users\\hp\\Desktop\\HRSystem\\HRRepository\\HRRepository.csproj",
         "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\hp\\Desktop\\HRSystem\\HRRepository\\obj\\",
->>>>>>> 7ce98665f62b3854daf24d5637cacea6603be958
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -108,13 +83,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-<<<<<<< HEAD
-              "C:\\Users\\ramad\\Desktop\\ApiHR\\HRSystem\\HRDomain\\HRDomain.csproj": {
-                "projectPath": "C:\\Users\\ramad\\Desktop\\ApiHR\\HRSystem\\HRDomain\\HRDomain.csproj"
-=======
               "C:\\Users\\hp\\Desktop\\HRSystem\\HRDomain\\HRDomain.csproj": {
                 "projectPath": "C:\\Users\\hp\\Desktop\\HRSystem\\HRDomain\\HRDomain.csproj"
->>>>>>> 7ce98665f62b3854daf24d5637cacea6603be958
               }
             }
           }
