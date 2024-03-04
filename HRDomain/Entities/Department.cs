@@ -13,8 +13,8 @@ namespace HRDomain.Entities
         //what about doing the data type "Byte"
         public sbyte WorkDays {  get; set; }
         // this property to indicate how the hour will be driven when the employee come late
-        public decimal DeductHour { get; set; }
-        public decimal BonusHour { get; set; }
+        public double DeductHour { get; set; }
+        public double BonusHour { get; set; }
         public TimeSpan ComingTime { get; set; }
         public TimeSpan LeaveTime { get; set; }
 

@@ -9,11 +9,11 @@ namespace HRDomain.Specification
 {
     public class DeptIncludeNavPropsSpecification:GenericSpecification<Department>
     {
-        public DeptIncludeNavPropsSpecification(string sort)
+        public DeptIncludeNavPropsSpecification(GetAllDeptsParams _params)
         {
             Includes.Add(E => E.Manager);
             //Includes.Add(E => E.Employees);
-            switch (sort)
+            switch (_params.sort)
             {
                 case "WorkDaysAsc":
                     AddOrderBy(E => E.WorkDays);

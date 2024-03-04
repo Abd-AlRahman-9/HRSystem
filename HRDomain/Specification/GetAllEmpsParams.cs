@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HRDomain.Specification
 {
-    public class GetAllEmpsParams
+    public class GetAllEmpsParams:IPagination
     {
         public int? MngId { get; set; }
         public int? DeptId { get; set; }
