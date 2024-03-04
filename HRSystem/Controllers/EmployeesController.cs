@@ -11,10 +11,10 @@ namespace HRSystem.Controllers
         {
             
         }
-        public async Task<ActionResult<IEnumerable<EmployeesDTO>>> GetAllEmps(string sort,int? DeptId,int? MngId)
-        {
-            var Specification = new EmpIncludeNavPropsSpecification (sort , DeptId , MngId);
+        //public async Task<ActionResult<IEnumerable<EmployeesDTO>>> GetAllEmps(string sort,int? DeptId,int? MngId)
+        //{
+        //    var Specification = new EmpIncludeNavPropsSpecification (sort , DeptId , MngId);
 
-        }
+        //}
     }
 }
