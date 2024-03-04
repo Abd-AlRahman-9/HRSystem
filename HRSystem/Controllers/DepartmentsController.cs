@@ -19,7 +19,7 @@ namespace HRSystem.Controllers
             this.mapper = mapper;
         }
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<GetDeptsDTO>>> GetAllDepts(GetAllDeptsParams P) 
+        public async Task<ActionResult<IEnumerable<GetDeptsDTO>>> GetAllDepts([FromQuery]GetAllDeptsParams P) 
         {
             var specification = new DeptIncludeNavPropsSpecification(P);
             var Depts = await _DeptRepo.GetAllWithSpecificationsAsync(specification);
