@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Query;
 
 namespace HRRepository.Data
 {
-    public class SpecificationEvaluator<T> where T : BaseTables
+    public class SpecificationEvaluator<T> where T : BaseTable
     {
         public static IQueryable<T> BuildQuery(IQueryable<T> EntryPoint,ISpecification<T> Specifications)
         {

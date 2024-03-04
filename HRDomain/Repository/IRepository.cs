@@ -8,7 +8,7 @@ using HRDomain.Specification;
 
 namespace HRDomain.Repository
 {
-    public interface IRepository<T> where T : BaseTables
+    public interface IRepository<T> where T : BaseTable
     {
         Task<T> GetByIdAsync(int id);
         Task<T> GetByIdWithSpecificationAsync(ISpecification<T> specification);

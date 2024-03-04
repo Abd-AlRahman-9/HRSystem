@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/6OpMlvF6lAyNH+oujyhAtZLPjsJShbg+kmYQzTOU9U63INGDI930Ab//VQ5ej+h0j2FIzvnT7h9w8yqGnrkYg==",
+  "dgSpecHash": "CchDKBnHXOpG8K2OXfwD6rZXyHXzo4qgNqG9jCjHKtzGmlKxLM6MjYZqyk8zOXCJ+51auSIPNYr4Vx+drKOAsg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ramad\\Desktop\\Api HR\\HRSystem\\HRService\\HRService.csproj",
+  "projectFilePath": "C:\\Users\\ramad\\Desktop\\ApiHR\\HRSystem\\HRService\\HRService.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

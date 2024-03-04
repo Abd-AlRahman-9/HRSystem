@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace HRRepository
 {
-    public class GenericRepository<T> : IRepository<T> where T : BaseTables
+    public class GenericRepository<T> : IRepository<T> where T : BaseTable
     {
         private HRContext context;
 

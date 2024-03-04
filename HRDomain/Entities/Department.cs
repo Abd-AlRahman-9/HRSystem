@@ -7,7 +7,7 @@ using HRDomain.Entities;
 
 namespace HRDomain.Entities
 {
-    public class Department:BaseTables,INamePropLSP
+    public class Department:BaseTable,INamePropLSP
     {
         public string Name { get; set; }
         //what about doing the data type "Byte"

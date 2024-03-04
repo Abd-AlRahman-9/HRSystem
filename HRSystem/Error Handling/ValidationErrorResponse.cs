@@ -3,9 +3,6 @@
     public class ValidationErrorResponse : ErrorResponse
     {
         public IEnumerable<string> Errors { get; set; }
-        public ValidationErrorResponse() : base(400)
-        {
-            
-        }
+        public ValidationErrorResponse() : base(400){}
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace HRDomain.Entities
 {
     // this Entity Comes From A relation Many To Many between Employees table and Vacation Table
-    public class EmployeeVacation : BaseTables
+    public class EmployeeVacation : BaseTable
     {
         // Here Was A inherited Prop "Id" :it Stands for the Employee Id Deal with it as a Foriegn Key and also Part form Compost PK
         // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

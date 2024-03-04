@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "W++9qaux9suqkhz8IgwbDqpKhAcNrQFk6uPG792gEkNDPDOviRA+uiLFHUVkZW5bpKhs8SKy6bOJbuiZKPqbhA==",
+  "dgSpecHash": "o6oZEBTyUq0QiSFCWEBSawupgWO+2PZnCUZjRnZDXk8S9v9XbigQ0KAwgijQd1vpzk1V24omfXVWI9MeYuSFiA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ramad\\Desktop\\Api HR\\HRSystem\\HRRepository\\HRRepository.csproj",
+  "projectFilePath": "C:\\Users\\ramad\\Desktop\\ApiHR\\HRSystem\\HRRepository\\HRRepository.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ramad\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\ramad\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

@@ -11,7 +11,7 @@ namespace HRDomain.Entities
     //    Female=1, female=1, F=1, f=1,
     //    Unknown=2, unknown=2
     //}
-    public class Employee:BaseTables,INamePropLSP
+    public class Employee:BaseTable,INamePropLSP
     {
         public string Name { get; set; }
         // search about the best practice of the national id prop
@@ -23,6 +23,7 @@ namespace HRDomain.Entities
         // search about the best practices on making the gender
         // Done and I decided to Make it Enum in the DTO layer 
         public string Gender { get; set; }
+        //???????????????phone must be string
         public long PhoneNumber { get; set; }
         public int VacationsRecord { get; set; }
         public decimal Salary { get; set; }

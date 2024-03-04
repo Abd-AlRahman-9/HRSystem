@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HRDomain.Entities
 {
-    public class Vacation : BaseTables,INamePropLSP
+    public class Vacation : BaseTable,INamePropLSP
     {
         public string Name { get; set; }
         // this bool field indicates this day was a official holiday (Will not Decrease the salary)

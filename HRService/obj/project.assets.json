@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ramad\\Desktop\\Api HR\\HRSystem\\HRService\\HRService.csproj",
+      "projectUniqueName": "C:\\Users\\ramad\\Desktop\\ApiHR\\HRSystem\\HRService\\HRService.csproj",
       "projectName": "HRService",
-      "projectPath": "C:\\Users\\ramad\\Desktop\\Api HR\\HRSystem\\HRService\\HRService.csproj",
+      "projectPath": "C:\\Users\\ramad\\Desktop\\ApiHR\\HRSystem\\HRService\\HRService.csproj",
       "packagesPath": "C:\\Users\\ramad\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ramad\\Desktop\\Api HR\\HRSystem\\HRService\\obj\\",
+      "outputPath": "C:\\Users\\ramad\\Desktop\\ApiHR\\HRSystem\\HRService\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ramad\\AppData\\Roaming\\NuGet\\NuGet.Config",

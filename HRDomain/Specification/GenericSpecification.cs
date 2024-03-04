@@ -8,7 +8,7 @@ using HRDomain.Entities;
 
 namespace HRDomain.Specification
 {
-    public class GenericSpecification<T> : ISpecification<T> where T : BaseTables
+    public class GenericSpecification<T> : ISpecification<T> where T : BaseTable
     {
         public Expression<Func<T, bool>> Criteria { get; set; }
         public List<Expression<Func<T, object>>> Includes { get; set; } = new List<Expression<Func<T, object>>> ();
