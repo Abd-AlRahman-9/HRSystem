@@ -6,12 +6,16 @@ using System.Threading.Tasks;
 
 namespace HRDomain.Specification
 {
-    public class GetAllDeptsParams : IPagination
+    public class GetAllDeptsParams
     {
         public string sort { get; set; }
-        public int MngId { get; set; }
-        public bool IsPaginationEnabled { get; set; }
-        public int? PageSize { get; set; }
-        public int? PageCount { get; set; }
+        public int? MngId { get; set; }
+        private int? pageSize;
+        public int? PageSize
+        {
+            get { return pageSize; }
+            set { pageSize = value > 10 ? 10 : value; }
+        }
+        public int? PageCount { get; set; } = 1;
     }
 }

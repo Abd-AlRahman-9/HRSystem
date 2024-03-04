@@ -14,6 +14,9 @@ namespace HRDomain.Specification
         public List<Expression<Func<T, object>>> Includes { get; set; } = new List<Expression<Func<T, object>>> ();
         public Expression<Func<T, object>> OrderBy { get; set; }
         public Expression<Func<T, object>> OrderByDescending { get; set; }
+        public int Skip { get; set; }
+        public int Take { get; set; }
+        public bool IsPaginationEnabled { get; set; }
 
         public GenericSpecification(){}
         public GenericSpecification(Expression<Func<T,bool>> criteria) { this.Criteria = criteria; }
@@ -26,6 +29,12 @@ namespace HRDomain.Specification
         public void AddOrderByDescending(Expression<Func<T, object>> orderByDescendingExpression)
         {
             OrderByDescending = orderByDescendingExpression;
+        }
+        public void ApplyPagination(int skip,int take)
+        {
+            IsPaginationEnabled = true;
+            Skip = skip;
+            Take = take;
         }
     }
 }

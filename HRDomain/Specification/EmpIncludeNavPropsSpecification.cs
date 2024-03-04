@@ -20,6 +20,8 @@ namespace HRDomain.Specification
             Includes.Add(E=>E.Department);
             Includes.Add(E => E.Manager);
 
+            ApplyPagination(getAllEmpsParams.PageSize.Value * (getAllEmpsParams.PageCount.Value - 1), getAllEmpsParams.PageSize.Value);
+
             if (!string.IsNullOrEmpty(getAllEmpsParams.sort))
             {
                 switch (getAllEmpsParams.sort)

@@ -19,6 +19,9 @@ namespace HRRepository.Data
             if (Specifications.Criteria != null)
                 query = query.Where(Specifications.Criteria);
 
+            if(Specifications.IsPaginationEnabled)
+                query = query.Skip(Specifications.Skip).Take(Specifications.Take);
+
             if (Specifications.OrderBy != null)
                 query = query.OrderBy(Specifications.OrderBy);
 
