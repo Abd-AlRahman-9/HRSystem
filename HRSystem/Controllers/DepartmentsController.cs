@@ -10,10 +10,10 @@ namespace HRSystem.Controllers
 {
     public class DepartmentsController : HRBaseController
     {
-        private readonly DepartmentRepository _DeptRepo;
+        private readonly GenericRepository<Department> _DeptRepo;
         private readonly Mapper mapper;
 
-        public DepartmentsController(DepartmentRepository repository,Mapper mapper)
+        public DepartmentsController(GenericRepository<Department> repository,Mapper mapper)
         {
             this._DeptRepo = repository;
             this.mapper = mapper;
@@ -25,7 +25,5 @@ namespace HRSystem.Controllers
             var Depts = await _DeptRepo.GetAllWithSpecificationsAsync(specification);
             return Ok(mapper.Map<IEnumerable<Department>,IEnumerable<GetDeptsDTO>>(Depts));
         }
-
-
     }
 }
