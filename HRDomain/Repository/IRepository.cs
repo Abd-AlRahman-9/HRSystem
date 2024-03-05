@@ -10,6 +10,7 @@ namespace HRDomain.Repository
 {
     public interface IRepository<T> where T : BaseTable
     {
+        Task<int> GetCountAsync(ISpecification<T> specification);
         Task<IEnumerable<T>> GetAllWithSpecificationsAsync(ISpecification<T> specification);
         Task<T> GetByIdWithSpecificationAsync(ISpecification<T> specification);
         Task AddAsync(T entity);

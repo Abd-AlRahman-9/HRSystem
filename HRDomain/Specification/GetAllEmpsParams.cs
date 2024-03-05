@@ -18,6 +18,6 @@ namespace HRDomain.Specification
             get { return pageSize; }
             set { pageSize = value > 10 ? 10 : value; }
         }
-        public int? PageCount { get; set; } = 1;
+        public int? PageIndex { get; set; } = 1;
     }
 }

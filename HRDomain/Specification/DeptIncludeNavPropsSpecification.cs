@@ -17,7 +17,7 @@ namespace HRDomain.Specification
             Includes.Add(E => E.Manager);
             //Includes.Add(E => E.Employees);
 
-            ApplyPagination(_params.PageSize.Value * (_params.PageCount.Value - 1), _params.PageSize.Value);
+            ApplyPagination(_params.PageSize.Value * (_params.PageIndex.Value - 1), _params.PageSize.Value);
 
             if (!string.IsNullOrEmpty(_params.sort))
             {
