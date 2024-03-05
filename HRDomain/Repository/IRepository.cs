@@ -17,5 +17,6 @@ namespace HRDomain.Repository
         Task UpdateAsync(int id,T entity);
         Task DeleteAsync(int id);
         Task<T> GetByNameWithSpecificationAsync(ISpecification<T> specification);
+        Task<T> GetByDateWithSpecificationAsync(ISpecification<T> specification);
     }
 }

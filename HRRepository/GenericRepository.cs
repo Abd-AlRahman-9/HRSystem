@@ -44,8 +44,6 @@ namespace HRRepository
             await context.SaveChangesAsync(); 
         }
         
-        //public async Task<IEnumerable<T>> GetAllWithSpecificationsAsync(ISpecification<T> specification) => await ApplySpecification(specification).ToListAsync();
-
         public async Task UpdateAsync(int id, T entity)
         {
             context.Set<T>().Update(entity);
@@ -56,8 +54,11 @@ namespace HRRepository
         {
             return await ApplySpecification(specification).CountAsync();
         }
-
         public async Task<T> GetByNameWithSpecificationAsync(ISpecification<T> specification)
+        {
+            return await ApplySpecification(specification).FirstOrDefaultAsync();
+        }
+        public async Task<T> GetByDateWithSpecificationAsync(ISpecification<T> specification)
         {
             return await ApplySpecification(specification).FirstOrDefaultAsync();
         }
