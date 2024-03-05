@@ -56,5 +56,10 @@ namespace HRRepository
         {
             return await ApplySpecification(specification).CountAsync();
         }
+
+        public async Task<T> GetByNameWithSpecificationAsync(ISpecification<T> specification)
+        {
+            return await ApplySpecification(specification).FirstOrDefaultAsync();
+        }
     }
 }

@@ -12,8 +12,9 @@ namespace HRDomain.Specification
         public DeptIncludeNavPropsSpecification(GetAllDeptsParams _params) : base
             (
                 D =>
+                (D.Deleted==false) &&
                 (string.IsNullOrEmpty(_params.Search)||D.Name.ToLower().Contains(_params.Search)) &&
-                (!_params.MngId.HasValue || D.ManagerId == _params.MngId.Value)
+                (!_params.MngId.HasValue || D.ManagerId == _params.MngId.Value) 
             )
         {
             Includes.Add(E => E.Manager);
@@ -37,7 +38,7 @@ namespace HRDomain.Specification
                 }
             }
         }
-        public DeptIncludeNavPropsSpecification(int id):base(E=>E.Id==id)
+        public DeptIncludeNavPropsSpecification(string name):base(D=>(D.Name==name)&&(D.Deleted==false))
         {
             Includes.Add(E => E.Manager);
             //Includes.Add(E => E.Employees);

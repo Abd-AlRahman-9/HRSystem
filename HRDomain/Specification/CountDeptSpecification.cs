@@ -13,6 +13,7 @@ namespace HRDomain.Specification
             :base
             (
                 D =>
+                (D.Deleted==false)&&
                 (string.IsNullOrEmpty(_params.Search) || D.Name.ToLower().Contains(_params.Search)) &&
                 (!_params.MngId.HasValue || D.ManagerId == _params.MngId.Value)
             )

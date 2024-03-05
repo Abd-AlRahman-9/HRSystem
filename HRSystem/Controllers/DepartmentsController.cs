@@ -14,10 +14,17 @@ namespace HRSystem.Controllers
         private readonly GenericRepository<Department> _DeptRepo;
         private readonly Mapper mapper;
 
-        public DepartmentsController(GenericRepository<Department> repository,Mapper mapper)
+        public DepartmentsController(GenericRepository<Department> repository, Mapper mapper)
         {
             this._DeptRepo = repository;
             this.mapper = mapper;
+        }
+        [HttpGet("{Name:alpha}", Name = "GetDepartmentByName")]
+        public async Task<ActionResult<GetDeptsDTO>> GetOneDept (string Name)
+        {
+            var specification = new DeptIncludeNavPropsSpecification(Name);
+            var Dept = await _DeptRepo.GetByNameWithSpecificationAsync(specification);
+            return Ok(mapper.Map<Department,GetDeptsDTO>(Dept));
         }
         [HttpGet]
         public async Task<ActionResult<Pagination<GetDeptsDTO>>> GetAllDepts([FromQuery]GetAllDeptsParams P) 
@@ -29,19 +36,18 @@ namespace HRSystem.Controllers
             var count = await _DeptRepo.GetCountAsync(countSpec);
             return Ok(new Pagination<GetDeptsDTO>(P.PageIndex,P.PageSize,count,Data));
         }
-        [HttpGet("{id:int}", Name = ("GetDepartmentById"))]
-        public async Task<ActionResult> GetById(int id)
-        {
-            var department = await _DeptRepo.GetByIdAsync(id);
-            if(department is null)
-            {
-                return BadRequest("Not Found!");
-            }
-            GetDeptsDTO deptsDTO = new();
-            deptsDTO = mapper.Map<GetDeptsDTO>(department);
-            return Ok(deptsDTO);
-        }
-
+        //[HttpGet("{id:int}", Name = ("GetDepartmentById"))]
+        //public async Task<ActionResult> GetById(int id)
+        //{
+        //    var department = await _DeptRepo.GetByIdAsync(id);
+        //    if(department is null)
+        //    {
+        //        return BadRequest("Not Found!");
+        //    }
+        //    GetDeptsDTO deptsDTO = new();
+        //    deptsDTO = mapper.Map<GetDeptsDTO>(department);
+        //    return Ok(deptsDTO);
+        //}
         [HttpPost]
         public async Task<ActionResult> Create(GetDeptsDTO deptsDTO)
         {
@@ -49,7 +55,7 @@ namespace HRSystem.Controllers
             {
                 var department = mapper.Map<Department>(deptsDTO);
               await _DeptRepo.AddAsync(department);
-              string uri=  Url.Action(nameof(GetById), new { id = department.Id });
+              string uri=  Url.Action(nameof(GetOneDept), new { id = department.Id });
                
                 return Created(uri,"Created succsessfully");
             }
