@@ -23,7 +23,7 @@ namespace HRSystem.Controllers
         public async Task<ActionResult<Pagination<EmployeesDTO>>> GetAllEmps([FromQuery] GetAllEmpsParams P)
         {
             var specification = new EmpIncludeNavPropsSpecification(P);
-            var Emps = await _EmpRepo.GetAllWithSpecificationsAsync(specification);
+            var Emps = await _EmpRepo.GetAllWithSpecificationsAsync(specification); 
             var Data = mapper.Map<IEnumerable<Employee>, IEnumerable<GetDeptsDTO>>(Emps);
             var countSpec = new CountEmpSpecification(P);
             var count = await _EmpRepo.GetCountAsync(countSpec);
