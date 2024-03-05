@@ -11,8 +11,7 @@ namespace HRDomain.Specification
     {
         public CountSetSpecification(GetAllDeptsParams P) : base
             (
-                D =>
-                (D.Deleted == true) && (D.Name == null)
+                D => (D.Deleted == true) && (D.Name == null)
             )
         {        }
     }

@@ -5,5 +5,6 @@ namespace HRSystem.Controllers
 {
     public class AttendancesController : HRBaseController
     {
+
     }
 }

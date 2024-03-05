@@ -18,7 +18,6 @@ namespace HRDomain.Specification
             )
         {
             Includes.Add(E => E.Manager);
-            //Includes.Add(E => E.Employees);
 
             ApplyPagination(_params.PageSize.Value * (_params.PageIndex.Value - 1), _params.PageSize.Value);
 
@@ -41,7 +40,6 @@ namespace HRDomain.Specification
         public DeptIncludeNavPropsSpecification(string name):base(D=>(D.Name==name)&&(D.Deleted==false))
         {
             Includes.Add(E => E.Manager);
-            //Includes.Add(E => E.Employees);
         }
     }
 }
