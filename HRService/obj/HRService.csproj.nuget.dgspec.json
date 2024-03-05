@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hp\\Desktop\\HRSystem\\HRService\\HRService.csproj": {}
+    "C:\\Users\\ramad\\Desktop\\ApiHR\\HRSystem\\HRService\\HRService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hp\\Desktop\\HRSystem\\HRService\\HRService.csproj": {
+    "C:\\Users\\ramad\\Desktop\\ApiHR\\HRSystem\\HRService\\HRService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hp\\Desktop\\HRSystem\\HRService\\HRService.csproj",
+        "projectUniqueName": "C:\\Users\\ramad\\Desktop\\ApiHR\\HRSystem\\HRService\\HRService.csproj",
         "projectName": "HRService",
-        "projectPath": "C:\\Users\\hp\\Desktop\\HRSystem\\HRService\\HRService.csproj",
-        "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hp\\Desktop\\HRSystem\\HRService\\obj\\",
+        "projectPath": "C:\\Users\\ramad\\Desktop\\ApiHR\\HRSystem\\HRService\\HRService.csproj",
+        "packagesPath": "C:\\Users\\ramad\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ramad\\Desktop\\ApiHR\\HRSystem\\HRService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ramad\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

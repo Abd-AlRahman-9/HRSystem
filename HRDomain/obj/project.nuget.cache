@@ -1,15 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QC/Ttx0tjbk69/1cKUjQ2nd1TIwGH1LrZcZZJ0z5J4/D9QR72LSor2Vws4+0kJV5zhcuZjxCej2hhyJnxFbBnA==",
+  "dgSpecHash": "HY7Rz0/55FkD5VyEwMijRTn7MHbpvPUcoxSUIuhntFzjxcl9cvajuS3RrG3F3RGN2potNKgLWu/hzC6MWb1VZA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\hp\\Desktop\\HRSystem\\HRDomain\\HRDomain.csproj",
+  "projectFilePath": "C:\\Users\\ramad\\Desktop\\ApiHR\\HRSystem\\HRDomain\\HRDomain.csproj",
   "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\hp\\Desktop\\HRSystem\\HRDomain\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

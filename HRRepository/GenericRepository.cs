@@ -46,7 +46,7 @@ namespace HRRepository
         
         //public async Task<IEnumerable<T>> GetAllWithSpecificationsAsync(ISpecification<T> specification) => await ApplySpecification(specification).ToListAsync();
 
-        public async Task UpdateAsync(T entity)
+        public async Task UpdateAsync(int id, T entity)
         {
             context.Set<T>().Update(entity);
             await context.SaveChangesAsync();
