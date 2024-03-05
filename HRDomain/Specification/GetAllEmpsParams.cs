@@ -11,6 +11,7 @@ namespace HRDomain.Specification
         public int? MngId { get; set; }
         public int? DeptId { get; set; }
         public string sort { get; set; }
+        public string Search { get; set; }
 
         private int? pageSize;
         public int? PageSize 

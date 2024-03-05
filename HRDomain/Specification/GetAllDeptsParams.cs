@@ -9,6 +9,7 @@ namespace HRDomain.Specification
     public class GetAllDeptsParams
     {
         public string sort { get; set; }
+        public string Search { get; set; }
         public int? MngId { get; set; }
         private int? pageSize;
         public int? PageSize

@@ -12,7 +12,9 @@ namespace HRDomain.Specification
         public CountDeptSpecification(GetAllDeptsParams _params)
             :base
             (
-                D =>(!_params.MngId.HasValue || D.ManagerId == _params.MngId.Value)
+                D =>
+                (string.IsNullOrEmpty(_params.Search) || D.Name.ToLower().Contains(_params.Search)) &&
+                (!_params.MngId.HasValue || D.ManagerId == _params.MngId.Value)
             )
         { }
     }

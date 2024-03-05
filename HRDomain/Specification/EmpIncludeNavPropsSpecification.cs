@@ -12,7 +12,8 @@ namespace HRDomain.Specification
         public EmpIncludeNavPropsSpecification(GetAllEmpsParams getAllEmpsParams)
             :base
             (
-                E => 
+                E =>
+                    (string.IsNullOrEmpty(getAllEmpsParams.Search) || E.Name.ToLower().Contains(getAllEmpsParams.Search)) &&
                     (!getAllEmpsParams.DeptId.HasValue || E.DeptId == getAllEmpsParams.DeptId.Value) &&
                     (!getAllEmpsParams.MngId.HasValue || E.ManagerId == getAllEmpsParams.MngId.Value)
             )
