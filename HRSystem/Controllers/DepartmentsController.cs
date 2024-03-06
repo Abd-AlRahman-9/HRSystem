@@ -60,39 +60,56 @@ namespace HRSystem.Controllers
         [HttpPost]
         public async Task<ActionResult> Create(GetDeptsDTO deptsDTO)
         {
-            if (ModelState.IsValid)
+            var department = new Department
             {
-                try
-                {
-                    string inputTime = deptsDTO.ComingTime;
+                Name = deptsDTO.DepartmentName,
+                LeaveTime = deptsDTO.TimeToLeave,
+                ComingTime = deptsDTO.ComingTime,
+                DeductHour = deptsDTO.DeductHour,
+                BonusHour = deptsDTO.BonusHour,
+                WorkDays = deptsDTO.WorkDays
+            };
+           await _DeptRepo.AddAsync(department);
+            string uri = Url.Action(nameof(GetOneDept), new { id = department.Id });
 
-                    string[] timeParts = inputTime.Split(':');
-                    if (timeParts.Length == 3)
-                    {
-                        if (int.TryParse(timeParts[0], out int hour) &&
-                            int.TryParse(timeParts[1], out int min) &&
-                            int.TryParse(timeParts[2], out int sec))
-                        {
-                            TimeSpan comingTime = new TimeSpan(hour, min, sec);
-                            var department = mapper.Map<Department>(deptsDTO);
+         return Created(uri, "Created succsessfully");
 
-                            await _DeptRepo.AddAsync(department);
-                            string uri = Url.Action(nameof(GetOneDept), new { id = department.Id });
 
-                            return Created(uri, "Created succsessfully");
-                        }
+            #region
+            //if (ModelState.IsValid)
+            //{
+            //    try
+            //    {
+            //        string inputTime = deptsDTO.ComingTime;
 
-                    }
-                     return BadRequest("Time does not match the expected format (HH:mm:ss)."); 
-                    
-                }
-                catch (Exception ex)
-                {
+            //        string[] timeParts = inputTime.Split(':');
+            //        if (timeParts.Length == 3)
+            //        {
+            //            if (int.TryParse(timeParts[0], out int hour) &&
+            //                int.TryParse(timeParts[1], out int min) &&
+            //                int.TryParse(timeParts[2], out int sec))
+            //            {
+            //                TimeSpan comingTime = new TimeSpan(hour, min, sec);
+            //                var department = mapper.Map<Department>(deptsDTO);
 
-                    throw;
-                }
-            }
-            return BadRequest();  
+            //                await _DeptRepo.AddAsync(department);
+            //                string uri = Url.Action(nameof(GetOneDept), new { id = department.Id });
+
+            //                return Created(uri, "Created succsessfully");
+            //            }
+
+            //        }
+            //         return BadRequest("Time does not match the expected format (HH:mm:ss)."); 
+
+            //    }
+            //    catch (Exception ex)
+            //    {
+
+            //        throw;
+            //    }
+            //}
+            //return BadRequest();
+            #endregion
         }
 
         [HttpPut("{name:alpha}")]
