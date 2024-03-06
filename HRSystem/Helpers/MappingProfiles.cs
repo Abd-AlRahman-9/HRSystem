@@ -18,12 +18,20 @@ namespace HRSystem.Helpers
                 .ForMember(DTO => DTO.BonusForTheDay, Opt => Opt.MapFrom(Att => Att.Bonus))
                 .ForMember(DTO => DTO.DiscountOfLatency, Opt => Opt.MapFrom(Att => Att.Discount));
 
+            // For Department 
             CreateMap<Department, GetDeptsDTO>()
                 .ForMember(D => D.ManagerName, O => O.MapFrom(M=>M.Manager.Name));
-            // For each DTO have a Navigation Property and you don't need to send the whole object
+            
+            // For Employee
             CreateMap<Employee, EmployeesDTO>()
                 .ForMember(D => D.Manager, O => O.MapFrom(M => M.Manager.Name))
                 .ForMember(D => D.Department, O => O.MapFrom(M => M.Department.Name));
+            // For Settings
+
+            // For Latency
+
+            // For Holidays
+
         }
     }
 }
