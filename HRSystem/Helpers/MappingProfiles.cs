@@ -8,6 +8,8 @@ namespace HRSystem.Helpers
     {
         public MappingProfiles()
         {
+            CreateMap<EmployeeAttendace, AttendDTO>()
+                .ForMember(A => A.EmpName,O=>O.MapFrom(A=>A.Employee.Name));
             CreateMap<Department, GetDeptsDTO>()
                 .ForMember(D => D.ManagerName, O => O.MapFrom(M=>M.Manager.Name));
             // For each DTO have a Navigation Property and you don't need to send the whole object
