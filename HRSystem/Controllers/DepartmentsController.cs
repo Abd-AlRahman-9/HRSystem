@@ -12,11 +12,13 @@ namespace HRSystem.Controllers
     public class DepartmentsController : HRBaseController
     {
         private readonly GenericRepository<Department> _DeptRepo;
+        private readonly GenericRepository<Employee> _EmpRepo;
         private readonly Mapper mapper;
 
-        public DepartmentsController(GenericRepository<Department> repository, Mapper mapper)
+        public DepartmentsController(GenericRepository<Department> repository,GenericRepository<Employee> EmpRepo, Mapper mapper)
         {
             this._DeptRepo = repository;
+            this._EmpRepo = EmpRepo;
             this.mapper = mapper;
         }
         [HttpGet("{Name:alpha}", Name = "GetDepartmentByName")]
@@ -29,6 +31,11 @@ namespace HRSystem.Controllers
         [HttpGet]
         public async Task<ActionResult<Pagination<GetDeptsDTO>>> GetAllDepts([FromQuery]GetAllDeptsParams P) 
         {
+            if (P.MngNationalId != null)
+            {
+                var Mng = await _EmpRepo.GetSpecified(new EmpIncludeNavPropsSpecification(P.MngNationalId));
+                P.MngId = Mng.Id;
+            }
             var specification = new DeptIncludeNavPropsSpecification(P);
             var Depts = await _DeptRepo.GetAllWithSpecificationsAsync(specification);
             var Data = mapper.Map<IEnumerable<Department>, IEnumerable<GetDeptsDTO>>(Depts);
