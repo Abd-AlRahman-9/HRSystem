@@ -8,8 +8,8 @@ namespace HRSystem.DTO
         public sbyte WorkDays { get; set; }
         public double DeductHour { get; set; }
         public double BonusHour { get; set; }
-        public TimeSpan ComingTime { get; set; }
-        public TimeSpan LeaveTime { get; set; }
+        public string ComingTime { get; set; }
+        public string LeaveTime { get; set; }
         public string ManagerName { get; set; }
     }
 }

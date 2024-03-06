@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc;
 using HRSystem.Helpers;
 using Microsoft.EntityFrameworkCore;
+using HRDomain.Entities;
 
 namespace HRSystem
 {
@@ -39,8 +40,25 @@ namespace HRSystem
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.AddDbContext<HRContext>(options => { options.UseSqlServer(builder.Configuration.GetConnectionString("Default")); });
-            builder.Services.AddScoped(typeof(IRepository<>),typeof(GenericRepository<>));
-            builder.Services.AddAutoMapper(typeof(MappingProfiles));
+
+
+            //builder.Services.AddScoped(typeof(IRepository<>),typeof(GenericRepository<>));
+           //builder.Services.AddScoped<IRepository<Department>,GenericRepository<Department>>();
+           //builder.Services.AddScoped<IRepository<Employee>,GenericRepository<Employee>>();
+           //builder.Services.AddScoped<IRepository<Vacation>,GenericRepository<Vacation>>();
+           // builder.Services.AddScoped<IRepository<EmployeeAttendace>,GenericRepository<EmployeeAttendace>>();
+           // builder.Services.AddScoped<IRepository<EmployeeVacation>,GenericRepository<EmployeeVacation>>();
+
+
+
+
+            builder.Services.AddScoped<GenericRepository<Department>>();
+            builder.Services.AddScoped<GenericRepository<Employee>>();
+
+
+            //builder.Services.AddAutoMapper(typeof(MappingProfiles));
+            builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
             var app = builder.Build();
             // Making update-database each time you run the project
             using var scope = app.Services.CreateScope();
@@ -52,7 +70,7 @@ namespace HRSystem
                 var context = services.GetRequiredService<HRContext>();
                 await context.Database.MigrateAsync();
 
-                //await HRContextSeed.SeedAsync(context,loggerFactory);
+                await HRContextSeed.SeedAsync(context,loggerFactory);
             }
             catch (Exception ex)
             {
@@ -67,6 +85,8 @@ namespace HRSystem
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+            app.UseStaticFiles();
+
 
             app.UseHttpsRedirection();
 

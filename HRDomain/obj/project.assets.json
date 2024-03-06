@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\hp\\.nuget\\packages\\": {}
+    "C:\\Users\\ramad\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hp\\Desktop\\HRSystem\\HRDomain\\HRDomain.csproj",
+      "projectUniqueName": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\HRDomain.csproj",
       "projectName": "HRDomain",
-      "projectPath": "C:\\Users\\hp\\Desktop\\HRSystem\\HRDomain\\HRDomain.csproj",
-      "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hp\\Desktop\\HRSystem\\HRDomain\\obj\\",
+      "projectPath": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\HRDomain.csproj",
+      "packagesPath": "C:\\Users\\ramad\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ramad\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

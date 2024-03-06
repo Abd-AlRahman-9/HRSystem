@@ -13,14 +13,14 @@ namespace HRDomain.Entities
         //what about doing the data type "Byte"
         public sbyte WorkDays {  get; set; }
         // this property to indicate how the hour will be driven when the employee come late
-        public double DeductHour { get; set; }
-        public double BonusHour { get; set; }
-        public TimeSpan ComingTime { get; set; }
+        public decimal DeductHour { get; set; }
+        public decimal BonusHour { get; set; }
+        public TimeSpan ComingTime { get; set; } = new TimeSpan();
         public TimeSpan LeaveTime { get; set; }
 
         // Foriegn Key of Employees Table
         public int? ManagerId { get; set; }
         public Employee Manager { get; set; } // Navigational Property
-        public List<Employee> Employees { get; set; } = new List<Employee>(); //-> we'll handle it by Fluent API 
+        //public List<Employee> Employees { get; set; } = new List<Employee>(); //-> we'll handle it by Fluent API 
     }
 }

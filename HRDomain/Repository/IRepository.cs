@@ -13,7 +13,7 @@ namespace HRDomain.Repository
         Task<int> GetCountAsync(ISpecification<T> specification);
         Task<IEnumerable<T>> GetAllWithSpecificationsAsync(ISpecification<T> specification);
         Task AddAsync(T entity);
-        Task UpdateAsync(int id,T entity);
+        Task UpdateAsync(string name,T entity);
         Task DeleteAsync(int id);
         Task<T> GetSpecified(ISpecification<T> specification);
         //Task<T> GetByNameWithSpecificationAsync(ISpecification<T> specification);

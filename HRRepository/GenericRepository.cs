@@ -40,7 +40,7 @@ namespace HRRepository
             await context.SaveChangesAsync(); 
         }
         
-        public async Task UpdateAsync(int id, T entity)
+        public async Task UpdateAsync(string name, T entity)
         {
             context.Set<T>().Update(entity);
             await context.SaveChangesAsync();

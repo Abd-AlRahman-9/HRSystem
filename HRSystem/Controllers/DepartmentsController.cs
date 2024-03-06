@@ -6,6 +6,8 @@ using HRSystem.DTO;
 using HRSystem.Helpers;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.SqlServer.Server;
+using System.Globalization;
 
 namespace HRSystem.Controllers
 {
@@ -13,9 +15,9 @@ namespace HRSystem.Controllers
     {
         private readonly GenericRepository<Department> _DeptRepo;
         private readonly GenericRepository<Employee> _EmpRepo;
-        private readonly Mapper mapper;
+        private readonly IMapper mapper;
 
-        public DepartmentsController(GenericRepository<Department> repository,GenericRepository<Employee> EmpRepo, Mapper mapper)
+        public DepartmentsController(GenericRepository<Department> repository,GenericRepository<Employee> EmpRepo, IMapper mapper)
         {
             this._DeptRepo = repository;
             this._EmpRepo = EmpRepo;
@@ -60,25 +62,50 @@ namespace HRSystem.Controllers
         {
             if (ModelState.IsValid)
             {
-                var department = mapper.Map<Department>(deptsDTO);
-              await _DeptRepo.AddAsync(department);
-              string uri=  Url.Action(nameof(GetOneDept), new { id = department.Id });
-               
-                return Created(uri,"Created succsessfully");
+                try
+                {
+                    string inputTime = deptsDTO.ComingTime;
+
+                    string[] timeParts = inputTime.Split(':');
+                    if (timeParts.Length == 3)
+                    {
+                        if (int.TryParse(timeParts[0], out int hour) &&
+                            int.TryParse(timeParts[1], out int min) &&
+                            int.TryParse(timeParts[2], out int sec))
+                        {
+                            TimeSpan comingTime = new TimeSpan(hour, min, sec);
+                            var department = mapper.Map<Department>(deptsDTO);
+
+                            await _DeptRepo.AddAsync(department);
+                            string uri = Url.Action(nameof(GetOneDept), new { id = department.Id });
+
+                            return Created(uri, "Created succsessfully");
+                        }
+
+                    }
+                     return BadRequest("Time does not match the expected format (HH:mm:ss)."); 
+                    
+                }
+                catch (Exception ex)
+                {
+
+                    throw;
+                }
             }
-            return BadRequest();
+            return BadRequest();  
         }
 
-        [HttpPut("{id}")]
-        public async Task<ActionResult> Edit(int id,GetDeptsDTO deptsDTO)
+        [HttpPut("{name:alpha}")]
+        public async Task<ActionResult> Edit(string name,GetDeptsDTO deptsDTO)
         {
-            var department = _DeptRepo.GetByIdAsync(id);
+            var specification = new DeptIncludeNavPropsSpecification(name);
+            var department = await _DeptRepo.GetSpecified(specification);
             if (department is null)
             {
                 return NotFound();
             }
            var dept= mapper.Map<Department>(deptsDTO);
-           await _DeptRepo.UpdateAsync(id, dept);
+           await _DeptRepo.UpdateAsync(name, dept);
             return StatusCode(202);
         }
 
