@@ -13,6 +13,7 @@ namespace HRDomain.Entities
         public DateOnly Date { get; set; }
         public decimal Bonus { get; set; }
         public decimal Discount { get; set; }
+        //FK
         public int? EmployeeId { get; set; }
         public Employee Employee { get; set; }
     }

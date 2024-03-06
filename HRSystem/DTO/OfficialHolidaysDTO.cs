@@ -2,7 +2,7 @@
 {
     public class OfficialHolidaysDTO
     {
-        public string Name { get; set; }
-        public DateOnly Date { get; set; }
+        public string HolidayName { get; set; }
+        public DateOnly DateOnTheCurrentYear { get; set; }
     }
 }
