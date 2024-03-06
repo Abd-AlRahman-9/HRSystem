@@ -2,11 +2,12 @@
 {
     public class AttendDTO
     {
-        public string EmpName { get; set; }
-        public TimeOnly Attendance { get; set; }
-        public TimeOnly Leave { get; set; }
-        public DateOnly Date { get; set; }
-        public decimal Bonus { get; set; }
-        public decimal Discount { get; set; }
+        public string DepartmentName { get; set; }
+        public string EmployeeName { get; set; }
+        public TimeOnly ComingTime { get; set; }
+        public TimeOnly LeaveTime { get; set; }
+        public DateOnly DateOfTheDay { get; set; }
+        public decimal BonusForTheDay { get; set; }
+        public decimal DiscountOfLatency { get; set; }
     }
 }

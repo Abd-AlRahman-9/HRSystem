@@ -13,7 +13,11 @@ namespace HRDomain.Specification
         {
             
         }
-        public AttendIncludeNavPropsSpecification(string EmpName,DateOnly date) : base(A=>(A.Deleted==false)&&(A.Date==date)&&(A.Employee.Name==EmpName)) 
-        {          }
+        public AttendIncludeNavPropsSpecification(string EmpName,DateOnly date) : base(A=>(A.Deleted==false)&&(A.Date==date)&&(A.Employee.Name==EmpName))
+        {
+            Includes.Add(A => A.Employee);
+            Includes.Add(A=>A.Employee.Department);
+            //ThenIncludes.Add(A => A.Employee.Department);
+        }
     }
 }

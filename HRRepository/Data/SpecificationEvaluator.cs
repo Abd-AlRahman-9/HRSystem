@@ -29,7 +29,11 @@ namespace HRRepository.Data
                 query = query.OrderByDescending(Specifications.OrderByDescending);
 
             query = Specifications.Includes.Aggregate(query, (CurrentQuery, IncludeExpression) => CurrentQuery.Include(IncludeExpression));
-            
+            // Add ThenInclude expressions
+            //foreach (var thenIncludeExpression in Specifications.ThenIncludes)
+            //{
+            //    query = query.ThenInclude(thenIncludeExpression);
+            //}
             return query;
 
         }
