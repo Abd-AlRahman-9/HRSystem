@@ -33,7 +33,7 @@ namespace HRSystem.Controllers
         public async Task<ActionResult> GetById(int id)
         {
             var specification = new SetIncludeNavPropsSpecification(id);
-            var Set = await _DeptRepo.GetByIdWithSpecificationAsync(specification);
+            var Set = await _DeptRepo.GetSpecified(specification);
             return Ok(mapper.Map<Department, SettingsDTO>(Set));
         }
     }

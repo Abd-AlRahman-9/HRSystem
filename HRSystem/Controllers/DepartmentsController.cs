@@ -23,7 +23,7 @@ namespace HRSystem.Controllers
         public async Task<ActionResult<GetDeptsDTO>> GetOneDept (string Name)
         {
             var specification = new DeptIncludeNavPropsSpecification(Name);
-            var Dept = await _DeptRepo.GetByNameWithSpecificationAsync(specification);
+            var Dept = await _DeptRepo.GetSpecified(specification);
             return Ok(mapper.Map<Department,GetDeptsDTO>(Dept));
         }
         [HttpGet]

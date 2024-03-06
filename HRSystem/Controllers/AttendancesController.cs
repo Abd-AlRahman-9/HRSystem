@@ -27,7 +27,7 @@ namespace HRSystem.Controllers
         public async Task<ActionResult<GetDeptsDTO>> GetOneDept(string Name,DateOnly Date)
         {
             var specification = new AttendIncludeNavPropsSpecification(Name,Date);
-            var Attend = await _AttendRepo.GetByNameAndDateWithSpecificationAsync(specification);
+            var Attend = await _AttendRepo.GetSpecified(specification);
             return Ok(mapper.Map<EmployeeAttendace, AttendDTO>(Attend));
         }
         [HttpGet]

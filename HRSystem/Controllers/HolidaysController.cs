@@ -23,7 +23,7 @@ namespace HRSystem.Controllers
         public async Task<ActionResult<OfficialHolidaysDTO>> GetHoliday(DateOnly date)
         {
             var specification = new VacIncludeNavPropsSpecification(date);
-            var Vac = await _VacRepo.GetByDateWithSpecificationAsync(specification);
+            var Vac = await _VacRepo.GetSpecified(specification);
             return Ok(mapper.Map<Vacation, OfficialHolidaysDTO>(Vac));
         }
     }

@@ -12,11 +12,12 @@ namespace HRDomain.Repository
     {
         Task<int> GetCountAsync(ISpecification<T> specification);
         Task<IEnumerable<T>> GetAllWithSpecificationsAsync(ISpecification<T> specification);
-        Task<T> GetByIdWithSpecificationAsync(ISpecification<T> specification);
         Task AddAsync(T entity);
         Task UpdateAsync(int id,T entity);
         Task DeleteAsync(int id);
-        Task<T> GetByNameWithSpecificationAsync(ISpecification<T> specification);
-        Task<T> GetByDateWithSpecificationAsync(ISpecification<T> specification);
+        Task<T> GetSpecified(ISpecification<T> specification);
+        //Task<T> GetByNameWithSpecificationAsync(ISpecification<T> specification);
+        //Task<T> GetByDateWithSpecificationAsync(ISpecification<T> specification);
+        //Task<T> GetByIdWithSpecificationAsync(ISpecification<T> specification);
     }
 }
