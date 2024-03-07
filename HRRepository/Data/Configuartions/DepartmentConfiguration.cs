@@ -20,7 +20,7 @@ namespace HRRepository.Data.Configuartions
             builder.Property(P => P.BonusHour).HasColumnType("decimal(6,2)");
             builder.Property(P => P.ComingTime).HasColumnType("time");
             builder.Property(P => P.LeaveTime).HasColumnType("time");
-            builder.HasOne(D => D.Manager).WithOne().HasForeignKey<Department>(D => D.ManagerId).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(D => D.Manager).WithOne(D=>D.department).HasForeignKey<Department>(D => D.ManagerId).OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

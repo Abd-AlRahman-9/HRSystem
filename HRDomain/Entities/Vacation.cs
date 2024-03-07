@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Text.Json.Serialization;
@@ -15,6 +16,9 @@ namespace HRDomain.Entities
         public bool Holiday {  get; set; }
         [JsonConverter(typeof(DateCustomConverter))]
         public DateOnly Date {  get; set; }
-        public List<EmployeeVacation> EmployeeVacations { get; set; } = new List<EmployeeVacation>();
+        //>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>
+        // EmployeeVacation One To Many Relation
+        [InverseProperty("Vacation")]
+        public List<EmployeeVacation> EmployeesVacation { get; set; } = new List<EmployeeVacation>();
     }
 }

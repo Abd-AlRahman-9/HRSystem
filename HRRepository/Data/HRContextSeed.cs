@@ -52,9 +52,15 @@
 //                            // Find the manager employee object
 //                            var manager = Employees.First(e => e.Id == Employee.ManagerId);
 
+<<<<<<< HEAD
 //                            // Set the Manager property of the current employee
 //                            Employee.Manager = manager;
 //                        }
+=======
+                            // Set the Manager property of the current employee
+                            Employee.manager = manager;
+                        }
+>>>>>>> 6076d9e3e3f6129a934f56fb1861b968b224cbd2
 
 //                        context.Set<Employee>().Add(Employee);
 //                    }

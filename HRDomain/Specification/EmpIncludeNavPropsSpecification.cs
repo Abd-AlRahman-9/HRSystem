@@ -20,7 +20,7 @@ namespace HRDomain.Specification
             )
         {
             Includes.Add(E=>E.Department);
-            Includes.Add(E => E.Manager);
+            Includes.Add(E => E.manager);
 
             ApplyPagination(getAllEmpsParams.PageSize.Value * (getAllEmpsParams.PageIndex.Value - 1), getAllEmpsParams.PageSize.Value);
 
@@ -49,7 +49,7 @@ namespace HRDomain.Specification
         public EmpIncludeNavPropsSpecification(string NationalId):base(E=>(E.NationalID == NationalId)&&(E.Deleted==false))
         {
             Includes.Add(E => E.Department);
-            Includes.Add(E => E.Manager);
+            Includes.Add(E => E.manager);
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Text.Json.Serialization;
@@ -32,12 +33,32 @@ namespace HRDomain.Entities
         public decimal Salary { get; set; }
         [JsonConverter(typeof(DateCustomConverter))]
         public DateOnly HireData { get; set; }
-        // Foreign Key Of Self Relationship
+        // this table has many relations and was complex to resolve
+        //>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>
+        // Self Relationship
+        [ForeignKey("manager")]
         public int? ManagerId { get; set; }
-        // Foreign Key Of the Department Table
+        [InverseProperty("employees")]
+        public Employee manager { get; set; } // Navigational Property
+        [InverseProperty("manager")]
+        public List<Employee> employees { get; set;} // Navgational Property
+        //>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>
+        // Department Table One To Many
+        [ForeignKey("Department")]
         public int? DeptId { get; set; }
+        [InverseProperty("Employees")]
         public Department Department { get; set; } // Navigational Property
-        public Employee Manager { get; set; } // Navigational Property
+        //>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>
+        // Department Table One To One
+        [InverseProperty("Manager")]
+        public Department department { get; set; } //Navigational Property
+        //>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>
+        // EmployeeVacation Table One To Many Relation
+        [InverseProperty("Employee")]
         public List<EmployeeVacation> EmployeeVacations { get; set; } = new List<EmployeeVacation>();
+        //>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>
+        // EmployeeAttendace Table One To Many Relation
+        [InverseProperty("Employee")]
+        public List<EmployeeAttendace> employeeAttendaces { get; set; }= new List<EmployeeAttendace>();
     }
 }

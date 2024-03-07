@@ -15,8 +15,8 @@ namespace HRRepository.Data.Configuartions
         {
             builder.Property(EmpVac=>EmpVac.Deleted).HasColumnType("bit");
             //builder.HasKey(EmpVac => new { EmpVac.Id, EmpVac.VacationId });
-            builder.HasOne(EmpVac => EmpVac.Employee).WithMany().HasForeignKey(EmpVac => EmpVac.EmployeeId).OnDelete(DeleteBehavior.NoAction);
-            builder.HasOne(EmpVac => EmpVac.Vacation).WithMany().HasForeignKey(EmpVac => EmpVac.VacationId).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(EmpVac => EmpVac.Employee).WithMany(s=>s.EmployeeVacations).HasForeignKey(EmpVac => EmpVac.EmployeeId).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(EmpVac => EmpVac.Vacation).WithMany(s=>s.EmployeesVacation).HasForeignKey(EmpVac => EmpVac.VacationId).OnDelete(DeleteBehavior.NoAction);
         }
     }
 }
