@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
+using HRDomain.CustomConverter;
 namespace HRDomain.Entities
 {
     //public enum Gender
@@ -17,6 +19,7 @@ namespace HRDomain.Entities
         // search about the best practice of the national id prop
         // Done it was between {"string", "long"}
         public string NationalID { get; set; }
+        [JsonConverter(typeof(DateCustomConverter))]
         public DateOnly BirthDate { get; set; }
         public string Nationality { get; set; }
         public string Address { get; set; }
@@ -24,9 +27,10 @@ namespace HRDomain.Entities
         // Done and I decided to Make it Enum in the DTO layer 
         public string Gender { get; set; }
         //???????????????phone must be string
-        public long PhoneNumber { get; set; }
+        public string PhoneNumber { get; set; }
         public int VacationsRecord { get; set; }
         public decimal Salary { get; set; }
+        [JsonConverter(typeof(DateCustomConverter))]
         public DateOnly HireData { get; set; }
         // Foreign Key Of Self Relationship
         public int? ManagerId { get; set; }

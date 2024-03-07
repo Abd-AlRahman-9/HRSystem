@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
+using HRDomain.CustomConverter;
 using HRDomain.Entities;
 
 namespace HRDomain.Entities
@@ -11,11 +13,13 @@ namespace HRDomain.Entities
     {
         public string Name { get; set; }
         //what about doing the data type "Byte"
-        public sbyte WorkDays {  get; set; }
+        public int WorkDays {  get; set; }
         // this property to indicate how the hour will be driven when the employee come late
         public decimal DeductHour { get; set; }
         public decimal BonusHour { get; set; }
+        [JsonConverter(typeof(TimeCustomConvertor))]
         public TimeSpan ComingTime { get; set; } = new TimeSpan();
+        [JsonConverter(typeof(TimeCustomConvertor))]
         public TimeSpan LeaveTime { get; set; }
 
         // Foriegn Key of Employees Table

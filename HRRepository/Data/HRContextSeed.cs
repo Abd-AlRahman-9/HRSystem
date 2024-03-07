@@ -34,7 +34,6 @@ namespace HRRepository.Data
                     {
                         context.Set<Department>().Add(department);
                     }
-                    await context.SaveChangesAsync();
                 }
 
 
@@ -102,9 +101,8 @@ namespace HRRepository.Data
                             context.Set<EmployeeVacation>().Add(vacation);
                         }
                     }
-
-
                 }
+                await context.SaveChangesAsync();
             }
             catch (Exception ex)
             {
