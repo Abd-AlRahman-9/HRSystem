@@ -31,7 +31,7 @@ namespace HRRepository.Data.Configuartions
             // Employee has one Manager
             // Manager can have many Employees
             // Foreign key property
-            builder.HasOne(e => e.Manager).WithMany().HasForeignKey(e => e.ManagerId).OnDelete(DeleteBehavior.NoAction); // Optional: Set delete behavior
+            builder.HasOne(e => e.manager).WithMany().HasForeignKey(e => e.ManagerId).OnDelete(DeleteBehavior.NoAction); // Optional: Set delete behavior
             builder.HasOne(e => e.Department).WithMany().HasForeignKey(e=> e.DeptId).OnDelete(DeleteBehavior.NoAction);
         }
     }

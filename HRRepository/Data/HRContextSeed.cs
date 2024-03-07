@@ -53,7 +53,7 @@ namespace HRRepository.Data
                             var manager = Employees.First(e => e.Id == Employee.ManagerId);
 
                             // Set the Manager property of the current employee
-                            Employee.Manager = manager;
+                            Employee.manager = manager;
                         }
 
                         context.Set<Employee>().Add(Employee);
