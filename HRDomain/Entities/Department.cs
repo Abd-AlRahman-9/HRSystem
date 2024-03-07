@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Text.Json.Serialization;
@@ -24,6 +25,7 @@ namespace HRDomain.Entities
 
         // Foriegn Key of Employees Table
         public int? ManagerId { get; set; }
+        [InverseProperty("")]
         public Employee Manager { get; set; } // Navigational Property
         //public List<Employee> Employees { get; set; } = new List<Employee>(); //-> we'll handle it by Fluent API 
     }

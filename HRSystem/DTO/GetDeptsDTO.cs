@@ -10,8 +10,8 @@ namespace HRSystem.DTO
         public decimal BonusHour { get; set; }
         public double DeductionRule { get; set; }
         public double BonusRule { get; set; } 
-        public TimeSpan ComingTime { get; set; }
-        public TimeSpan TimeToLeave { get; set; }
+        public string ComingTime { get; set; }
+        public string TimeToLeave { get; set; }
         public string ManagerName { get; set; }
         public bool IsHourly { get; set; } 
     }

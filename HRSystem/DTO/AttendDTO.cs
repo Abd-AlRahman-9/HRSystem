@@ -4,9 +4,9 @@
     {
         public string DepartmentName { get; set; }
         public string EmployeeName { get; set; }
-        public TimeOnly ComingTime { get; set; }
-        public TimeOnly LeaveTime { get; set; }
-        public DateOnly DateOfTheDay { get; set; }
+        public string ComingTime { get; set; }
+        public string LeaveTime { get; set; }
+        public string DateOfTheDay { get; set; }
         public decimal BonusForTheDay { get; set; }
         public decimal DiscountOfLatency { get; set; }
     }

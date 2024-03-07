@@ -63,8 +63,8 @@ namespace HRSystem.Controllers
             var department = new Department
             {
                 Name = deptsDTO.DepartmentName,
-                LeaveTime = deptsDTO.TimeToLeave,
-                ComingTime = deptsDTO.ComingTime,
+                LeaveTime = TimeSpan.Parse(deptsDTO.TimeToLeave),
+                ComingTime = TimeSpan.Parse(deptsDTO.ComingTime),
                 DeductHour = deptsDTO.DeductHour,
                 BonusHour = deptsDTO.BonusHour,
                 WorkDays = deptsDTO.WorkDays
