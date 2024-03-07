@@ -1,0 +1,252 @@
+[
+  {
+    "Deleted": true,
+    "EmployeeId": 26,
+    "VacationId": 17
+  },
+  {
+    "Deleted": false,
+    "EmployeeId": 46,
+    "VacationId": 39
+  },
+  {
+    "Deleted": false,
+    "EmployeeId": 4,
+    "VacationId": 46
+  },
+  {
+    "Deleted": false,
+    "EmployeeId": 17,
+    "VacationId": 8
+  },
+  {
+    "Deleted": true,
+    "EmployeeId": 50,
+    "VacationId": 33
+  },
+  {
+    "Deleted": true,
+    "EmployeeId": 49,
+    "VacationId": 28
+  },
+  {
+    "Deleted": false,
+    "EmployeeId": 38,
+    "VacationId": 45
+  },
+  {
+    "Deleted": true,
+    "EmployeeId": 10,
+    "VacationId": 20
+  },
+  {
+    "Deleted": true,
+    "EmployeeId": 32,
+    "VacationId": 44
+  },
+  {
+    "Deleted": false,
+    "EmployeeId": 39,
+    "VacationId": 11
+  },
+  {
+    "Deleted": true,
+    "EmployeeId": 33,
+    "VacationId": 32
+  },
+  {
+    "Deleted": true,
+    "EmployeeId": 29,
+    "VacationId": 7
+  },
+  {
+    "Deleted": false,
+    "EmployeeId": 8,
+    "VacationId": 6
+  },
+  {
+    "Deleted": false,
+    "EmployeeId": 30,
+    "VacationId": 19
+  },
+  {
+    "Deleted": false,
+    "EmployeeId": 21,
+    "VacationId": 18
+  },
+  {
+    "Deleted": true,
+    "EmployeeId": 43,
+    "VacationId": 34
+  },
+  {
+    "Deleted": false,
+    "EmployeeId": 31,
+    "VacationId": 41
+  },
+  {
+    "Deleted": true,
+    "EmployeeId": 15,
+    "VacationId": 15
+  },
+  {
+    "Deleted": true,
+    "EmployeeId": 1,
+    "VacationId": 24
+  },
+  {
+    "Deleted": true,
+    "EmployeeId": 11,
+    "VacationId": 10
+  },
+  {
+    "Deleted": false,
+    "EmployeeId": 25,
+    "VacationId": 49
+  },
+  {
+    "Deleted": false,
+    "EmployeeId": 35,
+    "VacationId": 23
+  },
+  {
+    "Deleted": true,
+    "EmployeeId": 34,
+    "VacationId": 26
+  },
+  {
+    "Deleted": false,
+    "EmployeeId": 45,
+    "VacationId": 27
+  },
+  {
+    "Deleted": false,
+    "EmployeeId": 36,
+    "VacationId": 38
+  },
+  {
+    "Deleted": true,
+    "EmployeeId": 18,
+    "VacationId": 4
+  },
+  {
+    "Deleted": false,
+    "EmployeeId": 27,
+    "VacationId": 29
+  },
+  {
+    "Deleted": false,
+    "EmployeeId": 20,
+    "VacationId": 50
+  },
+  {
+    "Deleted": true,
+    "EmployeeId": 14,
+    "VacationId": 30
+  },
+  {
+    "Deleted": true,
+    "EmployeeId": 7,
+    "VacationId": 25
+  },
+  {
+    "Deleted": false,
+    "EmployeeId": 44,
+    "VacationId": 9
+  },
+  {
+    "Deleted": false,
+    "EmployeeId": 2,
+    "VacationId": 14
+  },
+  {
+    "Deleted": true,
+    "EmployeeId": 40,
+    "VacationId": 40
+  },
+  {
+    "Deleted": true,
+    "EmployeeId": 5,
+    "VacationId": 1
+  },
+  {
+    "Deleted": false,
+    "EmployeeId": 13,
+    "VacationId": 3
+  },
+  {
+    "Deleted": true,
+    "EmployeeId": 24,
+    "VacationId": 47
+  },
+  {
+    "Deleted": false,
+    "EmployeeId": 23,
+    "VacationId": 42
+  },
+  {
+    "Deleted": true,
+    "EmployeeId": 28,
+    "VacationId": 48
+  },
+  {
+    "Deleted": true,
+    "EmployeeId": 12,
+    "VacationId": 31
+  },
+  {
+    "Deleted": true,
+    "EmployeeId": 37,
+    "VacationId": 2
+  },
+  {
+    "Deleted": true,
+    "EmployeeId": 3,
+    "VacationId": 37
+  },
+  {
+    "Deleted": true,
+    "EmployeeId": 48,
+    "VacationId": 36
+  },
+  {
+    "Deleted": true,
+    "EmployeeId": 47,
+    "VacationId": 16
+  },
+  {
+    "Deleted": true,
+    "EmployeeId": 42,
+    "VacationId": 22
+  },
+  {
+    "Deleted": false,
+    "EmployeeId": 6,
+    "VacationId": 21
+  },
+  {
+    "Deleted": true,
+    "EmployeeId": 22,
+    "VacationId": 35
+  },
+  {
+    "Deleted": false,
+    "EmployeeId": 41,
+    "VacationId": 13
+  },
+  {
+    "Deleted": true,
+    "EmployeeId": 16,
+    "VacationId": 12
+  },
+  {
+    "Deleted": true,
+    "EmployeeId": 19,
+    "VacationId": 43
+  },
+  {
+    "Deleted": false,
+    "EmployeeId": 9,
+    "VacationId": 5
+  }
+]
