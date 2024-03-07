@@ -14,8 +14,4 @@
     <ProjectReference Include="..\HRDomain\HRDomain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Data\DataSeeding\" />
-  </ItemGroup>
-
 </Project>

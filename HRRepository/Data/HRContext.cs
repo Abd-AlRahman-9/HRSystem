@@ -16,6 +16,7 @@ namespace HRRepository.Data
         public DbSet<Employee> Employees { get; set; }
         public DbSet<EmployeeVacation> EmployeeVacations { get; set; }
         public DbSet<Vacation> Vacations { get; set; }
+        public DbSet<EmployeeAttendace> EmployeeAttendaces { get; set; }
 
         public HRContext(DbContextOptions options):base(options) { }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
