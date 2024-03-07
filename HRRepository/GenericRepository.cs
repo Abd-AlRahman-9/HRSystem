@@ -31,10 +31,10 @@ namespace HRRepository
             await context.Set<T>().AddAsync(entity);
             await context.SaveChangesAsync();
         }
-        public async Task DeleteAsync(int id)
+        public async Task DeleteAsync(string name)
         {
             // Does using Find "ASYNC" Here is right ? && ! null reference
-            var entity = await context.Set<T>().FindAsync(id);
+            var entity = await context.Set<T>().FindAsync(name);
             entity!.Deleted = true;
             context.Set<T>().Update(entity);
             await context.SaveChangesAsync(); 

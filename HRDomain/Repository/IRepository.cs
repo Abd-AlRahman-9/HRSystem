@@ -14,7 +14,7 @@ namespace HRDomain.Repository
         Task<IEnumerable<T>> GetAllWithSpecificationsAsync(ISpecification<T> specification);
         Task AddAsync(T entity);
         Task UpdateAsync(string name,T entity);
-        Task DeleteAsync(int id);
+        Task DeleteAsync(string name);
         Task<T> GetSpecified(ISpecification<T> specification);
         //Task<T> GetByNameWithSpecificationAsync(ISpecification<T> specification);
         //Task<T> GetByDateWithSpecificationAsync(ISpecification<T> specification);
