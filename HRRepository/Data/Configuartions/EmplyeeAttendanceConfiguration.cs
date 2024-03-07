@@ -16,7 +16,7 @@ namespace HRRepository.Data.Configuartions
             builder.Property(e => e.Attendance).HasColumnType("time").IsRequired();
             builder.Property(e => e.Leave).HasColumnType("time").IsRequired();
             builder.Property(e => e.Date).HasColumnType("date").IsRequired();
-            builder.HasOne(e => e.Employee).WithMany().HasForeignKey(e => e.EmployeeId).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(e => e.Employee).WithMany(s=>s.employeeAttendaces).HasForeignKey(e => e.EmployeeId).OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

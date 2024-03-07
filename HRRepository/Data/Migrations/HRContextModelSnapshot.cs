@@ -141,7 +141,7 @@ namespace HRRepository.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<TimeOnly>("Attendance")
+                    b.Property<TimeSpan>("Attendance")
                         .HasColumnType("time");
 
                     b.Property<decimal>("Bonus")
@@ -159,7 +159,7 @@ namespace HRRepository.Data.Migrations
                     b.Property<int?>("EmployeeId")
                         .HasColumnType("int");
 
-                    b.Property<TimeOnly>("Leave")
+                    b.Property<TimeSpan>("Leave")
                         .HasColumnType("time");
 
                     b.HasKey("Id");
@@ -183,24 +183,14 @@ namespace HRRepository.Data.Migrations
                     b.Property<int?>("EmployeeId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("EmployeeId1")
-                        .HasColumnType("int");
-
                     b.Property<int?>("VacationId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("VacationId1")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
                     b.HasIndex("EmployeeId");
 
-                    b.HasIndex("EmployeeId1");
-
                     b.HasIndex("VacationId");
-
-                    b.HasIndex("VacationId1");
 
                     b.ToTable("EmployeeVacations");
                 });
@@ -235,7 +225,7 @@ namespace HRRepository.Data.Migrations
             modelBuilder.Entity("HRDomain.Entities.Department", b =>
                 {
                     b.HasOne("HRDomain.Entities.Employee", "Manager")
-                        .WithOne()
+                        .WithOne("department")
                         .HasForeignKey("HRDomain.Entities.Department", "ManagerId")
                         .OnDelete(DeleteBehavior.NoAction);
 
@@ -245,24 +235,24 @@ namespace HRRepository.Data.Migrations
             modelBuilder.Entity("HRDomain.Entities.Employee", b =>
                 {
                     b.HasOne("HRDomain.Entities.Department", "Department")
-                        .WithMany()
+                        .WithMany("Employees")
                         .HasForeignKey("DeptId")
                         .OnDelete(DeleteBehavior.NoAction);
 
-                    b.HasOne("HRDomain.Entities.Employee", "Manager")
-                        .WithMany()
+                    b.HasOne("HRDomain.Entities.Employee", "manager")
+                        .WithMany("employees")
                         .HasForeignKey("ManagerId")
                         .OnDelete(DeleteBehavior.NoAction);
 
                     b.Navigation("Department");
 
-                    b.Navigation("Manager");
+                    b.Navigation("manager");
                 });
 
             modelBuilder.Entity("HRDomain.Entities.EmployeeAttendace", b =>
                 {
                     b.HasOne("HRDomain.Entities.Employee", "Employee")
-                        .WithMany()
+                        .WithMany("employeeAttendaces")
                         .HasForeignKey("EmployeeId")
                         .OnDelete(DeleteBehavior.NoAction);
 
@@ -272,36 +262,40 @@ namespace HRRepository.Data.Migrations
             modelBuilder.Entity("HRDomain.Entities.EmployeeVacation", b =>
                 {
                     b.HasOne("HRDomain.Entities.Employee", "Employee")
-                        .WithMany()
+                        .WithMany("EmployeeVacations")
                         .HasForeignKey("EmployeeId")
                         .OnDelete(DeleteBehavior.NoAction);
 
-                    b.HasOne("HRDomain.Entities.Employee", null)
-                        .WithMany("EmployeeVacations")
-                        .HasForeignKey("EmployeeId1");
-
                     b.HasOne("HRDomain.Entities.Vacation", "Vacation")
-                        .WithMany()
+                        .WithMany("EmployeesVacation")
                         .HasForeignKey("VacationId")
                         .OnDelete(DeleteBehavior.NoAction);
-
-                    b.HasOne("HRDomain.Entities.Vacation", null)
-                        .WithMany("EmployeeVacations")
-                        .HasForeignKey("VacationId1");
 
                     b.Navigation("Employee");
 
                     b.Navigation("Vacation");
                 });
 
+            modelBuilder.Entity("HRDomain.Entities.Department", b =>
+                {
+                    b.Navigation("Employees");
+                });
+
             modelBuilder.Entity("HRDomain.Entities.Employee", b =>
                 {
                     b.Navigation("EmployeeVacations");
+
+                    b.Navigation("department")
+                        .IsRequired();
+
+                    b.Navigation("employeeAttendaces");
+
+                    b.Navigation("employees");
                 });
 
             modelBuilder.Entity("HRDomain.Entities.Vacation", b =>
                 {
-                    b.Navigation("EmployeeVacations");
+                    b.Navigation("EmployeesVacation");
                 });
 #pragma warning restore 612, 618
         }
