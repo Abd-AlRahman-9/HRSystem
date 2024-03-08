@@ -161,7 +161,7 @@
     "VacationsRecord": 10,
     "Salary": 32134.39,
     "HireData": "02/09/2018",
-    "ManagerId": 1,
+    "ManagerId": null,
     "DeptId": 1
   },
   {
@@ -176,7 +176,7 @@
     "VacationsRecord": 16,
     "Salary": 29015.74,
     "HireData": "01/30/2017",
-    "ManagerId": 2,
+    "ManagerId": null,
     "DeptId": 2
   },
   {
@@ -191,7 +191,7 @@
     "VacationsRecord": 8,
     "Salary": 41420.7,
     "HireData": "05/06/2022",
-    "ManagerId": 3,
+    "ManagerId": null,
     "DeptId": 3
   },
   {
@@ -206,7 +206,7 @@
     "VacationsRecord": 15,
     "Salary": 11422.01,
     "HireData": "09/25/2023",
-    "ManagerId": 4,
+    "ManagerId": null,
     "DeptId": 4
   },
   {
@@ -221,7 +221,7 @@
     "VacationsRecord": 8,
     "Salary": 37797.82,
     "HireData": "01/01/2022",
-    "ManagerId": 5,
+    "ManagerId": null,
     "DeptId": 5
   },
   {
@@ -236,7 +236,7 @@
     "VacationsRecord": 11,
     "Salary": 85607.64,
     "HireData": "05/15/2021",
-    "ManagerId": 6,
+    "ManagerId": null,
     "DeptId": 6
   },
   {
@@ -251,7 +251,7 @@
     "VacationsRecord": 16,
     "Salary": 60079.51,
     "HireData": "05/15/2015",
-    "ManagerId": 7,
+    "ManagerId": null,
     "DeptId": 7
   },
   {
@@ -266,7 +266,7 @@
     "VacationsRecord": 18,
     "Salary": 62580.31,
     "HireData": "03/01/2023",
-    "ManagerId": 8,
+    "ManagerId": null,
     "DeptId": 8
   },
   {
@@ -281,7 +281,7 @@
     "VacationsRecord": 5,
     "Salary": 88647.12,
     "HireData": "11/25/2019",
-    "ManagerId": 9,
+    "ManagerId": null,
     "DeptId": 9
   },
   {
@@ -296,7 +296,7 @@
     "VacationsRecord": 10,
     "Salary": 37177.12,
     "HireData": "05/20/2004",
-    "ManagerId": 10,
+    "ManagerId": null,
     "DeptId": 10
   },
   {
@@ -311,7 +311,7 @@
     "VacationsRecord": 6,
     "Salary": 26390.38,
     "HireData": "09/17/2016",
-    "ManagerId": 1,
+    "ManagerId": null,
     "DeptId": 1
   },
   {
@@ -326,7 +326,7 @@
     "VacationsRecord": 21,
     "Salary": 55952.7,
     "HireData": "09/29/2019",
-    "ManagerId": 2,
+    "ManagerId": null,
     "DeptId": 2
   },
   {
@@ -341,7 +341,7 @@
     "VacationsRecord": 7,
     "Salary": 28871.79,
     "HireData": "09/29/2022",
-    "ManagerId": 3,
+    "ManagerId": null,
     "DeptId": 3
   },
   {
@@ -356,7 +356,7 @@
     "VacationsRecord": 6,
     "Salary": 7526.8,
     "HireData": "01/09/2018",
-    "ManagerId": 4,
+    "ManagerId": null,
     "DeptId": 4
   },
   {
@@ -371,7 +371,7 @@
     "VacationsRecord": 9,
     "Salary": 83111.01,
     "HireData": "09/22/2015",
-    "ManagerId": 5,
+    "ManagerId": null,
     "DeptId": 5
   },
   {
@@ -386,7 +386,7 @@
     "VacationsRecord": 17,
     "Salary": 51783.84,
     "HireData": "10/07/2023",
-    "ManagerId": 6,
+    "ManagerId": null,
     "DeptId": 6
   },
   {
@@ -401,7 +401,7 @@
     "VacationsRecord": 11,
     "Salary": 9853.77,
     "HireData": "06/24/2018",
-    "ManagerId": 7,
+    "ManagerId": null,
     "DeptId": 7
   },
   {
@@ -416,7 +416,7 @@
     "VacationsRecord": 3,
     "Salary": 14097.37,
     "HireData": "09/29/2021",
-    "ManagerId": 8,
+    "ManagerId": null,
     "DeptId": 8
   },
   {
@@ -431,7 +431,7 @@
     "VacationsRecord": 8,
     "Salary": 71491.74,
     "HireData": "04/11/2024",
-    "ManagerId": 9,
+    "ManagerId": null,
     "DeptId": 9
   },
   {
@@ -446,7 +446,7 @@
     "VacationsRecord": 21,
     "Salary": 21020.54,
     "HireData": "11/13/2019",
-    "ManagerId": 10,
+    "ManagerId": null,
     "DeptId": 10
   },
   {
@@ -461,7 +461,7 @@
     "VacationsRecord": 8,
     "Salary": 11796.72,
     "HireData": "04/01/2023",
-    "ManagerId": 1,
+    "ManagerId": null,
     "DeptId": 1
   },
   {
@@ -476,7 +476,7 @@
     "VacationsRecord": 2,
     "Salary": 69957.96,
     "HireData": "10/20/2023",
-    "ManagerId": 2,
+    "ManagerId": null,
     "DeptId": 2
   },
   {
@@ -491,7 +491,7 @@
     "VacationsRecord": 7,
     "Salary": 16448.08,
     "HireData": "12/19/2002",
-    "ManagerId": 3,
+    "ManagerId": null,
     "DeptId": 3
   },
   {
@@ -506,7 +506,7 @@
     "VacationsRecord": 17,
     "Salary": 57243.88,
     "HireData": "03/03/2004",
-    "ManagerId": 4,
+    "ManagerId": null,
     "DeptId": 4
   },
   {
@@ -521,7 +521,7 @@
     "VacationsRecord": 8,
     "Salary": 68724.89,
     "HireData": "10/31/2007",
-    "ManagerId": 5,
+    "ManagerId": null,
     "DeptId": 5
   },
   {
@@ -536,7 +536,7 @@
     "VacationsRecord": 15,
     "Salary": 48542.63,
     "HireData": "02/24/2001",
-    "ManagerId": 6,
+    "ManagerId": null,
     "DeptId": 6
   },
   {
@@ -551,7 +551,7 @@
     "VacationsRecord": 9,
     "Salary": 29793.09,
     "HireData": "03/20/2012",
-    "ManagerId": 7,
+    "ManagerId": null,
     "DeptId": 7
   },
   {
@@ -566,7 +566,7 @@
     "VacationsRecord": 2,
     "Salary": 49843.99,
     "HireData": "02/08/2000",
-    "ManagerId": 8,
+    "ManagerId": null,
     "DeptId": 8
   },
   {
@@ -581,7 +581,7 @@
     "VacationsRecord": 4,
     "Salary": 93968.66,
     "HireData": "10/12/2022",
-    "ManagerId": 9,
+    "ManagerId": null,
     "DeptId": 9
   },
   {
@@ -596,7 +596,7 @@
     "VacationsRecord": 8,
     "Salary": 87893.21,
     "HireData": "12/31/2018",
-    "ManagerId": 10,
+    "ManagerId": null,
     "DeptId": 10
   },
   {
@@ -611,7 +611,7 @@
     "VacationsRecord": 19,
     "Salary": 24991.48,
     "HireData": "12/06/2021",
-    "ManagerId": 1,
+    "ManagerId": null,
     "DeptId": 1
   },
   {
@@ -626,7 +626,7 @@
     "VacationsRecord": 2,
     "Salary": 47669.14,
     "HireData": "09/16/2023",
-    "ManagerId": 2,
+    "ManagerId": null,
     "DeptId": 2
   },
   {
@@ -641,7 +641,7 @@
     "VacationsRecord": 5,
     "Salary": 9356.04,
     "HireData": "02/18/2022",
-    "ManagerId": 3,
+    "ManagerId": null,
     "DeptId": 3
   },
   {
@@ -656,7 +656,7 @@
     "VacationsRecord": 3,
     "Salary": 17324.17,
     "HireData": "04/20/2023",
-    "ManagerId": 4,
+    "ManagerId": null,
     "DeptId": 4
   },
   {
@@ -671,7 +671,7 @@
     "VacationsRecord": 9,
     "Salary": 48178.41,
     "HireData": "05/17/2014",
-    "ManagerId": 5,
+    "ManagerId": null,
     "DeptId": 5
   },
   {
@@ -686,7 +686,7 @@
     "VacationsRecord": 5,
     "Salary": 45612.87,
     "HireData": "08/14/2018",
-    "ManagerId": 6,
+    "ManagerId": null,
     "DeptId": 6
   },
   {
@@ -701,7 +701,7 @@
     "VacationsRecord": 12,
     "Salary": 24114.8,
     "HireData": "06/01/2022",
-    "ManagerId": 7,
+    "ManagerId": null,
     "DeptId": 7
   },
   {
@@ -716,7 +716,7 @@
     "VacationsRecord": 16,
     "Salary": 78587.81,
     "HireData": "08/26/2013",
-    "ManagerId": 8,
+    "ManagerId": null,
     "DeptId": 8
   },
   {
@@ -731,7 +731,7 @@
     "VacationsRecord": 16,
     "Salary": 70837.36,
     "HireData": "09/28/2024",
-    "ManagerId": 9,
+    "ManagerId": null,
     "DeptId": 9
   },
   {
@@ -746,7 +746,7 @@
     "VacationsRecord": 9,
     "Salary": 7568.07,
     "HireData": "01/27/2024",
-    "ManagerId": 10,
+    "ManagerId": null,
     "DeptId": 10
   }
 ]
