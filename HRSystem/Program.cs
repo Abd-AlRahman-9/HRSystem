@@ -18,10 +18,10 @@ namespace HRSystem
         public static async Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-
             // Add services to the container.
 
-            //Handling Validation Response
+
+            #region Handling Validation Response
             builder.Services.Configure<ApiBehaviorOptions>(options => options.InvalidModelStateResponseFactory = (actionContext) =>
             {
                 var errors = actionContext.ModelState.Where(m => m.Value.Errors.Count() > 0).SelectMany(m => m.Value.Errors).Select(m => m.ErrorMessage).ToArray();
@@ -32,25 +32,15 @@ namespace HRSystem
                 };
                 return new BadRequestObjectResult(validationErrorResponse);
             });
+            #endregion
 
-
+            //Add HRContext Servise
+            builder.Services.AddDbContext<HRContext>(options => { options.UseSqlServer(builder.Configuration.GetConnectionString("Default")); });
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
-            builder.Services.AddDbContext<HRContext>(options => { options.UseSqlServer(builder.Configuration.GetConnectionString("Default")); });
-
-
-            //builder.Services.AddScoped(typeof(IRepository<>),typeof(GenericRepository<>));
-           //builder.Services.AddScoped<IRepository<Department>,GenericRepository<Department>>();
-           //builder.Services.AddScoped<IRepository<Employee>,GenericRepository<Employee>>();
-           //builder.Services.AddScoped<IRepository<Vacation>,GenericRepository<Vacation>>();
-           // builder.Services.AddScoped<IRepository<EmployeeAttendace>,GenericRepository<EmployeeAttendace>>();
-           // builder.Services.AddScoped<IRepository<EmployeeVacation>,GenericRepository<EmployeeVacation>>();
-
-
-
 
             builder.Services.AddScoped<GenericRepository<Department>>();
             builder.Services.AddScoped<GenericRepository<Employee>>();
@@ -60,7 +50,8 @@ namespace HRSystem
             builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
             var app = builder.Build();
-            // Making update-database each time you run the project
+         
+            #region Making update-database each time you run the project
             using var scope = app.Services.CreateScope();
 
             var services = scope.ServiceProvider;
@@ -70,13 +61,15 @@ namespace HRSystem
                 var context = services.GetRequiredService<HRContext>();
                 await context.Database.MigrateAsync();
 
-                await HRContextSeed.SeedAsync(context,loggerFactory);
+                //await HRContextSeed.SeedAsync(context,loggerFactory);
             }
             catch (Exception ex)
             {
                 var logger = loggerFactory.CreateLogger<Program>();
                 logger.LogError(ex,ex.Message);
             }
+            #endregion
+
             // Configure the HTTP request pipeline.
             //use custom middleware
             //app.UseMiddleware<ExceptionMiddleware>();

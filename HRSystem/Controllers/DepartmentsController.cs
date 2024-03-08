@@ -6,8 +6,10 @@ using HRSystem.DTO;
 using HRSystem.Helpers;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.SqlServer.Server;
 using System.Globalization;
+using System.Text.RegularExpressions;
 
 namespace HRSystem.Controllers
 {
@@ -57,59 +59,24 @@ namespace HRSystem.Controllers
         //    deptsDTO = mapper.Map<GetDeptsDTO>(department);
         //    return Ok(deptsDTO);
         //}
-        [HttpPost]
-        public async Task<ActionResult> Create(GetDeptsDTO deptsDTO)
+        [HttpPost ("WorkDays: int")]
+        public async Task<ActionResult> Create(GetDeptsDTO deptsDTO, int workDays)
         {
-            var department = new Department
-            {
-                Name = deptsDTO.DepartmentName,
-                LeaveTime = TimeSpan.Parse(deptsDTO.TimeToLeave),
-                ComingTime = TimeSpan.Parse(deptsDTO.ComingTime),
-                DeductHour = deptsDTO.DeductHour,
-                BonusHour = deptsDTO.BonusHour,
-                WorkDays = deptsDTO.WorkDays
-            };
-           await _DeptRepo.AddAsync(department);
+            string pattern = @"^([0-1][0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])$";
+            Regex regex = new Regex(pattern);
+
+            if ((!regex.IsMatch(deptsDTO.ComingTime) && !regex.IsMatch(deptsDTO.TimeToLeave)) || !ModelState.IsValid)
+                return BadRequest();
+
+            //User must at least choose one holiday day, if he choose first holiday then works day would be 6, else it would be 5 and in front side we won't make second holiday input active untill user choose first day.
+            //_ = deptsDTO.SecondOfficalHoliday.IsNullOrEmpty() ? deptsDTO.WorkDays = 6 : deptsDTO.WorkDays = 5;
+
+            deptsDTO.WorkDays = (sbyte)workDays;
+            var department = mapper.Map<Department>(deptsDTO);
+            await _DeptRepo.AddAsync(department);
             string uri = Url.Action(nameof(GetOneDept), new { id = department.Id });
 
-         return Created(uri, "Created succsessfully");
-
-
-            #region
-            //if (ModelState.IsValid)
-            //{
-            //    try
-            //    {
-            //        string inputTime = deptsDTO.ComingTime;
-
-            //        string[] timeParts = inputTime.Split(':');
-            //        if (timeParts.Length == 3)
-            //        {
-            //            if (int.TryParse(timeParts[0], out int hour) &&
-            //                int.TryParse(timeParts[1], out int min) &&
-            //                int.TryParse(timeParts[2], out int sec))
-            //            {
-            //                TimeSpan comingTime = new TimeSpan(hour, min, sec);
-            //                var department = mapper.Map<Department>(deptsDTO);
-
-            //                await _DeptRepo.AddAsync(department);
-            //                string uri = Url.Action(nameof(GetOneDept), new { id = department.Id });
-
-            //                return Created(uri, "Created succsessfully");
-            //            }
-
-            //        }
-            //         return BadRequest("Time does not match the expected format (HH:mm:ss)."); 
-
-            //    }
-            //    catch (Exception ex)
-            //    {
-
-            //        throw;
-            //    }
-            //}
-            //return BadRequest();
-            #endregion
+            return Created(uri, "Created succsessfully");
         }
 
         [HttpPut("{name:alpha}")]
@@ -127,15 +94,17 @@ namespace HRSystem.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult> SoftDelete(int id)
+        public async Task<ActionResult> SoftDelete(string name)
         {
-            var department = _DeptRepo.GetByIdAsync(id);
-            if (department is not null)
+            var specification = new DeptIncludeNavPropsSpecification(name);
+            var department = await _DeptRepo.GetSpecified(specification);
+            if (department is null)
             {
-              await _DeptRepo.DeleteAsync(id);
-                return StatusCode(200, "Deleted Succsessfully");
+                return NotFound();
             }
-            return NotFound("Element isn't exist");
+               await _DeptRepo.DeleteAsync(name);
+
+                return StatusCode(200, "Deleted Succsessfully");
         }
     }
 }
