@@ -14,12 +14,14 @@ namespace HRDomain.Entities
         // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
         // Foriegn Key From Vacations Table and the Second Part of PK
 
+
         //>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>
         // Vacation Table One To Many Relation
         [ForeignKey("Employee")]
         public int? EmployeeId { get; set; }
         [InverseProperty("EmployeeVacations")]
         public Employee Employee { get; set; } // Navigational Property
+
         //>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>
         // Vacation Table One To Many Relation
         [ForeignKey("Vacation")]

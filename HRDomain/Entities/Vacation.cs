@@ -16,6 +16,7 @@ namespace HRDomain.Entities
         public bool Holiday {  get; set; }
         [JsonConverter(typeof(DateCustomConverter))]
         public DateOnly Date {  get; set; }
+
         //>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>
         // EmployeeVacation One To Many Relation
         [InverseProperty("Vacation")]

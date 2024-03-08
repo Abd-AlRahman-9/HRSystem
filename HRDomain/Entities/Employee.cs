@@ -48,14 +48,17 @@ namespace HRDomain.Entities
         public int? DeptId { get; set; }
         [InverseProperty("Employees")]
         public Department Department { get; set; } // Navigational Property
+
         //>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>
         // Department Table One To One
         [InverseProperty("Manager")]
         public Department department { get; set; } //Navigational Property
+
         //>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>
         // EmployeeVacation Table One To Many Relation
         [InverseProperty("Employee")]
         public List<EmployeeVacation> EmployeeVacations { get; set; } = new List<EmployeeVacation>();
+
         //>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>
         // EmployeeAttendace Table One To Many Relation
         [InverseProperty("Employee")]
