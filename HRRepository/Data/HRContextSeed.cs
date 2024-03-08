@@ -15,26 +15,26 @@ namespace HRRepository.Data
         {
             try
             {
-                if (!context.Vacations.Any())
-                {
-                    var vacationsData = File.ReadAllText("../HRRepository/Data/DataSeeding/Vacation.json");
-                    var Vacations = JsonSerializer.Deserialize<List<Vacation>>(vacationsData);
-                    foreach (var vacation in Vacations)
-                    {
-                        context.Set<Vacation>().Add(vacation);
-                    }
+                //if (!context.Vacations.Any())
+                //{
+                //    var vacationsData = File.ReadAllText("../HRRepository/Data/DataSeeding/Vacation.json");
+                //    var Vacations = JsonSerializer.Deserialize<List<Vacation>>(vacationsData);
+                //    foreach (var vacation in Vacations)
+                //    {
+                //        context.Set<Vacation>().Add(vacation);
+                //    }
 
-                }
+                //}
 
-                if (!context.Departments.Any())
-                {
-                    var departmentsData = File.ReadAllText("../HRRepository/Data/DataSeeding/Department.json");
-                    var Departments = JsonSerializer.Deserialize<List<Department>>(departmentsData);
-                    foreach (var department in Departments)
-                    {
-                        context.Set<Department>().Add(department);
-                    }
-                }
+                //if (!context.Departments.Any())
+                //{
+                //    var departmentsData = File.ReadAllText("../HRRepository/Data/DataSeeding/Department.json");
+                //    var Departments = JsonSerializer.Deserialize<List<Department>>(departmentsData);
+                //    foreach (var department in Departments)
+                //    {
+                //        context.Set<Department>().Add(department);
+                //    }
+                //}
 
 
                 //NOTE:you must care about the order of seeding
@@ -57,6 +57,8 @@ namespace HRRepository.Data
                         }
 
                         context.Set<Employee>().Add(Employee);
+                        await context.SaveChangesAsync();
+
                     }
                 }
 
@@ -102,7 +104,6 @@ namespace HRRepository.Data
                         }
                     }
                 }
-                await context.SaveChangesAsync();
             }
             catch (Exception ex)
             {
