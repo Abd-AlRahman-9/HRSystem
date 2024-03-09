@@ -65,7 +65,7 @@ namespace HRSystem
                 var context = services.GetRequiredService<HRContext>();
                 await context.Database.MigrateAsync();
 
-                //await HRContextSeed.SeedAsync(context,loggerFactory);
+                await HRContextSeed.SeedAsync(context,loggerFactory);
             }
             catch (Exception ex)
             {

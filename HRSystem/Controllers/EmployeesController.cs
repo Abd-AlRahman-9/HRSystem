@@ -63,10 +63,7 @@ namespace HRSystem.Controllers
             {
 
                 throw new Exception(ex.Message,ex);
-            }
-
-            
-            
+            } 
         }
     }
 }
