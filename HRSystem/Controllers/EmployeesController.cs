@@ -13,9 +13,9 @@ namespace HRSystem.Controllers
     {
         private readonly GenericRepository<Department> _DeptRepo;
         private readonly GenericRepository<Employee> _EmpRepo;
-        private readonly Mapper mapper;
+        private readonly IMapper mapper;
 
-        public EmployeesController(GenericRepository<Employee> repository,GenericRepository<Department> DeptRepo,Mapper mapper)
+        public EmployeesController(GenericRepository<Employee> repository,GenericRepository<Department> DeptRepo,IMapper mapper)
         {
             this._DeptRepo = DeptRepo;
             this._EmpRepo = repository;
