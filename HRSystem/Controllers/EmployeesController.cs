@@ -48,5 +48,25 @@ namespace HRSystem.Controllers
             var Emp = await _EmpRepo.GetSpecified(specification);
             return Ok(mapper.Map<Employee, EmployeesDTO>(Emp));
         }
+
+        [HttpPost]
+        public async Task<ActionResult> Create(EmployeesDTO employeesDTO)
+        {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+            try
+            {
+                Employee employee = mapper.Map<Employee>(employeesDTO);
+               await _EmpRepo.AddAsync(employee);
+                return Created();
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message,ex);
+            }
+
+            
+            
+        }
     }
 }

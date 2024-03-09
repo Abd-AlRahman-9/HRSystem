@@ -12,9 +12,9 @@ namespace HRSystem.Controllers
     public class SettingsController : HRBaseController
     {
         private readonly GenericRepository<Department> _DeptRepo;
-        private readonly Mapper mapper;
+        private readonly IMapper mapper;
 
-        public SettingsController(GenericRepository<Department> repository, Mapper mapper)
+        public SettingsController(GenericRepository<Department> repository, IMapper mapper)
         {
             this._DeptRepo = repository;
             this.mapper = mapper;
