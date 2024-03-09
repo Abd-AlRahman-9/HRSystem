@@ -20,7 +20,7 @@ namespace HRSystem.Helpers
                 .ReverseMap()
                 .ForMember(Att => Att.Attendance, Opt => Opt.MapFrom(DTO => TimeSpan.Parse(DTO.ComingTime)))
                 .ForMember(Att => Att.Leave, Opt => Opt.MapFrom(DTO => TimeSpan.Parse(DTO.LeaveTime)))
-                .ForMember(Att=>Att.Date,Opt=>Opt.MapFrom(DTO=>DateOnly.Parse(DTO.DateOfTheDay)));
+                .ForMember(Att => Att.Date, Opt => Opt.MapFrom(DTO => DateOnly.Parse(DTO.DateOfTheDay)));
 
             // For Department 
             CreateMap<Department, GetDeptsDTO>()
@@ -49,15 +49,15 @@ namespace HRSystem.Helpers
                 .ForMember(DTO => DTO.DateOfBirth, Opt => Opt.MapFrom(Emp => Emp.BirthDate))
                 .ForMember(DTO => DTO.HiringDate, Opt => Opt.MapFrom(Emp => Emp.HireData))
                 .ReverseMap()
-                .ForMember(Emp=>Emp.BirthDate,Opt=>Opt.MapFrom(DTO=>DateOnly.Parse(DTO.DateOfBirth)))
-                .ForMember(Emp=>Emp.HireData,Opt=>Opt.MapFrom(DTO=>DateOnly.Parse(DTO.HiringDate)));
+                .ForMember(Emp => Emp.BirthDate, Opt => Opt.MapFrom(DTO => DateOnly.Parse(DTO.DateOfBirth)))
+                .ForMember(Emp => Emp.HireData, Opt => Opt.MapFrom(DTO => DateOnly.Parse(DTO.HiringDate)));
 
             // For Holidays
             CreateMap<Vacation, OfficialHolidaysDTO>()
                 .ForMember(DTO => DTO.HolidayName, Opt => Opt.MapFrom(Hol => Hol.Name))
                 .ForMember(DTO => DTO.DateOnTheCurrentYear, Opt => Opt.MapFrom(Hol => Hol.Date.ToString("dd-MM-yyyy")))
                 .ReverseMap()
-                .ForMember(Hol=>Hol.Date,Opt=>Opt.MapFrom(DTO=>DateOnly.Parse(DTO.DateOnTheCurrentYear)));
+                .ForMember(Hol => Hol.Date, Opt => Opt.MapFrom(DTO => DateOnly.Parse(DTO.DateOnTheCurrentYear)));
         }
     }
 }
