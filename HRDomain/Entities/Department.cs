@@ -25,7 +25,7 @@ namespace HRDomain.Entities
         //>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>
         // Employee Table One T One Relation
         [ForeignKey("Manager")]
-        public int? ManagerId { get; set; }
+        public int ManagerId { get; set; }
         [InverseProperty("department")]
         public Employee Manager { get; set; } // Navigational Property
         //>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>

@@ -55,7 +55,7 @@ namespace HRSystem.Helpers
             // For Holidays
             CreateMap<Vacation, OfficialHolidaysDTO>()
                 .ForMember(DTO => DTO.HolidayName, Opt => Opt.MapFrom(Hol => Hol.Name))
-                .ForMember(DTO => DTO.DateOnTheCurrentYear, Opt => Opt.MapFrom(Hol => Hol.Date.ToString()))
+                .ForMember(DTO => DTO.DateOnTheCurrentYear, Opt => Opt.MapFrom(Hol => Hol.Date.ToString("dd-MM-yyyy")))
                 .ReverseMap()
                 .ForMember(Hol=>Hol.Date,Opt=>Opt.MapFrom(DTO=>DateOnly.Parse(DTO.DateOnTheCurrentYear)));
         }

@@ -8,7 +8,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.SqlServer.Server;
+using System;
 using System.Globalization;
+using System.Linq.Expressions;
 using System.Text.RegularExpressions;
 
 namespace HRSystem.Controllers
@@ -82,14 +84,15 @@ namespace HRSystem.Controllers
         [HttpPut("{name:alpha}")]
         public async Task<ActionResult> Edit(string name,GetDeptsDTO deptsDTO)
         {
-            var specification = new DeptIncludeNavPropsSpecification(name);
+            var specification = new DeptIncludeNavPropsSpecification(deptsDTO.DepartmentName);
             var department = await _DeptRepo.GetSpecified(specification);
             if (department is null)
             {
                 return NotFound();
             }
            var dept= mapper.Map<Department>(deptsDTO);
-           await _DeptRepo.UpdateAsync(name, dept);
+            Expression<Func<Department, bool>> predicate = d => d.Name == name;
+            await _DeptRepo.UpdateAsync(predicate,name,dept);
             return StatusCode(202);
         }
 
@@ -102,7 +105,8 @@ namespace HRSystem.Controllers
             {
                 return NotFound();
             }
-               await _DeptRepo.DeleteAsync(name);
+            Expression<Func<Department, bool>> predicate= d => d.Name == name;
+               await _DeptRepo.DeleteAsync( predicate, name);
 
                 return StatusCode(200, "Deleted Succsessfully");
         }

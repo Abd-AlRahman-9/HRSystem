@@ -13,7 +13,7 @@ namespace HRDomain.Entities
     {
         public string Name { get; set; }
         // this bool field indicates this day was a official holiday (Will not Decrease the salary)
-        public bool Holiday {  get; set; }
+        public bool Holiday { get; set; } = true;
         [JsonConverter(typeof(DateCustomConverter))]
         public DateOnly Date {  get; set; }
         //>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>

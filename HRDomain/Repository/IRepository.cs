@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using HRDomain.Entities;
@@ -13,8 +14,8 @@ namespace HRDomain.Repository
         Task<int> GetCountAsync(ISpecification<T> specification);
         Task<IEnumerable<T>> GetAllWithSpecificationsAsync(ISpecification<T> specification);
         Task AddAsync(T entity);
-        Task UpdateAsync(string name,T entity);
-        Task DeleteAsync(string name);
+        Task UpdateAsync(Expression<Func<T, bool>> predicate, string date,T entity);
+        Task DeleteAsync(Expression<Func<T, bool>> predicate, string name);
         Task<T> GetSpecified(ISpecification<T> specification);
         //Task<T> GetByNameWithSpecificationAsync(ISpecification<T> specification);
         //Task<T> GetByDateWithSpecificationAsync(ISpecification<T> specification);

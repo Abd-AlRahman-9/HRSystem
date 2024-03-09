@@ -63,7 +63,7 @@ namespace HRRepository.Data.Migrations
                         .IsUnique()
                         .HasFilter("[ManagerId] IS NOT NULL");
 
-                    b.ToTable("Departments");
+                    b.ToTable("Departments", (string)null);
                 });
 
             modelBuilder.Entity("HRDomain.Entities.Employee", b =>
@@ -130,7 +130,7 @@ namespace HRRepository.Data.Migrations
 
                     b.HasIndex("ManagerId");
 
-                    b.ToTable("Employees");
+                    b.ToTable("Employees", (string)null);
                 });
 
             modelBuilder.Entity("HRDomain.Entities.EmployeeAttendace", b =>
@@ -166,7 +166,7 @@ namespace HRRepository.Data.Migrations
 
                     b.HasIndex("EmployeeId");
 
-                    b.ToTable("EmployeeAttendaces");
+                    b.ToTable("EmployeeAttendaces", (string)null);
                 });
 
             modelBuilder.Entity("HRDomain.Entities.EmployeeVacation", b =>
@@ -192,7 +192,7 @@ namespace HRRepository.Data.Migrations
 
                     b.HasIndex("VacationId");
 
-                    b.ToTable("EmployeeVacations");
+                    b.ToTable("EmployeeVacations", (string)null);
                 });
 
             modelBuilder.Entity("HRDomain.Entities.Vacation", b =>
@@ -219,7 +219,7 @@ namespace HRRepository.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Vacations");
+                    b.ToTable("Vacations", (string)null);
                 });
 
             modelBuilder.Entity("HRDomain.Entities.Department", b =>

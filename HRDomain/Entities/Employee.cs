@@ -14,7 +14,7 @@ namespace HRDomain.Entities
     //    Female=1, female=1, F=1, f=1,
     //    Unknown=2, unknown=2
     //}
-    public class Employee:BaseTable,INamePropLSP
+    public class Employee : BaseTable, INamePropLSP
     {
         public string Name { get; set; }
         // search about the best practice of the national id prop
@@ -41,7 +41,7 @@ namespace HRDomain.Entities
         [InverseProperty("employees")]
         public Employee manager { get; set; } // Navigational Property
         [InverseProperty("manager")]
-        public List<Employee> employees { get; set;} // Navgational Property
+        public List<Employee> employees { get; set; } // Navgational Property
         //>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>
         // Department Table One To Many
         [ForeignKey("Department")]
@@ -59,6 +59,6 @@ namespace HRDomain.Entities
         //>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>
         // EmployeeAttendace Table One To Many Relation
         [InverseProperty("Employee")]
-        public List<EmployeeAttendace> employeeAttendaces { get; set; }= new List<EmployeeAttendace>();
+        public List<EmployeeAttendace> employeeAttendaces { get; set; } = new List<EmployeeAttendace>();
     }
 }

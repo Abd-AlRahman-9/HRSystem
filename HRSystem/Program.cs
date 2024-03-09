@@ -10,6 +10,8 @@ using Microsoft.AspNetCore.Mvc;
 using HRSystem.Helpers;
 using Microsoft.EntityFrameworkCore;
 using HRDomain.Entities;
+using AutoMapper;
+using HRSystem.DTO;
 
 namespace HRSystem
 {
@@ -37,6 +39,7 @@ namespace HRSystem
             //Add HRContext Servise
             builder.Services.AddDbContext<HRContext>(options => { options.UseSqlServer(builder.Configuration.GetConnectionString("Default")); });
 
+
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
@@ -44,6 +47,7 @@ namespace HRSystem
 
             builder.Services.AddScoped<GenericRepository<Department>>();
             builder.Services.AddScoped<GenericRepository<Employee>>();
+            builder.Services.AddScoped<GenericRepository<Vacation>>();
 
 
             //builder.Services.AddAutoMapper(typeof(MappingProfiles));
