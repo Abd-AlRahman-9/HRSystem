@@ -13,9 +13,9 @@ namespace HRSystem.Controllers
     {
         private readonly GenericRepository<Department> _DeptRepo;
         private readonly GenericRepository<Employee> _EmpRepo;
-        private readonly Mapper mapper;
+        private readonly IMapper mapper;
 
-        public EmployeesController(GenericRepository<Employee> repository,GenericRepository<Department> DeptRepo,Mapper mapper)
+        public EmployeesController(GenericRepository<Employee> repository,GenericRepository<Department> DeptRepo,IMapper mapper)
         {
             this._DeptRepo = DeptRepo;
             this._EmpRepo = repository;
@@ -47,6 +47,26 @@ namespace HRSystem.Controllers
             var specification = new EmpIncludeNavPropsSpecification(NationalId);
             var Emp = await _EmpRepo.GetSpecified(specification);
             return Ok(mapper.Map<Employee, EmployeesDTO>(Emp));
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> Create(EmployeesDTO employeesDTO)
+        {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+            try
+            {
+                Employee employee = mapper.Map<Employee>(employeesDTO);
+               await _EmpRepo.AddAsync(employee);
+                return Created();
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message,ex);
+            }
+
+            
+            
         }
     }
 }

@@ -15,7 +15,6 @@ namespace HRRepository.Data
         {
             try
             {
-<<<<<<< HEAD
                 if (!context.Vacations.Any())
                 {
                     var vacationsData = File.ReadAllText("../HRRepository/Data/DataSeeding/Vacation.json");
@@ -36,8 +35,8 @@ namespace HRRepository.Data
                         context.Set<Department>().Add(department);
                     }
                 }
-                 //NOTE:you must care about the order of seeding
-               // do all the code inside the if statement to each entity
+                //NOTE:you must care about the order of seeding
+                // do all the code inside the if statement to each entity
                 if (!context.Employees.Any())
                 {
                     var EmployeesData = File.ReadAllText("../HRRepository/Data/DataSeeding/Employee.json");
@@ -45,37 +44,39 @@ namespace HRRepository.Data
 
                     foreach (var Employee in Employees)
                     {
-                            context.Set<Employee>().Add(Employee);
+                        context.Set<Employee>().Add(Employee);
                     }
 
-                    if (!context.EmployeeAttendaces.Any())
+                }
+
+
+                if (!context.EmployeeAttendaces.Any())
+                {
+                    var attendData = File.ReadAllText("../HRRepository/Data/DataSeeding/EmployeeAttendace.json");
+                    var attendances = JsonSerializer.Deserialize<List<EmployeeAttendace>>(attendData);
+                    foreach (var attendance in attendances)
                     {
-                        var attendData = File.ReadAllText("../HRRepository/Data/DataSeeding/EmployeeAttendace.json");
-                        var attendances = JsonSerializer.Deserialize<List<EmployeeAttendace>>(attendData);
-                        foreach (var attendance in attendances)
+                        // Retrieve the corresponding employee from the context
+                        var employee = context.Employees.FirstOrDefault(e => e.Id == attendance.EmployeeId);
+                        if (employee != null)
                         {
-                            // Retrieve the corresponding employee from the context
-                            var employee = context.Employees.FirstOrDefault(e => e.Id == attendance.EmployeeId);
-                            if (employee != null)
-                            {
-                                attendance.Employee = employee; // Set the navigation property
-                                context.Set<EmployeeAttendace>().Add(attendance);
-                            }
+                            attendance.Employee = employee; // Set the navigation property
+                            context.Set<EmployeeAttendace>().Add(attendance);
                         }
                     }
-                    if (!context.EmployeeVacations.Any())
+                }
+                if (!context.EmployeeVacations.Any())
+                {
+                    var vacationData = File.ReadAllText("../HRRepository/Data/DataSeeding/EmployeeVacation.json");
+                    var vacations = JsonSerializer.Deserialize<List<EmployeeVacation>>(vacationData);
+                    foreach (var vacation in vacations)
                     {
-                        var vacationData = File.ReadAllText("../HRRepository/Data/DataSeeding/EmployeeVacation.json");
-                        var vacations = JsonSerializer.Deserialize<List<EmployeeVacation>>(vacationData);
-                        foreach (var vacation in vacations)
+                        // Retrieve the corresponding employee from the context
+                        var employee = context.Employees.FirstOrDefault(e => e.Id == vacation.EmployeeId);
+                        if (employee != null)
                         {
-                            // Retrieve the corresponding employee from the context
-                            var employee = context.Employees.FirstOrDefault(e => e.Id == vacation.EmployeeId);
-                            if (employee != null)
-                            {
-                                vacation.Employee = employee; // Set the navigation property
-                                context.Set<EmployeeVacation>().Add(vacation);
-                            }
+                            vacation.Employee = employee; // Set the navigation property
+                            context.Set<EmployeeVacation>().Add(vacation);
                         }
                     }
                     await context.SaveChangesAsync();
@@ -87,7 +88,6 @@ namespace HRRepository.Data
                 logger.LogError(ex, ex.Message);
             }
 
-=======
                 //if (!context.Vacations.Any())
                 //{
                 //    var vacationsData = File.ReadAllText("../HRRepository/Data/DataSeeding/Vacation.json");
@@ -109,27 +109,27 @@ namespace HRRepository.Data
                 //    }
                 //    await context.SaveChangesAsync();
                 //}
-                if (!context.Employees.Any())
-                {
-                    var EmployeesData = File.ReadAllText("../HRRepository/Data/DataSeeding/Employee.json");
-                    var Employees = JsonSerializer.Deserialize<List<Employee>>(EmployeesData);
+                //if (!context.Employees.Any())
+                //{
+                //    var EmployeesData = File.ReadAllText("../HRRepository/Data/DataSeeding/Employee.json");
+                //    var Employees = JsonSerializer.Deserialize<List<Employee>>(EmployeesData);
 
-                    foreach (var Employee in Employees)
-                    {
-                        // Check if the manager ID is valid
-                        if (Employees.Any(e => e.Id == Employee.ManagerId))
-                        {
-                            // Find the manager employee object
-                            var manager = Employees.First(e => e.Id == Employee.ManagerId);
+                //    foreach (var Employee in Employees)
+                //    {
+                //        // Check if the manager ID is valid
+                //        if (Employees.Any(e => e.Id == Employee.ManagerId))
+                //        {
+                //            // Find the manager employee object
+                //            var manager = Employees.First(e => e.Id == Employee.ManagerId);
 
-                            // Set the Manager property of the current employee
-                            Employee.manager = manager;
-                        }
+                //            // Set the Manager property of the current employee
+                //            Employee.manager = manager;
+                //        }
 
-                        context.Set<Employee>().Add(Employee);
-                    }
-                    await context.SaveChangesAsync();
-                }
+                //        context.Set<Employee>().Add(Employee);
+                //    }
+                //    await context.SaveChangesAsync();
+                //}
 
                 //if (!context.EmployeeAttendaces.Any())
                 //{
@@ -162,14 +162,13 @@ namespace HRRepository.Data
                 //    }
                 //}
                 //await context.SaveChangesAsync();
-            }
-            catch (Exception ex)
-            {
-                var logger = loggerFactory.CreateLogger<HRContextSeed>();
-                logger.LogError(ex, ex.Message);
-            }
+            //}
+            //catch (Exception ex)
+            //{
+            //    var logger = loggerFactory.CreateLogger<HRContextSeed>();
+            //    logger.LogError(ex, ex.Message);
+            //}
 
->>>>>>> cf8d654b7883d8525a02b881f13dc841cfafa3e7
         }
     }
 }

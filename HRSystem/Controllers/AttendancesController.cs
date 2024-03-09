@@ -14,9 +14,9 @@ namespace HRSystem.Controllers
         private readonly GenericRepository<EmployeeAttendace> _AttendRepo;
         private readonly GenericRepository<Department> _DeptRepo;
         private readonly GenericRepository<Employee> _EmpRepo;
-        private readonly Mapper mapper;
+        private readonly IMapper mapper;
 
-        public AttendancesController(GenericRepository<EmployeeAttendace> repository, Mapper mapper,GenericRepository<Employee> EmpRepo,GenericRepository<Department> DeptRepo)
+        public AttendancesController(GenericRepository<EmployeeAttendace> repository, IMapper mapper,GenericRepository<Employee> EmpRepo,GenericRepository<Department> DeptRepo)
         {
             this._DeptRepo = DeptRepo;
             this._EmpRepo = EmpRepo;

@@ -81,7 +81,7 @@ namespace HRSystem.Controllers
             return Created(uri, "Created succsessfully");
         }
 
-        [HttpPut("{name:alpha}")]
+        [HttpPut("{name}")]
         public async Task<ActionResult> Edit(string name,GetDeptsDTO deptsDTO)
         {
             var specification = new DeptIncludeNavPropsSpecification(deptsDTO.DepartmentName);
@@ -96,7 +96,7 @@ namespace HRSystem.Controllers
             return StatusCode(202);
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("delete/{name}")]
         public async Task<ActionResult> SoftDelete(string name)
         {
             var specification = new DeptIncludeNavPropsSpecification(name);
