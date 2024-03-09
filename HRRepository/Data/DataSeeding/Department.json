@@ -6,7 +6,6 @@
     "BonusHour": 2.00,
     "ComingTime": "9:00:00",
     "LeaveTime": "5:00:00",
-    "ManagerId": 1,
     "WorkDays": 5
   },
   {
@@ -16,7 +15,6 @@
     "BonusHour": 2.00,
     "ComingTime": "10:00:00",
     "LeaveTime": "6:00:00",
-    "ManagerId": 2,
     "WorkDays": 6
   },
   {
@@ -26,7 +24,6 @@
     "BonusHour": 2.00,
     "ComingTime": "8:00:00",
     "LeaveTime": "4:00:00",
-    "ManagerId": 3,
     "WorkDays": 6
   },
   {
@@ -36,7 +33,6 @@
     "BonusHour": 2.00,
     "ComingTime": "9:30:00",
     "LeaveTime": "5:30:00",
-    "ManagerId": 4,
     "WorkDays": 5
   },
   {
@@ -46,7 +42,6 @@
     "BonusHour": 2.00,
     "ComingTime": "8:30:00",
     "LeaveTime": "4:30:00",
-    "ManagerId": 5,
     "WorkDays": 4
   },
   {
@@ -56,7 +51,6 @@
     "BonusHour": 2.00,
     "ComingTime": "9:00:00",
     "LeaveTime": "5:00:00",
-    "ManagerId": 6,
     "WorkDays": 6
   },
   {
@@ -66,7 +60,6 @@
     "BonusHour": 3.00,
     "ComingTime": "9:00:00",
     "LeaveTime": "5:00:00",
-    "ManagerId": 7,
     "WorkDays": 6
   },
   {
@@ -76,7 +69,6 @@
     "BonusHour": 3.00,
     "ComingTime": "10:30:00",
     "LeaveTime": "6:30:00",
-    "ManagerId": 8,
     "WorkDays": 5
   },
   {
@@ -86,7 +78,6 @@
     "BonusHour": 2.50,
     "ComingTime": "10:30:00",
     "LeaveTime": "6:30:00",
-    "ManagerId": 9,
     "WorkDays": 6
   },
   {
@@ -96,7 +87,6 @@
     "BonusHour": 2.00,
     "ComingTime": "9:00:00",
     "LeaveTime": "5:00:00",
-    "ManagerId": 10,
     "WorkDays": 6
   }
 ]

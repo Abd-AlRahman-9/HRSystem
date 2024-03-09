@@ -22,12 +22,14 @@ namespace HRDomain.Entities
         public TimeSpan ComingTime { get; set; } = new TimeSpan();
         [JsonConverter(typeof(TimeCustomConvertor))]
         public TimeSpan LeaveTime { get; set; }
+
         //>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>
         // Employee Table One T One Relation
         [ForeignKey("Manager")]
         public int ManagerId { get; set; }
         [InverseProperty("department")]
         public Employee Manager { get; set; } // Navigational Property
+
         //>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>
         // Employee Table One To Many Relation
         [InverseProperty("Department")]

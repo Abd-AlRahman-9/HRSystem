@@ -6,13 +6,13 @@
     "BirthDate": "07/05/1999",
     "Nationality": "China",
     "Address": "Apt 622",
-    "Gender ": "M",
+    "Gender": "M",
     "PhoneNumber": "3229175681",
     "VacationsRecord": 11,
     "Salary": 64307.09,
     "HireData": "03/07/2017",
     "ManagerId": null,
-    "DeptId":1
+    "DeptId": 1
   },
   {
     "Deleted": false,
@@ -21,13 +21,13 @@
     "BirthDate": "05/14/1999",
     "Nationality": "Russia",
     "Address": "Apt 1210",
-    "Gender ": "F",
+    "Gender": "F",
     "PhoneNumber": "3587264163",
     "VacationsRecord": 1,
     "Salary": 37112.9,
     "HireData": "07/15/2004",
     "ManagerId": null,
-    "DeptId":2
+    "DeptId": 2
   },
   {
     "Deleted": false,
@@ -36,13 +36,13 @@
     "BirthDate": "10/03/1995",
     "Nationality": "Kenya",
     "Address": "PO Box 28716",
-    "Gender ": "F",
+    "Gender": "F",
     "PhoneNumber": "6587533359",
     "VacationsRecord": 1,
     "Salary": 68039.75,
     "HireData": "04/03/2014",
     "ManagerId": null,
-    "DeptId":3
+    "DeptId": 3
   },
   {
     "Deleted": false,
@@ -51,13 +51,13 @@
     "BirthDate": "04/23/2001",
     "Nationality": "Italy",
     "Address": "7th Floor",
-    "Gender ": "F",
+    "Gender": "F",
     "PhoneNumber": "5057281063",
     "VacationsRecord": 14,
     "Salary": 12716.33,
     "HireData": "12/18/2023",
     "ManagerId": null,
-    "DeptId":4
+    "DeptId": 4
   },
   {
     "Deleted": false,
@@ -66,13 +66,13 @@
     "BirthDate": "05/08/1988",
     "Nationality": "China",
     "Address": "4th Floor",
-    "Gender ": "M",
+    "Gender": "M",
     "PhoneNumber": "2559077336",
     "VacationsRecord": 2,
     "Salary": 9919.4,
     "HireData": "10/14/2005",
     "ManagerId": null,
-    "DeptId":5
+    "DeptId": 5
   },
   {
     "Deleted": false,
@@ -81,13 +81,13 @@
     "BirthDate": "06/05/1999",
     "Nationality": "Portugal",
     "Address": "10th Floor",
-    "Gender ": "F",
+    "Gender": "F",
     "PhoneNumber": "4298118806",
     "VacationsRecord": 18,
     "Salary": 14214.18,
     "HireData": "08/01/2005",
     "ManagerId": null,
-    "DeptId":6
+    "DeptId": 6
   },
   {
     "Deleted": false,
@@ -96,13 +96,13 @@
     "BirthDate": "09/12/1990",
     "Nationality": "Spain",
     "Address": "PO Box 48522",
-    "Gender ": "M",
+    "Gender": "M",
     "PhoneNumber": "3565341726",
     "VacationsRecord": 11,
     "Salary": 32419.98,
     "HireData": "06/01/2009",
     "ManagerId": null,
-    "DeptId":7
+    "DeptId": 7
   },
   {
     "Deleted": false,
@@ -111,13 +111,13 @@
     "BirthDate": "08/27/1970",
     "Nationality": "Denmark",
     "Address": "Apt 1951",
-    "Gender ": "M",
+    "Gender": "M",
     "PhoneNumber": "7938821888",
     "VacationsRecord": 19,
     "Salary": 96015.62,
     "HireData": "11/11/2000",
     "ManagerId": null,
-    "DeptId":8
+    "DeptId": 8
   },
   {
     "Deleted": false,
@@ -126,13 +126,13 @@
     "BirthDate": "04/20/1965",
     "Nationality": "Indonesia",
     "Address": "PO Box 10320",
-    "Gender ": "F",
+    "Gender": "F",
     "PhoneNumber": "8307622283",
     "VacationsRecord": 13,
     "Salary": 69166.41,
     "HireData": "03/10/2004",
     "ManagerId": null,
-    "DeptId":9
+    "DeptId": 9
   },
   {
     "Deleted": false,
@@ -141,13 +141,13 @@
     "BirthDate": "03/30/1999",
     "Nationality": "United Kingdom",
     "Address": "14th Floor",
-    "Gender ": "F",
+    "Gender": "F",
     "PhoneNumber": "8691222020",
     "VacationsRecord": 6,
     "Salary": 27773.62,
     "HireData": "11/06/2019",
     "ManagerId": null,
-    "DeptId":10
+    "DeptId": 10
   },
   {
     "Deleted": false,
@@ -156,12 +156,12 @@
     "BirthDate": "08/22/2000",
     "Nationality": "Indonesia",
     "Address": "Room 1649",
-    "Gender ": "M",
+    "Gender": "M",
     "PhoneNumber": "5344914282",
     "VacationsRecord": 10,
     "Salary": 32134.39,
     "HireData": "02/09/2018",
-    "ManagerId": 1,
+    "ManagerId": null,
     "DeptId": 1
   },
   {
@@ -171,12 +171,12 @@
     "BirthDate": "05/08/1982",
     "Nationality": "Czech Republic",
     "Address": "Room 134",
-    "Gender ": "M",
+    "Gender": "M",
     "PhoneNumber": "8243457083",
     "VacationsRecord": 16,
     "Salary": 29015.74,
     "HireData": "01/30/2017",
-    "ManagerId": 2,
+    "ManagerId": null,
     "DeptId": 2
   },
   {
@@ -186,13 +186,13 @@
     "BirthDate": "06/09/1999",
     "Nationality": "Belarus",
     "Address": "16th Floor",
-    "Gender ": "M",
+    "Gender": "M",
     "PhoneNumber": "9646188082",
     "VacationsRecord": 8,
     "Salary": 41420.7,
     "HireData": "05/06/2022",
-    "ManagerId": 3,
-    "DeptId":3
+    "ManagerId": null,
+    "DeptId": 3
   },
   {
     "Deleted": false,
@@ -201,12 +201,12 @@
     "BirthDate": "10/08/2001",
     "Nationality": "Ukraine",
     "Address": "Apt 1610",
-    "Gender ": "F",
+    "Gender": "F",
     "PhoneNumber": "5267268885",
     "VacationsRecord": 15,
     "Salary": 11422.01,
     "HireData": "09/25/2023",
-    "ManagerId": 4,
+    "ManagerId": null,
     "DeptId": 4
   },
   {
@@ -216,12 +216,12 @@
     "BirthDate": "03/06/1999",
     "Nationality": "Russia",
     "Address": "16th Floor",
-    "Gender ": "M",
+    "Gender": "M",
     "PhoneNumber": "8654173447",
     "VacationsRecord": 8,
     "Salary": 37797.82,
     "HireData": "01/01/2022",
-    "ManagerId": 5,
+    "ManagerId": null,
     "DeptId": 5
   },
   {
@@ -231,12 +231,12 @@
     "BirthDate": "12/18/2003",
     "Nationality": "Peru",
     "Address": "Suite 79",
-    "Gender ": "F",
+    "Gender": "F",
     "PhoneNumber": "3528878351",
     "VacationsRecord": 11,
     "Salary": 85607.64,
     "HireData": "05/15/2021",
-    "ManagerId": 6,
+    "ManagerId": null,
     "DeptId": 6
   },
   {
@@ -246,12 +246,12 @@
     "BirthDate": "06/20/1990",
     "Nationality": "Tanzania",
     "Address": "Suite 66",
-    "Gender ": "M",
+    "Gender": "M",
     "PhoneNumber": "6212341260",
     "VacationsRecord": 16,
     "Salary": 60079.51,
     "HireData": "05/15/2015",
-    "ManagerId": 7,
+    "ManagerId": null,
     "DeptId": 7
   },
   {
@@ -261,12 +261,12 @@
     "BirthDate": "01/25/1999",
     "Nationality": "Poland",
     "Address": "Apt 318",
-    "Gender ": "F",
+    "Gender": "F",
     "PhoneNumber": "5744335274",
     "VacationsRecord": 18,
     "Salary": 62580.31,
     "HireData": "03/01/2023",
-    "ManagerId": 8,
+    "ManagerId": null,
     "DeptId": 8
   },
   {
@@ -276,12 +276,12 @@
     "BirthDate": "12/08/1990",
     "Nationality": "Armenia",
     "Address": "PO Box 95912",
-    "Gender ": "M",
+    "Gender": "M",
     "PhoneNumber": "4466554989",
     "VacationsRecord": 5,
     "Salary": 88647.12,
     "HireData": "11/25/2019",
-    "ManagerId": 9,
+    "ManagerId": null,
     "DeptId": 9
   },
   {
@@ -291,12 +291,12 @@
     "BirthDate": "08/14/1977",
     "Nationality": "Democratic Republic of the Congo",
     "Address": "Room 1737",
-    "Gender ": "F",
+    "Gender": "F",
     "PhoneNumber": "3406453466",
     "VacationsRecord": 10,
     "Salary": 37177.12,
     "HireData": "05/20/2004",
-    "ManagerId": 10,
+    "ManagerId": null,
     "DeptId": 10
   },
   {
@@ -306,12 +306,12 @@
     "BirthDate": "08/21/1988",
     "Nationality": "Japan",
     "Address": "Room 616",
-    "Gender ": "F",
+    "Gender": "F",
     "PhoneNumber": "7754162594",
     "VacationsRecord": 6,
     "Salary": 26390.38,
     "HireData": "09/17/2016",
-    "ManagerId": 1,
+    "ManagerId": null,
     "DeptId": 1
   },
   {
@@ -321,12 +321,12 @@
     "BirthDate": "06/22/1990",
     "Nationality": "Ethiopia",
     "Address": "Room 332",
-    "Gender ": "F",
+    "Gender": "F",
     "PhoneNumber": "9898190661",
     "VacationsRecord": 21,
     "Salary": 55952.7,
     "HireData": "09/29/2019",
-    "ManagerId": 2,
+    "ManagerId": null,
     "DeptId": 2
   },
   {
@@ -336,12 +336,12 @@
     "BirthDate": "07/10/2001",
     "Nationality": "Germany",
     "Address": "PO Box 95298",
-    "Gender ": "F",
+    "Gender": "F",
     "PhoneNumber": "6984600626",
     "VacationsRecord": 7,
     "Salary": 28871.79,
     "HireData": "09/29/2022",
-    "ManagerId": 3,
+    "ManagerId": null,
     "DeptId": 3
   },
   {
@@ -351,13 +351,13 @@
     "BirthDate": "11/03/1984",
     "Nationality": "Indonesia",
     "Address": "Room 1678",
-    "Gender ": "F",
+    "Gender": "F",
     "PhoneNumber": "3918981883",
     "VacationsRecord": 6,
     "Salary": 7526.8,
     "HireData": "01/09/2018",
-    "ManagerId": 4,
-    "DeptId":4
+    "ManagerId": null,
+    "DeptId": 4
   },
   {
     "Deleted": false,
@@ -366,12 +366,12 @@
     "BirthDate": "03/17/1979",
     "Nationality": "China",
     "Address": "Suite 87",
-    "Gender ": "M",
+    "Gender": "M",
     "PhoneNumber": "8919646015",
     "VacationsRecord": 9,
     "Salary": 83111.01,
     "HireData": "09/22/2015",
-    "ManagerId": 5,
+    "ManagerId": null,
     "DeptId": 5
   },
   {
@@ -381,12 +381,12 @@
     "BirthDate": "05/12/2000",
     "Nationality": "Brazil",
     "Address": "Suite 29",
-    "Gender ": "F",
+    "Gender": "F",
     "PhoneNumber": "8096485813",
     "VacationsRecord": 17,
     "Salary": 51783.84,
     "HireData": "10/07/2023",
-    "ManagerId": 6,
+    "ManagerId": null,
     "DeptId": 6
   },
   {
@@ -396,12 +396,12 @@
     "BirthDate": "02/17/1999",
     "Nationality": "Moldova",
     "Address": "Apt 1725",
-    "Gender ": "M",
+    "Gender": "M",
     "PhoneNumber": "1695438559",
     "VacationsRecord": 11,
     "Salary": 9853.77,
     "HireData": "06/24/2018",
-    "ManagerId": 7,
+    "ManagerId": null,
     "DeptId": 7
   },
   {
@@ -411,12 +411,12 @@
     "BirthDate": "09/27/1990",
     "Nationality": "Ukraine",
     "Address": "PO Box 95006",
-    "Gender ": "F",
+    "Gender": "F",
     "PhoneNumber": "9962005886",
     "VacationsRecord": 3,
     "Salary": 14097.37,
     "HireData": "09/29/2021",
-    "ManagerId": 8,
+    "ManagerId": null,
     "DeptId": 8
   },
   {
@@ -426,12 +426,12 @@
     "BirthDate": "08/19/2002",
     "Nationality": "Sweden",
     "Address": "Room 1752",
-    "Gender ": "M",
+    "Gender": "M",
     "PhoneNumber": "5293842762",
     "VacationsRecord": 8,
     "Salary": 71491.74,
     "HireData": "04/11/2024",
-    "ManagerId": 9,
+    "ManagerId": null,
     "DeptId": 9
   },
   {
@@ -441,12 +441,12 @@
     "BirthDate": "10/04/1988",
     "Nationality": "Czech Republic",
     "Address": "Room 950",
-    "Gender ": "M",
+    "Gender": "M",
     "PhoneNumber": "7106744231",
     "VacationsRecord": 21,
     "Salary": 21020.54,
     "HireData": "11/13/2019",
-    "ManagerId": 10,
+    "ManagerId": null,
     "DeptId": 10
   },
   {
@@ -456,12 +456,12 @@
     "BirthDate": "02/02/2012",
     "Nationality": "China",
     "Address": "Apt 1835",
-    "Gender ": "M",
+    "Gender": "M",
     "PhoneNumber": "3123233430",
     "VacationsRecord": 8,
     "Salary": 11796.72,
     "HireData": "04/01/2023",
-    "ManagerId": 1,
+    "ManagerId": null,
     "DeptId": 1
   },
   {
@@ -471,12 +471,12 @@
     "BirthDate": "03/24/2008",
     "Nationality": "Russia",
     "Address": "Apt 1810",
-    "Gender ": "F",
+    "Gender": "F",
     "PhoneNumber": "7355356919",
     "VacationsRecord": 2,
     "Salary": 69957.96,
     "HireData": "10/20/2023",
-    "ManagerId": 2,
+    "ManagerId": null,
     "DeptId": 2
   },
   {
@@ -486,12 +486,12 @@
     "BirthDate": "06/28/2003",
     "Nationality": "Sweden",
     "Address": "Apt 1573",
-    "Gender ": "M",
+    "Gender": "M",
     "PhoneNumber": "5584896379",
     "VacationsRecord": 7,
     "Salary": 16448.08,
     "HireData": "12/19/2002",
-    "ManagerId": 3,
+    "ManagerId": null,
     "DeptId": 3
   },
   {
@@ -501,12 +501,12 @@
     "BirthDate": "12/09/1995",
     "Nationality": "United States",
     "Address": "Apt 1991",
-    "Gender ": "F",
+    "Gender": "F",
     "PhoneNumber": "7818547949",
     "VacationsRecord": 17,
     "Salary": 57243.88,
     "HireData": "03/03/2004",
-    "ManagerId": 4,
+    "ManagerId": null,
     "DeptId": 4
   },
   {
@@ -516,12 +516,12 @@
     "BirthDate": "10/10/1991",
     "Nationality": "China",
     "Address": "Apt 1100",
-    "Gender ": "F",
+    "Gender": "F",
     "PhoneNumber": "1944691193",
     "VacationsRecord": 8,
     "Salary": 68724.89,
     "HireData": "10/31/2007",
-    "ManagerId": 5,
+    "ManagerId": null,
     "DeptId": 5
   },
   {
@@ -531,12 +531,12 @@
     "BirthDate": "01/23/1982",
     "Nationality": "Slovenia",
     "Address": "PO Box 34137",
-    "Gender ": "M",
+    "Gender": "M",
     "PhoneNumber": "4718684755",
     "VacationsRecord": 15,
     "Salary": 48542.63,
     "HireData": "02/24/2001",
-    "ManagerId": 6,
+    "ManagerId": null,
     "DeptId": 6
   },
   {
@@ -546,12 +546,12 @@
     "BirthDate": "04/30/2013",
     "Nationality": "Brazil",
     "Address": "Room 1538",
-    "Gender ": "F",
+    "Gender": "F",
     "PhoneNumber": "1264145954",
     "VacationsRecord": 9,
     "Salary": 29793.09,
     "HireData": "03/20/2012",
-    "ManagerId": 7,
+    "ManagerId": null,
     "DeptId": 7
   },
   {
@@ -561,12 +561,12 @@
     "BirthDate": "05/15/1998",
     "Nationality": "Poland",
     "Address": "Apt 133",
-    "Gender ": "M",
+    "Gender": "M",
     "PhoneNumber": "4017413121",
     "VacationsRecord": 2,
     "Salary": 49843.99,
     "HireData": "02/08/2000",
-    "ManagerId": 8,
+    "ManagerId": null,
     "DeptId": 8
   },
   {
@@ -576,12 +576,12 @@
     "BirthDate": "11/14/1981",
     "Nationality": "Russia",
     "Address": "Suite 52",
-    "Gender ": "M",
+    "Gender": "M",
     "PhoneNumber": "9775522446",
     "VacationsRecord": 4,
     "Salary": 93968.66,
     "HireData": "10/12/2022",
-    "ManagerId": 9,
+    "ManagerId": null,
     "DeptId": 9
   },
   {
@@ -591,12 +591,12 @@
     "BirthDate": "05/14/1990",
     "Nationality": "Macedonia",
     "Address": "Apt 1900",
-    "Gender ": "F",
+    "Gender": "F",
     "PhoneNumber": "1715992582",
     "VacationsRecord": 8,
     "Salary": 87893.21,
     "HireData": "12/31/2018",
-    "ManagerId": 10,
+    "ManagerId": null,
     "DeptId": 10
   },
   {
@@ -606,12 +606,12 @@
     "BirthDate": "11/30/1990",
     "Nationality": "China",
     "Address": "8th Floor",
-    "Gender ": "M",
+    "Gender": "M",
     "PhoneNumber": "5264416592",
     "VacationsRecord": 19,
     "Salary": 24991.48,
     "HireData": "12/06/2021",
-    "ManagerId": 1,
+    "ManagerId": null,
     "DeptId": 1
   },
   {
@@ -621,12 +621,12 @@
     "BirthDate": "08/10/2000",
     "Nationality": "Portugal",
     "Address": "PO Box 83189",
-    "Gender ": "F",
+    "Gender": "F",
     "PhoneNumber": "8082393884",
     "VacationsRecord": 2,
     "Salary": 47669.14,
     "HireData": "09/16/2023",
-    "ManagerId": 2,
+    "ManagerId": null,
     "DeptId": 2
   },
   {
@@ -636,12 +636,12 @@
     "BirthDate": "05/29/1990",
     "Nationality": "China",
     "Address": "PO Box 53157",
-    "Gender ": "M",
+    "Gender": "M",
     "PhoneNumber": "6352705449",
     "VacationsRecord": 5,
     "Salary": 9356.04,
     "HireData": "02/18/2022",
-    "ManagerId": 3,
+    "ManagerId": null,
     "DeptId": 3
   },
   {
@@ -651,12 +651,12 @@
     "BirthDate": "11/15/1999",
     "Nationality": "China",
     "Address": "Suite 79",
-    "Gender ": "F",
+    "Gender": "F",
     "PhoneNumber": "2325923517",
     "VacationsRecord": 3,
     "Salary": 17324.17,
     "HireData": "04/20/2023",
-    "ManagerId": 4,
+    "ManagerId": null,
     "DeptId": 4
   },
   {
@@ -666,12 +666,12 @@
     "BirthDate": "11/22/1969",
     "Nationality": "Peru",
     "Address": "1st Floor",
-    "Gender ": "F",
+    "Gender": "F",
     "PhoneNumber": "1622778798",
     "VacationsRecord": 9,
     "Salary": 48178.41,
     "HireData": "05/17/2014",
-    "ManagerId": 5,
+    "ManagerId": null,
     "DeptId": 5
   },
   {
@@ -681,12 +681,12 @@
     "BirthDate": "02/04/1990",
     "Nationality": "Greece",
     "Address": "Apt 1679",
-    "Gender ": "F",
+    "Gender": "F",
     "PhoneNumber": "8243080902",
     "VacationsRecord": 5,
     "Salary": 45612.87,
     "HireData": "08/14/2018",
-    "ManagerId": 6,
+    "ManagerId": null,
     "DeptId": 6
   },
   {
@@ -696,12 +696,12 @@
     "BirthDate": "04/13/1999",
     "Nationality": "Poland",
     "Address": "8th Floor",
-    "Gender ": "F",
+    "Gender": "F",
     "PhoneNumber": "1857807878",
     "VacationsRecord": 12,
     "Salary": 24114.8,
     "HireData": "06/01/2022",
-    "ManagerId": 7,
+    "ManagerId": null,
     "DeptId": 7
   },
   {
@@ -711,12 +711,12 @@
     "BirthDate": "05/08/1980",
     "Nationality": "Poland",
     "Address": "PO Box 14183",
-    "Gender ": "F",
+    "Gender": "F",
     "PhoneNumber": "1835517606",
     "VacationsRecord": 16,
     "Salary": 78587.81,
     "HireData": "08/26/2013",
-    "ManagerId": 8,
+    "ManagerId": null,
     "DeptId": 8
   },
   {
@@ -726,12 +726,12 @@
     "BirthDate": "03/26/1999",
     "Nationality": "Philippines",
     "Address": "Suite 45",
-    "Gender ": "F",
+    "Gender": "F",
     "PhoneNumber": "5724403045",
     "VacationsRecord": 16,
     "Salary": 70837.36,
     "HireData": "09/28/2024",
-    "ManagerId": 9,
+    "ManagerId": null,
     "DeptId": 9
   },
   {
@@ -741,12 +741,12 @@
     "BirthDate": "11/08/1990",
     "Nationality": "Russia",
     "Address": "Apt 1761",
-    "Gender ": "F",
+    "Gender": "F",
     "PhoneNumber": "5718872334",
     "VacationsRecord": 9,
     "Salary": 7568.07,
     "HireData": "01/27/2024",
-    "ManagerId": 10,
+    "ManagerId": null,
     "DeptId": 10
   }
 ]
