@@ -75,6 +75,8 @@ namespace HRSystem.Controllers
 
             deptsDTO.WorkDays = (sbyte)workDays;
             var department = mapper.Map<Department>(deptsDTO);
+           // department.ManagerId = 
+
             await _DeptRepo.AddAsync(department);
             string uri = Url.Action(nameof(GetOneDept), new { id = department.Id });
 

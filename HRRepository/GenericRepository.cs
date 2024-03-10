@@ -45,6 +45,7 @@ namespace HRRepository
         public async Task UpdateAsync(Expression<Func<T, bool>> predicate, string name, T entity)
         {
 
+
             var entityToEdit = await context.Set<T>().SingleOrDefaultAsync(predicate);
             if (entityToEdit != null)
             {
