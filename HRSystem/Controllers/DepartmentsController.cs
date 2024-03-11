@@ -3,6 +3,7 @@ using HRDomain.Entities;
 using HRDomain.Specification;
 using HRRepository;
 using HRSystem.DTO;
+using HRSystem.Error_Handling;
 using HRSystem.Helpers;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -32,6 +33,7 @@ namespace HRSystem.Controllers
         {
             var specification = new DeptIncludeNavPropsSpecification(Name);
             var Dept = await _DeptRepo.GetSpecified(specification);
+            if (Dept is null) return NotFound(new ErrorResponse(400));
             return Ok(mapper.Map<Department,GetDeptsDTO>(Dept));
         }
         [HttpGet]
@@ -49,18 +51,7 @@ namespace HRSystem.Controllers
             var count = await _DeptRepo.GetCountAsync(countSpec);
             return Ok(new Pagination<GetDeptsDTO>(P.PageIndex,P.PageSize,count,Data));
         }
-        //[HttpGet("{id:int}", Name = ("GetDepartmentById"))]
-        //public async Task<ActionResult> GetById(int id)
-        //{
-        //    var department = await _DeptRepo.GetByIdAsync(id);
-        //    if(department is null)
-        //    {
-        //        return BadRequest("Not Found!");
-        //    }
-        //    GetDeptsDTO deptsDTO = new();
-        //    deptsDTO = mapper.Map<GetDeptsDTO>(department);
-        //    return Ok(deptsDTO);
-        //}
+
         [HttpPost ("WorkDays: int")]
         public async Task<ActionResult> Create(GetDeptsDTO deptsDTO, int workDays)
         {
@@ -69,9 +60,6 @@ namespace HRSystem.Controllers
 
             if ((!regex.IsMatch(deptsDTO.ComingTime) && !regex.IsMatch(deptsDTO.TimeToLeave)) || !ModelState.IsValid)
                 return BadRequest();
-
-            //User must at least choose one holiday day, if he choose first holiday then works day would be 6, else it would be 5 and in front side we won't make second holiday input active untill user choose first day.
-            //_ = deptsDTO.SecondOfficalHoliday.IsNullOrEmpty() ? deptsDTO.WorkDays = 6 : deptsDTO.WorkDays = 5;
 
             deptsDTO.WorkDays = (sbyte)workDays;
             var department = mapper.Map<Department>(deptsDTO);

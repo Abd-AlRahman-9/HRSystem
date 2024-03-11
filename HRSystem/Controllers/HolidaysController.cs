@@ -4,11 +4,13 @@ using HRDomain.Entities;
 using HRDomain.Specification;
 using HRRepository;
 using HRSystem.DTO;
+using HRSystem.Error_Handling;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.OpenApi.Writers;
 using System.Globalization;
 using System.Linq.Expressions;
+using System.Reflection.Metadata.Ecma335;
 using System.Text.RegularExpressions;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
@@ -29,40 +31,52 @@ namespace HRSystem.Controllers
         public async Task<ActionResult<OfficialHolidaysDTO>> GetHoliday(string date)
         {
 
-            var specification = new VacIncludeNavPropsSpecification(DateOnlyCustomConverter.ToDateOnly(date));
+            var specification = new VacIncludeNavPropsSpecification(DateOnlyOperations.ToDateOnly(date));
             var Vac = await _VacRepo.GetSpecified(specification);
+            if (Vac == null) return NotFound(new ErrorResponse(400, $"{date} can't be found!"));
             return Ok(mapper.Map<Vacation, OfficialHolidaysDTO>(Vac));
         }
 
         [HttpPost]
         public async Task<ActionResult> Create(OfficialHolidaysDTO holidaysDTO)
         {
-            if (!ModelState.IsValid) return BadRequest();
+            if (!ModelState.IsValid) return BadRequest(HandleValidationErrors());
 
+            DateOnlyOperations.ToDateOnly(holidaysDTO.DateOnTheCurrentYear);
             var officialHoliday = mapper.Map<Vacation>(holidaysDTO);
-           await _VacRepo.AddAsync(officialHoliday);
+            //check if date is future date or past date
+            var date = officialHoliday.Date;
+            if (DateOnlyOperations.IsValidDate(date.Year, date.Month, date.Day))
+            {
+                await _VacRepo.AddAsync(officialHoliday);
 
-            string uri =  Url.Action(nameof(GetHoliday), new { officialHoliday.Date });
-            return Created(uri,"Created Succsessfully");
+                string uri = Url.Action(nameof(GetHoliday), new { officialHoliday.Date });
+                return Created(uri, "Created Succsessfully");
+            }
+           return BadRequest(new ErrorResponse(400, $"Date must be from " +
+               $"{DateTime.Now.Month}/{DateTime.Now.Year} to 12/2999"));
         }
 
         [HttpPut("edit/{date}")]
         public async Task<ActionResult> Edit(string date, OfficialHolidaysDTO holidaysDTO)
         {
-            var specification = new VacIncludeNavPropsSpecification(DateOnlyCustomConverter.ToDateOnly(date));
+            var specification = new VacIncludeNavPropsSpecification(DateOnlyOperations.ToDateOnly(date));
             var vacation = await _VacRepo.GetSpecified(specification);
 
             
             if (vacation is not null)
             {
-                DateOnlyCustomConverter.ToDateOnly(holidaysDTO.DateOnTheCurrentYear);
+              var currentDate=  DateOnlyOperations.ToDateOnly(holidaysDTO.DateOnTheCurrentYear);
                 var Vac = mapper.Map<Vacation>(holidaysDTO);
+                if (!DateOnlyOperations.IsValidDate(currentDate.Year, currentDate.Month, currentDate.Day))
+                    return BadRequest(new ErrorResponse(400, $"Date must be from " +
+                        $"{DateTime.Now.Month}/{DateTime.Now.Year} to 12/2999"));
+                Expression<Func<Vacation, bool>> predicate = v => v.Date == DateOnlyOperations.ToDateOnly(date);
 
-                Expression<Func<Vacation, bool>> predicate = v => v.Date == DateOnlyCustomConverter.ToDateOnly(date);
                await _VacRepo.UpdateAsync(predicate,date,Vac);
                 return StatusCode(202, "Updated Succsessfully");
             }
-            return NotFound();
+            return NotFound(new ErrorResponse(404));
         }
 
         [HttpDelete("delete/{date}")]
@@ -70,14 +84,15 @@ namespace HRSystem.Controllers
         {
             string pattern = @"^\d{2}-\d{2}-\d{4}$";
             Regex regex = new Regex(pattern);
+
             if (regex.IsMatch(date))
             {
 
-                Expression<Func<Vacation, bool>> predicate = v => v.Date==DateOnlyCustomConverter.ToDateOnly(date);
-                await _VacRepo.DeleteAsync(predicate,date);
-            return StatusCode(200, "Deleted Succsessfully");
+                Expression<Func<Vacation, bool>> predicate = v => v.Date == DateOnlyOperations.ToDateOnly(date);
+                await _VacRepo.DeleteAsync(predicate, date);
+                return StatusCode(200, "Deleted Succsessfully");
             }
-            return NotFound();
+            return NotFound(new ErrorResponse(404));
         }
     }
 }
