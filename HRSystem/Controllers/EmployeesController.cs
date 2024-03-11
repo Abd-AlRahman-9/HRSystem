@@ -3,9 +3,11 @@ using HRDomain.Entities;
 using HRDomain.Specification;
 using HRRepository;
 using HRSystem.DTO;
+using HRSystem.Error_Handling;
 using HRSystem.Helpers;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq.Expressions;
 
 namespace HRSystem.Controllers
 {
@@ -57,13 +59,36 @@ namespace HRSystem.Controllers
             {
                 Employee employee = mapper.Map<Employee>(employeesDTO);
                await _EmpRepo.AddAsync(employee);
-                return Created();
+              string url=  Url.Action(nameof(GetOneEmp),new {employee.NationalID});
+                return Created(url, "Created Succsessfully");
             }
             catch (Exception ex)
             {
 
                 throw new Exception(ex.Message,ex);
             } 
+        }
+
+        [HttpPut("edit/{ID}")]
+        public async Task<ActionResult> Edit(string ID, EmployeesDTO employeeDTO)
+        {
+            var specification = new EmpIncludeNavPropsSpecification(ID);
+            var employee = await _EmpRepo.GetSpecified(specification);
+            if (employee is null) return NotFound(new ErrorResponse(404));
+
+           Employee emp= mapper.Map<Employee>(employeeDTO);
+            
+            Expression<Func<Employee, bool>> predicate = e => e.NationalID == ID;
+           await _EmpRepo.UpdateAsync(predicate, ID, emp);
+            return StatusCode(202);
+        }
+
+        [HttpDelete("delete/{ID}")]
+        public async Task<ActionResult> Delete(string ID)
+        {
+            Expression<Func<Employee, bool>> predicate = e => e.NationalID == ID;
+           await _EmpRepo.DeleteAsync(predicate,ID);
+            return StatusCode(202, "Deleted Succsessfully");
         }
     }
 }

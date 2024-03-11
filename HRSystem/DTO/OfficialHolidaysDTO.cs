@@ -1,4 +1,6 @@
-﻿namespace HRSystem.DTO
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace HRSystem.DTO
 {
     public class OfficialHolidaysDTO
     {
