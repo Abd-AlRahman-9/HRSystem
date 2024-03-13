@@ -973,11 +973,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-<<<<<<< HEAD
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.3",
           "Microsoft.Data.SqlClient": "5.2.0"
-=======
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.3"
->>>>>>> ee211352028b2794003703c01ae4ed5cfa5276a3
         },
         "compile": {
           "bin/placeholder/HRDomain.dll": {}

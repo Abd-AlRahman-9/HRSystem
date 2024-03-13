@@ -11,11 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-<<<<<<< HEAD
-    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.0" />
-=======
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.3" />
->>>>>>> ee211352028b2794003703c01ae4ed5cfa5276a3
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.0" />
   </ItemGroup>
 
 </Project>

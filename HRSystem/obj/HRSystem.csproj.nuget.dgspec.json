@@ -40,15 +40,13 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-<<<<<<< HEAD
-            "Microsoft.Data.SqlClient": {
-              "target": "Package",
-              "version": "[5.2.0, )"
-=======
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.3, )"
->>>>>>> ee211352028b2794003703c01ae4ed5cfa5276a3
+            },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[5.2.0, )"
             }
           },
           "imports": [
@@ -225,6 +223,9 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+              "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\HRDomain.csproj": {
+                "projectPath": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\HRDomain.csproj"
+              },
               "C:\\Users\\ramad\\Desktop\\HRSystem\\HRRepository\\HRRepository.csproj": {
                 "projectPath": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRRepository\\HRRepository.csproj"
               },
