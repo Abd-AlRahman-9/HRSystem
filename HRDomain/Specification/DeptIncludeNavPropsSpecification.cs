@@ -37,7 +37,7 @@ namespace HRDomain.Specification
                 }
             }
         }
-        public DeptIncludeNavPropsSpecification(string name):base(D=>(D.Name==name)&&(D.Deleted==false))
+        public DeptIncludeNavPropsSpecification(string name) : base(D => (D.Name == name) && (D.Deleted == false))
         {
             Includes.Add(E => E.Manager);
         }
