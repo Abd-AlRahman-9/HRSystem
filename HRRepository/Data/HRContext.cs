@@ -20,7 +20,7 @@ namespace HRRepository.Data
         public DbSet<EmployeeAttendace> EmployeeAttendaces { get; set; }
         public HRContext() { }
 
-        public HRContext(DbContextOptions options) : base(options) { }
+        public HRContext(DbContextOptions<HRContext> options) : base(options) { }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 

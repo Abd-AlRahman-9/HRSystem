@@ -414,6 +414,7 @@ C:\Users\ramad\Desktop\HRSystem\HRSystem\obj\Debug\net8.0\refint\HRSystem.dll
 C:\Users\ramad\Desktop\HRSystem\HRSystem\obj\Debug\net8.0\HRSystem.pdb
 C:\Users\ramad\Desktop\HRSystem\HRSystem\obj\Debug\net8.0\HRSystem.genruntimeconfig.cache
 C:\Users\ramad\Desktop\HRSystem\HRSystem\obj\Debug\net8.0\ref\HRSystem.dll
+<<<<<<< HEAD
 C:\Users\hp\Desktop\HRSystem\HRSystem\bin\Debug\net8.0\de\Microsoft.Data.SqlClient.resources.dll
 C:\Users\hp\Desktop\HRSystem\HRSystem\bin\Debug\net8.0\es\Microsoft.Data.SqlClient.resources.dll
 C:\Users\hp\Desktop\HRSystem\HRSystem\bin\Debug\net8.0\fr\Microsoft.Data.SqlClient.resources.dll
@@ -427,3 +428,15 @@ C:\Users\hp\Desktop\HRSystem\HRSystem\bin\Debug\net8.0\zh-Hant\Microsoft.Data.Sq
 C:\Users\hp\Desktop\HRSystem\HRSystem\bin\Debug\net8.0\runtimes\unix\lib\net8.0\Microsoft.Data.SqlClient.dll
 C:\Users\hp\Desktop\HRSystem\HRSystem\bin\Debug\net8.0\runtimes\win\lib\net8.0\Microsoft.Data.SqlClient.dll
 C:\Users\hp\Desktop\HRSystem\HRSystem\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Runtime.Caching.dll
+=======
+C:\Users\ramad\Desktop\HRSystem\HRSystem\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\ramad\Desktop\HRSystem\HRSystem\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\ramad\Desktop\HRSystem\HRSystem\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\ramad\Desktop\HRSystem\HRSystem\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\ramad\Desktop\HRSystem\HRSystem\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\ramad\Desktop\HRSystem\HRSystem\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\ramad\Desktop\HRSystem\HRSystem\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\ramad\Desktop\HRSystem\HRSystem\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\ramad\Desktop\HRSystem\HRSystem\bin\Debug\net8.0\HRService.dll
+C:\Users\ramad\Desktop\HRSystem\HRSystem\bin\Debug\net8.0\HRService.pdb
+>>>>>>> ee211352028b2794003703c01ae4ed5cfa5276a3

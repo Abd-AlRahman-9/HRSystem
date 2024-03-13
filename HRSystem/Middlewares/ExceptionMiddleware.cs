@@ -28,7 +28,7 @@ namespace HRSystem.Middlewares
                 logger.LogError(ex, ex.Message);
                 context.Response.ContentType = "application/json";
                 context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
-              var response=   environment.IsDevelopment() ? new ApiExseptionResponse(500,ex.Message,ex.StackTrace.ToString()) : new ApiExseptionResponse(500);
+              var response=   environment.IsDevelopment() ? new ApiExseptionResponse(500,ex.Message,ex.InnerException.ToString()) : new ApiExseptionResponse(500);
 
                 var options = new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase };
 

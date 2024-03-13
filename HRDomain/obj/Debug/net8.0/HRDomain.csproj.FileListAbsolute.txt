@@ -46,4 +46,8 @@ C:\Users\ramad\Desktop\HRSystem\HRDomain\obj\Debug\net8.0\HRDomain.dll
 C:\Users\ramad\Desktop\HRSystem\HRDomain\obj\Debug\net8.0\refint\HRDomain.dll
 C:\Users\ramad\Desktop\HRSystem\HRDomain\obj\Debug\net8.0\HRDomain.pdb
 C:\Users\ramad\Desktop\HRSystem\HRDomain\obj\Debug\net8.0\ref\HRDomain.dll
+<<<<<<< HEAD
 C:\Users\hp\Desktop\HRSystem\HRDomain\obj\Debug\net8.0\HRDomain.csproj.AssemblyReference.cache
+=======
+C:\Users\ramad\Desktop\HRSystem\HRDomain\obj\Debug\net8.0\HRDomain.csproj.AssemblyReference.cache
+>>>>>>> ee211352028b2794003703c01ae4ed5cfa5276a3
