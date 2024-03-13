@@ -17,19 +17,6 @@ namespace HRRepository.Identity
         {
             
         }
-        protected override void OnModelCreating(ModelBuilder builder)
-        {
-            builder.Entity<AppUser>().HasData(
-               new AppUser()
-               {
-                   FullName = "Ashraf Nouh",
-                   Email = "ashraf@pioneers-solutions.com",
-                   UserName = "Ashraf2024",
-                   PasswordHash = "3s7raf@nou7",
-                   Id = Guid.NewGuid().ToString(),
-               }
-                ) ;
-            base.OnModelCreating(builder);
-        }
+       
     }
 }

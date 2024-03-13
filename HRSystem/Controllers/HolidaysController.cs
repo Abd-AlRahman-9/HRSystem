@@ -5,6 +5,7 @@ using HRDomain.Specification;
 using HRRepository;
 using HRSystem.DTO;
 using HRSystem.Error_Handling;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.OpenApi.Writers;
@@ -26,7 +27,7 @@ namespace HRSystem.Controllers
             this._VacRepo = repository;
             this.mapper = mapper;
         }
-
+        [Authorize]
         [HttpGet("{date}", Name = "GetSpecificHolidayByDate")]
         public async Task<ActionResult<OfficialHolidaysDTO>> GetHoliday(string date)
         {

@@ -18,6 +18,11 @@ using Microsoft.AspNetCore.Identity;
 using HRDomain.Entities.Identity;
 using System;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using HRDomain.Services;
+using HRService;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace HRSystem
 {
@@ -69,6 +74,7 @@ namespace HRSystem
 
             //Add HRContext Servise
             builder.Services.AddDbContext<HRContext>(options => { options.UseSqlServer(builder.Configuration.GetConnectionString("Default")); });
+
             #region Identity Services
 
             builder.Services.AddDbContext<AppIdentityDbContext>(options => { options.UseSqlServer(builder.Configuration.GetConnectionString("IdentityConnection")); });
@@ -76,13 +82,35 @@ namespace HRSystem
 
             builder.Services.AddIdentity<AppUser, IdentityRole>(option =>
             {
-                //option.Password.RequiredLength = 8;
+                option.Password.RequiredLength = 6;
                 //option.Password.RequireUppercase = false;
                 //option.Password.RequireNonAlphanumeric = false;
                 //option.User.RequireUniqueEmail = true;
 
             })
      .AddEntityFrameworkStores<AppIdentityDbContext>();
+
+            #region Jwt Configurations
+            builder.Services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(options =>
+            {
+                options.TokenValidationParameters = new TokenValidationParameters()
+                {
+                    ValidateIssuer = true,
+                    ValidIssuer = builder.Configuration["JWT:ValidIssuer"],
+                    ValidateAudience = true,
+                    ValidAudience = builder.Configuration["JWT:ValidAudience"],
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:Key"]))
+                };
+            });
+            #endregion
+
             #endregion
 
 
@@ -91,6 +119,7 @@ namespace HRSystem
                 builder.Services.AddEndpointsApiExplorer();
                 builder.Services.AddSwaggerGen();
 
+            builder.Services.AddScoped<ITokenService, TokenService>();
                 builder.Services.AddScoped<GenericRepository<Department>>();
                 builder.Services.AddScoped<GenericRepository<Employee>>();
                 builder.Services.AddScoped<GenericRepository<Vacation>>();
@@ -98,6 +127,7 @@ namespace HRSystem
 
 
                 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+          
 
                 var app = builder.Build();
 
@@ -141,7 +171,7 @@ namespace HRSystem
 
                 app.UseHttpsRedirection();
                 app.UseRouting();
-                app.UseAuthentication();
+               app.UseAuthentication();
                 app.UseAuthorization();
                 app.MapControllers();
 
