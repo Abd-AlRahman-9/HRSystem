@@ -15,7 +15,6 @@ namespace HRRepository.Data
         {
             try
             {
-<<<<<<< HEAD
                 //if (!context.Vacations.Any())
                 //{
                 //    var vacationsData = File.ReadAllText("../HRRepository/Data/DataSeeding/Vacation.json");
@@ -81,7 +80,6 @@ namespace HRRepository.Data
                 //        }
                 //    }
                 //}
-=======
                 if (!context.Vacations.Any())
                 {
                     var vacationsData = File.ReadAllText("../HRRepository/Data/DataSeeding/Vacation.json");
@@ -144,22 +142,16 @@ namespace HRRepository.Data
                         }   
                     }
                 await context.SaveChangesAsync();
->>>>>>> 0a268bc5e90515365dfb4d6205db768454aba2c5
             }
             catch (Exception ex)
             {
                 var logger = loggerFactory.CreateLogger<HRContextSeed>();
                 logger.LogError(ex, ex.Message);
             }
-<<<<<<< HEAD
 
         }
     }
 }
-=======
-        }
-    }
-}
 
 
->>>>>>> 0a268bc5e90515365dfb4d6205db768454aba2c5
+

@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using HRDomain.CustomConverter;
 using HRDomain.Entities;
 using HRDomain.Specification;
 using HRRepository;
@@ -28,12 +29,12 @@ namespace HRSystem.Controllers
             this._EmpRepo = EmpRepo;
             this.mapper = mapper;
         }
-        [HttpGet("{Name:alpha}", Name = "GetDepartmentByName")]
+        [HttpGet("{Name}", Name = "GetDepartmentByName")]
         public async Task<ActionResult<GetDeptsDTO>> GetOneDept (string Name)
         {
             var specification = new DeptIncludeNavPropsSpecification(Name);
             var Dept = await _DeptRepo.GetSpecified(specification);
-            if (Dept is null) return NotFound(new ErrorResponse(400));
+            if (Dept is null) return NotFound(new ErrorResponse(404));
             return Ok(mapper.Map<Department,GetDeptsDTO>(Dept));
         }
         [HttpGet]
@@ -55,11 +56,8 @@ namespace HRSystem.Controllers
         [HttpPost ("WorkDays: int")]
         public async Task<ActionResult> Create(GetDeptsDTO deptsDTO, int workDays)
         {
-            string pattern = @"^([0-1][0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])$";
-            Regex regex = new Regex(pattern);
-
-            if ((!regex.IsMatch(deptsDTO.ComingTime) && !regex.IsMatch(deptsDTO.TimeToLeave)) || !ModelState.IsValid)
-                return BadRequest();
+            if (!TimeSpanOperations.IsTime(deptsDTO.ComingTime, deptsDTO.TimeToLeave))
+                return BadRequest("Invalid time format,Please provide the time in the format 'hh:mm:ss'");
 
             deptsDTO.WorkDays = (sbyte)workDays;
             var department = mapper.Map<Department>(deptsDTO);
@@ -76,11 +74,11 @@ namespace HRSystem.Controllers
         {
             var specification = new DeptIncludeNavPropsSpecification(deptsDTO.DepartmentName);
             var department = await _DeptRepo.GetSpecified(specification);
-            if (department is null)
-            {
-                return NotFound();
-            }
-           var dept= mapper.Map<Department>(deptsDTO);
+            if (department is null) return NotFound(new ErrorResponse(404,$"Uneable to find {name} department"));
+
+            if (!TimeSpanOperations.IsTime(deptsDTO.ComingTime, deptsDTO.TimeToLeave))
+                return BadRequest("Invalid time format,Please provide the time in the format '00:00:00'");
+            var dept= mapper.Map<Department>(deptsDTO);
             Expression<Func<Department, bool>> predicate = d => d.Name == name;
             await _DeptRepo.UpdateAsync(predicate,name,dept);
             return StatusCode(202);
@@ -91,10 +89,7 @@ namespace HRSystem.Controllers
         {
             var specification = new DeptIncludeNavPropsSpecification(name);
             var department = await _DeptRepo.GetSpecified(specification);
-            if (department is null)
-            {
-                return NotFound();
-            }
+            if (department is null) return NotFound(new ErrorResponse(404, $"Uneable to find {name} department"));
             Expression<Func<Department, bool>> predicate= d => d.Name == name;
                await _DeptRepo.DeleteAsync( predicate, name);
 

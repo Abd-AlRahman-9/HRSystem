@@ -13,6 +13,11 @@ using HRDomain.Entities;
 using AutoMapper;
 using HRSystem.DTO;
 using HRSystem.Middlewares;
+using HRRepository.Identity;
+using Microsoft.AspNetCore.Identity;
+using HRDomain.Entities.Identity;
+using System;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace HRSystem
 {
@@ -26,27 +31,62 @@ namespace HRSystem
 
             #region Handling Validation Error
 
-
-
             builder.Services.Configure<ApiBehaviorOptions>(options =>
-            
-            options.InvalidModelStateResponseFactory = (actionContext) =>
             {
-                var errors = actionContext.ModelState.Where(m => m.Value.Errors.Count() > 0).SelectMany(m => m.Value.Errors).Select(m => m.ErrorMessage).ToList();
-
-                var validationErrorResponse = new ValidationErrorResponse()
+                options.InvalidModelStateResponseFactory = context =>
                 {
-                    Errors = errors
+                    var errors = context.ModelState
+                        .Where(e => e.Value.Errors.Count > 0)
+                        .SelectMany(e => e.Value.Errors)
+                        .Select(e => e.ErrorMessage)
+                        .ToArray();
+
+                    var errorResponse = new ValidationErrorResponse
+                    {
+                        Errors = errors
+                    };
+
+                    return new BadRequestObjectResult(errorResponse)
+                    {
+                        ContentTypes = { "application/problem+json" }
+                    };
                 };
-                return new BadRequestObjectResult(validationErrorResponse);
-            }) ;
-                #endregion
+            });
 
-                //Add HRContext Servise
-                builder.Services.AddDbContext<HRContext>(options => { options.UseSqlServer(builder.Configuration.GetConnectionString("Default")); });
+            //builder.Services.Configure<ApiBehaviorOptions>(options =>
+
+            //options.InvalidModelStateResponseFactory = (actionContext) =>
+            //{
+            //    var errors = actionContext.ModelState.Where(m => m.Value.Errors.Count() > 0).SelectMany(m => m.Value.Errors).Select(m => m.ErrorMessage).ToList();
+
+            //    var validationErrorResponse = new ValidationErrorResponse()
+            //    {
+            //        Errors = errors
+            //    };
+            //    return new BadRequestObjectResult(validationErrorResponse);
+            //}) ;
+            #endregion
+
+            //Add HRContext Servise
+            builder.Services.AddDbContext<HRContext>(options => { options.UseSqlServer(builder.Configuration.GetConnectionString("Default")); });
+            #region Identity Services
+
+            builder.Services.AddDbContext<AppIdentityDbContext>(options => { options.UseSqlServer(builder.Configuration.GetConnectionString("IdentityConnection")); });
 
 
-                builder.Services.AddControllers();
+            builder.Services.AddIdentity<AppUser, IdentityRole>(option =>
+            {
+                //option.Password.RequiredLength = 8;
+                //option.Password.RequireUppercase = false;
+                //option.Password.RequireNonAlphanumeric = false;
+                //option.User.RequireUniqueEmail = true;
+
+            })
+     .AddEntityFrameworkStores<AppIdentityDbContext>();
+            #endregion
+
+
+            builder.Services.AddControllers();
                 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
                 builder.Services.AddEndpointsApiExplorer();
                 builder.Services.AddSwaggerGen();
@@ -57,7 +97,6 @@ namespace HRSystem
                 builder.Services.AddScoped<GenericRepository<EmployeeAttendace>>();
 
 
-                //builder.Services.AddAutoMapper(typeof(MappingProfiles));
                 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
                 var app = builder.Build();
@@ -70,10 +109,16 @@ namespace HRSystem
                 try
                 {
                     var context = services.GetRequiredService<HRContext>();
-                    context.Database.MigrateAsync();
+                   await context.Database.MigrateAsync();
 
-                    //await HRContextSeed.SeedAsync(context,loggerFactory);
-                }
+                //await HRContextSeed.SeedAsync(context,loggerFactory);
+
+                var identityContext = services.GetRequiredService<AppIdentityDbContext>();
+                await identityContext.Database.MigrateAsync();
+
+                var manger= services.GetRequiredService<UserManager<AppUser>>();
+                await AppIdentityDbContextSeed.SeedUsersAsync(manger);
+            }
                 catch (Exception ex)
                 {
                     var logger = loggerFactory.CreateLogger<Program>();
@@ -82,6 +127,7 @@ namespace HRSystem
                 #endregion
 
                 // Configure the HTTP request pipeline.
+
                 //use custom middleware
                  app.UseMiddleware<ExceptionMiddleware>();
                 if (app.Environment.IsDevelopment())
@@ -94,10 +140,9 @@ namespace HRSystem
 
 
                 app.UseHttpsRedirection();
-
+                app.UseRouting();
+                app.UseAuthentication();
                 app.UseAuthorization();
-
-
                 app.MapControllers();
 
                 app.Run();

@@ -40,13 +40,13 @@ namespace HRSystem.Controllers
         [HttpPost]
         public async Task<ActionResult> Create(OfficialHolidaysDTO holidaysDTO)
         {
-            if (!ModelState.IsValid) return BadRequest(HandleValidationErrors());
+            if (!ModelState.IsValid) return BadRequest(400);
 
             DateOnlyOperations.ToDateOnly(holidaysDTO.DateOnTheCurrentYear);
             var officialHoliday = mapper.Map<Vacation>(holidaysDTO);
             //check if date is future date or past date
             var date = officialHoliday.Date;
-            if (DateOnlyOperations.IsValidDate(date.Year, date.Month, date.Day))
+            if (DateOnlyOperations.IsValidDate(date.Year))
             {
                 await _VacRepo.AddAsync(officialHoliday);
 
@@ -54,7 +54,7 @@ namespace HRSystem.Controllers
                 return Created(uri, "Created Succsessfully");
             }
            return BadRequest(new ErrorResponse(400, $"Date must be from " +
-               $"{DateTime.Now.Month}/{DateTime.Now.Year} to 12/2999"));
+               $"{DateTime.Now.Year} to 12/2999"));
         }
 
         [HttpPut("edit/{date}")]
@@ -68,9 +68,9 @@ namespace HRSystem.Controllers
             {
               var currentDate=  DateOnlyOperations.ToDateOnly(holidaysDTO.DateOnTheCurrentYear);
                 var Vac = mapper.Map<Vacation>(holidaysDTO);
-                if (!DateOnlyOperations.IsValidDate(currentDate.Year, currentDate.Month, currentDate.Day))
+                if (!DateOnlyOperations.IsValidDate(currentDate.Year))
                     return BadRequest(new ErrorResponse(400, $"Date must be from " +
-                        $"{DateTime.Now.Month}/{DateTime.Now.Year} to 12/2999"));
+                        $"{DateTime.Now.Year} to 12/2999"));
                 Expression<Func<Vacation, bool>> predicate = v => v.Date == DateOnlyOperations.ToDateOnly(date);
 
                await _VacRepo.UpdateAsync(predicate,date,Vac);

@@ -26,11 +26,12 @@ namespace HRSystem.Controllers
             this._AttendRepo = repository;
             this.mapper = mapper;
         }
-        [HttpGet("{Name:alpha}/{Date}", Name = "GetSpecificAttendanceRecord")]
+        [HttpGet("{Name}/{Date}", Name = "GetSpecificAttendanceRecord")]
         public async Task<ActionResult<GetDeptsDTO>> GetOneDept(string Name, string Date)
         {
             var specification = new AttendIncludeNavPropsSpecification(Name, DateOnlyOperations.ToDateOnly(Date));
             var Attend = await _AttendRepo.GetSpecified(specification);
+            if (Attend == null) return BadRequest(new ErrorResponse(404));
             return Ok(mapper.Map<EmployeeAttendace, AttendDTO>(Attend));
         }
         [HttpGet]
@@ -49,17 +50,7 @@ namespace HRSystem.Controllers
             return Ok(new Pagination<AttendDTO>(P.PageIndex, P.PageSize, count, Data));
         }
         [HttpPost]
-        public async Task<ActionResult> Create(AttendDTO attendDTO)
-        {
-            if (!ModelState.IsValid) return BadRequest(ModelState);
 
-           var Attenadance= mapper.Map<EmployeeAttendace>(attendDTO);
-
-            await _AttendRepo.AddAsync(Attenadance);
-          string url=  Url.Action(nameof(GetOneDept), new {Attenadance.Employee.Name, Attenadance.Date });
-            return Created(url,"Created Succsessfully");
-
-        }
         [HttpPut("edit/{Name}/{Date}")]
         public async Task<ActionResult> Edit (string Name,string Date,AttendDTO attendDTO)
         {
