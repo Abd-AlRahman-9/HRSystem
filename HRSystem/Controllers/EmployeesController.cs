@@ -8,6 +8,8 @@ using HRSystem.Helpers;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq.Expressions;
+using System.Net;
+using System.Reflection;
 
 namespace HRSystem.Controllers
 {
@@ -57,7 +59,20 @@ namespace HRSystem.Controllers
             if (!ModelState.IsValid) return BadRequest(ModelState);
             try
             {
-                Employee employee = mapper.Map<Employee>(employeesDTO);
+                var specification = new DeptIncludeNavPropsSpecification(employeesDTO.Department);
+                //var Dept = await _DeptRepo.GetSpecified(specification);
+                //Employee employee = mapper.Map<Employee>(employeesDTO);
+                Employee employee = new ()
+                {
+                    Name = employeesDTO.EmployeeName,
+                    Address = employeesDTO.Address,
+                    Gender = employeesDTO.Gender,
+                    NationalID = employeesDTO.NationalID,
+                    Nationality = employeesDTO.Nationality,
+                    PhoneNumber = employeesDTO.Phone,
+                    Department =  await _DeptRepo.GetSpecified(specification),
+                };
+                employee.manager = employee.Department.Manager;
                await _EmpRepo.AddAsync(employee);
               string url=  Url.Action(nameof(GetOneEmp),new {employee.NationalID});
                 return Created(url, "Created Succsessfully");
@@ -69,21 +84,33 @@ namespace HRSystem.Controllers
             } 
         }
 
-        [HttpPut("edit/{ID}")]
-        public async Task<ActionResult> Edit(string ID, EmployeesDTO employeeDTO)
+        [HttpPut("Edit/id")]
+        public async Task<ActionResult> Edit(string ID, EmployeesDTO employeesDTO)
         {
             var specification = new EmpIncludeNavPropsSpecification(ID);
             var employee = await _EmpRepo.GetSpecified(specification);
-            if (employee is null) return NotFound(new ErrorResponse(404));
+            if (employee is null) return NotFound(new ErrorResponse(404,$"{employeesDTO.NationalID} is not found"));
 
-           Employee emp= mapper.Map<Employee>(employeeDTO);
-            
+            //Employee emp= mapper.Map<Employee>(employeeDTO);
+            var specifications = new DeptIncludeNavPropsSpecification(employeesDTO.Department);
+
+            employee.Name = employeesDTO.EmployeeName;
+            employee.Address = employeesDTO.Address;
+            employee.Gender = employeesDTO.Gender;
+            employee.NationalID = employeesDTO.NationalID;
+            employee.Nationality = employeesDTO.Nationality;
+            employee.PhoneNumber = employeesDTO.Phone;
+            employee.Salary = employeesDTO.Salary;
+            employee.VacationsRecord = employeesDTO.VacationsCredit;
+            employee.Department = await _DeptRepo.GetSpecified(specifications);
+
+
             Expression<Func<Employee, bool>> predicate = e => e.NationalID == ID;
-           await _EmpRepo.UpdateAsync(predicate, ID, emp);
+           await _EmpRepo.UpdateAsync(predicate, ID, employee);
             return StatusCode(202);
         }
 
-        [HttpDelete("delete/{ID}")]
+        [HttpDelete("delete/id")]
         public async Task<ActionResult> Delete(string ID)
         {
             Expression<Func<Employee, bool>> predicate = e => e.NationalID == ID;

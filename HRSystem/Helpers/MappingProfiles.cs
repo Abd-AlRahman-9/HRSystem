@@ -39,7 +39,7 @@ namespace HRSystem.Helpers
 
             // For Employee
             CreateMap<Employee, EmployeesDTO>()
-                .ForMember(DTO => DTO.Manager, Opt => Opt.MapFrom(Emp => Emp.manager.Name))
+                //.ForMember(DTO => DTO.Manager, Opt => Opt.MapFrom(Emp => Emp.manager.Name))
                 .ForMember(DTO => DTO.Department, Opt => Opt.MapFrom(Emp => Emp.Department.Name))
                 .ForMember(DTO => DTO.EmployeeName, Opt => Opt.MapFrom(Emp => Emp.Name))
                 .ForMember(DTO => DTO.Address, Opt => Opt.MapFrom(Emp => Emp.Address))

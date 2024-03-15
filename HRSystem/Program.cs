@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore;
 using HRDomain.Entities;
 using AutoMapper;
 using HRSystem.DTO;
-using HRSystem.Middlewares;
+//using HRSystem.Middlewares;
 using HRRepository.Identity;
 using Microsoft.AspNetCore.Identity;
 using HRDomain.Entities.Identity;
@@ -159,10 +159,10 @@ namespace HRSystem
                 // Configure the HTTP request pipeline.
 
                 //use custom middleware
-                 app.UseMiddleware<ExceptionMiddleware>();
+                // app.UseMiddleware<ExceptionMiddleware>();
                 if (app.Environment.IsDevelopment())
                 {
-                    //app.UseDeveloperExceptionPage();
+                    app.UseDeveloperExceptionPage();
                     app.UseSwagger();
                     app.UseSwaggerUI();
                 }

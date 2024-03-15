@@ -49,7 +49,6 @@ namespace HRSystem.Controllers
             var count = await _AttendRepo.GetCountAsync(countSpec);
             return Ok(new Pagination<AttendDTO>(P.PageIndex, P.PageSize, count, Data));
         }
-        [HttpPost]
 
         [HttpPut("edit/{Name}/{Date}")]
         public async Task<ActionResult> Edit (string Name,string Date,AttendDTO attendDTO)

@@ -63,30 +63,11 @@ namespace HRRepository
                     }
                   
                 }
-
-                // Mark the entity as modified
-                //context.Entry(entityToEdit).State = EntityState.Modified;
-
+                //context.Entry(entityToEdit).CurrentValues.SetValues(entity);
                 context.Set<T>().Update(entity);
 
                 await context.SaveChangesAsync();
-                //var entityToEdit = await context.Set<T>().SingleOrDefaultAsync(predicate);
-                //if (entityToEdit != null)
-                //{
 
-
-                //    //context.Set<T>().Update(entity);
-                //    try
-                //    {
-                //        context.Set<T>().Attach(entityToEdit);
-                //        context.Entry(entityToEdit).State = EntityState.Modified;
-                //        // context.Entry(entityToEdit).CurrentValues.SetValues(entity);
-                //        await context.SaveChangesAsync();
-                //    }
-                //    catch (DbUpdateConcurrencyException ex)
-                //    {
-                //        throw new DbUpdateConcurrencyException(ex.Message);
-                //    }
                 }
             }
 

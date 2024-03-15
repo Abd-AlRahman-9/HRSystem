@@ -48,7 +48,7 @@ namespace HRDomain.Entities
         [ForeignKey("Department")]
         public int? DeptId { get; set; }
         [InverseProperty("Employees")]
-        public Department Department { get; set; } // Navigational Property
+        public Department? Department { get; set; } // Navigational Property
 
         //>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>
         // Department Table One To One
@@ -64,5 +64,7 @@ namespace HRDomain.Entities
         // EmployeeAttendace Table One To Many Relation
         [InverseProperty("Employee")]
         public List<EmployeeAttendace> employeeAttendaces { get; set; } = new List<EmployeeAttendace>();
+
+
     }
 }

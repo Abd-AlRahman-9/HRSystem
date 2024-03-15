@@ -51,5 +51,12 @@ namespace HRDomain.Specification
             Includes.Add(E => E.Department);
             Includes.Add(E => E.manager);
         }
+
+        public EmpIncludeNavPropsSpecification(string name,int id) : base(E => (E.Name == name) && (E.Deleted == false))
+        {
+            Includes.Add(E => E.Department);
+            Includes.Add(E => E.manager);
+            
+        }
     }
 }
