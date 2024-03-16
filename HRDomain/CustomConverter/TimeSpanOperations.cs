@@ -18,6 +18,39 @@ namespace HRDomain.CustomConverter
                 return true;
             return false;
         }
-       
+        public static decimal CalculateBonusHours (TimeSpan departmentAttend, TimeSpan employeeAttend, TimeSpan departmentLeave, TimeSpan employeeLeave)
+        {
+            double bonus = 0; 
+
+            if (departmentAttend > employeeAttend)
+            {
+                var attend = departmentAttend - employeeAttend;   
+                
+                bonus += (attend.Hours) +(attend.Minutes /60.00);
+            }
+            if (departmentLeave < employeeLeave)
+            {
+                var leave = employeeLeave - departmentLeave;
+                bonus += (leave.Hours) + (leave.Minutes / 60.00);
+            }
+            return (decimal)bonus;
+        }
+        public static decimal CalculateDiscountHours(TimeSpan departmentAttend, TimeSpan employeeAttend, TimeSpan departmentLeave, TimeSpan employeeLeave)
+        {
+            double discount = 0.00;
+            if (departmentAttend < employeeAttend)
+            {
+                var attend = employeeAttend - departmentAttend;
+                discount += (attend.Hours) + (attend.Minutes / 60.00); 
+            }
+            if (departmentLeave > employeeLeave)
+            {
+                var leave = departmentLeave - employeeLeave;
+                discount += (leave.Hours) + (leave.Minutes / 60.00);
+            }
+            return (decimal)discount;
+        }
+
+
     }
 }

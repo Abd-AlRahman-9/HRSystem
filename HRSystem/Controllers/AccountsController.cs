@@ -36,6 +36,7 @@ namespace HRSystem.Controllers
 
             return Ok(new UserDTO()
             {
+                Message = "succsess",
                 FullName = user.FullName,
                 Email = user.Email,
                 Token = await _tokenService.CreateToken(user,_userManager)
@@ -45,7 +46,7 @@ namespace HRSystem.Controllers
         [HttpPost("register")] // /api/Accounts/register
         public async Task<ActionResult<UserDTO>> Register(RegisterDTO registerDTO)
         {
-            if (CheckEmailExists(registerDTO.Email).Result.Value)
+            if (_userManager.FindByEmailAsync(registerDTO.Email) is not null)
                 return BadRequest(new ValidationErrorResponse()
                 { Errors = new[] { "This email is already in use" } });
             var user = new AppUser()
@@ -53,8 +54,6 @@ namespace HRSystem.Controllers
                 FullName = registerDTO.FullName,
                 Email = registerDTO.Email,
                 UserName = registerDTO.UserName,
-                //UserName = registerDTO.Email.Split("@")[0]
-
             };
 
             var result = await _userManager.CreateAsync(user, registerDTO.Password);
@@ -62,7 +61,8 @@ namespace HRSystem.Controllers
 
             return Ok(new UserDTO()
             {
-                FullName=user.FullName,
+                Message = "succsess",
+                FullName = user.FullName,
                 Email = user.Email,
                 Token = await _tokenService.CreateToken(user, _userManager)
             });
@@ -76,6 +76,7 @@ namespace HRSystem.Controllers
             var user = await _userManager.FindByIdAsync(email);
             return Ok(new UserDTO
             {
+                Message = "succsess",
                 FullName = user.FullName,
                 Email = user.Email,
                 Token = await _tokenService.CreateToken(user, _userManager)
@@ -83,13 +84,13 @@ namespace HRSystem.Controllers
             });
         }
 
-        [Authorize]
-        [HttpGet("emailExists")] 
-        //if true, refuse to register else register
-        public async Task<ActionResult<bool>> CheckEmailExists (string email)
-        {
-            return await _userManager.FindByEmailAsync(email) != null;
-        }
+        //[Authorize]
+        //[HttpGet("emailExists")] 
+        ////if true, refuse to register else register
+        //public async Task<ActionResult<bool>> CheckEmailExists (string email)
+        //{
+        //    return await _userManager.FindByEmailAsync(email) != null;
+        //}
 
     }
 }

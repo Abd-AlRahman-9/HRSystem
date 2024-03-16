@@ -91,8 +91,6 @@ namespace HRSystem.Controllers
             Employee departmentManger= await _EmpRepo.GetSpecified(manger);
             if(departmentManger is null) return NotFound(new ErrorResponse(404,"Manger Name can't be found."));
             dept.Manager = departmentManger;
-            dept.Manager.Department = null;
-            dept.Manager.DeptId = null;
 
             Expression<Func<Department, bool>> predicate = d => d.Name == name;
             await _DeptRepo.UpdateAsync(predicate,name,dept);

@@ -57,9 +57,32 @@ namespace HRSystem.Controllers
             var Attendance = await _AttendRepo.GetSpecified(specification);
             if (Attendance is null) return NotFound(new ErrorResponse(400));
 
-           var attend= mapper.Map<EmployeeAttendace>(attendDTO);
+            var attend = mapper.Map<EmployeeAttendace>(attendDTO);
+
+            var dept =  new DeptIncludeNavPropsSpecification(attendDTO.DepartmentName);
+            Department department = await _DeptRepo.GetSpecified(dept);
+
+
+            TimeSpan timeToCome = TimeSpan.Parse(attendDTO.ComingTime);
+            TimeSpan timeToLeave = TimeSpan.Parse(attendDTO.LeaveTime);
+
+           var bonusHour= TimeSpanOperations.CalculateBonusHours(department.ComingTime, timeToCome, department.LeaveTime, timeToLeave);
+
+          var discountHour=  TimeSpanOperations.CalculateDiscountHours(department.ComingTime, timeToCome, department.LeaveTime, timeToLeave);
+
+            var hourSalary = (Attendance.Employee.Salary) / ((department.LeaveTime + TimeSpan.FromHours(12)) - department.ComingTime).Hours;
+
+            attend.Bonus = hourSalary * (bonusHour * department.BonusHour);
+            attend.Discount = hourSalary * (discountHour * department.DeductHour);
+
+            var employee = new EmpIncludeNavPropsSpecification(attendDTO.EmployeeName, department.Id);
+            Employee employeeAttend = await _EmpRepo.GetSpecified(employee);
+            if (employeeAttend is null) return NotFound(new ErrorResponse(404, "Manger Name can't be found."));
+            attend.Employee = employeeAttend;
             Expression<Func<EmployeeAttendace, bool>> predicate = a => a.Date == DateOnlyOperations.ToDateOnly(Date) && a.Employee.Name == Name;
-           await _AttendRepo.UpdateAsync(predicate,Name,attend);
+            await _AttendRepo.UpdateAsync(predicate, Name, attend);
+
+            // await _AttendRepo.UpdateOneToOneAsync(attend, a => a.Employee,attend.Employee);
             return StatusCode(202, "Updated Succsessfully");
         }
         [HttpDelete("delete/{Name}/{Date}")]

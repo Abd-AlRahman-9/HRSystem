@@ -44,32 +44,38 @@ namespace HRRepository
         
         public async Task UpdateAsync(Expression<Func<T, bool>> predicate, string name, T entity)
         {
-
-
             var entityToEdit = await context.Set<T>().SingleOrDefaultAsync(predicate);
+           
             if (entityToEdit != null)
             {
                 // Update each property individually
                 var properties = typeof(T).GetProperties();
                 foreach (var property in properties)
                 {
-                    if(property.Name != "Id")
+                    if (property.Name != "Id")
                     {
                         var newValue = property.GetValue(entity);
-                    if (newValue != null)
-                    {
-                        property.SetValue(entityToEdit, newValue);
+                        if (newValue != null)
+                        {
+                            property.SetValue(entityToEdit, newValue);
+                        }
                     }
-                    }
-                  
+
                 }
                 //context.Entry(entityToEdit).CurrentValues.SetValues(entity);
-                context.Set<T>().Update(entity);
+
+                context.Set<T>().Update(entityToEdit);
 
                 await context.SaveChangesAsync();
-
-                }
             }
+        }
+
+        public async Task UpdateOneToOneAsync<TEntity>(T entity, Expression<Func<T, TEntity>> navigationProperty, TEntity relatedEntity) where TEntity : BaseTable
+        {
+            context.Entry(entity).Reference(navigationProperty).IsModified = true;
+            context.Entry(entity).Property(navigationProperty).CurrentValue = relatedEntity;
+            await context.SaveChangesAsync();
+        }
 
         public async Task<int> GetCountAsync(ISpecification<T> specification)
         {
@@ -77,20 +83,5 @@ namespace HRRepository
         }
         public async Task<T> GetSpecified(ISpecification<T> specification) => await ApplySpecification(specification).FirstOrDefaultAsync();
 
-        //public async Task<T> GetByNameAndDateWithSpecificationAsync (ISpecification<T> specification) {
-        //    return await ApplySpecification(specification).FirstOrDefaultAsync();
-        //}
-        //public async Task<T> GetByNameWithSpecificationAsync(ISpecification<T> specification)
-        //{
-        //    return await ApplySpecification(specification).FirstOrDefaultAsync();
-        //}
-        //public async Task<T> GetByDateWithSpecificationAsync(ISpecification<T> specification)
-        //{
-        //    return await ApplySpecification(specification).FirstOrDefaultAsync();
-        //}
-        //public async Task<T> GetByIdWithSpecificationAsync(ISpecification<T> specification)
-        //{
-        //    return await ApplySpecification(specification).FirstOrDefaultAsync();
-        //}
     }
 }

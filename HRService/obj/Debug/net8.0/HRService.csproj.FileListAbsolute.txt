@@ -21,8 +21,8 @@ C:\Users\ramad\Desktop\HRSystem\HRService\obj\Debug\net8.0\HRService.AssemblyInf
 C:\Users\ramad\Desktop\HRSystem\HRService\obj\Debug\net8.0\HRService.AssemblyInfo.cs
 C:\Users\ramad\Desktop\HRSystem\HRService\obj\Debug\net8.0\HRService.csproj.CoreCompileInputs.cache
 C:\Users\ramad\Desktop\HRSystem\HRService\obj\Debug\net8.0\HRService.sourcelink.json
-C:\Users\ramad\Desktop\HRSystem\HRService\obj\Debug\net8.0\HRService.csproj.CopyComplete
 C:\Users\ramad\Desktop\HRSystem\HRService\obj\Debug\net8.0\HRService.dll
 C:\Users\ramad\Desktop\HRSystem\HRService\obj\Debug\net8.0\refint\HRService.dll
 C:\Users\ramad\Desktop\HRSystem\HRService\obj\Debug\net8.0\HRService.pdb
 C:\Users\ramad\Desktop\HRSystem\HRService\obj\Debug\net8.0\ref\HRService.dll
+C:\Users\ramad\Desktop\HRSystem\HRService\obj\Debug\net8.0\HRService.csproj.Up2Date

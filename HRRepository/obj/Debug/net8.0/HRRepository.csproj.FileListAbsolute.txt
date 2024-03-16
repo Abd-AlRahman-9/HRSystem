@@ -41,8 +41,8 @@ C:\Users\ramad\Desktop\HRSystem\HRRepository\obj\Debug\net8.0\HRRepository.Assem
 C:\Users\ramad\Desktop\HRSystem\HRRepository\obj\Debug\net8.0\HRRepository.AssemblyInfo.cs
 C:\Users\ramad\Desktop\HRSystem\HRRepository\obj\Debug\net8.0\HRRepository.csproj.CoreCompileInputs.cache
 C:\Users\ramad\Desktop\HRSystem\HRRepository\obj\Debug\net8.0\HRRepository.sourcelink.json
-C:\Users\ramad\Desktop\HRSystem\HRRepository\obj\Debug\net8.0\HRRepository.csproj.CopyComplete
 C:\Users\ramad\Desktop\HRSystem\HRRepository\obj\Debug\net8.0\HRRepository.dll
 C:\Users\ramad\Desktop\HRSystem\HRRepository\obj\Debug\net8.0\refint\HRRepository.dll
 C:\Users\ramad\Desktop\HRSystem\HRRepository\obj\Debug\net8.0\HRRepository.pdb
 C:\Users\ramad\Desktop\HRSystem\HRRepository\obj\Debug\net8.0\ref\HRRepository.dll
+C:\Users\ramad\Desktop\HRSystem\HRRepository\obj\Debug\net8.0\HRReposi.7A96AEA5.Up2Date

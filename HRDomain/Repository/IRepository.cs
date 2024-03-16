@@ -14,7 +14,9 @@ namespace HRDomain.Repository
         Task<int> GetCountAsync(ISpecification<T> specification);
         Task<IEnumerable<T>> GetAllWithSpecificationsAsync(ISpecification<T> specification);
         Task AddAsync(T entity);
-        Task UpdateAsync(Expression<Func<T, bool>> predicate, string date,T entity);
+        Task UpdateAsync(Expression<Func<T, bool>> predicate, string date, T entity);
+        // ?????????????????????????????????????????????
+        Task UpdateOneToOneAsync<TEntity>(T entity, Expression<Func<T, TEntity>> navigationProperty, TEntity relatedEntity) where TEntity : BaseTable;
         Task DeleteAsync(Expression<Func<T, bool>> predicate, string name);
         Task<T> GetSpecified(ISpecification<T> specification);
         //Task<T> GetByNameWithSpecificationAsync(ISpecification<T> specification);
