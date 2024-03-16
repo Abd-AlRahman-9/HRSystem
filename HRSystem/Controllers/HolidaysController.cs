@@ -27,7 +27,7 @@ namespace HRSystem.Controllers
             this._VacRepo = repository;
             this.mapper = mapper;
         }
-        [Authorize]
+
         [HttpGet("{date}", Name = "GetSpecificHolidayByDate")]
         public async Task<ActionResult<OfficialHolidaysDTO>> GetHoliday(string date)
         {

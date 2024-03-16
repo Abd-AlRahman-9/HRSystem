@@ -72,6 +72,14 @@ namespace HRSystem
             //}) ;
             #endregion
 
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("HrPolicy", options =>
+                {
+                    options.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
+                });
+            });
+
             //Add HRContext Servise
             builder.Services.AddDbContext<HRContext>(options => { options.UseSqlServer(builder.Configuration.GetConnectionString("Default")); });
 
@@ -115,67 +123,68 @@ namespace HRSystem
 
 
             builder.Services.AddControllers();
-                // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-                builder.Services.AddEndpointsApiExplorer();
-                builder.Services.AddSwaggerGen();
+            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+            builder.Services.AddEndpointsApiExplorer();
+            builder.Services.AddSwaggerGen();
 
             builder.Services.AddScoped<ITokenService, TokenService>();
-                builder.Services.AddScoped<GenericRepository<Department>>();
-                builder.Services.AddScoped<GenericRepository<Employee>>();
-                builder.Services.AddScoped<GenericRepository<Vacation>>();
-                builder.Services.AddScoped<GenericRepository<EmployeeAttendace>>();
+            builder.Services.AddScoped<GenericRepository<Department>>();
+            builder.Services.AddScoped<GenericRepository<Employee>>();
+            builder.Services.AddScoped<GenericRepository<Vacation>>();
+            builder.Services.AddScoped<GenericRepository<EmployeeAttendace>>();
 
 
-                builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-          
+            builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-                var app = builder.Build();
 
-                #region Making update-database each time you run the project
-                using var scope = app.Services.CreateScope();
+            var app = builder.Build();
 
-                var services = scope.ServiceProvider;
-                var loggerFactory = services.GetRequiredService<ILoggerFactory>();
-                try
-                {
-                    var context = services.GetRequiredService<HRContext>();
-                   await context.Database.MigrateAsync();
+            #region Making update-database each time you run the project
+            using var scope = app.Services.CreateScope();
+
+            var services = scope.ServiceProvider;
+            var loggerFactory = services.GetRequiredService<ILoggerFactory>();
+            try
+            {
+                var context = services.GetRequiredService<HRContext>();
+                await context.Database.MigrateAsync();
 
                 //await HRContextSeed.SeedAsync(context,loggerFactory);
 
                 var identityContext = services.GetRequiredService<AppIdentityDbContext>();
                 await identityContext.Database.MigrateAsync();
 
-                var manger= services.GetRequiredService<UserManager<AppUser>>();
+                var manger = services.GetRequiredService<UserManager<AppUser>>();
                 await AppIdentityDbContextSeed.SeedUsersAsync(manger);
             }
-                catch (Exception ex)
-                {
-                    var logger = loggerFactory.CreateLogger<Program>();
-                    logger.LogError(ex, ex.Message);
-                }
-                #endregion
-
-                // Configure the HTTP request pipeline.
-
-                //use custom middleware
-                // app.UseMiddleware<ExceptionMiddleware>();
-                if (app.Environment.IsDevelopment())
-                {
-                    app.UseDeveloperExceptionPage();
-                    app.UseSwagger();
-                    app.UseSwaggerUI();
-                }
-                app.UseStaticFiles();
-
-
-                app.UseHttpsRedirection();
-                app.UseRouting();
-               app.UseAuthentication();
-                app.UseAuthorization();
-                app.MapControllers();
-
-                app.Run();
+            catch (Exception ex)
+            {
+                var logger = loggerFactory.CreateLogger<Program>();
+                logger.LogError(ex, ex.Message);
             }
+            #endregion
+
+            // Configure the HTTP request pipeline.
+
+            //use custom middleware
+            // app.UseMiddleware<ExceptionMiddleware>();
+            if (app.Environment.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+                app.UseSwagger();
+                app.UseSwaggerUI();
+            }
+            app.UseStaticFiles();
+
+
+            app.UseHttpsRedirection();
+            app.UseRouting();
+            app.UseCors("HrPolicy");
+            app.UseAuthentication();
+            app.UseAuthorization();
+            app.MapControllers();
+
+            app.Run();
+        }
     }
     } 
