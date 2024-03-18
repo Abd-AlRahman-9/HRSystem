@@ -10,6 +10,9 @@ namespace HRRepository.Data.Configuartions
         {
             builder.Property(P => P.Deleted).HasColumnType("bit");
             builder.Property(P => P.Name).HasMaxLength(25);
+            builder.HasIndex(p => p.Name).IsUnique();
+
+
             builder.Property(P => P.WorkDays).HasColumnType("tinyint").HasMaxLength(2);
             builder.Property(P => P.DeductHour).HasColumnType("decimal(6,2)");
             builder.Property(P => P.BonusHour).HasColumnType("decimal(6,2)");
