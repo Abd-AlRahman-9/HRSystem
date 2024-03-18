@@ -4373,11 +4373,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\HRSystem.csproj",
+      "projectUniqueName": "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRSystem\\HRSystem.csproj",
       "projectName": "HRSystem",
-      "projectPath": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\HRSystem.csproj",
+      "projectPath": "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRSystem\\HRSystem.csproj",
       "packagesPath": "C:\\Users\\ramad\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\obj\\",
+      "outputPath": "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRSystem\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ramad\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4394,14 +4394,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\HRDomain.csproj": {
-              "projectPath": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\HRDomain.csproj"
+            "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRDomain\\HRDomain.csproj": {
+              "projectPath": "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRDomain\\HRDomain.csproj"
             },
-            "C:\\Users\\ramad\\Desktop\\HRSystem\\HRRepository\\HRRepository.csproj": {
-              "projectPath": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRRepository\\HRRepository.csproj"
+            "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRRepository\\HRRepository.csproj": {
+              "projectPath": "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRRepository\\HRRepository.csproj"
             },
-            "C:\\Users\\ramad\\Desktop\\HRSystem\\HRService\\HRService.csproj": {
-              "projectPath": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRService\\HRService.csproj"
+            "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRService\\HRService.csproj": {
+              "projectPath": "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRService\\HRService.csproj"
             }
           }
         }

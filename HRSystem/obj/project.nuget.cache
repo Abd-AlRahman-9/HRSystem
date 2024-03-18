@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pslVE5uyLMS4WGkeFkkRpub8CrzrQ1GVNKJY3oQ3SSgwGOglIkpCo5cvHUgmkmsCOHeMjaBCOFq/esAnL/HDCQ==",
+  "dgSpecHash": "9aGRTqCmRaE6XNLzOU7w0Q4GA5V8jJBNF/v/Lb0BohEgfRUcc/1K6Fv/BF4Z7Ahlx42P3NFWPEKg84PsyDa9fw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\HRSystem.csproj",
+  "projectFilePath": "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRSystem\\HRSystem.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ramad\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\ramad\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
