@@ -2689,19 +2689,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ramad\\.nuget\\packages\\": {}
+    "C:\\Users\\Hager\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\HRDomain.csproj",
+      "projectUniqueName": "C:\\Users\\Hager\\Pictures\\HRSystem\\HRDomain\\HRDomain.csproj",
       "projectName": "HRDomain",
-      "projectPath": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\HRDomain.csproj",
-      "packagesPath": "C:\\Users\\ramad\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\obj\\",
+      "projectPath": "C:\\Users\\Hager\\Pictures\\HRSystem\\HRDomain\\HRDomain.csproj",
+      "packagesPath": "C:\\Users\\Hager\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Hager\\Pictures\\HRSystem\\HRDomain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ramad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Hager\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2721,11 +2721,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -2757,7 +2752,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\HRSystem.csproj": {}
+    "C:\\Users\\Hager\\Pictures\\HRSystem\\HRSystem\\HRSystem.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\HRDomain.csproj": {
+    "C:\\Users\\Hager\\Pictures\\HRSystem\\HRDomain\\HRDomain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\HRDomain.csproj",
+        "projectUniqueName": "C:\\Users\\Hager\\Pictures\\HRSystem\\HRDomain\\HRDomain.csproj",
         "projectName": "HRDomain",
-        "projectPath": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\HRDomain.csproj",
-        "packagesPath": "C:\\Users\\ramad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\obj\\",
+        "projectPath": "C:\\Users\\Hager\\Pictures\\HRSystem\\HRDomain\\HRDomain.csproj",
+        "packagesPath": "C:\\Users\\Hager\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Hager\\Pictures\\HRSystem\\HRDomain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ramad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Hager\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,11 +34,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -70,21 +65,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ramad\\Desktop\\HRSystem\\HRRepository\\HRRepository.csproj": {
+    "C:\\Users\\Hager\\Pictures\\HRSystem\\HRRepository\\HRRepository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRRepository\\HRRepository.csproj",
+        "projectUniqueName": "C:\\Users\\Hager\\Pictures\\HRSystem\\HRRepository\\HRRepository.csproj",
         "projectName": "HRRepository",
-        "projectPath": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRRepository\\HRRepository.csproj",
-        "packagesPath": "C:\\Users\\ramad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRRepository\\obj\\",
+        "projectPath": "C:\\Users\\Hager\\Pictures\\HRSystem\\HRRepository\\HRRepository.csproj",
+        "packagesPath": "C:\\Users\\Hager\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Hager\\Pictures\\HRSystem\\HRRepository\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ramad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Hager\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -98,8 +93,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\HRDomain.csproj": {
-                "projectPath": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\HRDomain.csproj"
+              "C:\\Users\\Hager\\Pictures\\HRSystem\\HRDomain\\HRDomain.csproj": {
+                "projectPath": "C:\\Users\\Hager\\Pictures\\HRSystem\\HRDomain\\HRDomain.csproj"
               }
             }
           }
@@ -108,11 +103,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -140,21 +130,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ramad\\Desktop\\HRSystem\\HRService\\HRService.csproj": {
+    "C:\\Users\\Hager\\Pictures\\HRSystem\\HRService\\HRService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRService\\HRService.csproj",
+        "projectUniqueName": "C:\\Users\\Hager\\Pictures\\HRSystem\\HRService\\HRService.csproj",
         "projectName": "HRService",
-        "projectPath": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRService\\HRService.csproj",
-        "packagesPath": "C:\\Users\\ramad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRService\\obj\\",
+        "projectPath": "C:\\Users\\Hager\\Pictures\\HRSystem\\HRService\\HRService.csproj",
+        "packagesPath": "C:\\Users\\Hager\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Hager\\Pictures\\HRSystem\\HRService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ramad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Hager\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -168,8 +158,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\HRDomain.csproj": {
-                "projectPath": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\HRDomain.csproj"
+              "C:\\Users\\Hager\\Pictures\\HRSystem\\HRDomain\\HRDomain.csproj": {
+                "projectPath": "C:\\Users\\Hager\\Pictures\\HRSystem\\HRDomain\\HRDomain.csproj"
               }
             }
           }
@@ -178,11 +168,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -210,21 +195,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\HRSystem.csproj": {
+    "C:\\Users\\Hager\\Pictures\\HRSystem\\HRSystem\\HRSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\HRSystem.csproj",
+        "projectUniqueName": "C:\\Users\\Hager\\Pictures\\HRSystem\\HRSystem\\HRSystem.csproj",
         "projectName": "HRSystem",
-        "projectPath": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\HRSystem.csproj",
-        "packagesPath": "C:\\Users\\ramad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\obj\\",
+        "projectPath": "C:\\Users\\Hager\\Pictures\\HRSystem\\HRSystem\\HRSystem.csproj",
+        "packagesPath": "C:\\Users\\Hager\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Hager\\Pictures\\HRSystem\\HRSystem\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ramad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Hager\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -238,14 +223,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\HRDomain.csproj": {
-                "projectPath": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\HRDomain.csproj"
+              "C:\\Users\\Hager\\Pictures\\HRSystem\\HRDomain\\HRDomain.csproj": {
+                "projectPath": "C:\\Users\\Hager\\Pictures\\HRSystem\\HRDomain\\HRDomain.csproj"
               },
-              "C:\\Users\\ramad\\Desktop\\HRSystem\\HRRepository\\HRRepository.csproj": {
-                "projectPath": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRRepository\\HRRepository.csproj"
+              "C:\\Users\\Hager\\Pictures\\HRSystem\\HRRepository\\HRRepository.csproj": {
+                "projectPath": "C:\\Users\\Hager\\Pictures\\HRSystem\\HRRepository\\HRRepository.csproj"
               },
-              "C:\\Users\\ramad\\Desktop\\HRSystem\\HRService\\HRService.csproj": {
-                "projectPath": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRService\\HRService.csproj"
+              "C:\\Users\\Hager\\Pictures\\HRSystem\\HRService\\HRService.csproj": {
+                "projectPath": "C:\\Users\\Hager\\Pictures\\HRSystem\\HRService\\HRService.csproj"
               }
             }
           }
@@ -254,11 +239,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -303,7 +283,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

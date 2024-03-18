@@ -2739,19 +2739,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ramad\\.nuget\\packages\\": {}
+    "C:\\Users\\Hager\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRRepository\\HRRepository.csproj",
+      "projectUniqueName": "C:\\Users\\Hager\\Pictures\\HRSystem\\HRRepository\\HRRepository.csproj",
       "projectName": "HRRepository",
-      "projectPath": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRRepository\\HRRepository.csproj",
-      "packagesPath": "C:\\Users\\ramad\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRRepository\\obj\\",
+      "projectPath": "C:\\Users\\Hager\\Pictures\\HRSystem\\HRRepository\\HRRepository.csproj",
+      "packagesPath": "C:\\Users\\Hager\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Hager\\Pictures\\HRSystem\\HRRepository\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ramad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Hager\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2765,8 +2765,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\HRDomain.csproj": {
-              "projectPath": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\HRDomain.csproj"
+            "C:\\Users\\Hager\\Pictures\\HRSystem\\HRDomain\\HRDomain.csproj": {
+              "projectPath": "C:\\Users\\Hager\\Pictures\\HRSystem\\HRDomain\\HRDomain.csproj"
             }
           }
         }
@@ -2775,11 +2775,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -2807,7 +2802,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
