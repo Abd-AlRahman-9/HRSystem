@@ -33,7 +33,7 @@ namespace HRDomain.Entities
         public int VacationsRecord { get; set; }
         public decimal Salary { get; set; }
         [JsonConverter(typeof(DateCustomConverter))]
-        public DateOnly HireData { get; set; }
+        public DateOnly HireDate { get; set; }
         // this table has many relations and was complex to resolve
         //>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>/>>>>>
         // Self Relationship

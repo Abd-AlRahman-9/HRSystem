@@ -1,22 +1,4 @@
-﻿using AutoMapper;
-using HRDomain.CustomConverter;
-using HRDomain.Entities;
-using HRDomain.Specification;
-using HRRepository;
-using HRSystem.DTO;
-using HRSystem.Error_Handling;
-using HRSystem.Helpers;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.Storage.Internal;
-using Microsoft.IdentityModel.Tokens;
-using Microsoft.SqlServer.Server;
-using System;
-using System.Globalization;
-using System.Linq.Expressions;
-using System.Text.RegularExpressions;
-
-namespace HRSystem.Controllers
+﻿namespace HRSystem.Controllers
 {
     public class DepartmentsController : HRBaseController
     {

@@ -1,19 +1,4 @@
-﻿using AutoMapper;
-using HRDomain.CustomConverter;
-using HRDomain.Entities;
-using HRDomain.Specification;
-using HRRepository;
-using HRSystem.DTO;
-using HRSystem.Error_Handling;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.OpenApi.Writers;
-using System.Globalization;
-using System.Linq.Expressions;
-using System.Reflection.Metadata.Ecma335;
-using System.Text.RegularExpressions;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+﻿using System.Text.RegularExpressions;
 
 namespace HRSystem.Controllers
 {

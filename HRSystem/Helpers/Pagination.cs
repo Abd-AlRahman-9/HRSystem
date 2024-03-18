@@ -1,6 +1,4 @@
-﻿using HRSystem.DTO;
-
-namespace HRSystem.Helpers
+﻿namespace HRSystem.Helpers
 {
     public class Pagination<T>
     {

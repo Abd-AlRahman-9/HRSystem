@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using HRDomain.Entities;
+﻿using HRDomain.Entities;
 
 namespace HRDomain.Specification
 {
@@ -29,10 +24,10 @@ namespace HRDomain.Specification
                 switch (getAllEmpsParams.sort)
                 {
                     case "hiringAsc":
-                        AddOrderBy(E => E.HireData); 
+                        AddOrderBy(E => E.HireDate); 
                         break;
                     case "hiringDesc":
-                        AddOrderByDescending(E => E.HireData);
+                        AddOrderByDescending(E => E.HireDate);
                         break;
                     case "salaryAsc":
                         AddOrderBy(E=>E.Salary);

@@ -1,10 +1,4 @@
-﻿using AutoMapper;
-using HRDomain.CustomConverter;
-using HRDomain.Entities;
-using HRSystem.DTO;
-using System.Globalization;
-
-namespace HRSystem.Helpers
+﻿namespace HRSystem.Helpers
 {
     public class MappingProfiles:Profile
     {
@@ -39,7 +33,7 @@ namespace HRSystem.Helpers
 
             // For Employee
             CreateMap<Employee, EmployeesDTO>()
-                //.ForMember(DTO => DTO.Manager, Opt => Opt.MapFrom(Emp => Emp.manager.Name))
+               // .ForMember(DTO => DTO.Manager, Opt => Opt.MapFrom(Emp => Emp.manager.Name))
                 .ForMember(DTO => DTO.Department, Opt => Opt.MapFrom(Emp => Emp.Department.Name))
                 .ForMember(DTO => DTO.EmployeeName, Opt => Opt.MapFrom(Emp => Emp.Name))
                 .ForMember(DTO => DTO.Address, Opt => Opt.MapFrom(Emp => Emp.Address))
@@ -48,16 +42,16 @@ namespace HRSystem.Helpers
                 .ForMember(DTO => DTO.Nationality, Opt => Opt.MapFrom(Emp => Emp.Nationality))
                 .ForMember(DTO => DTO.Gender, Opt => Opt.MapFrom(Emp => Emp.Gender))
                 .ForMember(DTO => DTO.VacationsCredit, Opt => Opt.MapFrom(Emp => Emp.VacationsRecord))
-                .ForMember(DTO => DTO.DateOfBirth, Opt => Opt.MapFrom(Emp => Emp.BirthDate.ToString("dd\\-MM\\-yyyy")))
-                .ForMember(DTO => DTO.HiringDate, Opt => Opt.MapFrom(Emp => Emp.HireData.ToString("dd\\-MM\\-yyyy")))
+                .ForMember(DTO => DTO.DateOfBirth, Opt => Opt.MapFrom(Emp => Emp.BirthDate.ToString("dd\\/MM\\/yyyy")))
+                .ForMember(DTO => DTO.HiringDate, Opt => Opt.MapFrom(Emp => Emp.HireDate.ToString("dd\\/MM\\/yyyy")))
                 .ReverseMap()
                 .ForMember(Emp => Emp.BirthDate, Opt => Opt.MapFrom(DTO => DateOnly.Parse(DTO.DateOfBirth)))
-                .ForMember(Emp => Emp.HireData, Opt => Opt.MapFrom(DTO => DateOnly.Parse(DTO.HiringDate)));
+                .ForMember(Emp => Emp.HireDate, Opt => Opt.MapFrom(DTO => DateOnly.Parse(DTO.HiringDate)));
 
             // For Holidays
             CreateMap<Vacation, OfficialHolidaysDTO>()
                 .ForMember(DTO => DTO.HolidayName, Opt => Opt.MapFrom(Hol => Hol.Name))
-                .ForMember(DTO => DTO.DateOnTheCurrentYear, Opt => Opt.MapFrom(Hol => Hol.Date.ToString("dd-MM-yyyy")))
+                .ForMember(DTO => DTO.DateOnTheCurrentYear, Opt => Opt.MapFrom(Hol => Hol.Date.ToString("dd/MM/yyyy")))
                 .ReverseMap()
                 .ForMember(Hol => Hol.Date, Opt => Opt.MapFrom(DTO => DateOnly.Parse(DTO.DateOnTheCurrentYear)));
         }
