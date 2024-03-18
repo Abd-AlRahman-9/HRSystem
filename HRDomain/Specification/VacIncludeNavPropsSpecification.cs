@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using HRDomain.Entities;
+﻿using HRDomain.Entities;
 
 namespace HRDomain.Specification
 {
@@ -12,5 +7,7 @@ namespace HRDomain.Specification
         public VacIncludeNavPropsSpecification(DateOnly date) :base(V=>(V.Date == date)&&(V.Deleted==false)&&(V.Holiday==true))
         { 
         }
+
+        public VacIncludeNavPropsSpecification() : base(V => (V.Deleted == false) && (V.Holiday == true)) { }
     }
 }

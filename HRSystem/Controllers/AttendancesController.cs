@@ -1,31 +1,13 @@
-﻿using AutoMapper;
-using HRDomain.CustomConverter;
-using HRDomain.Entities;
-using HRDomain.Specification;
-using HRRepository;
-using HRSystem.DTO;
-using HRSystem.Error_Handling;
-using HRSystem.Helpers;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using System.Linq.Expressions;
-
+﻿
 namespace HRSystem.Controllers
 {
-    public class AttendancesController : HRBaseController
+    public class AttendancesController(GenericRepository<EmployeeAttendace> repository, IMapper mapper, GenericRepository<Employee> EmpRepo, GenericRepository<Department> DeptRepo) : HRBaseController
     {
-        private readonly GenericRepository<EmployeeAttendace> _AttendRepo;
-        private readonly GenericRepository<Department> _DeptRepo;
-        private readonly GenericRepository<Employee> _EmpRepo;
-        private readonly IMapper mapper;
+        readonly GenericRepository<EmployeeAttendace> _AttendRepo = repository;
+        readonly GenericRepository<Department> _DeptRepo = DeptRepo;
+        readonly GenericRepository<Employee> _EmpRepo = EmpRepo;
+        readonly IMapper mapper = mapper;
 
-        public AttendancesController(GenericRepository<EmployeeAttendace> repository, IMapper mapper, GenericRepository<Employee> EmpRepo, GenericRepository<Department> DeptRepo)
-        {
-            this._DeptRepo = DeptRepo;
-            this._EmpRepo = EmpRepo;
-            this._AttendRepo = repository;
-            this.mapper = mapper;
-        }
         [HttpGet("{Name}/{Date}", Name = "GetSpecificAttendanceRecord")]
         public async Task<ActionResult<GetDeptsDTO>> GetOneDept(string Name, string Date)
         {

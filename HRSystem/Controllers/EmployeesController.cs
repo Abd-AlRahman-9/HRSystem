@@ -1,30 +1,11 @@
-﻿using AutoMapper;
-using HRDomain.Entities;
-using HRDomain.Specification;
-using HRRepository;
-using HRSystem.DTO;
-using HRSystem.Error_Handling;
-using HRSystem.Helpers;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using System.Linq.Expressions;
-using System.Net;
-using System.Reflection;
-
-namespace HRSystem.Controllers
+﻿namespace HRSystem.Controllers
 {
-    public class EmployeesController : HRBaseController
+    public class EmployeesController(GenericRepository<Employee> repository, GenericRepository<Department> DeptRepo, IMapper mapper) : HRBaseController
     {
-        private readonly GenericRepository<Department> _DeptRepo;
-        private readonly GenericRepository<Employee> _EmpRepo;
-        private readonly IMapper mapper;
+        private readonly GenericRepository<Department> _DeptRepo = DeptRepo;
+        private readonly GenericRepository<Employee> _EmpRepo = repository;
+        private readonly IMapper mapper = mapper;
 
-        public EmployeesController(GenericRepository<Employee> repository,GenericRepository<Department> DeptRepo,IMapper mapper)
-        {
-            this._DeptRepo = DeptRepo;
-            this._EmpRepo = repository;
-            this.mapper = mapper;
-        }
         [HttpGet]
         public async Task<ActionResult<Pagination<EmployeesDTO>>> GetAllEmps([FromQuery] GetAllEmpsParams P)
         {
@@ -60,9 +41,9 @@ namespace HRSystem.Controllers
             try
             {
                 var specification = new DeptIncludeNavPropsSpecification(employeesDTO.Department);
-                //var Dept = await _DeptRepo.GetSpecified(specification);
+                var Dept = await _DeptRepo.GetSpecified(specification);
                 //Employee employee = mapper.Map<Employee>(employeesDTO);
-                Employee employee = new ()
+                Employee employee = new()
                 {
                     Name = employeesDTO.EmployeeName,
                     Address = employeesDTO.Address,
@@ -70,7 +51,11 @@ namespace HRSystem.Controllers
                     NationalID = employeesDTO.NationalID,
                     Nationality = employeesDTO.Nationality,
                     PhoneNumber = employeesDTO.Phone,
-                    Department =  await _DeptRepo.GetSpecified(specification),
+                    VacationsRecord = employeesDTO.VacationsCredit,
+                    Salary = employeesDTO.Salary,
+                    BirthDate = DateOnlyOperations.ToDateOnly(employeesDTO.DateOfBirth),
+                    HireData = DateOnlyOperations.ToDateOnly(employeesDTO.HiringDate),
+                    Department = Dept,
                 };
                 employee.manager = employee.Department.Manager;
                await _EmpRepo.AddAsync(employee);

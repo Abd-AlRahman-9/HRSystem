@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace HRSystem.DTO
+﻿namespace HRSystem.DTO
 {
     public class LoginDTO
     {

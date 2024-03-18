@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -29,6 +30,7 @@ namespace HRDomain.Entities
         // Done and I decided to Make it Enum in the DTO layer 
         public string Gender { get; set; }
         //???????????????phone must be string
+        [Length (11,13)]
         public string PhoneNumber { get; set; }
         public int VacationsRecord { get; set; }
         public decimal Salary { get; set; }

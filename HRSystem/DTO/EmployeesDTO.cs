@@ -1,6 +1,4 @@
-﻿using HRDomain.Entities;
-
-namespace HRSystem.DTO
+﻿namespace HRSystem.DTO
 {
     public class EmployeesDTO
     {

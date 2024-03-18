@@ -1,31 +1,12 @@
-﻿using AutoMapper;
-using HRDomain.CustomConverter;
-using HRDomain.Entities;
-using HRDomain.Specification;
-using HRRepository;
-using HRSystem.DTO;
-using HRSystem.Error_Handling;
-using HRSystem.Helpers;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.Storage.Internal;
-using Microsoft.IdentityModel.Tokens;
-using Microsoft.SqlServer.Server;
-using System;
-using System.Globalization;
-using System.Linq.Expressions;
-using System.Text.RegularExpressions;
-
-namespace HRSystem.Controllers
+﻿namespace HRSystem.Controllers
 {
     public class DepartmentsController : HRBaseController
     {
-        private readonly GenericRepository<Department> _DeptRepo;
-        private readonly GenericRepository<Employee> _EmpRepo;
-        private readonly IMapper mapper;
-        private readonly IConfiguration _configuration;
+        readonly GenericRepository<Department> _DeptRepo;
+        readonly GenericRepository<Employee> _EmpRepo;
+        readonly IMapper mapper;
+        readonly IConfiguration _configuration;
         readonly ADOProcedures aDOProcedures;
-
 
         public DepartmentsController(GenericRepository<Department> repository,GenericRepository<Employee> EmpRepo, IMapper mapper, IConfiguration configuration)
         {
@@ -34,7 +15,7 @@ namespace HRSystem.Controllers
             this.mapper = mapper;
             _configuration = configuration;
             string connectionString = _configuration.GetConnectionString("Default");
-        aDOProcedures = new ADOProcedures(connectionString);
+            aDOProcedures = new ADOProcedures(connectionString);
         }
         [HttpGet("{Name}", Name = "GetDepartmentByName")]
         public async Task<ActionResult<GetDeptsDTO>> GetOneDept (string Name)

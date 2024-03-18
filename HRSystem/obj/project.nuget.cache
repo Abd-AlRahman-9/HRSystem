@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "HIigI2mFRbJ6Cn2DR1hWJyg6O5lZaYlrmevf1O9kT/0Uy7FCoV3At/dUJpJOyqkVyD0+zlUCnXIeLRjw06Iohg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Hager\\Pictures\\HRSystem\\HRSystem\\HRSystem.csproj",
+=======
+  "dgSpecHash": "9aGRTqCmRaE6XNLzOU7w0Q4GA5V8jJBNF/v/Lb0BohEgfRUcc/1K6Fv/BF4Z7Ahlx42P3NFWPEKg84PsyDa9fw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRSystem\\HRSystem.csproj",
+>>>>>>> 12178f0cfd0978b95d0521b6e5c7aeb6334bef35
   "expectedPackageFiles": [
     "C:\\Users\\Hager\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\Hager\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",

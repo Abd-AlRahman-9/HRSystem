@@ -1,32 +1,11 @@
-﻿using AutoMapper;
-using HRDomain.CustomConverter;
-using HRDomain.Entities;
-using HRDomain.Specification;
-using HRRepository;
-using HRSystem.DTO;
-using HRSystem.Error_Handling;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.OpenApi.Writers;
-using System.Globalization;
-using System.Linq.Expressions;
-using System.Reflection.Metadata.Ecma335;
-using System.Text.RegularExpressions;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+﻿using System.Text.RegularExpressions;
 
 namespace HRSystem.Controllers
 {
-    public class HolidaysController : HRBaseController
+    public class HolidaysController(GenericRepository<Vacation> repository, IMapper mapper) : HRBaseController
     {
-        private readonly GenericRepository<Vacation> _VacRepo;
-        private readonly IMapper mapper;
-
-        public HolidaysController(GenericRepository<Vacation> repository, IMapper mapper)
-        {
-            this._VacRepo = repository;
-            this.mapper = mapper;
-        }
+        private readonly GenericRepository<Vacation> _VacRepo = repository;
+        private readonly IMapper mapper = mapper;
 
         [HttpGet("{date}", Name = "GetSpecificHolidayByDate")]
         public async Task<ActionResult<OfficialHolidaysDTO>> GetHoliday(string date)
@@ -37,8 +16,17 @@ namespace HRSystem.Controllers
             if (Vac == null) return NotFound(new ErrorResponse(400, $"{date} can't be found!"));
             return Ok(mapper.Map<Vacation, OfficialHolidaysDTO>(Vac));
         }
+        //-----------------------------------------------------------//
+        [HttpGet]
+        public async Task<ActionResult<OfficialHolidaysDTO>> GetAllDepts()
+        {
+            
+            var Holidays = await _VacRepo.GetAllWithSpecificationsAsync(new VacIncludeNavPropsSpecification());
+            var Data = mapper.Map<IEnumerable<Vacation>, IEnumerable<OfficialHolidaysDTO>>(Holidays);
+            return Ok(Data);
+        }
 
-        [HttpPost]
+       [HttpPost]
         public async Task<ActionResult> Create(OfficialHolidaysDTO holidaysDTO)
         {
             if (!ModelState.IsValid) return BadRequest(400);

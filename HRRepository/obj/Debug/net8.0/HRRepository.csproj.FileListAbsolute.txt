@@ -46,6 +46,7 @@ C:\Users\ramad\Desktop\HRSystem\HRRepository\obj\Debug\net8.0\refint\HRRepositor
 C:\Users\ramad\Desktop\HRSystem\HRRepository\obj\Debug\net8.0\HRRepository.pdb
 C:\Users\ramad\Desktop\HRSystem\HRRepository\obj\Debug\net8.0\ref\HRRepository.dll
 C:\Users\ramad\Desktop\HRSystem\HRRepository\obj\Debug\net8.0\HRReposi.7A96AEA5.Up2Date
+<<<<<<< HEAD
 C:\Users\Hager\Pictures\HRSystem\HRRepository\bin\Debug\net8.0\HRRepository.deps.json
 C:\Users\Hager\Pictures\HRSystem\HRRepository\bin\Debug\net8.0\HRRepository.dll
 C:\Users\Hager\Pictures\HRSystem\HRRepository\bin\Debug\net8.0\HRRepository.pdb
@@ -62,3 +63,21 @@ C:\Users\Hager\Pictures\HRSystem\HRRepository\obj\Debug\net8.0\HRRepository.dll
 C:\Users\Hager\Pictures\HRSystem\HRRepository\obj\Debug\net8.0\refint\HRRepository.dll
 C:\Users\Hager\Pictures\HRSystem\HRRepository\obj\Debug\net8.0\HRRepository.pdb
 C:\Users\Hager\Pictures\HRSystem\HRRepository\obj\Debug\net8.0\ref\HRRepository.dll
+=======
+C:\Users\ramad\Desktop\oldHRSystem\HRRepository\bin\Debug\net8.0\HRRepository.deps.json
+C:\Users\ramad\Desktop\oldHRSystem\HRRepository\bin\Debug\net8.0\HRRepository.dll
+C:\Users\ramad\Desktop\oldHRSystem\HRRepository\bin\Debug\net8.0\HRRepository.pdb
+C:\Users\ramad\Desktop\oldHRSystem\HRRepository\bin\Debug\net8.0\HRDomain.dll
+C:\Users\ramad\Desktop\oldHRSystem\HRRepository\bin\Debug\net8.0\HRDomain.pdb
+C:\Users\ramad\Desktop\oldHRSystem\HRRepository\obj\Debug\net8.0\HRRepository.csproj.AssemblyReference.cache
+C:\Users\ramad\Desktop\oldHRSystem\HRRepository\obj\Debug\net8.0\HRRepository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ramad\Desktop\oldHRSystem\HRRepository\obj\Debug\net8.0\HRRepository.AssemblyInfoInputs.cache
+C:\Users\ramad\Desktop\oldHRSystem\HRRepository\obj\Debug\net8.0\HRRepository.AssemblyInfo.cs
+C:\Users\ramad\Desktop\oldHRSystem\HRRepository\obj\Debug\net8.0\HRRepository.csproj.CoreCompileInputs.cache
+C:\Users\ramad\Desktop\oldHRSystem\HRRepository\obj\Debug\net8.0\HRRepository.sourcelink.json
+C:\Users\ramad\Desktop\oldHRSystem\HRRepository\obj\Debug\net8.0\HRReposi.7A96AEA5.Up2Date
+C:\Users\ramad\Desktop\oldHRSystem\HRRepository\obj\Debug\net8.0\HRRepository.dll
+C:\Users\ramad\Desktop\oldHRSystem\HRRepository\obj\Debug\net8.0\refint\HRRepository.dll
+C:\Users\ramad\Desktop\oldHRSystem\HRRepository\obj\Debug\net8.0\HRRepository.pdb
+C:\Users\ramad\Desktop\oldHRSystem\HRRepository\obj\Debug\net8.0\ref\HRRepository.dll
+>>>>>>> 12178f0cfd0978b95d0521b6e5c7aeb6334bef35

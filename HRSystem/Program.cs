@@ -1,28 +1,11 @@
-
-using HRDomain.Repository;
-using HRRepository;
-using HRRepository.Data;
-using HRSystem.Error_Handling;
-using HRSystem.Helpers;
-//using HRSystem.Middlewares;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc;
-using HRSystem.Helpers;
 using Microsoft.EntityFrameworkCore;
-using HRDomain.Entities;
-using AutoMapper;
-using HRSystem.DTO;
-//using HRSystem.Middlewares;
+using HRSystem.Middlewares;
 using HRRepository.Identity;
 using Microsoft.AspNetCore.Identity;
 using HRDomain.Entities.Identity;
-using System;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using HRDomain.Services;
-using HRService;
-using Microsoft.AspNetCore.Builder;
 using Microsoft.IdentityModel.Tokens;
-using System.Text;
+
 
 namespace HRSystem
 {
@@ -167,7 +150,7 @@ namespace HRSystem
             // Configure the HTTP request pipeline.
 
             //use custom middleware
-            // app.UseMiddleware<ExceptionMiddleware>();
+             //app.UseMiddleware<ExceptionMiddleware>();
             if (app.Environment.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
