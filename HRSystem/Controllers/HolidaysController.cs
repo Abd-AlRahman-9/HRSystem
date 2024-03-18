@@ -16,6 +16,15 @@ namespace HRSystem.Controllers
             if (Vac == null) return NotFound(new ErrorResponse(400, $"{date} can't be found!"));
             return Ok(mapper.Map<Vacation, OfficialHolidaysDTO>(Vac));
         }
+        [HttpGet]
+        public async Task<ActionResult<OfficialHolidaysDTO>> GetAllDepts()
+        {
+            
+            var Holidays = await _VacRepo.GetAllWithSpecificationsAsync(new VacIncludeNavPropsSpecification());
+            var Data = mapper.Map<IEnumerable<Vacation>, IEnumerable<OfficialHolidaysDTO>>(Holidays);
+            return Ok(Data);
+        }
+
 
         [HttpPost]
         public async Task<ActionResult> Create(OfficialHolidaysDTO holidaysDTO)
