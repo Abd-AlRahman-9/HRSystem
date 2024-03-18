@@ -2,12 +2,11 @@
 {
     public class DepartmentsController : HRBaseController
     {
-        private readonly GenericRepository<Department> _DeptRepo;
-        private readonly GenericRepository<Employee> _EmpRepo;
-        private readonly IMapper mapper;
-        private readonly IConfiguration _configuration;
+        readonly GenericRepository<Department> _DeptRepo;
+        readonly GenericRepository<Employee> _EmpRepo;
+        readonly IMapper mapper;
+        readonly IConfiguration _configuration;
         readonly ADOProcedures aDOProcedures;
-
 
         public DepartmentsController(GenericRepository<Department> repository,GenericRepository<Employee> EmpRepo, IMapper mapper, IConfiguration configuration)
         {
@@ -16,7 +15,7 @@
             this.mapper = mapper;
             _configuration = configuration;
             string connectionString = _configuration.GetConnectionString("Default");
-        aDOProcedures = new ADOProcedures(connectionString);
+            aDOProcedures = new ADOProcedures(connectionString);
         }
         [HttpGet("{Name}", Name = "GetDepartmentByName")]
         public async Task<ActionResult<GetDeptsDTO>> GetOneDept (string Name)

@@ -1,17 +1,11 @@
 ﻿namespace HRSystem.Controllers
 {
-    public class EmployeesController : HRBaseController
+    public class EmployeesController(GenericRepository<Employee> repository, GenericRepository<Department> DeptRepo, IMapper mapper) : HRBaseController
     {
-        private readonly GenericRepository<Department> _DeptRepo;
-        private readonly GenericRepository<Employee> _EmpRepo;
-        private readonly IMapper mapper;
+        private readonly GenericRepository<Department> _DeptRepo = DeptRepo;
+        private readonly GenericRepository<Employee> _EmpRepo = repository;
+        private readonly IMapper mapper = mapper;
 
-        public EmployeesController(GenericRepository<Employee> repository,GenericRepository<Department> DeptRepo,IMapper mapper)
-        {
-            this._DeptRepo = DeptRepo;
-            this._EmpRepo = repository;
-            this.mapper = mapper;
-        }
         [HttpGet]
         public async Task<ActionResult<Pagination<EmployeesDTO>>> GetAllEmps([FromQuery] GetAllEmpsParams P)
         {
@@ -60,7 +54,7 @@
                     VacationsRecord = employeesDTO.VacationsCredit,
                     Salary = employeesDTO.Salary,
                     BirthDate = DateOnlyOperations.ToDateOnly(employeesDTO.DateOfBirth),
-                    HireDate = DateOnlyOperations.ToDateOnly(employeesDTO.HiringDate),
+                    HireData = DateOnlyOperations.ToDateOnly(employeesDTO.HiringDate),
                     Department = Dept,
                 };
                 employee.manager = employee.Department.Manager;

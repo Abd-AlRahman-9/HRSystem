@@ -42,11 +42,11 @@
                 .ForMember(DTO => DTO.Nationality, Opt => Opt.MapFrom(Emp => Emp.Nationality))
                 .ForMember(DTO => DTO.Gender, Opt => Opt.MapFrom(Emp => Emp.Gender))
                 .ForMember(DTO => DTO.VacationsCredit, Opt => Opt.MapFrom(Emp => Emp.VacationsRecord))
-                .ForMember(DTO => DTO.DateOfBirth, Opt => Opt.MapFrom(Emp => Emp.BirthDate.ToString("dd\\/MM\\/yyyy")))
-                .ForMember(DTO => DTO.HiringDate, Opt => Opt.MapFrom(Emp => Emp.HireDate.ToString("dd\\/MM\\/yyyy")))
+                .ForMember(DTO => DTO.DateOfBirth, Opt => Opt.MapFrom(Emp => Emp.BirthDate.ToString("dd\\-MM\\-yyyy")))
+                .ForMember(DTO => DTO.HiringDate, Opt => Opt.MapFrom(Emp => Emp.HireData.ToString("dd\\-MM\\-yyyy")))
                 .ReverseMap()
                 .ForMember(Emp => Emp.BirthDate, Opt => Opt.MapFrom(DTO => DateOnly.Parse(DTO.DateOfBirth)))
-                .ForMember(Emp => Emp.HireDate, Opt => Opt.MapFrom(DTO => DateOnly.Parse(DTO.HiringDate)));
+                .ForMember(Emp => Emp.HireData, Opt => Opt.MapFrom(DTO => DateOnly.Parse(DTO.HiringDate)));
 
             // For Holidays
             CreateMap<Vacation, OfficialHolidaysDTO>()

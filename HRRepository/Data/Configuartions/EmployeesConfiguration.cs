@@ -16,7 +16,7 @@ namespace HRRepository.Data.Configuartions
             builder.Property(P=>P.NationalID).HasColumnType("char(14)");
             builder.Property(P => P.PhoneNumber).HasMaxLength(25);
             builder.Property(P => P.Name).HasMaxLength(50);
-            builder.Property(P => P.HireDate).HasColumnType("date");
+            builder.Property(P => P.HireData).HasColumnType("date");
             builder.Property(P => P.BirthDate).HasColumnType("date");
             builder.Property(P => P.Gender).HasMaxLength(9);
             builder.Property(P=>P.VacationsRecord).HasColumnType("tinyint").HasMaxLength(2);

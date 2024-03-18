@@ -24,10 +24,10 @@ namespace HRDomain.Specification
                 switch (getAllEmpsParams.sort)
                 {
                     case "hiringAsc":
-                        AddOrderBy(E => E.HireDate); 
+                        AddOrderBy(E => E.HireData); 
                         break;
                     case "hiringDesc":
-                        AddOrderByDescending(E => E.HireDate);
+                        AddOrderByDescending(E => E.HireData);
                         break;
                     case "salaryAsc":
                         AddOrderBy(E=>E.Salary);

@@ -2,16 +2,10 @@
 
 namespace HRSystem.Controllers
 {
-    public class HolidaysController : HRBaseController
+    public class HolidaysController(GenericRepository<Vacation> repository, IMapper mapper) : HRBaseController
     {
-        private readonly GenericRepository<Vacation> _VacRepo;
-        private readonly IMapper mapper;
-
-        public HolidaysController(GenericRepository<Vacation> repository, IMapper mapper)
-        {
-            this._VacRepo = repository;
-            this.mapper = mapper;
-        }
+        private readonly GenericRepository<Vacation> _VacRepo = repository;
+        private readonly IMapper mapper = mapper;
 
         [HttpGet("{date}", Name = "GetSpecificHolidayByDate")]
         public async Task<ActionResult<OfficialHolidaysDTO>> GetHoliday(string date)

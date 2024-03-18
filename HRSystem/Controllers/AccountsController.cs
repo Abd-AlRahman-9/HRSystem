@@ -5,7 +5,6 @@ using System.Security.Claims;
 
 namespace HRSystem.Controllers
 {
-
     public class AccountsController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, ITokenService tokenService) : HRBaseController
     {
        readonly UserManager<AppUser> _userManager = userManager;
