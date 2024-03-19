@@ -13,7 +13,7 @@ namespace HRSystem.Controllers
         {
             var specification = new AttendIncludeNavPropsSpecification(Name, DateOnlyOperations.ToDateOnly(Date));
             var Attend = await _AttendRepo.GetSpecified(specification);
-            if (Attend == null) return BadRequest(new ErrorResponse(404));
+            if (Attend == null) return NotFound(new ErrorResponse(404));
             return Ok(mapper.Map<EmployeeAttendace, AttendDTO>(Attend));
         }
         [HttpGet]
@@ -70,9 +70,12 @@ namespace HRSystem.Controllers
         [HttpDelete("delete/{Name}/{Date}")]
         public async Task<ActionResult> Delete (string Name, string Date) 
         {
-            Expression<Func<EmployeeAttendace, bool>> predicate = a => a.Date == DateOnlyOperations.ToDateOnly(Date) && a.Employee.Name == Name;
-           await _AttendRepo.DeleteAsync(predicate,Name);
-            return StatusCode(202);
+            // Expression<Func<EmployeeAttendace, bool>> predicate = a => a.Date == DateOnlyOperations.ToDateOnly(Date) && a.Employee.Name == Name;
+            var specification = new AttendIncludeNavPropsSpecification(Name, DateOnlyOperations.ToDateOnly(Date));
+            var Attend = await _AttendRepo.GetSpecified(specification);
+            if (Attend == null) return NotFound(new ErrorResponse(404));
+            await _AttendRepo.DeleteAsync(Attend);
+            return StatusCode(202,"Deleted Succsessfully");
         }
 
     } 

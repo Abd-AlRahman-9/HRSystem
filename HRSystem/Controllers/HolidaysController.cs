@@ -16,7 +16,7 @@ namespace HRSystem.Controllers
             if (Vac == null) return NotFound(new ErrorResponse(400, $"{date} can't be found!"));
             return Ok(mapper.Map<Vacation, OfficialHolidaysDTO>(Vac));
         }
-        //-----------------------------------------------------------//
+
         [HttpGet]
         public async Task<ActionResult<OfficialHolidaysDTO>> GetAllDepts()
         {
@@ -71,17 +71,15 @@ namespace HRSystem.Controllers
         [HttpDelete("delete/{date}")]
         public async Task<ActionResult> Delete(string date)
         {
-            string pattern = @"^\d{2}-\d{2}-\d{4}$";
-            Regex regex = new Regex(pattern);
+            var specification = new VacIncludeNavPropsSpecification(DateOnlyOperations.ToDateOnly(date));
+            var Vac = await _VacRepo.GetSpecified(specification);
+            if (Vac == null) return NotFound(new ErrorResponse(400, $"{date} can't be found!"));
+            //string pattern = @"^\d{2}-\d{2}-\d{4}$";
+            //Regex regex = new Regex(pattern);
 
-            if (regex.IsMatch(date))
-            {
-
-                Expression<Func<Vacation, bool>> predicate = v => v.Date == DateOnlyOperations.ToDateOnly(date);
-                await _VacRepo.DeleteAsync(predicate, date);
+                //Expression<Func<Vacation, bool>> predicate = v => v.Date == DateOnlyOperations.ToDateOnly(date);
+                await _VacRepo.DeleteAsync(Vac);
                 return StatusCode(200, "Deleted Succsessfully");
-            }
-            return NotFound(new ErrorResponse(404));
         }
     }
 }

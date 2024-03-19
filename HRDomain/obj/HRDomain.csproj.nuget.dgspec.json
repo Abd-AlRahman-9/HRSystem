@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRDomain\\HRDomain.csproj": {}
+    "C:\\Users\\ramad\\Desktop\\oldHRSystem - Copy\\HRDomain\\HRDomain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRDomain\\HRDomain.csproj": {
+    "C:\\Users\\ramad\\Desktop\\oldHRSystem - Copy\\HRDomain\\HRDomain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRDomain\\HRDomain.csproj",
+        "projectUniqueName": "C:\\Users\\ramad\\Desktop\\oldHRSystem - Copy\\HRDomain\\HRDomain.csproj",
         "projectName": "HRDomain",
-        "projectPath": "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRDomain\\HRDomain.csproj",
+        "projectPath": "C:\\Users\\ramad\\Desktop\\oldHRSystem - Copy\\HRDomain\\HRDomain.csproj",
         "packagesPath": "C:\\Users\\ramad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRDomain\\obj\\",
+        "outputPath": "C:\\Users\\ramad\\Desktop\\oldHRSystem - Copy\\HRDomain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ramad\\AppData\\Roaming\\NuGet\\NuGet.Config",

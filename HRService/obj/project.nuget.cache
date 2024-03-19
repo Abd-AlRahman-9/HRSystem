@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oA8JxN9Gyf00RzEOc6uToikmy2Kq73LCTedrFzs1tAMT1zBPkG5Y2C99RT+wHdv+weL5PqnlfwJi9B6BpUfi+Q==",
+  "dgSpecHash": "mkrREPVXgg5XVcvUQhZjHIyNXnZ79unCO+jd1SzZ/H9Wnxrif7EGt+mN5eqK1vFxuaM/t8Ti65jtjkhbaVkwGg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRService\\HRService.csproj",
+  "projectFilePath": "C:\\Users\\ramad\\Desktop\\oldHRSystem - Copy\\HRService\\HRService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ramad\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\ramad\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

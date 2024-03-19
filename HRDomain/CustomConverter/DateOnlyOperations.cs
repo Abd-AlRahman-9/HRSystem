@@ -21,7 +21,13 @@ namespace HRDomain.CustomConverter
            return true;
 
             return false;
+        }
 
+        public static int CheckAge(string birthDate, string hiringDate)
+        {
+          var birth=  ToDateOnly(birthDate);
+          var hiring= ToDateOnly(hiringDate);
+            return hiring.Year - birth.Year;
 
         }
     }

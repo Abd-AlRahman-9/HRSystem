@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRSystem\\HRSystem.csproj": {}
+    "C:\\Users\\ramad\\Desktop\\oldHRSystem - Copy\\HRSystem\\HRSystem.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRDomain\\HRDomain.csproj": {
+    "C:\\Users\\ramad\\Desktop\\oldHRSystem - Copy\\HRDomain\\HRDomain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRDomain\\HRDomain.csproj",
+        "projectUniqueName": "C:\\Users\\ramad\\Desktop\\oldHRSystem - Copy\\HRDomain\\HRDomain.csproj",
         "projectName": "HRDomain",
-        "projectPath": "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRDomain\\HRDomain.csproj",
+        "projectPath": "C:\\Users\\ramad\\Desktop\\oldHRSystem - Copy\\HRDomain\\HRDomain.csproj",
         "packagesPath": "C:\\Users\\ramad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRDomain\\obj\\",
+        "outputPath": "C:\\Users\\ramad\\Desktop\\oldHRSystem - Copy\\HRDomain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ramad\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -74,14 +74,14 @@
         }
       }
     },
-    "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRRepository\\HRRepository.csproj": {
+    "C:\\Users\\ramad\\Desktop\\oldHRSystem - Copy\\HRRepository\\HRRepository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRRepository\\HRRepository.csproj",
+        "projectUniqueName": "C:\\Users\\ramad\\Desktop\\oldHRSystem - Copy\\HRRepository\\HRRepository.csproj",
         "projectName": "HRRepository",
-        "projectPath": "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRRepository\\HRRepository.csproj",
+        "projectPath": "C:\\Users\\ramad\\Desktop\\oldHRSystem - Copy\\HRRepository\\HRRepository.csproj",
         "packagesPath": "C:\\Users\\ramad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRRepository\\obj\\",
+        "outputPath": "C:\\Users\\ramad\\Desktop\\oldHRSystem - Copy\\HRRepository\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ramad\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -98,8 +98,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRDomain\\HRDomain.csproj": {
-                "projectPath": "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRDomain\\HRDomain.csproj"
+              "C:\\Users\\ramad\\Desktop\\oldHRSystem - Copy\\HRDomain\\HRDomain.csproj": {
+                "projectPath": "C:\\Users\\ramad\\Desktop\\oldHRSystem - Copy\\HRDomain\\HRDomain.csproj"
               }
             }
           }
@@ -144,14 +144,14 @@
         }
       }
     },
-    "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRService\\HRService.csproj": {
+    "C:\\Users\\ramad\\Desktop\\oldHRSystem - Copy\\HRService\\HRService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRService\\HRService.csproj",
+        "projectUniqueName": "C:\\Users\\ramad\\Desktop\\oldHRSystem - Copy\\HRService\\HRService.csproj",
         "projectName": "HRService",
-        "projectPath": "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRService\\HRService.csproj",
+        "projectPath": "C:\\Users\\ramad\\Desktop\\oldHRSystem - Copy\\HRService\\HRService.csproj",
         "packagesPath": "C:\\Users\\ramad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRService\\obj\\",
+        "outputPath": "C:\\Users\\ramad\\Desktop\\oldHRSystem - Copy\\HRService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ramad\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -168,8 +168,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRDomain\\HRDomain.csproj": {
-                "projectPath": "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRDomain\\HRDomain.csproj"
+              "C:\\Users\\ramad\\Desktop\\oldHRSystem - Copy\\HRDomain\\HRDomain.csproj": {
+                "projectPath": "C:\\Users\\ramad\\Desktop\\oldHRSystem - Copy\\HRDomain\\HRDomain.csproj"
               }
             }
           }
@@ -214,14 +214,14 @@
         }
       }
     },
-    "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRSystem\\HRSystem.csproj": {
+    "C:\\Users\\ramad\\Desktop\\oldHRSystem - Copy\\HRSystem\\HRSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRSystem\\HRSystem.csproj",
+        "projectUniqueName": "C:\\Users\\ramad\\Desktop\\oldHRSystem - Copy\\HRSystem\\HRSystem.csproj",
         "projectName": "HRSystem",
-        "projectPath": "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRSystem\\HRSystem.csproj",
+        "projectPath": "C:\\Users\\ramad\\Desktop\\oldHRSystem - Copy\\HRSystem\\HRSystem.csproj",
         "packagesPath": "C:\\Users\\ramad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRSystem\\obj\\",
+        "outputPath": "C:\\Users\\ramad\\Desktop\\oldHRSystem - Copy\\HRSystem\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ramad\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -238,14 +238,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRDomain\\HRDomain.csproj": {
-                "projectPath": "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRDomain\\HRDomain.csproj"
+              "C:\\Users\\ramad\\Desktop\\oldHRSystem - Copy\\HRDomain\\HRDomain.csproj": {
+                "projectPath": "C:\\Users\\ramad\\Desktop\\oldHRSystem - Copy\\HRDomain\\HRDomain.csproj"
               },
-              "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRRepository\\HRRepository.csproj": {
-                "projectPath": "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRRepository\\HRRepository.csproj"
+              "C:\\Users\\ramad\\Desktop\\oldHRSystem - Copy\\HRRepository\\HRRepository.csproj": {
+                "projectPath": "C:\\Users\\ramad\\Desktop\\oldHRSystem - Copy\\HRRepository\\HRRepository.csproj"
               },
-              "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRService\\HRService.csproj": {
-                "projectPath": "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRService\\HRService.csproj"
+              "C:\\Users\\ramad\\Desktop\\oldHRSystem - Copy\\HRService\\HRService.csproj": {
+                "projectPath": "C:\\Users\\ramad\\Desktop\\oldHRSystem - Copy\\HRService\\HRService.csproj"
               }
             }
           }

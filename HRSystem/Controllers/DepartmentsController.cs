@@ -44,6 +44,8 @@
         [HttpPost ("WorkDays")]
         public async Task<ActionResult> Create(GetDeptsDTO deptsDTO, int workDays)
         {
+            Expression<Func<Department, bool>> predicate = d => d.Name == deptsDTO.DepartmentName;
+            if (!_DeptRepo.IsExist(predicate)) return BadRequest(new ErrorResponse(400, $"{deptsDTO.DepartmentName} is already exist!"));
             if (!TimeSpanOperations.IsTime(deptsDTO.ComingTime, deptsDTO.TimeToLeave))
                 return BadRequest("Invalid time format,Please provide the time in the format 'hh:mm:ss'");
 
@@ -84,8 +86,8 @@
             var specification = new DeptIncludeNavPropsSpecification(name);
             var department = await _DeptRepo.GetSpecified(specification);
             if (department is null) return NotFound(new ErrorResponse(404, $"Uneable to find {name} department"));
-            Expression<Func<Department, bool>> predicate= d => d.Name == name;
-               await _DeptRepo.DeleteAsync( predicate, name);
+            //Expression<Func<Department, bool>> predicate= d => d.Name == name;
+               await _DeptRepo.DeleteAsync( department);
 
                 return StatusCode(200, "Deleted Succsessfully");
         }
