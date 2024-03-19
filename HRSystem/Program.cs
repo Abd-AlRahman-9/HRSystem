@@ -150,10 +150,10 @@ namespace HRSystem
             // Configure the HTTP request pipeline.
 
             //use custom middleware
-             //app.UseMiddleware<ExceptionMiddleware>();
+             app.UseMiddleware<ExceptionMiddleware>();
             if (app.Environment.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
+                //app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }

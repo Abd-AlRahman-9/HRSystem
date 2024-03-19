@@ -13,8 +13,10 @@ namespace HRRepository.Data.Configuartions
         public void Configure(EntityTypeBuilder<Employee> builder)
         {
             builder.Property(P=>P.Deleted).HasColumnType("bit");
-            builder.Property(P=>P.NationalID).HasColumnType("char(14)");
-            builder.Property(P => P.PhoneNumber).HasMaxLength(25);
+            builder.Property(P => P.NationalID).HasColumnType("char(14)");
+            builder.HasIndex(p => p.NationalID).IsUnique();
+
+            builder.Property(P => P.PhoneNumber).HasMaxLength(12);
             builder.Property(P => P.Name).HasMaxLength(50);
             builder.Property(P => P.HireData).HasColumnType("date");
             builder.Property(P => P.BirthDate).HasColumnType("date");

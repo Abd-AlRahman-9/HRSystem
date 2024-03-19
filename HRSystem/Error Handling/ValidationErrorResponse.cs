@@ -19,7 +19,7 @@
     using Newtonsoft.Json;
 
     [JsonObject(MemberSerialization.OptIn)]
-    public class ValidationErrorResponse : ErrorResponse
+    public class ValidationErrorResponse : StatusResponse
     {
         [JsonProperty(PropertyName = "errors")]
         public IEnumerable<string> Errors { get; set; }
