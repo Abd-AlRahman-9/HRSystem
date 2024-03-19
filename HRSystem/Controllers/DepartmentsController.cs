@@ -22,7 +22,7 @@
         {
             var specification = new DeptIncludeNavPropsSpecification(Name);
             var Dept = await _DeptRepo.GetSpecified(specification);
-            if (Dept is null) return NotFound(new ErrorResponse(404));
+            if (Dept is null) return NotFound(new StatusResponse(404));
             return Ok(mapper.Map<Department,GetDeptsDTO>(Dept));
         }
         [HttpGet]
@@ -45,7 +45,7 @@
         public async Task<ActionResult> Create(GetDeptsDTO deptsDTO, int workDays)
         {
             Expression<Func<Department, bool>> predicate = d => d.Name == deptsDTO.DepartmentName;
-            if (!_DeptRepo.IsExist(predicate)) return BadRequest(new ErrorResponse(400, $"{deptsDTO.DepartmentName} is already exist!"));
+            if (!_DeptRepo.IsExist(predicate)) return BadRequest(new StatusResponse(400, $"{deptsDTO.DepartmentName} is already exist!"));
             if (!TimeSpanOperations.IsTime(deptsDTO.ComingTime, deptsDTO.TimeToLeave))
                 return BadRequest("Invalid time format,Please provide the time in the format 'hh:mm:ss'");
 
@@ -57,7 +57,7 @@
             await _DeptRepo.AddAsync(department);
             string uri = Url.Action(nameof(GetOneDept), new { id = department.Id });
 
-            return Created(uri, "Created succsessfully");
+            return Created(uri, new StatusResponse(201,"New Department has been created"));
         }
 
         [HttpPut("Edit/{name}")]
@@ -65,19 +65,19 @@
         {
             var specification = new DeptIncludeNavPropsSpecification(name);
             var department = await _DeptRepo.GetSpecified(specification);
-            if (department is null) return NotFound(new ErrorResponse(404,$"Uneable to find {name} department"));
+            if (department is null) return NotFound(new StatusResponse(404,$"Uneable to find {name} department"));
 
             if (!TimeSpanOperations.IsTime(deptsDTO.ComingTime, deptsDTO.TimeToLeave))
                 return BadRequest("Invalid time format,Please provide the time in the format '00:00:00'");
             var dept= mapper.Map<Department>(deptsDTO);
             var manger = new EmpIncludeNavPropsSpecification(deptsDTO.ManagerName, department.Id);
             Employee departmentManger= await _EmpRepo.GetSpecified(manger);
-            if(departmentManger is null) return NotFound(new ErrorResponse(404,"Manger Name can't be found."));
+            if(departmentManger is null) return NotFound(new StatusResponse(404,"Manger Name can't be found."));
             dept.Manager = departmentManger;
 
             Expression<Func<Department, bool>> predicate = d => d.Name == name;
             await _DeptRepo.UpdateAsync(predicate,name,dept);
-            return StatusCode(202);
+            return StatusCode(204,new StatusResponse(204,"Updated Successfully"));
         }
 
         [HttpDelete("delete/{name}")]
@@ -85,11 +85,11 @@
         {
             var specification = new DeptIncludeNavPropsSpecification(name);
             var department = await _DeptRepo.GetSpecified(specification);
-            if (department is null) return NotFound(new ErrorResponse(404, $"Uneable to find {name} department"));
+            if (department is null) return NotFound(new StatusResponse(404, $"Uneable to find {name} department"));
             //Expression<Func<Department, bool>> predicate= d => d.Name == name;
                await _DeptRepo.DeleteAsync( department);
 
-                return StatusCode(200, "Deleted Succsessfully");
+                return StatusCode(204, new StatusResponse(204,"Deleted Successfully"));
         }
     }
 }

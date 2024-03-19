@@ -34,7 +34,7 @@ namespace HRSystem.Controllers
         {
             var specification = new EmpIncludeNavPropsSpecification(NationalId);
             var Emp = await _EmpRepo.GetSpecified(specification);
-            if (Emp is null) return NotFound(new ErrorResponse(404, $"{NationalId} is not found"));
+            if (Emp is null) return NotFound(new StatusResponse(404, $"{NationalId} is not found"));
             return Ok(mapper.Map<Employee, EmployeesDTO>(Emp));
         }
 
@@ -45,12 +45,12 @@ namespace HRSystem.Controllers
             try
             {
                 Expression<Func<Employee, bool>> predicate = e => e.NationalID == employeesDTO.NationalID;
-                if(!_EmpRepo.IsExist(predicate)) return BadRequest(new ErrorResponse(400,"This National Id is already exist!"));
+                if(!_EmpRepo.IsExist(predicate)) return BadRequest(new StatusResponse(400,"This National Id is already exist!"));
                 var specification = new DeptIncludeNavPropsSpecification(employeesDTO.Department);
                 var Dept = await _DeptRepo.GetSpecified(specification);
                 int age = DateOnlyOperations.CheckAge(employeesDTO.DateOfBirth, employeesDTO.HiringDate);
-                if (age < 20) return BadRequest(new ErrorResponse(400,"Can't hire employee less than 20 years."));
-                if (DateOnlyOperations.ToDateOnly(employeesDTO.HiringDate).Year < 2008) return BadRequest(new ErrorResponse(400,"Uneable to hire employee before establish the company!"));
+                if (age < 20) return BadRequest(new StatusResponse(400,"Can't hire employee less than 20 years."));
+                if (DateOnlyOperations.ToDateOnly(employeesDTO.HiringDate).Year < 2008) return BadRequest(new StatusResponse(400,"Uneable to hire employee before establish the company!"));
                 //Employee employee = mapper.Map<Employee>(employeesDTO);
                 Employee employee = new()
                 {
@@ -69,7 +69,7 @@ namespace HRSystem.Controllers
                 employee.manager = employee.Department.Manager;
                await _EmpRepo.AddAsync(employee);
               string url=  Url.Action(nameof(GetOneEmp),new {employee.NationalID});
-                return Created(url, "Created Succsessfully");
+                return Created(url, new StatusResponse(201,"New Employee has been created"));
             }
             catch (Exception ex)
             {
@@ -83,7 +83,7 @@ namespace HRSystem.Controllers
         {
             var specification = new EmpIncludeNavPropsSpecification(ID);
             var employee = await _EmpRepo.GetSpecified(specification);
-            if (employee is null) return NotFound(new ErrorResponse(404,$"{employeesDTO.NationalID} is not found"));
+            if (employee is null) return NotFound(new StatusResponse(404,$"{employeesDTO.NationalID} is not found"));
 
             //Employee emp= mapper.Map<Employee>(employeeDTO);
             var specifications = new DeptIncludeNavPropsSpecification(employeesDTO.Department);
@@ -103,7 +103,7 @@ namespace HRSystem.Controllers
 
             Expression<Func<Employee, bool>> predicate = e => e.NationalID == ID;
            await _EmpRepo.UpdateAsync(predicate, ID, employee);
-            return StatusCode(202);
+            return StatusCode(204,new StatusResponse(204,"Updated Successfully"));
         }
 
         [HttpDelete("delete/id")]
@@ -111,10 +111,10 @@ namespace HRSystem.Controllers
         {
             var specification = new EmpIncludeNavPropsSpecification(ID);
             var employee = await _EmpRepo.GetSpecified(specification);
-            if (employee is null) return NotFound(new ErrorResponse(400, $"Uneable to find employee with {ID}, check national id and try again."));
+            if (employee is null) return NotFound(new StatusResponse(400, $"Uneable to find employee with {ID}, check national id and try again."));
            // Expression<Func<Employee, bool>> predicate = e => e.NationalID == ID;
            await _EmpRepo.DeleteAsync(employee);
-            return StatusCode(202, "Deleted Succsessfully");
+            return StatusCode(204,new StatusResponse(204,"Deleted Successfully"));
         }
     }
 }

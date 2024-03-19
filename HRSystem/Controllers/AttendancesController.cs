@@ -13,7 +13,7 @@ namespace HRSystem.Controllers
         {
             var specification = new AttendIncludeNavPropsSpecification(Name, DateOnlyOperations.ToDateOnly(Date));
             var Attend = await _AttendRepo.GetSpecified(specification);
-            if (Attend == null) return NotFound(new ErrorResponse(404));
+            if (Attend == null) return NotFound(new StatusResponse(404));
             return Ok(mapper.Map<EmployeeAttendace, AttendDTO>(Attend));
         }
         [HttpGet]
@@ -37,7 +37,7 @@ namespace HRSystem.Controllers
         {
             var specification = new AttendIncludeNavPropsSpecification(Name, DateOnlyOperations.ToDateOnly(Date));
             var Attendance = await _AttendRepo.GetSpecified(specification);
-            if (Attendance is null) return NotFound(new ErrorResponse(400));
+            if (Attendance is null) return NotFound(new StatusResponse(400));
 
             var attend = mapper.Map<EmployeeAttendace>(attendDTO);
 
@@ -59,13 +59,13 @@ namespace HRSystem.Controllers
 
             var employee = new EmpIncludeNavPropsSpecification(attendDTO.EmployeeName, department.Id);
             Employee employeeAttend = await _EmpRepo.GetSpecified(employee);
-            if (employeeAttend is null) return NotFound(new ErrorResponse(404, "Manger Name can't be found."));
+            if (employeeAttend is null) return NotFound(new StatusResponse(404, "Manger Name can't be found."));
             attend.Employee = employeeAttend;
             Expression<Func<EmployeeAttendace, bool>> predicate = a => a.Date == DateOnlyOperations.ToDateOnly(Date) && a.Employee.Name == Name;
             await _AttendRepo.UpdateAsync(predicate, Name, attend);
 
             // await _AttendRepo.UpdateOneToOneAsync(attend, a => a.Employee,attend.Employee);
-            return StatusCode(202, "Updated Succsessfully");
+            return StatusCode(204, new StatusResponse(204, "Updated Successfully"));
         }
         [HttpDelete("delete/{Name}/{Date}")]
         public async Task<ActionResult> Delete (string Name, string Date) 
@@ -73,9 +73,9 @@ namespace HRSystem.Controllers
             // Expression<Func<EmployeeAttendace, bool>> predicate = a => a.Date == DateOnlyOperations.ToDateOnly(Date) && a.Employee.Name == Name;
             var specification = new AttendIncludeNavPropsSpecification(Name, DateOnlyOperations.ToDateOnly(Date));
             var Attend = await _AttendRepo.GetSpecified(specification);
-            if (Attend == null) return NotFound(new ErrorResponse(404));
+            if (Attend == null) return NotFound(new StatusResponse(404));
             await _AttendRepo.DeleteAsync(Attend);
-            return StatusCode(202,"Deleted Succsessfully");
+            return StatusCode(204,new StatusResponse(204,"Deleted Successfully"));
         }
 
     } 
