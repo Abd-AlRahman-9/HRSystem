@@ -65,7 +65,7 @@ namespace HRSystem.Controllers
             await _AttendRepo.UpdateAsync(predicate, Name, attend);
 
             // await _AttendRepo.UpdateOneToOneAsync(attend, a => a.Employee,attend.Employee);
-            return StatusCode(204, new StatusResponse(204, "Updated Successfully"));
+            return Ok(new StatusResponse(204, "Updated Successfully"));
         }
         [HttpDelete("delete/{Name}/{Date}")]
         public async Task<ActionResult> Delete (string Name, string Date) 
@@ -75,7 +75,7 @@ namespace HRSystem.Controllers
             var Attend = await _AttendRepo.GetSpecified(specification);
             if (Attend == null) return NotFound(new StatusResponse(404));
             await _AttendRepo.DeleteAsync(Attend);
-            return StatusCode(204,new StatusResponse(204,"Deleted Successfully"));
+            return Ok(new StatusResponse(204,"Deleted Successfully"));
         }
 
     } 

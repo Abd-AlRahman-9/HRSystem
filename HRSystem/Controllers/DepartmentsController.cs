@@ -77,7 +77,7 @@
 
             Expression<Func<Department, bool>> predicate = d => d.Name == name;
             await _DeptRepo.UpdateAsync(predicate,name,dept);
-            return StatusCode(204,new StatusResponse(204,"Updated Successfully"));
+            return Ok(new StatusResponse(204,"Updated Successfully"));
         }
 
         [HttpDelete("delete/{name}")]
@@ -89,7 +89,7 @@
             //Expression<Func<Department, bool>> predicate= d => d.Name == name;
                await _DeptRepo.DeleteAsync( department);
 
-                return StatusCode(204, new StatusResponse(204,"Deleted Successfully"));
+                return Ok( new StatusResponse(204,"Deleted Successfully"));
         }
     }
 }

@@ -4368,34 +4368,19 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
-    "C:\\Users\\Hager\\.nuget\\packages\\": {}
-=======
-    "C:\\Users\\hp\\.nuget\\packages\\": {}
->>>>>>> 4ef5c6882088d2d5f3ad26483b246705fd86544f
+    "C:\\Users\\ramad\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "C:\\Users\\Hager\\Pictures\\HRSystem\\HRSystem\\HRSystem.csproj",
+      "projectUniqueName": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\HRSystem.csproj",
       "projectName": "HRSystem",
-      "projectPath": "C:\\Users\\Hager\\Pictures\\HRSystem\\HRSystem\\HRSystem.csproj",
-      "packagesPath": "C:\\Users\\Hager\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Hager\\Pictures\\HRSystem\\HRSystem\\obj\\",
+      "projectPath": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\HRSystem.csproj",
+      "packagesPath": "C:\\Users\\ramad\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Hager\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-      "projectUniqueName": "C:\\Users\\hp\\Desktop\\HRSystem\\HRSystem\\HRSystem.csproj",
-      "projectName": "HRSystem",
-      "projectPath": "C:\\Users\\hp\\Desktop\\HRSystem\\HRSystem\\HRSystem.csproj",
-      "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hp\\Desktop\\HRSystem\\HRSystem\\obj\\",
-      "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 4ef5c6882088d2d5f3ad26483b246705fd86544f
+        "C:\\Users\\ramad\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4409,25 +4394,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-<<<<<<< HEAD
-            "C:\\Users\\Hager\\Pictures\\HRSystem\\HRDomain\\HRDomain.csproj": {
-              "projectPath": "C:\\Users\\Hager\\Pictures\\HRSystem\\HRDomain\\HRDomain.csproj"
+            "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\HRDomain.csproj": {
+              "projectPath": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\HRDomain.csproj"
             },
-            "C:\\Users\\Hager\\Pictures\\HRSystem\\HRRepository\\HRRepository.csproj": {
-              "projectPath": "C:\\Users\\Hager\\Pictures\\HRSystem\\HRRepository\\HRRepository.csproj"
+            "C:\\Users\\ramad\\Desktop\\HRSystem\\HRRepository\\HRRepository.csproj": {
+              "projectPath": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRRepository\\HRRepository.csproj"
             },
-            "C:\\Users\\Hager\\Pictures\\HRSystem\\HRService\\HRService.csproj": {
-              "projectPath": "C:\\Users\\Hager\\Pictures\\HRSystem\\HRService\\HRService.csproj"
-=======
-            "C:\\Users\\hp\\Desktop\\HRSystem\\HRDomain\\HRDomain.csproj": {
-              "projectPath": "C:\\Users\\hp\\Desktop\\HRSystem\\HRDomain\\HRDomain.csproj"
-            },
-            "C:\\Users\\hp\\Desktop\\HRSystem\\HRRepository\\HRRepository.csproj": {
-              "projectPath": "C:\\Users\\hp\\Desktop\\HRSystem\\HRRepository\\HRRepository.csproj"
-            },
-            "C:\\Users\\hp\\Desktop\\HRSystem\\HRService\\HRService.csproj": {
-              "projectPath": "C:\\Users\\hp\\Desktop\\HRSystem\\HRService\\HRService.csproj"
->>>>>>> 4ef5c6882088d2d5f3ad26483b246705fd86544f
+            "C:\\Users\\ramad\\Desktop\\HRSystem\\HRService\\HRService.csproj": {
+              "projectPath": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRService\\HRService.csproj"
             }
           }
         }
@@ -4436,6 +4410,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -4480,16 +4459,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\hp\\Desktop\\HRSystem\\HRSystem\\obj\\project.nuget.cache : Unexpected character encountered while parsing value: <. Path '', line 0, position 0."
-    }
-  ]
+  }
 }

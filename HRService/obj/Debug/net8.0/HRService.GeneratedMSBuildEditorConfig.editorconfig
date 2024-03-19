@@ -8,10 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = HRService
-<<<<<<< HEAD
-build_property.ProjectDir = C:\Users\Hager\Pictures\HRSystem\HRService\
-=======
-build_property.ProjectDir = C:\Users\hp\Desktop\HRSystem\HRService\
->>>>>>> 4ef5c6882088d2d5f3ad26483b246705fd86544f
+build_property.ProjectDir = C:\Users\ramad\Desktop\HRSystem\HRService\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

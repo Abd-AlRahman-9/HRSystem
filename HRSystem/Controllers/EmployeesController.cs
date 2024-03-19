@@ -103,7 +103,7 @@ namespace HRSystem.Controllers
 
             Expression<Func<Employee, bool>> predicate = e => e.NationalID == ID;
            await _EmpRepo.UpdateAsync(predicate, ID, employee);
-            return StatusCode(204,new StatusResponse(204,"Updated Successfully"));
+            return Ok(new StatusResponse(204,"Updated Successfully"));
         }
 
         [HttpDelete("delete/id")]
@@ -114,7 +114,7 @@ namespace HRSystem.Controllers
             if (employee is null) return NotFound(new StatusResponse(400, $"Uneable to find employee with {ID}, check national id and try again."));
            // Expression<Func<Employee, bool>> predicate = e => e.NationalID == ID;
            await _EmpRepo.DeleteAsync(employee);
-            return StatusCode(204,new StatusResponse(204,"Deleted Successfully"));
+            return Ok(new StatusResponse(204,"Deleted Successfully"));
         }
     }
 }

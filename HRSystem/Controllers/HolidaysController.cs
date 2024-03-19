@@ -72,7 +72,7 @@ namespace HRSystem.Controllers
                 Expression<Func<Vacation, bool>> predicate = v => v.Date == DateOnlyOperations.ToDateOnly(date);
 
                await _VacRepo.UpdateAsync(predicate,date,Vac);
-                return StatusCode(204, new StatusResponse(204, "Updated Successfully"));
+                return Ok(new StatusResponse(204, "Updated Successfully"));
             }
             return NotFound(new StatusResponse(404));
         }
@@ -88,7 +88,7 @@ namespace HRSystem.Controllers
 
                 //Expression<Func<Vacation, bool>> predicate = v => v.Date == DateOnlyOperations.ToDateOnly(date);
                 await _VacRepo.DeleteAsync(Vac);
-                return StatusCode(204, new StatusResponse(204, "Deleted Successfully"));
+                return Ok(new StatusResponse(204, "Deleted Successfully"));
         }
     }
 }
