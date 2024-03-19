@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\Hager\Pictures\HRSystem\HRService\bin\Debug\net8.0\HRService.deps.json
 C:\Users\Hager\Pictures\HRSystem\HRService\bin\Debug\net8.0\HRService.dll
 C:\Users\Hager\Pictures\HRSystem\HRService\bin\Debug\net8.0\HRService.pdb
@@ -14,3 +15,56 @@ C:\Users\Hager\Pictures\HRSystem\HRService\obj\Debug\net8.0\HRService.dll
 C:\Users\Hager\Pictures\HRSystem\HRService\obj\Debug\net8.0\refint\HRService.dll
 C:\Users\Hager\Pictures\HRSystem\HRService\obj\Debug\net8.0\HRService.pdb
 C:\Users\Hager\Pictures\HRSystem\HRService\obj\Debug\net8.0\ref\HRService.dll
+=======
+<<<<<<< HEAD
+C:\Users\hp\Desktop\HRSystem\HRService\bin\Debug\net8.0\HRService.deps.json
+C:\Users\hp\Desktop\HRSystem\HRService\bin\Debug\net8.0\HRService.dll
+C:\Users\hp\Desktop\HRSystem\HRService\bin\Debug\net8.0\HRService.pdb
+C:\Users\hp\Desktop\HRSystem\HRService\obj\Debug\net8.0\HRService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\Desktop\HRSystem\HRService\obj\Debug\net8.0\HRService.AssemblyInfoInputs.cache
+C:\Users\hp\Desktop\HRSystem\HRService\obj\Debug\net8.0\HRService.AssemblyInfo.cs
+C:\Users\hp\Desktop\HRSystem\HRService\obj\Debug\net8.0\HRService.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\HRSystem\HRService\obj\Debug\net8.0\HRService.dll
+C:\Users\hp\Desktop\HRSystem\HRService\obj\Debug\net8.0\refint\HRService.dll
+C:\Users\hp\Desktop\HRSystem\HRService\obj\Debug\net8.0\HRService.pdb
+C:\Users\hp\Desktop\HRSystem\HRService\obj\Debug\net8.0\ref\HRService.dll
+C:\Users\hp\Desktop\HRSystem\HRService\obj\Debug\net8.0\HRService.sourcelink.json
+C:\Users\ramad\Desktop\HRSystem\HRService\bin\Debug\net8.0\HRService.deps.json
+C:\Users\ramad\Desktop\HRSystem\HRService\bin\Debug\net8.0\HRService.dll
+C:\Users\ramad\Desktop\HRSystem\HRService\bin\Debug\net8.0\HRService.pdb
+C:\Users\ramad\Desktop\HRSystem\HRService\bin\Debug\net8.0\HRDomain.dll
+C:\Users\ramad\Desktop\HRSystem\HRService\bin\Debug\net8.0\HRDomain.pdb
+C:\Users\ramad\Desktop\HRSystem\HRService\obj\Debug\net8.0\HRService.csproj.AssemblyReference.cache
+C:\Users\ramad\Desktop\HRSystem\HRService\obj\Debug\net8.0\HRService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ramad\Desktop\HRSystem\HRService\obj\Debug\net8.0\HRService.AssemblyInfoInputs.cache
+C:\Users\ramad\Desktop\HRSystem\HRService\obj\Debug\net8.0\HRService.AssemblyInfo.cs
+C:\Users\ramad\Desktop\HRSystem\HRService\obj\Debug\net8.0\HRService.csproj.CoreCompileInputs.cache
+C:\Users\ramad\Desktop\HRSystem\HRService\obj\Debug\net8.0\HRService.sourcelink.json
+C:\Users\ramad\Desktop\HRSystem\HRService\obj\Debug\net8.0\HRService.dll
+C:\Users\ramad\Desktop\HRSystem\HRService\obj\Debug\net8.0\refint\HRService.dll
+C:\Users\ramad\Desktop\HRSystem\HRService\obj\Debug\net8.0\HRService.pdb
+C:\Users\ramad\Desktop\HRSystem\HRService\obj\Debug\net8.0\ref\HRService.dll
+C:\Users\ramad\Desktop\HRSystem\HRService\obj\Debug\net8.0\HRService.csproj.Up2Date
+C:\Users\hp\Desktop\HRSystem\HRService\bin\Debug\net8.0\HRDomain.dll
+C:\Users\hp\Desktop\HRSystem\HRService\bin\Debug\net8.0\HRDomain.pdb
+C:\Users\hp\Desktop\HRSystem\HRService\obj\Debug\net8.0\HRService.csproj.AssemblyReference.cache
+C:\Users\hp\Desktop\HRSystem\HRService\obj\Debug\net8.0\HRService.csproj.CopyComplete
+=======
+C:\Users\ramad\Desktop\oldHRSystem - Copy\HRService\bin\Debug\net8.0\HRService.deps.json
+C:\Users\ramad\Desktop\oldHRSystem - Copy\HRService\bin\Debug\net8.0\HRService.dll
+C:\Users\ramad\Desktop\oldHRSystem - Copy\HRService\bin\Debug\net8.0\HRService.pdb
+C:\Users\ramad\Desktop\oldHRSystem - Copy\HRService\bin\Debug\net8.0\HRDomain.dll
+C:\Users\ramad\Desktop\oldHRSystem - Copy\HRService\bin\Debug\net8.0\HRDomain.pdb
+C:\Users\ramad\Desktop\oldHRSystem - Copy\HRService\obj\Debug\net8.0\HRService.csproj.AssemblyReference.cache
+C:\Users\ramad\Desktop\oldHRSystem - Copy\HRService\obj\Debug\net8.0\HRService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ramad\Desktop\oldHRSystem - Copy\HRService\obj\Debug\net8.0\HRService.AssemblyInfoInputs.cache
+C:\Users\ramad\Desktop\oldHRSystem - Copy\HRService\obj\Debug\net8.0\HRService.AssemblyInfo.cs
+C:\Users\ramad\Desktop\oldHRSystem - Copy\HRService\obj\Debug\net8.0\HRService.csproj.CoreCompileInputs.cache
+C:\Users\ramad\Desktop\oldHRSystem - Copy\HRService\obj\Debug\net8.0\HRService.sourcelink.json
+C:\Users\ramad\Desktop\oldHRSystem - Copy\HRService\obj\Debug\net8.0\HRService.csproj.Up2Date
+C:\Users\ramad\Desktop\oldHRSystem - Copy\HRService\obj\Debug\net8.0\HRService.dll
+C:\Users\ramad\Desktop\oldHRSystem - Copy\HRService\obj\Debug\net8.0\refint\HRService.dll
+C:\Users\ramad\Desktop\oldHRSystem - Copy\HRService\obj\Debug\net8.0\HRService.pdb
+C:\Users\ramad\Desktop\oldHRSystem - Copy\HRService\obj\Debug\net8.0\ref\HRService.dll
+>>>>>>> f756e1d3402b4a90926dba5f799dd0d5c83f3f7b
+>>>>>>> 4ef5c6882088d2d5f3ad26483b246705fd86544f

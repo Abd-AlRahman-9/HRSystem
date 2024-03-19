@@ -13,10 +13,9 @@ namespace HRSystem.Controllers
 
             var specification = new VacIncludeNavPropsSpecification(DateOnlyOperations.ToDateOnly(date));
             var Vac = await _VacRepo.GetSpecified(specification);
-            if (Vac == null) return NotFound(new ErrorResponse(400, $"{date} can't be found!"));
+            if (Vac == null) return NotFound(new StatusResponse(400, $"{date} can't be found!"));
             return Ok(mapper.Map<Vacation, OfficialHolidaysDTO>(Vac));
         }
-        //-----------------------------------------------------------//
         [HttpGet]
         public async Task<ActionResult<OfficialHolidaysDTO>> GetAllDepts()
         {
@@ -25,6 +24,16 @@ namespace HRSystem.Controllers
             var Data = mapper.Map<IEnumerable<Vacation>, IEnumerable<OfficialHolidaysDTO>>(Holidays);
             return Ok(Data);
         }
+
+
+        //[HttpGet]
+        //public async Task<ActionResult<OfficialHolidaysDTO>> GetAllDepts()
+        //{
+            
+        //    var Holidays = await _VacRepo.GetAllWithSpecificationsAsync(new VacIncludeNavPropsSpecification());
+        //    var Data = mapper.Map<IEnumerable<Vacation>, IEnumerable<OfficialHolidaysDTO>>(Holidays);
+        //    return Ok(Data);
+        //}
 
        [HttpPost]
         public async Task<ActionResult> Create(OfficialHolidaysDTO holidaysDTO)
@@ -40,9 +49,9 @@ namespace HRSystem.Controllers
                 await _VacRepo.AddAsync(officialHoliday);
 
                 string uri = Url.Action(nameof(GetHoliday), new { officialHoliday.Date });
-                return Created(uri, "Created Succsessfully");
+                return Created(uri, new StatusResponse(201));
             }
-           return BadRequest(new ErrorResponse(400, $"Date must be from " +
+           return BadRequest(new StatusResponse(400, $"Date must be from " +
                $"{DateTime.Now.Year} to 12/2999"));
         }
 
@@ -58,30 +67,28 @@ namespace HRSystem.Controllers
               var currentDate=  DateOnlyOperations.ToDateOnly(holidaysDTO.DateOnTheCurrentYear);
                 var Vac = mapper.Map<Vacation>(holidaysDTO);
                 if (!DateOnlyOperations.IsValidDate(currentDate.Year))
-                    return BadRequest(new ErrorResponse(400, $"Date must be from " +
+                    return BadRequest(new StatusResponse(400, $"Date must be from " +
                         $"{DateTime.Now.Year} to 12/2999"));
                 Expression<Func<Vacation, bool>> predicate = v => v.Date == DateOnlyOperations.ToDateOnly(date);
 
                await _VacRepo.UpdateAsync(predicate,date,Vac);
-                return StatusCode(202, "Updated Succsessfully");
+                return StatusCode(204, new StatusResponse(204, "Updated Successfully"));
             }
-            return NotFound(new ErrorResponse(404));
+            return NotFound(new StatusResponse(404));
         }
 
         [HttpDelete("delete/{date}")]
         public async Task<ActionResult> Delete(string date)
         {
-            string pattern = @"^\d{2}-\d{2}-\d{4}$";
-            Regex regex = new Regex(pattern);
+            var specification = new VacIncludeNavPropsSpecification(DateOnlyOperations.ToDateOnly(date));
+            var Vac = await _VacRepo.GetSpecified(specification);
+            if (Vac == null) return NotFound(new StatusResponse(400, $"{date} can't be found!"));
+            //string pattern = @"^\d{2}-\d{2}-\d{4}$";
+            //Regex regex = new Regex(pattern);
 
-            if (regex.IsMatch(date))
-            {
-
-                Expression<Func<Vacation, bool>> predicate = v => v.Date == DateOnlyOperations.ToDateOnly(date);
-                await _VacRepo.DeleteAsync(predicate, date);
-                return StatusCode(200, "Deleted Succsessfully");
-            }
-            return NotFound(new ErrorResponse(404));
+                //Expression<Func<Vacation, bool>> predicate = v => v.Date == DateOnlyOperations.ToDateOnly(date);
+                await _VacRepo.DeleteAsync(Vac);
+                return StatusCode(204, new StatusResponse(204, "Deleted Successfully"));
         }
     }
 }

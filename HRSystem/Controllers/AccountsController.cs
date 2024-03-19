@@ -15,9 +15,9 @@ namespace HRSystem.Controllers
         public async Task<ActionResult<UserDTO>> Login(LoginDTO loginDTO)
         {
             var user = await _userManager.FindByEmailAsync(loginDTO.Email);
-            if (user == null) return Unauthorized(new ErrorResponse(401));
+            if (user == null) return Unauthorized(new StatusResponse(401));
             var result = await _signInManager.CheckPasswordSignInAsync(user, loginDTO.Password, false);
-            if (!result.Succeeded) return Unauthorized(new ErrorResponse(401));
+            if (!result.Succeeded) return Unauthorized(new StatusResponse(401));
 
             return Ok(new UserDTO()
             {
@@ -42,7 +42,7 @@ namespace HRSystem.Controllers
             };
 
             var result = await _userManager.CreateAsync(user, registerDTO.Password);
-            if (!result.Succeeded) return BadRequest(new ErrorResponse(400));
+            if (!result.Succeeded) return BadRequest(new StatusResponse(400));
 
             return Ok(new UserDTO()
             {

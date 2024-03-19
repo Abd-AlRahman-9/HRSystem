@@ -17,7 +17,8 @@ namespace HRDomain.Repository
         Task UpdateAsync(Expression<Func<T, bool>> predicate, string date, T entity);
         // ?????????????????????????????????????????????
         Task UpdateOneToOneAsync<TEntity>(T entity, Expression<Func<T, TEntity>> navigationProperty, TEntity relatedEntity) where TEntity : BaseTable;
-        Task DeleteAsync(Expression<Func<T, bool>> predicate, string name);
+        Task DeleteAsync(T entity);
+        bool IsExist(Expression<Func<T, bool>> predicate);
         Task<T> GetSpecified(ISpecification<T> specification);
         //Task<T> GetByNameWithSpecificationAsync(ISpecification<T> specification);
         //Task<T> GetByDateWithSpecificationAsync(ISpecification<T> specification);

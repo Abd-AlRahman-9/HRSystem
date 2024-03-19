@@ -12,6 +12,7 @@ namespace HRRepository.Data.Configuartions
             builder.Property(P => P.Holiday).HasColumnType("bit");
             builder.Property(P => P.Name).HasMaxLength(25);
             builder.Property(P => P.Date).HasColumnType("date");
+            builder.HasIndex(p => new { p.Name, p.Date }).IsUnique();
         }
     }
 }

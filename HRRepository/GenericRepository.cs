@@ -7,13 +7,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace HRRepository
 {
-    public class GenericRepository<T> : IRepository<T> where T : BaseTable
+    public class GenericRepository<T>(HRContext context) : IRepository<T> where T : BaseTable
     {
-        protected HRContext context;
-        public GenericRepository(HRContext context) 
-        {
-            this.context = context;
-        }
+        protected HRContext context = context;
+
         private IQueryable<T> ApplySpecification(ISpecification<T> specification)
         {
             return SpecificationEvaluator<T>.BuildQuery(context.Set<T>(), specification);
@@ -26,10 +23,10 @@ namespace HRRepository
             await context.Set<T>().AddAsync(entity);
             await context.SaveChangesAsync();
         }
-        public async Task DeleteAsync(Expression<Func<T, bool>> predicate, string name)
+        public async Task DeleteAsync(T entity)
         {
             // Does using Find "ASYNC" Here is right ? && ! null reference
-            var entity = await context.Set<T>().SingleOrDefaultAsync(predicate);
+           // var entity = await context.Set<T>().SingleOrDefaultAsync(predicate);
             entity!.Deleted = true;
             context.Set<T>().Update(entity);
             await context.SaveChangesAsync(); 
@@ -61,6 +58,14 @@ namespace HRRepository
 
                 await context.SaveChangesAsync();
             }
+        }
+
+        public bool IsExist(Expression<Func<T, bool>> predicate)
+        {
+            var entity = context.Set<T>().SingleOrDefault(predicate);
+            if (entity is null)
+                return true;
+            return false;
         }
 
         public async Task UpdateOneToOneAsync<TEntity>(T entity, Expression<Func<T, TEntity>> navigationProperty, TEntity relatedEntity) where TEntity : BaseTable
