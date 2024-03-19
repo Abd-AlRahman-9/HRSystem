@@ -4373,19 +4373,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\Hager\\Pictures\\HRSystem\\HRSystem\\HRSystem.csproj",
       "projectName": "HRSystem",
       "projectPath": "C:\\Users\\Hager\\Pictures\\HRSystem\\HRSystem\\HRSystem.csproj",
       "packagesPath": "C:\\Users\\Hager\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Hager\\Pictures\\HRSystem\\HRSystem\\obj\\",
-=======
-      "projectUniqueName": "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRSystem\\HRSystem.csproj",
-      "projectName": "HRSystem",
-      "projectPath": "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRSystem\\HRSystem.csproj",
-      "packagesPath": "C:\\Users\\ramad\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRSystem\\obj\\",
->>>>>>> 12178f0cfd0978b95d0521b6e5c7aeb6334bef35
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Hager\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4402,7 +4394,6 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-<<<<<<< HEAD
             "C:\\Users\\Hager\\Pictures\\HRSystem\\HRDomain\\HRDomain.csproj": {
               "projectPath": "C:\\Users\\Hager\\Pictures\\HRSystem\\HRDomain\\HRDomain.csproj"
             },
@@ -4411,16 +4402,6 @@
             },
             "C:\\Users\\Hager\\Pictures\\HRSystem\\HRService\\HRService.csproj": {
               "projectPath": "C:\\Users\\Hager\\Pictures\\HRSystem\\HRService\\HRService.csproj"
-=======
-            "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRDomain\\HRDomain.csproj": {
-              "projectPath": "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRDomain\\HRDomain.csproj"
-            },
-            "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRRepository\\HRRepository.csproj": {
-              "projectPath": "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRRepository\\HRRepository.csproj"
-            },
-            "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRService\\HRService.csproj": {
-              "projectPath": "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRService\\HRService.csproj"
->>>>>>> 12178f0cfd0978b95d0521b6e5c7aeb6334bef35
             }
           }
         }

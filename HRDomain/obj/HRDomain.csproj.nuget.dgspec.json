@@ -1,7 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
     "C:\\Users\\Hager\\Pictures\\HRSystem\\HRDomain\\HRDomain.csproj": {}
   },
   "projects": {
@@ -13,19 +12,6 @@
         "projectPath": "C:\\Users\\Hager\\Pictures\\HRSystem\\HRDomain\\HRDomain.csproj",
         "packagesPath": "C:\\Users\\Hager\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Hager\\Pictures\\HRSystem\\HRDomain\\obj\\",
-=======
-    "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRDomain\\HRDomain.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRDomain\\HRDomain.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRDomain\\HRDomain.csproj",
-        "projectName": "HRDomain",
-        "projectPath": "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRDomain\\HRDomain.csproj",
-        "packagesPath": "C:\\Users\\ramad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRDomain\\obj\\",
->>>>>>> 12178f0cfd0978b95d0521b6e5c7aeb6334bef35
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Hager\\AppData\\Roaming\\NuGet\\NuGet.Config",

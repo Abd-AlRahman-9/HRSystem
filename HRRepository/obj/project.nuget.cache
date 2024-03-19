@@ -1,14 +1,8 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "Txfq34If13MWaAI0666sUvzeS8ibK2OHR3RvS5frV4PmtSE60+ZJu5l9yTUCwwvsHFqsyU/yT05Fm+Hq9EBjow==",
   "success": true,
   "projectFilePath": "C:\\Users\\Hager\\Pictures\\HRSystem\\HRRepository\\HRRepository.csproj",
-=======
-  "dgSpecHash": "HnaMb7+Ygk1yUD9uV2vZ8COeqeoDr6Cf16XsHOclofRZwVMinAdFt9rabdqoKssJRWkBUHoQHmEn0njj4+W00g==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRRepository\\HRRepository.csproj",
->>>>>>> 12178f0cfd0978b95d0521b6e5c7aeb6334bef35
   "expectedPackageFiles": [
     "C:\\Users\\Hager\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Hager\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

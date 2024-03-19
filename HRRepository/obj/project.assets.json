@@ -2744,19 +2744,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\Hager\\Pictures\\HRSystem\\HRRepository\\HRRepository.csproj",
       "projectName": "HRRepository",
       "projectPath": "C:\\Users\\Hager\\Pictures\\HRSystem\\HRRepository\\HRRepository.csproj",
       "packagesPath": "C:\\Users\\Hager\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Hager\\Pictures\\HRSystem\\HRRepository\\obj\\",
-=======
-      "projectUniqueName": "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRRepository\\HRRepository.csproj",
-      "projectName": "HRRepository",
-      "projectPath": "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRRepository\\HRRepository.csproj",
-      "packagesPath": "C:\\Users\\ramad\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRRepository\\obj\\",
->>>>>>> 12178f0cfd0978b95d0521b6e5c7aeb6334bef35
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Hager\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2773,13 +2765,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-<<<<<<< HEAD
             "C:\\Users\\Hager\\Pictures\\HRSystem\\HRDomain\\HRDomain.csproj": {
               "projectPath": "C:\\Users\\Hager\\Pictures\\HRSystem\\HRDomain\\HRDomain.csproj"
-=======
-            "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRDomain\\HRDomain.csproj": {
-              "projectPath": "C:\\Users\\ramad\\Desktop\\oldHRSystem\\HRDomain\\HRDomain.csproj"
->>>>>>> 12178f0cfd0978b95d0521b6e5c7aeb6334bef35
             }
           }
         }

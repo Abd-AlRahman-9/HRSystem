@@ -1,17 +1,3 @@
-C:\Users\ramad\Desktop\HRSystem\HRDomain\bin\Debug\net8.0\HRDomain.deps.json
-C:\Users\ramad\Desktop\HRSystem\HRDomain\bin\Debug\net8.0\HRDomain.dll
-C:\Users\ramad\Desktop\HRSystem\HRDomain\bin\Debug\net8.0\HRDomain.pdb
-C:\Users\ramad\Desktop\HRSystem\HRDomain\obj\Debug\net8.0\HRDomain.csproj.AssemblyReference.cache
-C:\Users\ramad\Desktop\HRSystem\HRDomain\obj\Debug\net8.0\HRDomain.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\ramad\Desktop\HRSystem\HRDomain\obj\Debug\net8.0\HRDomain.AssemblyInfoInputs.cache
-C:\Users\ramad\Desktop\HRSystem\HRDomain\obj\Debug\net8.0\HRDomain.AssemblyInfo.cs
-C:\Users\ramad\Desktop\HRSystem\HRDomain\obj\Debug\net8.0\HRDomain.csproj.CoreCompileInputs.cache
-C:\Users\ramad\Desktop\HRSystem\HRDomain\obj\Debug\net8.0\HRDomain.sourcelink.json
-C:\Users\ramad\Desktop\HRSystem\HRDomain\obj\Debug\net8.0\HRDomain.dll
-C:\Users\ramad\Desktop\HRSystem\HRDomain\obj\Debug\net8.0\refint\HRDomain.dll
-C:\Users\ramad\Desktop\HRSystem\HRDomain\obj\Debug\net8.0\HRDomain.pdb
-C:\Users\ramad\Desktop\HRSystem\HRDomain\obj\Debug\net8.0\ref\HRDomain.dll
-<<<<<<< HEAD
 C:\Users\Hager\Pictures\HRSystem\HRDomain\bin\Debug\net8.0\HRDomain.deps.json
 C:\Users\Hager\Pictures\HRSystem\HRDomain\bin\Debug\net8.0\HRDomain.dll
 C:\Users\Hager\Pictures\HRSystem\HRDomain\bin\Debug\net8.0\HRDomain.pdb
@@ -25,18 +11,3 @@ C:\Users\Hager\Pictures\HRSystem\HRDomain\obj\Debug\net8.0\HRDomain.dll
 C:\Users\Hager\Pictures\HRSystem\HRDomain\obj\Debug\net8.0\refint\HRDomain.dll
 C:\Users\Hager\Pictures\HRSystem\HRDomain\obj\Debug\net8.0\HRDomain.pdb
 C:\Users\Hager\Pictures\HRSystem\HRDomain\obj\Debug\net8.0\ref\HRDomain.dll
-=======
-C:\Users\ramad\Desktop\oldHRSystem\HRDomain\bin\Debug\net8.0\HRDomain.deps.json
-C:\Users\ramad\Desktop\oldHRSystem\HRDomain\bin\Debug\net8.0\HRDomain.dll
-C:\Users\ramad\Desktop\oldHRSystem\HRDomain\bin\Debug\net8.0\HRDomain.pdb
-C:\Users\ramad\Desktop\oldHRSystem\HRDomain\obj\Debug\net8.0\HRDomain.csproj.AssemblyReference.cache
-C:\Users\ramad\Desktop\oldHRSystem\HRDomain\obj\Debug\net8.0\HRDomain.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\ramad\Desktop\oldHRSystem\HRDomain\obj\Debug\net8.0\HRDomain.AssemblyInfoInputs.cache
-C:\Users\ramad\Desktop\oldHRSystem\HRDomain\obj\Debug\net8.0\HRDomain.AssemblyInfo.cs
-C:\Users\ramad\Desktop\oldHRSystem\HRDomain\obj\Debug\net8.0\HRDomain.csproj.CoreCompileInputs.cache
-C:\Users\ramad\Desktop\oldHRSystem\HRDomain\obj\Debug\net8.0\HRDomain.sourcelink.json
-C:\Users\ramad\Desktop\oldHRSystem\HRDomain\obj\Debug\net8.0\HRDomain.dll
-C:\Users\ramad\Desktop\oldHRSystem\HRDomain\obj\Debug\net8.0\refint\HRDomain.dll
-C:\Users\ramad\Desktop\oldHRSystem\HRDomain\obj\Debug\net8.0\HRDomain.pdb
-C:\Users\ramad\Desktop\oldHRSystem\HRDomain\obj\Debug\net8.0\ref\HRDomain.dll
->>>>>>> 12178f0cfd0978b95d0521b6e5c7aeb6334bef35
