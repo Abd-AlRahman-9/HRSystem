@@ -9,6 +9,5 @@ namespace HRDomain.Specification
         { 
         }
 
-        public VacIncludeNavPropsSpecification() : base(V => (V.Deleted == false) && (V.Holiday == true)) { }
     }
 }

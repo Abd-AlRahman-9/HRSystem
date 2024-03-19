@@ -26,14 +26,14 @@ namespace HRSystem.Controllers
         }
 
 
-        [HttpGet]
-        public async Task<ActionResult<OfficialHolidaysDTO>> GetAllDepts()
-        {
+        //[HttpGet]
+        //public async Task<ActionResult<OfficialHolidaysDTO>> GetAllDepts()
+        //{
             
-            var Holidays = await _VacRepo.GetAllWithSpecificationsAsync(new VacIncludeNavPropsSpecification());
-            var Data = mapper.Map<IEnumerable<Vacation>, IEnumerable<OfficialHolidaysDTO>>(Holidays);
-            return Ok(Data);
-        }
+        //    var Holidays = await _VacRepo.GetAllWithSpecificationsAsync(new VacIncludeNavPropsSpecification());
+        //    var Data = mapper.Map<IEnumerable<Vacation>, IEnumerable<OfficialHolidaysDTO>>(Holidays);
+        //    return Ok(Data);
+        //}
 
        [HttpPost]
         public async Task<ActionResult> Create(OfficialHolidaysDTO holidaysDTO)

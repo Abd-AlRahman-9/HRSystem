@@ -4,10 +4,10 @@
     {
         public int? MngId { get; set; }
         public int? DeptId { get; set; }
-        public string DeptName { get; set; }
-        public string NationalID { get; set; }
-        public string sort { get; set; }
-        public string Search { get; set; }
+        public string? DeptName { get; set; }
+        public string? NationalID { get; set; }
+        public string? sort { get; set; }
+        public string? Search { get; set; }
 
         private int? pageSize;
         public int? PageSize 

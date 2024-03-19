@@ -415,7 +415,6 @@ C:\Users\ramad\Desktop\HRSystem\HRSystem\obj\Debug\net8.0\refint\HRSystem.dll
 C:\Users\ramad\Desktop\HRSystem\HRSystem\obj\Debug\net8.0\HRSystem.pdb
 C:\Users\ramad\Desktop\HRSystem\HRSystem\obj\Debug\net8.0\HRSystem.genruntimeconfig.cache
 C:\Users\ramad\Desktop\HRSystem\HRSystem\obj\Debug\net8.0\ref\HRSystem.dll
-<<<<<<< HEAD
 C:\Users\hp\Desktop\HRSystem\HRSystem\bin\Debug\net8.0\de\Microsoft.Data.SqlClient.resources.dll
 C:\Users\hp\Desktop\HRSystem\HRSystem\bin\Debug\net8.0\es\Microsoft.Data.SqlClient.resources.dll
 C:\Users\hp\Desktop\HRSystem\HRSystem\bin\Debug\net8.0\fr\Microsoft.Data.SqlClient.resources.dll
@@ -465,7 +464,6 @@ C:\Users\hp\Desktop\HRSystem\HRSystem\bin\Debug\net8.0\Microsoft.Extensions.Opti
 C:\Users\hp\Desktop\HRSystem\HRSystem\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\hp\Desktop\HRSystem\HRSystem\bin\Debug\net8.0\HRService.dll
 C:\Users\hp\Desktop\HRSystem\HRSystem\bin\Debug\net8.0\HRService.pdb
-=======
 C:\Users\ramad\Desktop\oldHRSystem - Copy\HRSystem\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\ramad\Desktop\oldHRSystem - Copy\HRSystem\bin\Debug\net8.0\appsettings.json
 C:\Users\ramad\Desktop\oldHRSystem - Copy\HRSystem\bin\Debug\net8.0\HRSystem.exe
