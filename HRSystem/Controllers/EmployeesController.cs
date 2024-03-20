@@ -55,7 +55,7 @@ namespace HRSystem.Controllers
                 int age = DateOnlyOperations.CheckAge(employeesDTO.DateOfBirth, employeesDTO.HiringDate);
                 if (age < 20) return BadRequest(new StatusResponse(400,"Can't hire employee less than 20 years."));
                 if (hiring.Year < 2008) return BadRequest(new StatusResponse(400,"Uneable to hire employee before establish the company!"));
-                //Employee employee = mapper.Map<Employee>(employeesDTO);
+             //   Employee employee = mapper.Map<Employee>(employeesDTO);
                 Employee employee = new()
                 {
                     Name = employeesDTO.EmployeeName,

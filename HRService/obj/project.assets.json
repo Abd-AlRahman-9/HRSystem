@@ -2371,19 +2371,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\hp\\.nuget\\packages\\": {}
+    "C:\\Users\\ramad\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hp\\Desktop\\HRSystem\\HRService\\HRService.csproj",
+      "projectUniqueName": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRService\\HRService.csproj",
       "projectName": "HRService",
-      "projectPath": "C:\\Users\\hp\\Desktop\\HRSystem\\HRService\\HRService.csproj",
-      "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hp\\Desktop\\HRSystem\\HRService\\obj\\",
+      "projectPath": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRService\\HRService.csproj",
+      "packagesPath": "C:\\Users\\ramad\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRService\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ramad\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2397,8 +2397,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\hp\\Desktop\\HRSystem\\HRDomain\\HRDomain.csproj": {
-              "projectPath": "C:\\Users\\hp\\Desktop\\HRSystem\\HRDomain\\HRDomain.csproj"
+            "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\HRDomain.csproj": {
+              "projectPath": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\HRDomain.csproj"
             }
           }
         }
@@ -2407,6 +2407,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -2434,7 +2439,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
