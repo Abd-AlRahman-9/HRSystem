@@ -13,6 +13,12 @@ namespace HRDomain.CustomConverter
                 return true;
             return false;
         }
+        public static int Compare(string arrive, string leave)
+        {
+            if (!IsTime(arrive, leave)) return 0;
+            var differance = TimeSpan.Parse(arrive).Hours - TimeSpan.Parse(leave).Hours;
+            return differance;
+        }
         public static decimal CalculateBonusHours (TimeSpan departmentAttend, TimeSpan employeeAttend, TimeSpan departmentLeave, TimeSpan employeeLeave)
         {
             double bonus = 0; 
@@ -30,6 +36,7 @@ namespace HRDomain.CustomConverter
             }
             return (decimal)bonus;
         }
+
         public static decimal CalculateDiscountHours(TimeSpan departmentAttend, TimeSpan employeeAttend, TimeSpan departmentLeave, TimeSpan employeeLeave)
         {
             double discount = 0.00;

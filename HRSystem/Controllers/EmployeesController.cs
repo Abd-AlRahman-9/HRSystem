@@ -45,12 +45,16 @@ namespace HRSystem.Controllers
             try
             {
                 Expression<Func<Employee, bool>> predicate = e => e.NationalID == employeesDTO.NationalID;
-                if(!_EmpRepo.IsExist(predicate)) return BadRequest(new StatusResponse(400,"This National Id is already exist!"));
+
+                var hiring = DateOnlyOperations.ToDateOnly(employeesDTO.HiringDate);
+                var birth = DateOnlyOperations.ToDateOnly(employeesDTO.HiringDate);
+
+                if (!_EmpRepo.IsExist(predicate)) return BadRequest(new StatusResponse(400,"This National Id is already exist!"));
                 var specification = new DeptIncludeNavPropsSpecification(employeesDTO.Department);
                 var Dept = await _DeptRepo.GetSpecified(specification);
                 int age = DateOnlyOperations.CheckAge(employeesDTO.DateOfBirth, employeesDTO.HiringDate);
                 if (age < 20) return BadRequest(new StatusResponse(400,"Can't hire employee less than 20 years."));
-                if (DateOnlyOperations.ToDateOnly(employeesDTO.HiringDate).Year < 2008) return BadRequest(new StatusResponse(400,"Uneable to hire employee before establish the company!"));
+                if (hiring.Year < 2008) return BadRequest(new StatusResponse(400,"Uneable to hire employee before establish the company!"));
                 //Employee employee = mapper.Map<Employee>(employeesDTO);
                 Employee employee = new()
                 {
@@ -62,8 +66,8 @@ namespace HRSystem.Controllers
                     PhoneNumber = employeesDTO.Phone,
                     VacationsRecord = employeesDTO.VacationsCredit,
                     Salary = employeesDTO.Salary,
-                    BirthDate = DateOnlyOperations.ToDateOnly(employeesDTO.DateOfBirth),
-                    HireData = DateOnlyOperations.ToDateOnly(employeesDTO.HiringDate),
+                    BirthDate = birth,
+                    HireData = hiring,
                     Department = Dept,
                 };
                 employee.manager = employee.Department.Manager;

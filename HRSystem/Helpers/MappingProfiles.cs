@@ -25,16 +25,17 @@
                 .ForMember(DTO => DTO.DeductionRule, Opt => Opt.MapFrom(Dept => Dept.DeductHour))
                 .ForMember(DTO => DTO.BonusRule, Opt => Opt.MapFrom(Dept => Dept.BonusHour))
                 .ForMember(DTO => DTO.WorkDays, Opt => Opt.MapFrom(Dept => Dept.WorkDays))
-                .ForMember(DTO => DTO.TimeToLeave, Opt => Opt.MapFrom(Dept => Dept.LeaveTime.ToString("hh\\:mm\\:ss")))
+                .ForMember(DTO => DTO.TimeToLeave , Opt => Opt.MapFrom(Dept => Dept.LeaveTime.ToString("hh\\:mm\\:ss")))
                 .ForMember(DTO => DTO.ComingTime, Opt => Opt.MapFrom(Dept => Dept.ComingTime.ToString("hh\\:mm\\:ss")))
                 .ReverseMap()
-                .ForMember(Dept => Dept.LeaveTime, Opt => Opt.MapFrom(DTO => TimeSpan.Parse(DTO.TimeToLeave)))
+                .ForMember(Dept => Dept.LeaveTime , Opt => Opt.MapFrom(DTO => TimeSpan.Parse(DTO.TimeToLeave)))
                 .ForMember(Dept => Dept.ComingTime, Opt => Opt.MapFrom(DTO => TimeSpan.Parse(DTO.ComingTime)));
 
             // For Employee
             CreateMap<Employee, EmployeesDTO>()
-               // .ForMember(DTO => DTO.Manager, Opt => Opt.MapFrom(Emp => Emp.manager.Name))
-                .ForMember(DTO => DTO.Department, Opt => Opt.MapFrom(Emp => Emp.Department.Name))
+                 // .ForMember(DTO => DTO.Manager, Opt => Opt.MapFrom(Emp => Emp.manager.Name))
+                 //.ForMember(DTO => DTO.Department, Opt => Opt.MapFrom(Emp => Emp.Department.Name))
+                //.ForMember(dto => dto.Department, opt => opt.Ignore())
                 .ForMember(DTO => DTO.EmployeeName, Opt => Opt.MapFrom(Emp => Emp.Name))
                 .ForMember(DTO => DTO.Address, Opt => Opt.MapFrom(Emp => Emp.Address))
                 .ForMember(DTO => DTO.Phone, Opt => Opt.MapFrom(Emp => Emp.PhoneNumber))
