@@ -20,7 +20,7 @@
             return Ok(mapper.Map<Department,GetDeptsDTO>(Dept));
         }
         [HttpGet]
-        public async Task<ActionResult<Pagination<GetDeptsDTO>>> GetAllDepts([FromQuery]GetAllDeptsParams P) 
+        public async Task<ActionResult<GetDeptsDTO>> GetAllDepts([FromQuery]GetAllDeptsParams P) 
         {
             if (P.MngNationalId != null)
             {
@@ -30,9 +30,7 @@
             var specification = new DeptIncludeNavPropsSpecification(P);
             var Depts = await _DeptRepo.GetAllWithSpecificationsAsync(specification);
             var Data = mapper.Map<IEnumerable<Department>, IEnumerable<GetDeptsDTO>>(Depts);
-            var countSpec = new CountDeptSpecification(P);
-            var count = await _DeptRepo.GetCountAsync(countSpec);
-            return Ok(new Pagination<GetDeptsDTO>(P.PageIndex,P.PageSize,count,Data));
+            return Ok(Data);
         }
 
         [HttpPost ("WorkDays")]
