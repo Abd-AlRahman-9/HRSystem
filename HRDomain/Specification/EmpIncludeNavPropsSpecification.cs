@@ -20,7 +20,7 @@ namespace HRDomain.Specification
             if (getAllEmpsParams == null)
                 getAllEmpsParams = new GetAllEmpsParams() { PageSize = 10, PageIndex = 1 };
 
-            ApplyPagination(getAllEmpsParams.PageSize.Value * (getAllEmpsParams.PageIndex.Value - 1), getAllEmpsParams.PageSize.Value);
+            ApplyPagination(getAllEmpsParams.PageSize * (getAllEmpsParams.PageIndex - 1), getAllEmpsParams.PageSize);
 
             if (!string.IsNullOrEmpty(getAllEmpsParams.sort))
             {
