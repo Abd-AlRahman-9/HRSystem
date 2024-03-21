@@ -53,7 +53,7 @@ namespace HRSystem.Controllers
             
             var department = mapper.Map<Department>(deptsDTO);
             var manger = SetManger(deptsDTO.ManagerName);
-            if(manger is null) return NotFound(new StatusResponse(404, $"Invalid Name, Please check that {deptsDTO.ManagerName} is exist."));
+            if(manger is null) return NotFound(new StatusResponse(404, $"Please check that {deptsDTO.ManagerName} is exist and isn't a manger of other department"));
             department.Manager = manger;
             
             await _DeptRepo.AddAsync(department);
@@ -70,7 +70,7 @@ namespace HRSystem.Controllers
 
 
             if (!TimeSpanOperations.IsTime(deptsDTO.ComingTime, deptsDTO.TimeToLeave))
-                return BadRequest(new StatusResponse(400,"Invalid time format,Please provide the time in the format '00:00:00'"));
+                return BadRequest(new StatusResponse(400,"Invalid time format,Please provide the time in the format 'hh:mm:ss'"));
 
 
             var dept = mapper.Map<Department>(deptsDTO);
@@ -78,13 +78,13 @@ namespace HRSystem.Controllers
             if (!department.Manager.Name.Equals(deptsDTO.ManagerName))
             {
                 var manger = SetManger(deptsDTO.ManagerName);
-            if (manger == null) return NotFound(new StatusResponse(404, $"Invalid Name, Please check that {deptsDTO.ManagerName} is exist."));
+            if (manger == null) return NotFound(new StatusResponse(404, $"Please check that {deptsDTO.ManagerName} is exist and isn't a manger of other department."));
                 dept.Manager =  manger;
             }
             else
             {
                 var employee = new EmpIncludeNavPropsSpecification(name, 0);
-            dept.Manager = await _EmpRepo.GetSpecified(employee);
+               dept.Manager = await _EmpRepo.GetSpecified(employee);
             }
             
 
@@ -114,7 +114,7 @@ namespace HRSystem.Controllers
             var departmentManger =  _EmpRepo.GetSpecified(manger);
             if ( departmentManger != null)
             {
-              var emp = aDOProcedures.GetManagers().FirstOrDefault(m => m.Value.ToLower() == name.ToLower());
+              var emp = aDOProcedures.GetManagers().FirstOrDefault(m => m.Value == name.ToLower());
                 if (emp.Key != null)
                     return null;
                 else return departmentManger.Result;

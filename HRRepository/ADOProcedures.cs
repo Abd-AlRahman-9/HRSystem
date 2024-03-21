@@ -24,7 +24,7 @@ namespace HRRepository
                 string Value = DT.Rows[i][0].ToString();
                 string Key = DT.Rows[i][1].ToString();
 
-                Mangers.Add(Key,Value);
+                Mangers.Add(Key,Value.ToLower());
             }
             return Mangers;
         }

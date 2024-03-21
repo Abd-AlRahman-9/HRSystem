@@ -31,6 +31,11 @@ namespace HRSystem.Controllers
             var count = await _AttendRepo.GetCountAsync(countSpec);
             return Ok(new Pagination<AttendDTO>(P.PageIndex, P.PageSize, count, Data));
         }
+        [HttpPost]
+        public async Task<ActionResult<AttendDTO>> Create(AttendDTO attendDTO)
+        {
+            return Created();
+        }
 
         [HttpPut("edit/{Name}/{Date}")]
         public async Task<ActionResult> Edit (string Name,string Date,AttendDTO attendDTO)
@@ -64,7 +69,6 @@ namespace HRSystem.Controllers
             Expression<Func<EmployeeAttendace, bool>> predicate = a => a.Date == DateOnlyOperations.ToDateOnly(Date) && a.Employee.Name == Name;
             await _AttendRepo.UpdateAsync(predicate, Name, attend);
 
-            // await _AttendRepo.UpdateOneToOneAsync(attend, a => a.Employee,attend.Employee);
             return Ok(new StatusResponse(204, "Updated Successfully"));
         }
         [HttpDelete("delete/{Name}/{Date}")]
