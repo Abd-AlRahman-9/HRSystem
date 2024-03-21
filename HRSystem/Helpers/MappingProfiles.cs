@@ -33,7 +33,7 @@
 
             // For Employee
             CreateMap<Employee, EmployeesDTO>()
-                .ForMember(DTO => DTO.ManagerName, Opt => Opt.MapFrom(Emp => Emp.manager.Name))
+                //.ForMember(DTO => DTO.ManagerName, Opt => Opt.MapFrom(Emp => Emp.manager.Name))
                 .ForMember(DTO => DTO.Department, Opt => Opt.MapFrom(Emp => Emp.Department.Name))
                 //.ForMember(dto => dto.Department, opt => opt.Ignore())
                 .ForMember(DTO => DTO.EmployeeName, Opt => Opt.MapFrom(Emp => Emp.Name))

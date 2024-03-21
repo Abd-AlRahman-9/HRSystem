@@ -1,16 +1,23 @@
-﻿namespace HRSystem.Controllers
-{
-    public class DepartmentsController(GenericRepository<Department> repository, GenericRepository<Employee> EmpRepo, IMapper mapper) : HRBaseController
-    {
-        readonly GenericRepository<Department> _DeptRepo = repository;
-        readonly GenericRepository<Employee> _EmpRepo = EmpRepo;
-        readonly IMapper mapper = mapper;
+﻿using HRDomain.Entities;
 
-        //        readonly IConfiguration _configuration;
-        //        readonly ADOProcedures aDOProcedures;
-        //_configuration = configuration;
-        //            string connectionString = _configuration.GetConnectionString("Default");
-        //            aDOProcedures = new ADOProcedures(connectionString);
+namespace HRSystem.Controllers
+{
+    public class DepartmentsController: HRBaseController
+    { 
+        readonly GenericRepository<Department> _DeptRepo;
+        readonly GenericRepository<Employee> _EmpRepo ;
+        readonly IMapper mapper;
+        readonly IConfiguration _configuration;
+        readonly ADOProcedures aDOProcedures;
+        public DepartmentsController(GenericRepository<Department> repository, GenericRepository<Employee> EmpRepo, IMapper mapper,IConfiguration configuration)
+        {
+            _DeptRepo = repository;
+            _EmpRepo = EmpRepo;
+            this.mapper = mapper;
+            _configuration = configuration;
+            string? connectionString =  _configuration.GetConnectionString("Default");
+            aDOProcedures = new ADOProcedures(connectionString);
+        }
 
         [HttpGet("{Name}", Name = "GetDepartmentByName")]
         public async Task<ActionResult<GetDeptsDTO>> GetOneDept (string Name)
@@ -38,14 +45,16 @@
         {
             Expression<Func<Department, bool>> predicate = d => d.Name == deptsDTO.DepartmentName;
             if (!_DeptRepo.IsExist(predicate)) return BadRequest(new StatusResponse(400, $"{deptsDTO.DepartmentName} is already exist!"));
-            //if (!TimeSpanOperations.IsTime(deptsDTO.ComingTime, deptsDTO.TimeToLeave))
-            //    return BadRequest("Invalid time format,Please provide the time in the format 'hh:mm:ss'");
-            if(TimeSpanOperations.Compare(deptsDTO.ComingTime, deptsDTO.TimeToLeave) < 6 )
-                return BadRequest(new StatusResponse(400,"Working Hours can't be less than 6 hours"));
-            //remember to create bool method for previous 2 validations, then concat them at one if state
+
+            if (!TimeSpanOperations.IsTime(deptsDTO.ComingTime, deptsDTO.TimeToLeave))
+                return BadRequest("Invalid time format,Please provide the time in the format 'hh:mm:ss'");
+
             deptsDTO.WorkDays = (sbyte)workDays;
+            
             var department = mapper.Map<Department>(deptsDTO);
-            department.Manager = null;
+            var manger = SetManger(deptsDTO.ManagerName);
+            if(manger is null) return NotFound(new StatusResponse(404, $"Please check that {deptsDTO.ManagerName} is exist and isn't a manger of other department"));
+            department.Manager = manger;
             
             await _DeptRepo.AddAsync(department);
             string? uri =  Url.Action(nameof(GetOneDept), new { id = department.Id });
@@ -61,15 +70,23 @@
 
 
             if (!TimeSpanOperations.IsTime(deptsDTO.ComingTime, deptsDTO.TimeToLeave))
-                return BadRequest("Invalid time format,Please provide the time in the format '00:00:00'");
-            if (TimeSpanOperations.Compare(deptsDTO.ComingTime, deptsDTO.TimeToLeave) < 6)
-                return BadRequest(new StatusResponse(400, "Working Hours can't be less than 6 hours"));
+                return BadRequest(new StatusResponse(400,"Invalid time format,Please provide the time in the format 'hh:mm:ss'"));
+
 
             var dept = mapper.Map<Department>(deptsDTO);
-            var manger = new EmpIncludeNavPropsSpecification(deptsDTO.ManagerName, department.Id);
-            Employee departmentManger = await _EmpRepo.GetSpecified(manger);
-            if (departmentManger is null) return NotFound(new StatusResponse(404, "Manger Name can't be found."));
-            dept.Manager = departmentManger;
+
+            if (!department.Manager.Name.Equals(deptsDTO.ManagerName))
+            {
+                var manger = SetManger(deptsDTO.ManagerName);
+            if (manger == null) return NotFound(new StatusResponse(404, $"Please check that {deptsDTO.ManagerName} is exist and isn't a manger of other department."));
+                dept.Manager =  manger;
+            }
+            else
+            {
+                var employee = new EmpIncludeNavPropsSpecification(name, 0);
+               dept.Manager = await _EmpRepo.GetSpecified(employee);
+            }
+            
 
             Expression<Func<Department, bool>> predicate = d => d.Name == name;
             await _DeptRepo.UpdateAsync(predicate, name, dept);
@@ -90,6 +107,19 @@
             var specification = new DeptIncludeNavPropsSpecification(name);
             var department = await _DeptRepo.GetSpecified(specification);
             return department;
+        }
+        private Employee SetManger (string name)
+        {
+            var manger = new EmpIncludeNavPropsSpecification(name,0);
+            var departmentManger =  _EmpRepo.GetSpecified(manger);
+            if ( departmentManger != null)
+            {
+              var emp = aDOProcedures.GetManagers().FirstOrDefault(m => m.Value == name.ToLower());
+                if (emp.Key != null)
+                    return null;
+                else return departmentManger.Result;
+            }
+            return  departmentManger.Result;
         }
     }
 }

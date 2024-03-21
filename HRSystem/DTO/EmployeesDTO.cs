@@ -4,7 +4,6 @@
     {
         public string EmployeeName { get; set; }
         public string Department { get; set; }
-        public string ManagerName { get; set; }
         public string NationalID { get; set; }
         public string DateOfBirth { get; set; }
         public string Nationality { get; set; }
