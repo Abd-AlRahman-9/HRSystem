@@ -6,6 +6,5 @@
         public string? sort { get; set; }
         public string? Search { get; set; }
         public int? MngId { get; set; }
-
     }
 }

@@ -22,12 +22,10 @@ namespace HRSystem.Controllers
                 var Emp = await _EmpRepo.GetSpecified(new EmpIncludeNavPropsSpecification(P.NationalID));
                 P.MngId = Emp.Id;
             }
-            var specification = new EmpIncludeNavPropsSpecification(P);
-            var Emps = await _EmpRepo.GetAllWithSpecificationsAsync(specification); 
+            var Emps = await _EmpRepo.GetAllWithSpecificationsAsync(new EmpIncludeNavPropsSpecification(P)); 
             var Data = mapper.Map<IEnumerable<Employee>, IEnumerable<EmployeesDTO>>(Emps);
-            var countSpec = new CountEmpSpecification(P);
-            var count = await _EmpRepo.GetCountAsync(countSpec);
-            return Ok(new Pagination<EmployeesDTO>(P.PageIndex, P.PageSize, count, Data));
+            var count = await _EmpRepo.GetCountAsync(new CountEmpSpecification(P));
+            return Ok(new Pagination<EmployeesDTO>(P.PageIndex, P.PageSize, count - (P.PageSize * P.PageIndex) > 0 ? count - (P.PageSize * P.PageIndex) : 0, Data));
         }
         [HttpGet("{NationalId}", Name = "GetEmployeeByNatinalId")]
         public async Task<ActionResult<EmployeesDTO>> GetOneEmp(string NationalId)
