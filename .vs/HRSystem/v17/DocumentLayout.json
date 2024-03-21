@@ -3,28 +3,60 @@
   "WorkspaceRootPath": "C:\\Users\\ramad\\Desktop\\HRSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{183D1582-B995-4C65-8E38-6D24F440B4A4}|HRSystem\\HRSystem.csproj|c:\\users\\ramad\\desktop\\hrsystem\\hrsystem\\controllers\\departmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{183D1582-B995-4C65-8E38-6D24F440B4A4}|HRSystem\\HRSystem.csproj|solutionrelative:hrsystem\\controllers\\departmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{183D1582-B995-4C65-8E38-6D24F440B4A4}|HRSystem\\HRSystem.csproj|c:\\users\\ramad\\desktop\\hrsystem\\hrsystem\\dto\\attenddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{183D1582-B995-4C65-8E38-6D24F440B4A4}|HRSystem\\HRSystem.csproj|solutionrelative:hrsystem\\dto\\attenddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{183D1582-B995-4C65-8E38-6D24F440B4A4}|HRSystem\\HRSystem.csproj|c:\\users\\ramad\\desktop\\hrsystem\\hrsystem\\controllers\\attendancescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{183D1582-B995-4C65-8E38-6D24F440B4A4}|HRSystem\\HRSystem.csproj|solutionrelative:hrsystem\\controllers\\attendancescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{183D1582-B995-4C65-8E38-6D24F440B4A4}|HRSystem\\HRSystem.csproj|c:\\users\\ramad\\desktop\\hrsystem\\hrsystem\\dto\\attenddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{183D1582-B995-4C65-8E38-6D24F440B4A4}|HRSystem\\HRSystem.csproj|solutionrelative:hrsystem\\dto\\attenddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2DE077F4-2423-4624-A558-23DDB72A5BD3}|HRDomain\\HRDomain.csproj|c:\\users\\ramad\\desktop\\hrsystem\\hrdomain\\customconverter\\timespanoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DE077F4-2423-4624-A558-23DDB72A5BD3}|HRDomain\\HRDomain.csproj|solutionrelative:hrdomain\\customconverter\\timespanoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{695D184C-7E33-4E62-A895-D16B1D4FF6FC}|HRRepository\\HRRepository.csproj|c:\\users\\ramad\\desktop\\hrsystem\\hrrepository\\adoprocedures.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{695D184C-7E33-4E62-A895-D16B1D4FF6FC}|HRRepository\\HRRepository.csproj|solutionrelative:hrrepository\\adoprocedures.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2DE077F4-2423-4624-A558-23DDB72A5BD3}|HRDomain\\HRDomain.csproj|c:\\users\\ramad\\desktop\\hrsystem\\hrdomain\\entities\\employeeattendace.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DE077F4-2423-4624-A558-23DDB72A5BD3}|HRDomain\\HRDomain.csproj|solutionrelative:hrdomain\\entities\\employeeattendace.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DE077F4-2423-4624-A558-23DDB72A5BD3}|HRDomain\\HRDomain.csproj|c:\\users\\ramad\\desktop\\hrsystem\\hrdomain\\repository\\adoconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DE077F4-2423-4624-A558-23DDB72A5BD3}|HRDomain\\HRDomain.csproj|solutionrelative:hrdomain\\repository\\adoconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2DE077F4-2423-4624-A558-23DDB72A5BD3}|HRDomain\\HRDomain.csproj|c:\\users\\ramad\\desktop\\hrsystem\\hrdomain\\entities\\vacation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DE077F4-2423-4624-A558-23DDB72A5BD3}|HRDomain\\HRDomain.csproj|solutionrelative:hrdomain\\entities\\vacation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DE077F4-2423-4624-A558-23DDB72A5BD3}|HRDomain\\HRDomain.csproj|c:\\users\\ramad\\desktop\\hrsystem\\hrdomain\\entities\\inameproplsp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DE077F4-2423-4624-A558-23DDB72A5BD3}|HRDomain\\HRDomain.csproj|solutionrelative:hrdomain\\entities\\inameproplsp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DE077F4-2423-4624-A558-23DDB72A5BD3}|HRDomain\\HRDomain.csproj|c:\\users\\ramad\\desktop\\hrsystem\\hrdomain\\entities\\employeevacation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DE077F4-2423-4624-A558-23DDB72A5BD3}|HRDomain\\HRDomain.csproj|solutionrelative:hrdomain\\entities\\employeevacation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DE077F4-2423-4624-A558-23DDB72A5BD3}|HRDomain\\HRDomain.csproj|c:\\users\\ramad\\desktop\\hrsystem\\hrdomain\\entities\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DE077F4-2423-4624-A558-23DDB72A5BD3}|HRDomain\\HRDomain.csproj|solutionrelative:hrdomain\\entities\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{183D1582-B995-4C65-8E38-6D24F440B4A4}|HRSystem\\HRSystem.csproj|c:\\users\\ramad\\desktop\\hrsystem\\hrsystem\\dto\\employeesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{183D1582-B995-4C65-8E38-6D24F440B4A4}|HRSystem\\HRSystem.csproj|solutionrelative:hrsystem\\dto\\employeesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{183D1582-B995-4C65-8E38-6D24F440B4A4}|HRSystem\\HRSystem.csproj|c:\\users\\ramad\\desktop\\hrsystem\\hrsystem\\dto\\getdeptsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{183D1582-B995-4C65-8E38-6D24F440B4A4}|HRSystem\\HRSystem.csproj|solutionrelative:hrsystem\\dto\\getdeptsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{183D1582-B995-4C65-8E38-6D24F440B4A4}|HRSystem\\HRSystem.csproj|c:\\users\\ramad\\desktop\\hrsystem\\hrsystem\\dto\\officialholidaysdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{183D1582-B995-4C65-8E38-6D24F440B4A4}|HRSystem\\HRSystem.csproj|solutionrelative:hrsystem\\dto\\officialholidaysdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{183D1582-B995-4C65-8E38-6D24F440B4A4}|HRSystem\\HRSystem.csproj|c:\\users\\ramad\\desktop\\hrsystem\\hrsystem\\dto\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{183D1582-B995-4C65-8E38-6D24F440B4A4}|HRSystem\\HRSystem.csproj|solutionrelative:hrsystem\\dto\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{183D1582-B995-4C65-8E38-6D24F440B4A4}|HRSystem\\HRSystem.csproj|c:\\users\\ramad\\desktop\\hrsystem\\hrsystem\\dto\\salariesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{183D1582-B995-4C65-8E38-6D24F440B4A4}|HRSystem\\HRSystem.csproj|solutionrelative:hrsystem\\dto\\salariesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{183D1582-B995-4C65-8E38-6D24F440B4A4}|HRSystem\\HRSystem.csproj|c:\\users\\ramad\\desktop\\hrsystem\\hrsystem\\dto\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{183D1582-B995-4C65-8E38-6D24F440B4A4}|HRSystem\\HRSystem.csproj|solutionrelative:hrsystem\\dto\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{183D1582-B995-4C65-8E38-6D24F440B4A4}|HRSystem\\HRSystem.csproj|c:\\users\\ramad\\desktop\\hrsystem\\hrsystem\\error handling\\statusresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -43,24 +75,32 @@
       "RelativeMoniker": "D:0:0:{183D1582-B995-4C65-8E38-6D24F440B4A4}|HRSystem\\HRSystem.csproj|solutionrelative:hrsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DE077F4-2423-4624-A558-23DDB72A5BD3}|HRDomain\\HRDomain.csproj|c:\\users\\ramad\\desktop\\hrsystem\\hrdomain\\specification\\empincludenavpropsspecification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DE077F4-2423-4624-A558-23DDB72A5BD3}|HRDomain\\HRDomain.csproj|solutionrelative:hrdomain\\specification\\empincludenavpropsspecification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2DE077F4-2423-4624-A558-23DDB72A5BD3}|HRDomain\\HRDomain.csproj|c:\\users\\ramad\\desktop\\hrsystem\\hrdomain\\entities\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DE077F4-2423-4624-A558-23DDB72A5BD3}|HRDomain\\HRDomain.csproj|solutionrelative:hrdomain\\entities\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2DE077F4-2423-4624-A558-23DDB72A5BD3}|HRDomain\\HRDomain.csproj|c:\\users\\ramad\\desktop\\hrsystem\\hrdomain\\entities\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DE077F4-2423-4624-A558-23DDB72A5BD3}|HRDomain\\HRDomain.csproj|solutionrelative:hrdomain\\entities\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{695D184C-7E33-4E62-A895-D16B1D4FF6FC}|HRRepository\\HRRepository.csproj|c:\\users\\ramad\\desktop\\hrsystem\\hrrepository\\data\\specificationevaluator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{695D184C-7E33-4E62-A895-D16B1D4FF6FC}|HRRepository\\HRRepository.csproj|solutionrelative:hrrepository\\data\\specificationevaluator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{183D1582-B995-4C65-8E38-6D24F440B4A4}|HRSystem\\HRSystem.csproj|c:\\users\\ramad\\desktop\\hrsystem\\hrsystem\\helpers\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{183D1582-B995-4C65-8E38-6D24F440B4A4}|HRSystem\\HRSystem.csproj|solutionrelative:hrsystem\\helpers\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{183D1582-B995-4C65-8E38-6D24F440B4A4}|HRSystem\\HRSystem.csproj|c:\\users\\ramad\\desktop\\hrsystem\\hrsystem\\dto\\employeesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{183D1582-B995-4C65-8E38-6D24F440B4A4}|HRSystem\\HRSystem.csproj|solutionrelative:hrsystem\\dto\\employeesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{183D1582-B995-4C65-8E38-6D24F440B4A4}|HRSystem\\HRSystem.csproj|c:\\users\\ramad\\desktop\\hrsystem\\hrsystem\\controllers\\departmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{183D1582-B995-4C65-8E38-6D24F440B4A4}|HRSystem\\HRSystem.csproj|solutionrelative:hrsystem\\controllers\\departmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{695D184C-7E33-4E62-A895-D16B1D4FF6FC}|HRRepository\\HRRepository.csproj|c:\\users\\ramad\\desktop\\hrsystem\\hrrepository\\adoprocedures.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{695D184C-7E33-4E62-A895-D16B1D4FF6FC}|HRRepository\\HRRepository.csproj|solutionrelative:hrrepository\\adoprocedures.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DE077F4-2423-4624-A558-23DDB72A5BD3}|HRDomain\\HRDomain.csproj|c:\\users\\ramad\\desktop\\hrsystem\\hrdomain\\repository\\adoconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DE077F4-2423-4624-A558-23DDB72A5BD3}|HRDomain\\HRDomain.csproj|solutionrelative:hrdomain\\repository\\adoconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DE077F4-2423-4624-A558-23DDB72A5BD3}|HRDomain\\HRDomain.csproj|c:\\users\\ramad\\desktop\\hrsystem\\hrdomain\\specification\\empincludenavpropsspecification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DE077F4-2423-4624-A558-23DDB72A5BD3}|HRDomain\\HRDomain.csproj|solutionrelative:hrdomain\\specification\\empincludenavpropsspecification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DE077F4-2423-4624-A558-23DDB72A5BD3}|HRDomain\\HRDomain.csproj|c:\\users\\ramad\\desktop\\hrsystem\\hrdomain\\entities\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DE077F4-2423-4624-A558-23DDB72A5BD3}|HRDomain\\HRDomain.csproj|solutionrelative:hrdomain\\entities\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2DE077F4-2423-4624-A558-23DDB72A5BD3}|HRDomain\\HRDomain.csproj|c:\\users\\ramad\\desktop\\hrsystem\\hrdomain\\specification\\genericspecification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -77,10 +117,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{183D1582-B995-4C65-8E38-6D24F440B4A4}|HRSystem\\HRSystem.csproj|c:\\users\\ramad\\desktop\\hrsystem\\hrsystem\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{183D1582-B995-4C65-8E38-6D24F440B4A4}|HRSystem\\HRSystem.csproj|solutionrelative:hrsystem\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2DE077F4-2423-4624-A558-23DDB72A5BD3}|HRDomain\\HRDomain.csproj|c:\\users\\ramad\\desktop\\hrsystem\\hrdomain\\customconverter\\timespanoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DE077F4-2423-4624-A558-23DDB72A5BD3}|HRDomain\\HRDomain.csproj|solutionrelative:hrdomain\\customconverter\\timespanoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{183D1582-B995-4C65-8E38-6D24F440B4A4}|HRSystem\\HRSystem.csproj|c:\\users\\ramad\\desktop\\hrsystem\\hrsystem\\middlewares\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -150,10 +186,6 @@
       "RelativeMoniker": "D:0:0:{695D184C-7E33-4E62-A895-D16B1D4FF6FC}|HRRepository\\HRRepository.csproj|solutionrelative:hrrepository\\identity\\appidentitydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{695D184C-7E33-4E62-A895-D16B1D4FF6FC}|HRRepository\\HRRepository.csproj|c:\\users\\ramad\\desktop\\hrsystem\\hrrepository\\data\\specificationevaluator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{695D184C-7E33-4E62-A895-D16B1D4FF6FC}|HRRepository\\HRRepository.csproj|solutionrelative:hrrepository\\data\\specificationevaluator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{695D184C-7E33-4E62-A895-D16B1D4FF6FC}|HRRepository\\HRRepository.csproj|c:\\users\\ramad\\desktop\\hrsystem\\hrrepository\\data\\hrcontextseed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{695D184C-7E33-4E62-A895-D16B1D4FF6FC}|HRRepository\\HRRepository.csproj|solutionrelative:hrrepository\\data\\hrcontextseed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -170,28 +202,12 @@
       "RelativeMoniker": "D:0:0:{183D1582-B995-4C65-8E38-6D24F440B4A4}|HRSystem\\HRSystem.csproj|solutionrelative:hrsystem\\error handling\\apiexseptionresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{183D1582-B995-4C65-8E38-6D24F440B4A4}|HRSystem\\HRSystem.csproj|c:\\users\\ramad\\desktop\\hrsystem\\hrsystem\\dto\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{183D1582-B995-4C65-8E38-6D24F440B4A4}|HRSystem\\HRSystem.csproj|solutionrelative:hrsystem\\dto\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{183D1582-B995-4C65-8E38-6D24F440B4A4}|HRSystem\\HRSystem.csproj|c:\\users\\ramad\\desktop\\hrsystem\\hrsystem\\dto\\salariesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{183D1582-B995-4C65-8E38-6D24F440B4A4}|HRSystem\\HRSystem.csproj|solutionrelative:hrsystem\\dto\\salariesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{183D1582-B995-4C65-8E38-6D24F440B4A4}|HRSystem\\HRSystem.csproj|c:\\users\\ramad\\desktop\\hrsystem\\hrsystem\\dto\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{183D1582-B995-4C65-8E38-6D24F440B4A4}|HRSystem\\HRSystem.csproj|solutionrelative:hrsystem\\dto\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{183D1582-B995-4C65-8E38-6D24F440B4A4}|HRSystem\\HRSystem.csproj|c:\\users\\ramad\\desktop\\hrsystem\\hrsystem\\dto\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{183D1582-B995-4C65-8E38-6D24F440B4A4}|HRSystem\\HRSystem.csproj|solutionrelative:hrsystem\\dto\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{183D1582-B995-4C65-8E38-6D24F440B4A4}|HRSystem\\HRSystem.csproj|c:\\users\\ramad\\desktop\\hrsystem\\hrsystem\\globalusings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{183D1582-B995-4C65-8E38-6D24F440B4A4}|HRSystem\\HRSystem.csproj|solutionrelative:hrsystem\\globalusings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{183D1582-B995-4C65-8E38-6D24F440B4A4}|HRSystem\\HRSystem.csproj|c:\\users\\ramad\\desktop\\hrsystem\\hrsystem\\dto\\officialholidaysdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{183D1582-B995-4C65-8E38-6D24F440B4A4}|HRSystem\\HRSystem.csproj|solutionrelative:hrsystem\\dto\\officialholidaysdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2DE077F4-2423-4624-A558-23DDB72A5BD3}|HRDomain\\HRDomain.csproj|c:\\users\\ramad\\desktop\\hrsystem\\hrdomain\\specification\\setincludenavpropsspecification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -238,22 +254,6 @@
       "RelativeMoniker": "D:0:0:{2DE077F4-2423-4624-A558-23DDB72A5BD3}|HRDomain\\HRDomain.csproj|solutionrelative:hrdomain\\service\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DE077F4-2423-4624-A558-23DDB72A5BD3}|HRDomain\\HRDomain.csproj|c:\\users\\ramad\\desktop\\hrsystem\\hrdomain\\entities\\vacation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DE077F4-2423-4624-A558-23DDB72A5BD3}|HRDomain\\HRDomain.csproj|solutionrelative:hrdomain\\entities\\vacation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2DE077F4-2423-4624-A558-23DDB72A5BD3}|HRDomain\\HRDomain.csproj|c:\\users\\ramad\\desktop\\hrsystem\\hrdomain\\entities\\inameproplsp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DE077F4-2423-4624-A558-23DDB72A5BD3}|HRDomain\\HRDomain.csproj|solutionrelative:hrdomain\\entities\\inameproplsp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2DE077F4-2423-4624-A558-23DDB72A5BD3}|HRDomain\\HRDomain.csproj|c:\\users\\ramad\\desktop\\hrsystem\\hrdomain\\entities\\employeevacation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DE077F4-2423-4624-A558-23DDB72A5BD3}|HRDomain\\HRDomain.csproj|solutionrelative:hrdomain\\entities\\employeevacation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2DE077F4-2423-4624-A558-23DDB72A5BD3}|HRDomain\\HRDomain.csproj|c:\\users\\ramad\\desktop\\hrsystem\\hrdomain\\entities\\employeeattendace.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DE077F4-2423-4624-A558-23DDB72A5BD3}|HRDomain\\HRDomain.csproj|solutionrelative:hrdomain\\entities\\employeeattendace.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2DE077F4-2423-4624-A558-23DDB72A5BD3}|HRDomain\\HRDomain.csproj|c:\\users\\ramad\\desktop\\hrsystem\\hrdomain\\entities\\basetable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2DE077F4-2423-4624-A558-23DDB72A5BD3}|HRDomain\\HRDomain.csproj|solutionrelative:hrdomain\\entities\\basetable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -286,7 +286,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 232,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -294,44 +294,265 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DepartmentsController.cs",
-              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\Controllers\\DepartmentsController.cs",
-              "RelativeDocumentMoniker": "HRSystem\\Controllers\\DepartmentsController.cs",
-              "ToolTip": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\Controllers\\DepartmentsController.cs",
-              "RelativeToolTip": "HRSystem\\Controllers\\DepartmentsController.cs",
-              "ViewState": "AQIAACsAAAAAAAAAAAAgwDoAAAAxAAAA",
+              "DocumentIndex": 6,
+              "Title": "EmployeeVacation.cs",
+              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\Entities\\EmployeeVacation.cs",
+              "RelativeDocumentMoniker": "HRDomain\\Entities\\EmployeeVacation.cs",
+              "ToolTip": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\Entities\\EmployeeVacation.cs",
+              "RelativeToolTip": "HRDomain\\Entities\\EmployeeVacation.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-13T20:37:11.48Z",
+              "WhenOpened": "2024-03-17T23:59:19.396Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EmployeeAttendace.cs",
+              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\Entities\\EmployeeAttendace.cs",
+              "RelativeDocumentMoniker": "HRDomain\\Entities\\EmployeeAttendace.cs",
+              "ToolTip": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\Entities\\EmployeeAttendace.cs",
+              "RelativeToolTip": "HRDomain\\Entities\\EmployeeAttendace.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T21:36:52.019Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "INamePropLSP.cs",
+              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\Entities\\INamePropLSP.cs",
+              "RelativeDocumentMoniker": "HRDomain\\Entities\\INamePropLSP.cs",
+              "ToolTip": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\Entities\\INamePropLSP.cs",
+              "RelativeToolTip": "HRDomain\\Entities\\INamePropLSP.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-17T23:59:33.438Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Vacation.cs",
+              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\Entities\\Vacation.cs",
+              "RelativeDocumentMoniker": "HRDomain\\Entities\\Vacation.cs",
+              "ToolTip": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\Entities\\Vacation.cs",
+              "RelativeToolTip": "HRDomain\\Entities\\Vacation.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-17T23:59:44.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AttendancesController.cs",
+              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\Controllers\\AttendancesController.cs",
+              "RelativeDocumentMoniker": "HRSystem\\Controllers\\AttendancesController.cs",
+              "ToolTip": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\Controllers\\AttendancesController.cs",
+              "RelativeToolTip": "HRSystem\\Controllers\\AttendancesController.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAYwCoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T12:40:57.46Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TimeSpanOperations.cs",
+              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\CustomConverter\\TimeSpanOperations.cs",
+              "RelativeDocumentMoniker": "HRDomain\\CustomConverter\\TimeSpanOperations.cs",
+              "ToolTip": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\CustomConverter\\TimeSpanOperations.cs",
+              "RelativeToolTip": "HRDomain\\CustomConverter\\TimeSpanOperations.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAAABMAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-16T13:26:30.216Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AttendDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\DTO\\AttendDTO.cs",
+              "RelativeDocumentMoniker": "HRSystem\\DTO\\AttendDTO.cs",
+              "ToolTip": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\DTO\\AttendDTO.cs",
+              "RelativeToolTip": "HRSystem\\DTO\\AttendDTO.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAUwAoAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-15T15:01:21.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Department.cs",
+              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\Entities\\Department.cs",
+              "RelativeDocumentMoniker": "HRDomain\\Entities\\Department.cs",
+              "ToolTip": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\Entities\\Department.cs",
+              "RelativeToolTip": "HRDomain\\Entities\\Department.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAawB0AAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T20:15:20.34Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EmployeesDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\DTO\\EmployeesDTO.cs",
+              "RelativeDocumentMoniker": "HRSystem\\DTO\\EmployeesDTO.cs",
+              "ToolTip": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\DTO\\EmployeesDTO.cs",
+              "RelativeToolTip": "HRSystem\\DTO\\EmployeesDTO.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAYAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-13T22:13:44.524Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "GetDeptsDTO.cs",
               "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\DTO\\GetDeptsDTO.cs",
               "RelativeDocumentMoniker": "HRSystem\\DTO\\GetDeptsDTO.cs",
               "ToolTip": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\DTO\\GetDeptsDTO.cs",
               "RelativeToolTip": "HRSystem\\DTO\\GetDeptsDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAowAsAAAA0AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAowAkAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-18T00:04:42.43Z"
+              "WhenOpened": "2024-03-18T00:04:42.43Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ADOProcedures.cs",
-              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRRepository\\ADOProcedures.cs",
-              "RelativeDocumentMoniker": "HRRepository\\ADOProcedures.cs",
-              "ToolTip": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRRepository\\ADOProcedures.cs",
-              "RelativeToolTip": "HRRepository\\ADOProcedures.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAewBoAAAAvAAAA",
+              "DocumentIndex": 10,
+              "Title": "OfficialHolidaysDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\DTO\\OfficialHolidaysDTO.cs",
+              "RelativeDocumentMoniker": "HRSystem\\DTO\\OfficialHolidaysDTO.cs",
+              "ToolTip": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\DTO\\OfficialHolidaysDTO.cs",
+              "RelativeToolTip": "HRSystem\\DTO\\OfficialHolidaysDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-13T20:37:11.531Z"
+              "WhenOpened": "2024-03-18T00:04:58.384Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 11,
+              "Title": "RegisterDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\DTO\\RegisterDTO.cs",
+              "RelativeDocumentMoniker": "HRSystem\\DTO\\RegisterDTO.cs",
+              "ToolTip": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\DTO\\RegisterDTO.cs",
+              "RelativeToolTip": "HRSystem\\DTO\\RegisterDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-18T00:05:13.336Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "SalariesDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\DTO\\SalariesDTO.cs",
+              "RelativeDocumentMoniker": "HRSystem\\DTO\\SalariesDTO.cs",
+              "ToolTip": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\DTO\\SalariesDTO.cs",
+              "RelativeToolTip": "HRSystem\\DTO\\SalariesDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-18T00:06:06.48Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UserDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\DTO\\UserDTO.cs",
+              "RelativeDocumentMoniker": "HRSystem\\DTO\\UserDTO.cs",
+              "ToolTip": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\DTO\\UserDTO.cs",
+              "RelativeToolTip": "HRSystem\\DTO\\UserDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-16T21:58:29.896Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "StatusResponse.cs",
+              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\Error Handling\\StatusResponse.cs",
+              "RelativeDocumentMoniker": "HRSystem\\Error Handling\\StatusResponse.cs",
+              "ToolTip": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\Error Handling\\StatusResponse.cs",
+              "RelativeToolTip": "HRSystem\\Error Handling\\StatusResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-18T00:06:33.891Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "SpecificationEvaluator.cs",
+              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRRepository\\Data\\SpecificationEvaluator.cs",
+              "RelativeDocumentMoniker": "HRRepository\\Data\\SpecificationEvaluator.cs",
+              "ToolTip": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRRepository\\Data\\SpecificationEvaluator.cs",
+              "RelativeToolTip": "HRRepository\\Data\\SpecificationEvaluator.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAAwCAAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-18T00:11:07.935Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "HRContext.cs",
+              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRRepository\\Data\\HRContext.cs",
+              "RelativeDocumentMoniker": "HRRepository\\Data\\HRContext.cs",
+              "ToolTip": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRRepository\\Data\\HRContext.cs",
+              "RelativeToolTip": "HRRepository\\Data\\HRContext.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAAwA8AAABQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-17T23:07:14.447Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\Program.cs",
+              "RelativeDocumentMoniker": "HRSystem\\Program.cs",
+              "ToolTip": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\Program.cs",
+              "RelativeToolTip": "HRSystem\\Program.cs",
+              "ViewState": "AQIAADoAAAAAAAAAAAAAwEIAAACOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-13T21:44:28.105Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRRepository\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "HRRepository\\GenericRepository.cs",
+              "ToolTip": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRRepository\\GenericRepository.cs",
+              "RelativeToolTip": "HRRepository\\GenericRepository.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAwAkAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T22:38:19.027Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "MappingProfiles.cs",
+              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\Helpers\\MappingProfiles.cs",
+              "RelativeDocumentMoniker": "HRSystem\\Helpers\\MappingProfiles.cs",
+              "ToolTip": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\Helpers\\MappingProfiles.cs",
+              "RelativeToolTip": "HRSystem\\Helpers\\MappingProfiles.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-13T23:14:17.789Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
               "Title": "ADOConnection.cs",
               "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\Repository\\ADOConnection.cs",
               "RelativeDocumentMoniker": "HRDomain\\Repository\\ADOConnection.cs",
@@ -343,80 +564,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "StatusResponse.cs",
-              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\Error Handling\\StatusResponse.cs",
-              "RelativeDocumentMoniker": "HRSystem\\Error Handling\\StatusResponse.cs",
-              "ToolTip": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\Error Handling\\StatusResponse.cs",
-              "RelativeToolTip": "HRSystem\\Error Handling\\StatusResponse.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAIAAAA",
+              "DocumentIndex": 21,
+              "Title": "ADOProcedures.cs",
+              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRRepository\\ADOProcedures.cs",
+              "RelativeDocumentMoniker": "HRRepository\\ADOProcedures.cs",
+              "ToolTip": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRRepository\\ADOProcedures.cs",
+              "RelativeToolTip": "HRRepository\\ADOProcedures.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAewBoAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-18T00:06:33.891Z"
+              "WhenOpened": "2024-03-13T20:37:11.531Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AttendancesController.cs",
-              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\Controllers\\AttendancesController.cs",
-              "RelativeDocumentMoniker": "HRSystem\\Controllers\\AttendancesController.cs",
-              "ToolTip": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\Controllers\\AttendancesController.cs",
-              "RelativeToolTip": "HRSystem\\Controllers\\AttendancesController.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAYwB4AAABDAAAA",
+              "DocumentIndex": 20,
+              "Title": "DepartmentsController.cs",
+              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\Controllers\\DepartmentsController.cs",
+              "RelativeDocumentMoniker": "HRSystem\\Controllers\\DepartmentsController.cs",
+              "ToolTip": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\Controllers\\DepartmentsController.cs",
+              "RelativeToolTip": "HRSystem\\Controllers\\DepartmentsController.cs",
+              "ViewState": "AQIAACMAAAAAAAAAAAAYwDEAAABqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-14T12:40:57.46Z",
+              "WhenOpened": "2024-03-13T20:37:11.48Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AttendDTO.cs",
-              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\DTO\\AttendDTO.cs",
-              "RelativeDocumentMoniker": "HRSystem\\DTO\\AttendDTO.cs",
-              "ToolTip": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\DTO\\AttendDTO.cs",
-              "RelativeToolTip": "HRSystem\\DTO\\AttendDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-15T15:01:21.835Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "GenericRepository.cs",
-              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRRepository\\GenericRepository.cs",
-              "RelativeDocumentMoniker": "HRRepository\\GenericRepository.cs",
-              "ToolTip": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRRepository\\GenericRepository.cs",
-              "RelativeToolTip": "HRRepository\\GenericRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAawAkAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-14T22:38:19.027Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "HRContext.cs",
-              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRRepository\\Data\\HRContext.cs",
-              "RelativeDocumentMoniker": "HRRepository\\Data\\HRContext.cs",
-              "ToolTip": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRRepository\\Data\\HRContext.cs",
-              "RelativeToolTip": "HRRepository\\Data\\HRContext.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAawA8AAABQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-17T23:07:14.447Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\Program.cs",
-              "RelativeDocumentMoniker": "HRSystem\\Program.cs",
-              "ToolTip": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\Program.cs",
-              "RelativeToolTip": "HRSystem\\Program.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAawEIAAACOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-13T21:44:28.105Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 23,
               "Title": "EmpIncludeNavPropsSpecification.cs",
               "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\Specification\\EmpIncludeNavPropsSpecification.cs",
               "RelativeDocumentMoniker": "HRDomain\\Specification\\EmpIncludeNavPropsSpecification.cs",
@@ -428,7 +601,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 24,
               "Title": "Employee.cs",
               "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\Entities\\Employee.cs",
               "RelativeDocumentMoniker": "HRDomain\\Entities\\Employee.cs",
@@ -440,43 +613,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Department.cs",
-              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\Entities\\Department.cs",
-              "RelativeDocumentMoniker": "HRDomain\\Entities\\Department.cs",
-              "ToolTip": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\Entities\\Department.cs",
-              "RelativeToolTip": "HRDomain\\Entities\\Department.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAawB0AAAA4AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-14T20:15:20.34Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "MappingProfiles.cs",
-              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\Helpers\\MappingProfiles.cs",
-              "RelativeDocumentMoniker": "HRSystem\\Helpers\\MappingProfiles.cs",
-              "ToolTip": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\Helpers\\MappingProfiles.cs",
-              "RelativeToolTip": "HRSystem\\Helpers\\MappingProfiles.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAQwBoAAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-13T23:14:17.789Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "EmployeesDTO.cs",
-              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\DTO\\EmployeesDTO.cs",
-              "RelativeDocumentMoniker": "HRSystem\\DTO\\EmployeesDTO.cs",
-              "ToolTip": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\DTO\\EmployeesDTO.cs",
-              "RelativeToolTip": "HRSystem\\DTO\\EmployeesDTO.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAxwAYAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-13T22:13:44.524Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 25,
               "Title": "GenericSpecification.cs",
               "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\Specification\\GenericSpecification.cs",
               "RelativeDocumentMoniker": "HRDomain\\Specification\\GenericSpecification.cs",
@@ -488,7 +625,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 26,
               "Title": "EmployeesController.cs",
               "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\Controllers\\EmployeesController.cs",
               "RelativeDocumentMoniker": "HRSystem\\Controllers\\EmployeesController.cs",
@@ -496,11 +633,12 @@
               "RelativeToolTip": "HRSystem\\Controllers\\EmployeesController.cs",
               "ViewState": "AQIAAEgAAAAAAAAAAAAiwDsAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-13T20:37:11.541Z"
+              "WhenOpened": "2024-03-13T20:37:11.541Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 27,
               "Title": "Pagination.cs",
               "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\Helpers\\Pagination.cs",
               "RelativeDocumentMoniker": "HRSystem\\Helpers\\Pagination.cs",
@@ -512,7 +650,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 28,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\appsettings.json",
               "RelativeDocumentMoniker": "HRSystem\\appsettings.json",
@@ -524,7 +662,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 29,
               "Title": "ExceptionMiddleware.cs",
               "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\Middlewares\\ExceptionMiddleware.cs",
               "RelativeDocumentMoniker": "HRSystem\\Middlewares\\ExceptionMiddleware.cs",
@@ -536,19 +674,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "TimeSpanOperations.cs",
-              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\CustomConverter\\TimeSpanOperations.cs",
-              "RelativeDocumentMoniker": "HRDomain\\CustomConverter\\TimeSpanOperations.cs",
-              "ToolTip": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\CustomConverter\\TimeSpanOperations.cs",
-              "RelativeToolTip": "HRDomain\\CustomConverter\\TimeSpanOperations.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAYwCcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-16T13:26:30.216Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 31,
               "Title": "GetAllEmpsParams.cs",
               "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\Specification\\GetAllEmpsParams.cs",
               "RelativeDocumentMoniker": "HRDomain\\Specification\\GetAllEmpsParams.cs",
@@ -560,7 +686,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 30,
               "Title": "DateOnlyOperations.cs",
               "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\CustomConverter\\DateOnlyOperations.cs",
               "RelativeDocumentMoniker": "HRDomain\\CustomConverter\\DateOnlyOperations.cs",
@@ -572,7 +698,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 32,
               "Title": "HolidaysController.cs",
               "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\Controllers\\HolidaysController.cs",
               "RelativeDocumentMoniker": "HRSystem\\Controllers\\HolidaysController.cs",
@@ -584,7 +710,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 35,
               "Title": "AccountsController.cs",
               "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\Controllers\\AccountsController.cs",
               "RelativeDocumentMoniker": "HRSystem\\Controllers\\AccountsController.cs",
@@ -596,7 +722,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 33,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\ramad\\AppData\\Local\\SourceServer\\2f9c9cd051964e66b2cbd39010b4ae4d177957f857cc709822ada57e93a1f7f4\\HRSystem\\Program.cs",
               "RelativeDocumentMoniker": "..\\..\\AppData\\Local\\SourceServer\\2f9c9cd051964e66b2cbd39010b4ae4d177957f857cc709822ada57e93a1f7f4\\HRSystem\\Program.cs",
@@ -608,7 +734,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 34,
               "Title": "SalariesController.cs",
               "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\Controllers\\SalariesController.cs",
               "RelativeDocumentMoniker": "HRSystem\\Controllers\\SalariesController.cs",
@@ -620,7 +746,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 38,
               "Title": "VacationConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRRepository\\Data\\Configuartions\\VacationConfiguration.cs",
               "RelativeDocumentMoniker": "HRRepository\\Data\\Configuartions\\VacationConfiguration.cs",
@@ -632,7 +758,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 39,
               "Title": "EmployeeVacationConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRRepository\\Data\\Configuartions\\EmployeeVacationConfiguration.cs",
               "RelativeDocumentMoniker": "HRRepository\\Data\\Configuartions\\EmployeeVacationConfiguration.cs",
@@ -644,7 +770,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 37,
               "Title": "EmployeesConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRRepository\\Data\\Configuartions\\EmployeesConfiguration.cs",
               "RelativeDocumentMoniker": "HRRepository\\Data\\Configuartions\\EmployeesConfiguration.cs",
@@ -656,7 +782,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 36,
               "Title": "IRepository.cs",
               "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\Repository\\IRepository.cs",
               "RelativeDocumentMoniker": "HRDomain\\Repository\\IRepository.cs",
@@ -668,7 +794,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 40,
               "Title": "DepartmentConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRRepository\\Data\\Configuartions\\DepartmentConfiguration.cs",
               "RelativeDocumentMoniker": "HRRepository\\Data\\Configuartions\\DepartmentConfiguration.cs",
@@ -680,7 +806,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 41,
               "Title": "20240319003947_Unique.cs",
               "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRRepository\\Data\\Migrations\\20240319003947_Unique.cs",
               "RelativeDocumentMoniker": "HRRepository\\Data\\Migrations\\20240319003947_Unique.cs",
@@ -692,7 +818,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 42,
               "Title": "EmplyeeAttendanceConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRRepository\\Data\\Configuartions\\EmplyeeAttendanceConfiguration.cs",
               "RelativeDocumentMoniker": "HRRepository\\Data\\Configuartions\\EmplyeeAttendanceConfiguration.cs",
@@ -704,7 +830,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 43,
               "Title": "VacIncludeNavPropsSpecification.cs",
               "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\Specification\\VacIncludeNavPropsSpecification.cs",
               "RelativeDocumentMoniker": "HRDomain\\Specification\\VacIncludeNavPropsSpecification.cs",
@@ -716,19 +842,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "SpecificationEvaluator.cs",
-              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRRepository\\Data\\SpecificationEvaluator.cs",
-              "RelativeDocumentMoniker": "HRRepository\\Data\\SpecificationEvaluator.cs",
-              "ToolTip": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRRepository\\Data\\SpecificationEvaluator.cs",
-              "RelativeToolTip": "HRRepository\\Data\\SpecificationEvaluator.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-18T00:11:07.935Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 44,
               "Title": "AppIdentityDbContextSeed.cs",
               "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRRepository\\Identity\\AppIdentityDbContextSeed.cs",
               "RelativeDocumentMoniker": "HRRepository\\Identity\\AppIdentityDbContextSeed.cs",
@@ -740,7 +854,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 46,
               "Title": "HRContextSeed.cs",
               "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRRepository\\Data\\HRContextSeed.cs",
               "RelativeDocumentMoniker": "HRRepository\\Data\\HRContextSeed.cs",
@@ -752,7 +866,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 45,
               "Title": "AppIdentityDbContext.cs",
               "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRRepository\\Identity\\AppIdentityDbContext.cs",
               "RelativeDocumentMoniker": "HRRepository\\Identity\\AppIdentityDbContext.cs",
@@ -764,7 +878,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 48,
               "Title": "ValidationErrorResponse.cs",
               "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\Error Handling\\ValidationErrorResponse.cs",
               "RelativeDocumentMoniker": "HRSystem\\Error Handling\\ValidationErrorResponse.cs",
@@ -776,7 +890,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 47,
               "Title": "EmpsPicsUrlResolver.cs",
               "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\Helpers\\EmpsPicsUrlResolver.cs",
               "RelativeDocumentMoniker": "HRSystem\\Helpers\\EmpsPicsUrlResolver.cs",
@@ -788,7 +902,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 49,
               "Title": "ApiExseptionResponse.cs",
               "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\Error Handling\\ApiExseptionResponse.cs",
               "RelativeDocumentMoniker": "HRSystem\\Error Handling\\ApiExseptionResponse.cs",
@@ -800,31 +914,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "SalariesDTO.cs",
-              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\DTO\\SalariesDTO.cs",
-              "RelativeDocumentMoniker": "HRSystem\\DTO\\SalariesDTO.cs",
-              "ToolTip": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\DTO\\SalariesDTO.cs",
-              "RelativeToolTip": "HRSystem\\DTO\\SalariesDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-18T00:06:06.48Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "RegisterDTO.cs",
-              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\DTO\\RegisterDTO.cs",
-              "RelativeDocumentMoniker": "HRSystem\\DTO\\RegisterDTO.cs",
-              "ToolTip": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\DTO\\RegisterDTO.cs",
-              "RelativeToolTip": "HRSystem\\DTO\\RegisterDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-18T00:05:13.336Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 50,
               "Title": "LoginDTO.cs",
               "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\DTO\\LoginDTO.cs",
               "RelativeDocumentMoniker": "HRSystem\\DTO\\LoginDTO.cs",
@@ -836,19 +926,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "OfficialHolidaysDTO.cs",
-              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\DTO\\OfficialHolidaysDTO.cs",
-              "RelativeDocumentMoniker": "HRSystem\\DTO\\OfficialHolidaysDTO.cs",
-              "ToolTip": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\DTO\\OfficialHolidaysDTO.cs",
-              "RelativeToolTip": "HRSystem\\DTO\\OfficialHolidaysDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-18T00:04:58.384Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 51,
               "Title": "GlobalUsings.cs",
               "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\GlobalUsings.cs",
               "RelativeDocumentMoniker": "HRSystem\\GlobalUsings.cs",
@@ -860,19 +938,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "UserDTO.cs",
-              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\DTO\\UserDTO.cs",
-              "RelativeDocumentMoniker": "HRSystem\\DTO\\UserDTO.cs",
-              "ToolTip": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRSystem\\DTO\\UserDTO.cs",
-              "RelativeToolTip": "HRSystem\\DTO\\UserDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-16T21:58:29.896Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 52,
               "Title": "SetIncludeNavPropsSpecification.cs",
               "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\Specification\\SetIncludeNavPropsSpecification.cs",
               "RelativeDocumentMoniker": "HRDomain\\Specification\\SetIncludeNavPropsSpecification.cs",
@@ -884,7 +950,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 53,
               "Title": "ISpecification.cs",
               "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\Specification\\ISpecification.cs",
               "RelativeDocumentMoniker": "HRDomain\\Specification\\ISpecification.cs",
@@ -896,7 +962,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 54,
               "Title": "GetAllDeptsParams.cs",
               "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\Specification\\GetAllDeptsParams.cs",
               "RelativeDocumentMoniker": "HRDomain\\Specification\\GetAllDeptsParams.cs",
@@ -908,7 +974,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 55,
               "Title": "GetAllAttendancesParams.cs",
               "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\Specification\\GetAllAttendancesParams.cs",
               "RelativeDocumentMoniker": "HRDomain\\Specification\\GetAllAttendancesParams.cs",
@@ -920,7 +986,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 57,
               "Title": "CountSetSpecification.cs",
               "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\Specification\\CountSetSpecification.cs",
               "RelativeDocumentMoniker": "HRDomain\\Specification\\CountSetSpecification.cs",
@@ -932,7 +998,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 58,
               "Title": "CountEmpSpecification.cs",
               "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\Specification\\CountEmpSpecification.cs",
               "RelativeDocumentMoniker": "HRDomain\\Specification\\CountEmpSpecification.cs",
@@ -944,7 +1010,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 59,
               "Title": "CountDeptSpecification.cs",
               "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\Specification\\CountDeptSpecification.cs",
               "RelativeDocumentMoniker": "HRDomain\\Specification\\CountDeptSpecification.cs",
@@ -956,7 +1022,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 56,
               "Title": "DeptIncludeNavPropsSpecification.cs",
               "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\Specification\\DeptIncludeNavPropsSpecification.cs",
               "RelativeDocumentMoniker": "HRDomain\\Specification\\DeptIncludeNavPropsSpecification.cs",
@@ -968,7 +1034,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 60,
               "Title": "CountAttendSpecification.cs",
               "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\Specification\\CountAttendSpecification.cs",
               "RelativeDocumentMoniker": "HRDomain\\Specification\\CountAttendSpecification.cs",
@@ -980,7 +1046,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 61,
               "Title": "AttendIncludeNavPropsSpecification.cs",
               "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\Specification\\AttendIncludeNavPropsSpecification.cs",
               "RelativeDocumentMoniker": "HRDomain\\Specification\\AttendIncludeNavPropsSpecification.cs",
@@ -992,7 +1058,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 62,
               "Title": "ITokenService.cs",
               "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\Service\\ITokenService.cs",
               "RelativeDocumentMoniker": "HRDomain\\Service\\ITokenService.cs",
@@ -1001,42 +1067,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-18T00:00:19.391Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 59,
-              "Title": "Vacation.cs",
-              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\Entities\\Vacation.cs",
-              "RelativeDocumentMoniker": "HRDomain\\Entities\\Vacation.cs",
-              "ToolTip": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\Entities\\Vacation.cs",
-              "RelativeToolTip": "HRDomain\\Entities\\Vacation.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-17T23:59:44.604Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 60,
-              "Title": "INamePropLSP.cs",
-              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\Entities\\INamePropLSP.cs",
-              "RelativeDocumentMoniker": "HRDomain\\Entities\\INamePropLSP.cs",
-              "ToolTip": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\Entities\\INamePropLSP.cs",
-              "RelativeToolTip": "HRDomain\\Entities\\INamePropLSP.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-17T23:59:33.438Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 61,
-              "Title": "EmployeeVacation.cs",
-              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\Entities\\EmployeeVacation.cs",
-              "RelativeDocumentMoniker": "HRDomain\\Entities\\EmployeeVacation.cs",
-              "ToolTip": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\Entities\\EmployeeVacation.cs",
-              "RelativeToolTip": "HRDomain\\Entities\\EmployeeVacation.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-17T23:59:19.396Z"
             },
             {
               "$type": "Document",
@@ -1085,18 +1115,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-17T23:56:15.462Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 62,
-              "Title": "EmployeeAttendace.cs",
-              "DocumentMoniker": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\Entities\\EmployeeAttendace.cs",
-              "RelativeDocumentMoniker": "HRDomain\\Entities\\EmployeeAttendace.cs",
-              "ToolTip": "C:\\Users\\ramad\\Desktop\\HRSystem\\HRDomain\\Entities\\EmployeeAttendace.cs",
-              "RelativeToolTip": "HRDomain\\Entities\\EmployeeAttendace.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-14T21:36:52.019Z"
             },
             {
               "$type": "Document",

@@ -34,6 +34,17 @@ namespace HRSystem.Controllers
         [HttpPost]
         public async Task<ActionResult<AttendDTO>> Create(AttendDTO attendDTO)
         {
+            var specification = new EmpIncludeNavPropsSpecification(attendDTO.EmployeeName,0);
+            var employee = await _EmpRepo.GetSpecified(specification);
+            if (employee is null) return NotFound(new StatusResponse(404, $"{attendDTO.EmployeeName} can't be found"));
+            if (!TimeSpanOperations.IsTime(attendDTO.ComingTime, attendDTO.LeaveTime))
+                return BadRequest(new StatusResponse(400,"Invalid time format"));
+
+
+            var attend = mapper.Map<EmployeeAttendace>(attendDTO);
+            attend.Employee = employee;
+            attend.Employee.Department = employee.Department;
+            await _AttendRepo.AddAsync(attend);
             return Created();
         }
 
@@ -46,9 +57,7 @@ namespace HRSystem.Controllers
 
             var attend = mapper.Map<EmployeeAttendace>(attendDTO);
 
-            var dept =  new DeptIncludeNavPropsSpecification(attendDTO.DepartmentName);
-            Department department = await _DeptRepo.GetSpecified(dept);
-
+            var department = Attendance.Employee.Department;
 
             TimeSpan timeToCome = TimeSpan.Parse(attendDTO.ComingTime);
             TimeSpan timeToLeave = TimeSpan.Parse(attendDTO.LeaveTime);
@@ -57,14 +66,11 @@ namespace HRSystem.Controllers
 
           var discountHour=  TimeSpanOperations.CalculateDiscountHours(department.ComingTime, timeToCome, department.LeaveTime, timeToLeave);
 
-            var hourSalary = (Attendance.Employee.Salary) / ((department.LeaveTime + TimeSpan.FromHours(12)) - department.ComingTime).Hours;
+            attend.Bonus = bonusHour;
+            attend.Discount = discountHour;
 
-            attend.Bonus = hourSalary * (bonusHour * department.BonusHour);
-            attend.Discount = hourSalary * (discountHour * department.DeductHour);
-
-            var employee = new EmpIncludeNavPropsSpecification(attendDTO.EmployeeName, department.Id);
-            Employee employeeAttend = await _EmpRepo.GetSpecified(employee);
-            if (employeeAttend is null) return NotFound(new StatusResponse(404, "Manger Name can't be found."));
+            var employeeAttend = Attendance.Employee;
+            if (employeeAttend is null) return NotFound(new StatusResponse(404, "Employee can't be found."));
             attend.Employee = employeeAttend;
             Expression<Func<EmployeeAttendace, bool>> predicate = a => a.Date == DateOnlyOperations.ToDateOnly(Date) && a.Employee.Name == Name;
             await _AttendRepo.UpdateAsync(predicate, Name, attend);
