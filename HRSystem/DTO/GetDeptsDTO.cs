@@ -12,6 +12,6 @@
         //public string SecondOfficalHoliday { get; set; }
 
         public string ManagerName { get; set; }
-        public bool IsHourly { get; set; } 
+        public bool IsHourly { get; set; } = true;
     }
 }

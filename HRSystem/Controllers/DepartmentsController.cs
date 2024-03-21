@@ -19,10 +19,6 @@ namespace HRSystem.Controllers
             aDOProcedures = new ADOProcedures(connectionString);
         }
 
-       
-        
-        
-
         [HttpGet("{Name}", Name = "GetDepartmentByName")]
         public async Task<ActionResult<GetDeptsDTO>> GetOneDept (string Name)
         {
@@ -53,7 +49,6 @@ namespace HRSystem.Controllers
             if (!TimeSpanOperations.IsTime(deptsDTO.ComingTime, deptsDTO.TimeToLeave))
                 return BadRequest("Invalid time format,Please provide the time in the format 'hh:mm:ss'");
 
-            //remember to create bool method for previous 2 validations, then concat them at one if state
             deptsDTO.WorkDays = (sbyte)workDays;
             
             var department = mapper.Map<Department>(deptsDTO);
@@ -80,15 +75,18 @@ namespace HRSystem.Controllers
 
             var dept = mapper.Map<Department>(deptsDTO);
 
-            if (!dept.Manager.Name.Equals(deptsDTO.ManagerName))
+            if (!department.Manager.Name.Equals(deptsDTO.ManagerName))
             {
                 var manger = SetManger(deptsDTO.ManagerName);
             if (manger == null) return NotFound(new StatusResponse(404, $"Invalid Name, Please check that {deptsDTO.ManagerName} is exist."));
                 dept.Manager =  manger;
             }
-
-            var employee = new EmpIncludeNavPropsSpecification(name, 0);
+            else
+            {
+                var employee = new EmpIncludeNavPropsSpecification(name, 0);
             dept.Manager = await _EmpRepo.GetSpecified(employee);
+            }
+            
 
             Expression<Func<Department, bool>> predicate = d => d.Name == name;
             await _DeptRepo.UpdateAsync(predicate, name, dept);
@@ -116,7 +114,7 @@ namespace HRSystem.Controllers
             var departmentManger =  _EmpRepo.GetSpecified(manger);
             if ( departmentManger != null)
             {
-              var emp = aDOProcedures.GetManagers().FirstOrDefault(m => m.Value == name);
+              var emp = aDOProcedures.GetManagers().FirstOrDefault(m => m.Value.ToLower() == name.ToLower());
                 if (emp.Key != null)
                     return null;
                 else return departmentManger.Result;
