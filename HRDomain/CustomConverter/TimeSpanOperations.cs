@@ -19,35 +19,42 @@ namespace HRDomain.CustomConverter
             var differance = TimeSpan.Parse(arrive).Hours - TimeSpan.Parse(leave).Hours;
             return differance;
         }
-        public static decimal CalculateBonusHours (TimeSpan departmentAttend, TimeSpan employeeAttend, TimeSpan departmentLeave, TimeSpan employeeLeave)
+        public static decimal CalculateBonusHours (TimeSpan departmentAttend, string employeeAttend, TimeSpan departmentLeave, string employeeLeave)
         {
-            double bonus = 0; 
+            double bonus = 0.0;
 
-            if (departmentAttend > employeeAttend)
+            TimeSpan timeToCome = TimeSpan.Parse(employeeAttend);
+            TimeSpan timeToLeave = TimeSpan.Parse(employeeLeave);
+
+            if (departmentAttend > timeToCome)
             {
-                var attend = departmentAttend - employeeAttend;   
+                var attend = departmentAttend - timeToCome;   
                 
                 bonus += (attend.Hours) +(attend.Minutes /60.00);
             }
-            if (departmentLeave < employeeLeave)
+            if (departmentLeave < timeToLeave)
             {
-                var leave = employeeLeave - departmentLeave;
+                var leave = timeToLeave - departmentLeave;
                 bonus += (leave.Hours) + (leave.Minutes / 60.00);
             }
             return (decimal)bonus;
         }
 
-        public static decimal CalculateDiscountHours(TimeSpan departmentAttend, TimeSpan employeeAttend, TimeSpan departmentLeave, TimeSpan employeeLeave)
+        public static decimal CalculateDiscountHours(TimeSpan departmentAttend, string employeeAttend, TimeSpan departmentLeave, string employeeLeave)
         {
             double discount = 0.00;
-            if (departmentAttend < employeeAttend)
+
+            TimeSpan timeToCome = TimeSpan.Parse(employeeAttend);
+            TimeSpan timeToLeave = TimeSpan.Parse(employeeLeave);
+
+            if (departmentAttend < timeToCome)
             {
-                var attend = employeeAttend - departmentAttend;
+                var attend = timeToCome - departmentAttend;
                 discount += (attend.Hours) + (attend.Minutes / 60.00); 
             }
-            if (departmentLeave > employeeLeave)
+            if (departmentLeave > timeToLeave)
             {
-                var leave = departmentLeave - employeeLeave;
+                var leave = departmentLeave - timeToLeave;
                 discount += (leave.Hours) + (leave.Minutes / 60.00);
             }
             return (decimal)discount;

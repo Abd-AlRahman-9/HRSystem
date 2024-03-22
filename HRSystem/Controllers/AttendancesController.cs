@@ -1,4 +1,6 @@
 ﻿
+using HRDomain.Entities;
+
 namespace HRSystem.Controllers
 {
     public class AttendancesController(GenericRepository<EmployeeAttendace> repository, IMapper mapper, GenericRepository<Employee> EmpRepo, GenericRepository<Department> DeptRepo) : HRBaseController
@@ -40,12 +42,17 @@ namespace HRSystem.Controllers
             if (!TimeSpanOperations.IsTime(attendDTO.ComingTime, attendDTO.LeaveTime))
                 return BadRequest(new StatusResponse(400,"Invalid time format"));
 
-
+            //separate
             var attend = mapper.Map<EmployeeAttendace>(attendDTO);
             attend.Employee = employee;
-            attend.Employee.Department = employee.Department;
+            var bonusHour = TimeSpanOperations.CalculateBonusHours(employee.Department.ComingTime, attendDTO.ComingTime, employee.Department.LeaveTime, attendDTO.LeaveTime);
+            var discountHour = TimeSpanOperations.CalculateDiscountHours(employee.Department.ComingTime, attendDTO.ComingTime, employee.Department.LeaveTime, attendDTO.LeaveTime);
+
+            attend.Bonus = bonusHour;
+            attend.Discount = discountHour;
+            //attend.Employee.Department = employee.Department;
             await _AttendRepo.AddAsync(attend);
-            return Created();
+            return Ok(new StatusResponse(201,"Created Successfully"));
         }
 
         [HttpPut("edit/{Name}/{Date}")]
@@ -59,12 +66,10 @@ namespace HRSystem.Controllers
 
             var department = Attendance.Employee.Department;
 
-            TimeSpan timeToCome = TimeSpan.Parse(attendDTO.ComingTime);
-            TimeSpan timeToLeave = TimeSpan.Parse(attendDTO.LeaveTime);
 
-           var bonusHour= TimeSpanOperations.CalculateBonusHours(department.ComingTime, timeToCome, department.LeaveTime, timeToLeave);
+            var bonusHour= TimeSpanOperations.CalculateBonusHours(department.ComingTime, attendDTO.ComingTime, department.LeaveTime, attendDTO.LeaveTime);
 
-          var discountHour=  TimeSpanOperations.CalculateDiscountHours(department.ComingTime, timeToCome, department.LeaveTime, timeToLeave);
+          var discountHour=  TimeSpanOperations.CalculateDiscountHours(department.ComingTime, attendDTO.ComingTime, department.LeaveTime, attendDTO.LeaveTime);
 
             attend.Bonus = bonusHour;
             attend.Discount = discountHour;

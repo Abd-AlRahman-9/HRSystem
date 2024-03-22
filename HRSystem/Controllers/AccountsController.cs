@@ -31,9 +31,9 @@ namespace HRSystem.Controllers
         [HttpPost("register")] // /api/Accounts/register
         public async Task<ActionResult<UserDTO>> Register(RegisterDTO registerDTO)
         {
-            if (_userManager.FindByEmailAsync(registerDTO.Email) is not null)
-                return BadRequest(new ValidationErrorResponse()
-                { Errors = new[] { "This email is already in use" } });
+            var mail = _userManager.FindByEmailAsync(registerDTO.Email);
+            if (mail.Result is not null)
+                return BadRequest(new StatusResponse(400, "This email is already in use"));
             var user = new AppUser()
             {
                 FullName = registerDTO.FullName,
@@ -42,7 +42,8 @@ namespace HRSystem.Controllers
             };
 
             var result = await _userManager.CreateAsync(user, registerDTO.Password);
-            if (!result.Succeeded) return BadRequest(new StatusResponse(400));
+            if (!result.Succeeded) return BadRequest(new ValidationErrorResponse()
+            { Errors = new[] { "Failed to create user" } });
 
             return Ok(new UserDTO()
             {
