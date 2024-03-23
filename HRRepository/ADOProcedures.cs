@@ -37,11 +37,30 @@ namespace HRRepository
             return Department;
         }
         // get salaries
-        public DataTable GetSalaries (int _StartMonth,int _Year,int? _EndMonth)
+        public List<SalaryObj> GetSalaries (int _StartMonth,int _Year,int? _EndMonth)
         {
             string _Procedure = "[dbo].[CalculateEmployeeSalary]";
             ADOConnection getData = new ADOConnection(_ConnectionString);
-            DataTable Salaries = getData.ExcuteSalariesProcedure(_Procedure, _StartMonth,_Year,_EndMonth);
+            List<SalaryObj> Salaries = new List<SalaryObj>();
+            DataTable DT = getData.ExcuteSalariesProcedure(_Procedure, _StartMonth,_Year,_EndMonth);
+            for (int i = 0; i < DT.Rows.Count; i++)
+            {
+                Salaries.Add
+                (new SalaryObj()
+                    {
+                        EmployeeName = DT.Rows[i][0].ToString(),
+                        DepartmentName = DT.Rows[i][1].ToString(),
+                        BasicSalary = (decimal)DT.Rows[i][2],
+                        AbsenceDays = (int)DT.Rows[i][3],
+                        AttendDays = (int)DT.Rows[i][4],
+                        OverallBonusHours = (decimal)DT.Rows[i][5],
+                        OverallDiscountHours = (decimal)DT.Rows[i][6],
+                        OverallDiscount = (decimal)DT.Rows[i][7],
+                        OverallBonus = (decimal)DT.Rows[i][8],
+                        NetSalary = (decimal)DT.Rows[i][DT.Columns.Count-1]
+                    }
+                );
+            }
             return Salaries;
         }
     }
