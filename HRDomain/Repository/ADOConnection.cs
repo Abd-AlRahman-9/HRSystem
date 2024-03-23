@@ -7,11 +7,9 @@ namespace HRDomain.Repository
     public class ADOConnection
     {
         SqlConnection Connection;
-        DataTable Managers;
         public ADOConnection (string ConString)
         {
             Connection = new SqlConnection (ConString);
-            Managers = new DataTable ();
         }
         public DataTable ExcuteMangersProcedure (string Procedure)
         {
@@ -20,6 +18,7 @@ namespace HRDomain.Repository
 
             Connection.Open ();
             SqlDataReader DR = cmd.ExecuteReader ();
+            DataTable Managers = new DataTable ();
             Managers.Load(DR);
             Connection.Close();
             return Managers;
@@ -41,10 +40,32 @@ namespace HRDomain.Repository
             Connection.Close ();
             return Dept;
         }
-        public void ExcuteSalariesProcedure (string Procedure)
+        public DataTable ExcuteSalariesProcedure (string Procedure,int StartMonth,int Year,int? EndMonth)
         {
-            SqlCommand cmd = new SqlCommand(Procedure,Connection);
-            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            SqlCommand cmd = new SqlCommand(Procedure, Connection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            SqlParameter holderParameter = new SqlParameter
+            {
+                ParameterName = "@StartDate",
+                SqlDbType = SqlDbType.Date,
+                Direction = ParameterDirection.Input,
+                Value = new DateTime(Year,StartMonth,1),
+            };
+            SqlParameter holderParameter1 = new SqlParameter
+            {
+                ParameterName = "@EndDate",
+                SqlDbType = SqlDbType.Date,
+                Direction = ParameterDirection.Input,
+                Value = new DateTime(Year, EndMonth.HasValue ? EndMonth.Value : StartMonth,1),
+            };
+            cmd.Parameters.Add (holderParameter);
+            cmd.Parameters.Add (holderParameter1);
+            DataTable Salaries = new DataTable();
+            Connection.Open();
+            SqlDataReader DR = cmd.ExecuteReader();
+            Salaries.Load(DR);
+            Connection.Close();
+            return Salaries;
         }
     }
 }

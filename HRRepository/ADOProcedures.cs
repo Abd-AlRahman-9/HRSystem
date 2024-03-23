@@ -1,6 +1,7 @@
 ﻿using System.Data;
 using HRDomain.Entities;
 using HRDomain.Repository;
+using HRDomain.Specification;
 
 namespace HRRepository
 {
@@ -15,7 +16,7 @@ namespace HRRepository
         // get managers
         public Dictionary<string,string> GetManagers ()
         {
-            string _Procedure = "[dbo].[GetMangers]";
+            string _Procedure = "[dbo].[GetManagers]";
             ADOConnection getData  = new ADOConnection (_ConnectionString);
             Dictionary<string, string> Mangers = new Dictionary<string, string>();
             DataTable DT = getData.ExcuteMangersProcedure(_Procedure);
@@ -37,8 +38,42 @@ namespace HRRepository
             return Department;
         }
         // get salaries
-        public void GetSalaries ()
+        public List<SalaryObj> GetSalaries(SalariesParams P)
         {
+            string _Procedure = "[dbo].[CalculateSalaries]";
+            ADOConnection getData = new ADOConnection(_ConnectionString);
+            List<SalaryObj> Salaries = new List<SalaryObj>();
+            DataTable DT = getData.ExcuteSalariesProcedure(_Procedure, P.StartMonth,P.Year,P.EndMonth);
+            DT = DT.AsEnumerable()
+                   .Where
+                        (row => 
+                            (
+                            string.IsNullOrEmpty(P.Search) ||
+                            row.Field<string>("EmployeeName").ToLower().Contains($"{P.Search}".ToLower()) || 
+                            row.Field<string>("DepartmentName").ToLower().Contains($"{P.Search}".ToLower())
+                            )
+                        )
+                    .CopyToDataTable();
+            for (int i = 0; i < DT.Rows.Count; i++)
+            {
+                Salaries.Add
+                (new SalaryObj()
+                    {
+                        EmployeeName = DT.Rows[i][0].ToString(),
+                        NationalID = DT.Rows[i][1].ToString(),
+                        DepartmentName = DT.Rows[i][2].ToString(),
+                        BasicSalary = (decimal)DT.Rows[i][3],
+                        AbsenceDays = (int)DT.Rows[i][4],
+                        AttendDays = (int)DT.Rows[i][5],
+                        OverallBonusHours = (decimal)DT.Rows[i][6],
+                        OverallDiscountHours = (decimal)DT.Rows[i][7],
+                        OverallDiscount = (decimal)DT.Rows[i][8],
+                        OverallBonus = (decimal)DT.Rows[i][9],
+                        NetSalary = (decimal)DT.Rows[i][10]
+                    }
+                );
+            }
+            return Salaries;
         }
     }
 }
