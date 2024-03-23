@@ -9,6 +9,7 @@ namespace HRDomain.Entities
     public class SalaryObj
     {
         public string EmployeeName { get; set; }
+        public string NationalID { get; set; }
         public string DepartmentName { get; set; }
         public decimal BasicSalary { get; set; }
         public int AbsenceDays { get; set; }
@@ -18,6 +19,5 @@ namespace HRDomain.Entities
         public decimal OverallDiscount { get; set; }
         public decimal OverallBonus { get; set; }
         public decimal NetSalary { get; set; }
-
     }
 }

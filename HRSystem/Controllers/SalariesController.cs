@@ -16,7 +16,7 @@ namespace HRSystem.Controllers
         [HttpGet]
         public async Task<ActionResult> Get([FromQuery]SalariesParams P)
         {
-            var Data = _ADOProcedures.GetSalaries(P.StartMonth,P.Year,P.EndMonth);
+            var Data = _ADOProcedures.GetSalaries(P);
             return Ok(Data);
         }
     }
