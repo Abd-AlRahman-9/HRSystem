@@ -15,7 +15,7 @@ namespace HRRepository
         // get managers
         public Dictionary<string,string> GetManagers ()
         {
-            string _Procedure = "[dbo].[GetMangers]";
+            string _Procedure = "[dbo].[GetManagers]";
             ADOConnection getData  = new ADOConnection (_ConnectionString);
             Dictionary<string, string> Mangers = new Dictionary<string, string>();
             DataTable DT = getData.ExcuteMangersProcedure(_Procedure);
@@ -37,8 +37,12 @@ namespace HRRepository
             return Department;
         }
         // get salaries
-        public void GetSalaries ()
+        public DataTable GetSalaries (int _StartMonth,int _Year,int? _EndMonth)
         {
+            string _Procedure = "[dbo].[CalculateEmployeeSalary]";
+            ADOConnection getData = new ADOConnection(_ConnectionString);
+            DataTable Salaries = getData.ExcuteSalariesProcedure(_Procedure, _StartMonth,_Year,_EndMonth);
+            return Salaries;
         }
     }
 }

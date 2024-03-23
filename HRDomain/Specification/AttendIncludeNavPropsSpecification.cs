@@ -8,14 +8,14 @@ namespace HRDomain.Specification
             (
                 A =>
                     (A.Deleted == false) &&
-                    (!((P.From.HasValue)&&(P.To.HasValue)) ||  (A.Date >= P.From) && (A.Date <= P.To)) 
-                //&&(string.IsNullOrEmpty(P.Search) || A.Employee.Name.ToLower().Contains(P.Search))  
+                    (!((P.From.HasValue)&&(P.To.HasValue)) ||  (A.Date >= P.From) && (A.Date <= P.To))&&
+                    (string.IsNullOrEmpty(P.Search) || A.Employee.Name.ToLower().Contains(P.Search))  
             )
         {
             Includes.Add(A=>A.Employee);
             Includes.Add(A=>A.Employee.Department);
 
-            ApplyPagination(P.PageSize.Value * (P.PageIndex.Value - 1), P.PageSize.Value);
+            ApplyPagination(P.PageSize * (P.PageIndex - 1), P.PageSize);
 
             if (!string.IsNullOrEmpty(P.sort))
             {
