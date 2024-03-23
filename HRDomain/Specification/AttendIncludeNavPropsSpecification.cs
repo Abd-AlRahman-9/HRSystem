@@ -15,7 +15,11 @@ namespace HRDomain.Specification
             Includes.Add(A=>A.Employee);
             Includes.Add(A=>A.Employee.Department);
 
-            ApplyPagination(P.PageSize.Value * (P.PageIndex.Value - 1), P.PageSize.Value);
+            if (P == null)
+                P = new GetAllAttendancesParams() { PageSize = 10, PageIndex = 1 };
+
+            ApplyPagination(P.PageSize * (P.PageIndex - 1), P.PageSize);
+
 
             if (!string.IsNullOrEmpty(P.sort))
             {
