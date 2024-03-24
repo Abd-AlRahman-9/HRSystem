@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "+9VsKtPIqnEhZOdCk9aRkK/orCTMauVMkHyECo+tbeY=",
+  "Source": "HRSystem",
+  "BasePath": "_content/HRSystem",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "HRSystem\\wwwroot",
+      "Source": "HRSystem",
+      "ContentRoot": "C:\\Users\\hp\\Desktop\\HRSystem\\HRSystem\\wwwroot\\",
+      "BasePath": "_content/HRSystem",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}
