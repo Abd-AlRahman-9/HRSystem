@@ -35,6 +35,7 @@ namespace HRDomain.Repository
                 Direction = ParameterDirection.Input,
                 Value = name,
             };
+            cmd.Parameters.Add(holderParameter);
             Department Dept = new Department ();
             Connection.Open ();
             Dept = cmd.ExecuteScalar () as Department;

@@ -2,8 +2,9 @@
 {
     public class GetAllAttendancesParams
     {
-        public DateOnly? From { get; set; } = null;
-        public DateOnly? To { get; set; } = null;
+        public int From { get; set; }
+        public int Year { get; set; }
+        public int? To { get; set; } 
         public string? sort { get; set; }
         public string? Search { get; set; }
 
