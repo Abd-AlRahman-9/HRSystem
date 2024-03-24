@@ -36,10 +36,23 @@ namespace HRDomain.Repository
                 Value = name,
             };
             cmd.Parameters.Add(holderParameter);
-            Department Dept = new Department ();
+            DataTable DT = new DataTable ();
             Connection.Open ();
-            Dept = cmd.ExecuteScalar () as Department;
+            SqlDataReader DR = cmd.ExecuteReader();
+            DT.Load(DR);
             Connection.Close ();
+            Department Dept = new Department() 
+            { 
+                Id=0,
+                Name = DT.Rows[0][1].ToString(),
+                WorkDays = int.Parse(DT.Rows[0][2].ToString()),
+                DeductHour = (decimal)DT.Rows[0][3],
+                BonusHour = (decimal)DT.Rows[0][4],
+                ComingTime = TimeSpan.Parse(DT.Rows[0][5].ToString()),
+                LeaveTime = TimeSpan.Parse(DT.Rows[0][6].ToString()),
+                ManagerId = int.Parse(DT.Rows[0][7].ToString()),
+                Deleted = (bool)DT.Rows[0][8],
+            };
             return Dept;
         }
         public DataTable ExcuteSalariesProcedure (string Procedure,int StartMonth,int Year,int? EndMonth)
