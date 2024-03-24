@@ -94,7 +94,7 @@ namespace HRRepository
                 Data.Add(Key, Value.ToLower());
             }
             return Data;
-        }
+        } 
         public List<AttendObj> GetAttendToEmployee(SalProcedureParams P)
         {
             string _Procedure = "[dbo].[GetEmployeeAttendance]";
@@ -129,7 +129,7 @@ namespace HRRepository
                 {
                     Attendance = TimeSpan.Parse(DT.Rows[i][0].ToString()),
                     Leave = TimeSpan.Parse(DT.Rows[i][1].ToString()),
-                    Date = DateOnly.Parse(DT.Rows[i][2].ToString()),
+                    Date = DateOnly.FromDateTime((DateTime)DT.Rows[i][2]),
                     Bonus = (decimal)DT.Rows[i][3],
                     Discount = (decimal)DT.Rows[i][4]
                 }
