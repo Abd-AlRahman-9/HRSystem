@@ -30,6 +30,8 @@ namespace HRSystem.Controllers
        [HttpPost]
         public async Task<ActionResult> Create(OfficialHolidaysDTO holidaysDTO)
         {
+            Expression<Func<Vacation, bool>> predicate = v => v.Name == holidaysDTO.HolidayName && v.Date == DateOnlyOperations.ToDateOnly(holidaysDTO.DateOnTheCurrentYear);
+            if (!_VacRepo.IsExist(predicate)) return BadRequest(new StatusResponse(400, $"{holidaysDTO.HolidayName} is already exist at {holidaysDTO.DateOnTheCurrentYear}"));
             if (!ModelState.IsValid) return BadRequest(400);
 
             DateOnlyOperations.ToDateOnly(holidaysDTO.DateOnTheCurrentYear);
