@@ -2,7 +2,6 @@
 using HRDomain.Entities;
 using HRDomain.Entities.DrivenEntities;
 using HRDomain.Repository;
-using HRDomain.Specification;
 using HRDomain.Specification.Params;
 
 namespace HRRepository

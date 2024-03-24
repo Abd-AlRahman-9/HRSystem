@@ -1,4 +1,6 @@
 ﻿using HRDomain.Entities;
+using HRDomain.Specification.EntitiesSpecification;
+using HRDomain.Specification.Params;
 
 namespace HRSystem.Controllers
 {

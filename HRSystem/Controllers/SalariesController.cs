@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using HRDomain.Entities.DrivenEntities;
+using HRDomain.Specification.Params;
 
 namespace HRSystem.Controllers
 {

@@ -1,4 +1,7 @@
 ﻿using HRDomain.Entities;
+using HRDomain.Specification.EntitiesSpecification;
+using HRDomain.Specification.PaginatioCount;
+using HRDomain.Specification.Params;
 using HRSystem.DTO;
 
 namespace HRSystem.Controllers
