@@ -15,15 +15,12 @@ namespace HRDomain.Specification
             Includes.Add(A=>A.Employee);
             Includes.Add(A=>A.Employee.Department);
 
-<<<<<<< HEAD
             if (P == null)
                 P = new GetAllAttendancesParams() { PageSize = 10, PageIndex = 1 };
 
             ApplyPagination(P.PageSize * (P.PageIndex - 1), P.PageSize);
 
-=======
             ApplyPagination(P.PageSize * (P.PageIndex - 1), P.PageSize);
->>>>>>> 66158759051a83b6a1367ff9dc227c516b59c044
 
             if (!string.IsNullOrEmpty(P.sort))
             {
