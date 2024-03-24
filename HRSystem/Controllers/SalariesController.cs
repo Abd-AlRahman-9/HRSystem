@@ -29,10 +29,13 @@ namespace HRSystem.Controllers
             if(P.StartMonth > P.EndMonth) return BadRequest(new StatusResponse(400, $"End date can't be before start date!"));
             var Data =  _ADOProcedures.GetSalaries(P);
             if(!Data.Any()) return BadRequest(new StatusResponse(404));
+<<<<<<< HEAD
             return Ok(Data);
 
+=======
+            return Ok(new Pagination<SalaryObj>(P.PageIndex, P.PageSize, _ADOProcedures.SalariesCount, Data));
+>>>>>>> 27ce6db6264b571e833a32663b28273c3c913c82
         }
-
         [HttpGet("department")]
         public async Task<ActionResult> GetDepartment(string name)
         {
