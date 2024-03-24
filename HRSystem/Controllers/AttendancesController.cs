@@ -1,6 +1,4 @@
-﻿
-using HRDomain.Entities;
-using HRDomain.Specification.EntitiesSpecification;
+﻿using HRDomain.Specification.EntitiesSpecification;
 using HRDomain.Specification.PaginatioCount;
 using HRDomain.Specification.Params;
 
@@ -16,7 +14,7 @@ namespace HRSystem.Controllers
         [HttpGet("{Name}/{Date}", Name = "GetSpecificAttendanceRecord")]
         public async Task<ActionResult<GetDeptsDTO>> GetOneDept(string Name, string Date)
         {
-            var specification = new AttendIncludeNavPropsSpecification(Name, DateOnlyOperations.ToDateOnly(Date));
+            var specification = new HRDomain.Specification.AttendIncludeNavPropsSpecification(Name, DateOnlyOperations.ToDateOnly(Date));
             var Attend = await _AttendRepo.GetSpecified(specification);
             if (Attend == null) return NotFound(new StatusResponse(404));
             return Ok(mapper.Map<EmployeeAttendace, AttendDTO>(Attend));
@@ -24,7 +22,7 @@ namespace HRSystem.Controllers
         [HttpGet]
         public async Task<ActionResult<Pagination<AttendDTO>>> GetAll([FromQuery] GetAllAttendancesParams P)
         {
-            var specification = new AttendIncludeNavPropsSpecification(P);
+            var specification = new HRDomain.Specification.AttendIncludeNavPropsSpecification(P);
             var Attends = await _AttendRepo.GetAllWithSpecificationsAsync(specification);
             if (P.Search != null)
             {
@@ -63,7 +61,7 @@ namespace HRSystem.Controllers
         public async Task<ActionResult> Edit (string Name,string Date,AttendDTO attendDTO)
         {
             var date = DateOnlyOperations.ToDateOnly(attendDTO.DateOfTheDay);
-            var specification = new AttendIncludeNavPropsSpecification(Name, DateOnlyOperations.ToDateOnly(Date));
+            var specification = new HRDomain.Specification.AttendIncludeNavPropsSpecification(Name, DateOnlyOperations.ToDateOnly(Date));
             var Attendance = await _AttendRepo.GetSpecified(specification);
             if (Attendance is null) return NotFound(new StatusResponse(400));
             if (date > DateOnly.FromDateTime(DateTime.Now.Date))
@@ -91,7 +89,7 @@ namespace HRSystem.Controllers
         [HttpDelete("delete/{Name}/{Date}")]
         public async Task<ActionResult> Delete (string Name, string Date) 
         {
-            var specification = new AttendIncludeNavPropsSpecification(Name, DateOnlyOperations.ToDateOnly(Date));
+            var specification = new HRDomain.Specification.AttendIncludeNavPropsSpecification(Name, DateOnlyOperations.ToDateOnly(Date));
             var Attend = await _AttendRepo.GetSpecified(specification);
             if (Attend == null) return NotFound(new StatusResponse(404));
             await _AttendRepo.DeleteAsync(Attend);

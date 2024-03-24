@@ -1,4 +1,5 @@
 ﻿using HRDomain.Entities;
+using HRDomain.Specification.Params;
 
 namespace HRDomain.Specification
 {

@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using HRDomain.Entities.DrivenEntities;
+using HRDomain.Specification.EntitiesSpecification;
 using HRDomain.Specification.Params;
 
 namespace HRSystem.Controllers
@@ -10,26 +11,24 @@ namespace HRSystem.Controllers
         readonly IConfiguration _configuration;
         readonly ADOProcedures _ADOProcedures;
         readonly GenericRepository<Department> _DeptRepo;
-        public SalariesController(IConfiguration configuration, GenericRepository<Department> repository)
+        readonly GenericRepository<Employee> _EmpRepo;
+        public SalariesController(IConfiguration configuration, GenericRepository<Department> repository, GenericRepository<Employee> empRepo)
         {
             _configuration = configuration;
             string? connectionString = _configuration.GetConnectionString("Default");
             _ADOProcedures = new ADOProcedures(connectionString);
             _DeptRepo = repository;
+            _EmpRepo = empRepo;
         }
         [HttpGet]
         public async Task<ActionResult<Pagination<SalaryObj>>> Get([FromQuery]SalariesParams P)
         {
-<<<<<<< HEAD
             if (P.Year != 2024 || P.StartMonth > 03) return NotFound(new StatusResponse(404, $"Uneable to find salaries at {P.StartMonth}/{P.Year}"));
             if(P.StartMonth > P.EndMonth) return BadRequest(new StatusResponse(400, $"End date can't be before start date!"));
             var Data =  _ADOProcedures.GetSalaries(P);
             if(!Data.Any()) return BadRequest(new StatusResponse(404));
             return Ok(Data);
-=======
-            var Data = _ADOProcedures.GetSalaries(P);
-            return Ok(new Pagination<SalaryObj>(P.PageIndex,P.PageSize, _ADOProcedures.SalariesCount, Data));
->>>>>>> 5725e49831f347ba592d02be6c4a7e2a535e111d
+
         }
 
         [HttpGet("department")]
@@ -41,6 +40,23 @@ namespace HRSystem.Controllers
             if (department is null) return NotFound(new StatusResponse(404, $"Uneable to find {name}"));
             var Departments = _ADOProcedures.GetDepartment(name);
             return Ok(Departments);
+        }
+        [HttpGet("Absent")]
+        public async Task<ActionResult> GetAbsent([FromQuery]SalProcedureParams P)
+        {
+            var specification = new EmpIncludeNavPropsSpecification(P.NationalId);
+            var Emp = await _EmpRepo.GetSpecified(specification);
+            if (Emp is null) return NotFound(new StatusResponse(404,$"{P.NationalId} isn't a valid national id"));
+            if (P.Year > DateTime.Now.Year) return NotFound(new StatusResponse(404, $"No absent days for {Emp.Name} at {P.Year}"));
+            var Absents = _ADOProcedures.GetAbsentDays(P);
+            return Ok(Absents);
+        }
+
+        [HttpGet("Attend")]
+        public async Task<ActionResult> GetAttend([FromQuery] SalProcedureParams P)
+        {
+            var Attend = _ADOProcedures.GetAttendToEmployee(P);
+            return Ok(Attend);
         }
 
     }
