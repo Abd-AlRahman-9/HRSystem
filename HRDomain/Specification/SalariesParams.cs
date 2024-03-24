@@ -11,7 +11,14 @@ namespace HRDomain.Specification
         public int StartMonth { get; set; }
         public int Year {  get; set; }
         public int? EndMonth { get; set; }
-        public string? Sort { get; set; }
         public string? Search { get; set; }
+
+        private int pageSize;
+        public int PageSize
+        {
+            get { return pageSize; }
+            set { pageSize = value > 10 ? 10 : value; }
+        }
+        public int PageIndex { get; set; } = 1;
     }
 }

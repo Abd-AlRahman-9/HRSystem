@@ -14,10 +14,10 @@ namespace HRSystem.Controllers
             _ADOProcedures = new ADOProcedures(connectionString);
         }
         [HttpGet]
-        public async Task<ActionResult> Get([FromQuery]SalariesParams P)
+        public async Task<ActionResult<Pagination<SalaryObj>>> Get([FromQuery]SalariesParams P)
         {
             var Data = _ADOProcedures.GetSalaries(P);
-            return Ok(Data);
+            return Ok(new Pagination<SalaryObj>(P.PageIndex,P.PageSize, _ADOProcedures.SalariesCount, Data));
         }
     }
 }

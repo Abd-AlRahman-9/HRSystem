@@ -8,7 +8,7 @@ namespace HRSystem.Controllers
         private readonly GenericRepository<Department> _DeptRepo = DeptRepo;
         private readonly GenericRepository<Employee> _EmpRepo = repository;
         private readonly IMapper mapper = mapper;
-
+        
         [HttpGet]
         public async Task<ActionResult<Pagination<EmployeesDTO>>> GetAllEmps([FromQuery] GetAllEmpsParams P)
         {
