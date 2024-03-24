@@ -20,8 +20,8 @@ namespace HRDomain.Specification.EntitiesSpecification
                     &&
                     (
                         string.IsNullOrEmpty(P.Search) ||
-                        A.Employee.Name.ToLower().Contains($"{P.Search}".ToLower()) ||
-                        A.Employee.Department.Name.ToLower().Contains($"{P.Search}".ToLower())
+                        (A.Employee.Name.ToLower().Contains($"{P.Search}".ToLower()) ||
+                        A.Employee.Department.Name.ToLower().Contains($"{P.Search}".ToLower()))
                     )
             )
         {
