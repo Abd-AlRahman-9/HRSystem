@@ -89,7 +89,7 @@ namespace HRRepository
             for (int i = 0; i < DT.Rows.Count; i++)
             {
                 string Value = DT.Rows[i][0].ToString();
-                DateOnly Key = DateOnly.Parse(DT.Rows[i][1].ToString());
+                DateOnly Key = DateOnly.FromDateTime((DateTime)DT.Rows[i][1]);
 
                 Data.Add(Key, Value.ToLower());
             }
@@ -108,7 +108,7 @@ namespace HRRepository
                     {
                         Attendance = TimeSpan.Parse(DT.Rows[i][0].ToString()),
                         Leave = TimeSpan.Parse(DT.Rows[i][1].ToString()),
-                        Date = DateOnly.Parse(DT.Rows[i][2].ToString()),
+                        Date = DateOnly.FromDateTime((DateTime)DT.Rows[i][2]),
                         Bonus = (decimal)DT.Rows[i][3],
                         Discount = (decimal)DT.Rows[i][4]
                     }
