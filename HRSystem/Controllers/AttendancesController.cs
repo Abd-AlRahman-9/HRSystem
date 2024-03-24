@@ -36,6 +36,7 @@ namespace HRSystem.Controllers
         [HttpPost]
         public async Task<ActionResult<AttendDTO>> Create(AttendDTO attendDTO)
         {
+            //search about employee
             var specification = new EmpIncludeNavPropsSpecification(attendDTO.EmployeeName,0);
             var employee = await _EmpRepo.GetSpecified(specification);
             if (employee is null) return NotFound(new StatusResponse(404, $"{attendDTO.EmployeeName} can't be found"));
@@ -50,7 +51,7 @@ namespace HRSystem.Controllers
 
             attend.Bonus = bonusHour;
             attend.Discount = discountHour;
-            //attend.Employee.Department = employee.Department;
+            attend.Date = DateOnly.FromDateTime(DateTime.Now.Date);
             await _AttendRepo.AddAsync(attend);
             return Ok(new StatusResponse(201,"Created Successfully"));
         }
@@ -58,10 +59,12 @@ namespace HRSystem.Controllers
         [HttpPut("edit/{Name}/{Date}")]
         public async Task<ActionResult> Edit (string Name,string Date,AttendDTO attendDTO)
         {
+            var date = DateOnlyOperations.ToDateOnly(attendDTO.DateOfTheDay);
             var specification = new AttendIncludeNavPropsSpecification(Name, DateOnlyOperations.ToDateOnly(Date));
             var Attendance = await _AttendRepo.GetSpecified(specification);
             if (Attendance is null) return NotFound(new StatusResponse(400));
-
+            if (date > DateOnly.FromDateTime(DateTime.Now.Date))
+                return BadRequest(new StatusResponse(400, "Uneable to enter date hasn't come."));
             var attend = mapper.Map<EmployeeAttendace>(attendDTO);
 
             var department = Attendance.Employee.Department;
@@ -74,9 +77,9 @@ namespace HRSystem.Controllers
             attend.Bonus = bonusHour;
             attend.Discount = discountHour;
 
-            var employeeAttend = Attendance.Employee;
-            if (employeeAttend is null) return NotFound(new StatusResponse(404, "Employee can't be found."));
-            attend.Employee = employeeAttend;
+            var employee = Attendance.Employee;
+            if (employee is null) return NotFound(new StatusResponse(404, "Employee can't be found."));
+            attend.Employee = employee;
             Expression<Func<EmployeeAttendace, bool>> predicate = a => a.Date == DateOnlyOperations.ToDateOnly(Date) && a.Employee.Name == Name;
             await _AttendRepo.UpdateAsync(predicate, Name, attend);
 
@@ -85,7 +88,6 @@ namespace HRSystem.Controllers
         [HttpDelete("delete/{Name}/{Date}")]
         public async Task<ActionResult> Delete (string Name, string Date) 
         {
-            // Expression<Func<EmployeeAttendace, bool>> predicate = a => a.Date == DateOnlyOperations.ToDateOnly(Date) && a.Employee.Name == Name;
             var specification = new AttendIncludeNavPropsSpecification(Name, DateOnlyOperations.ToDateOnly(Date));
             var Attend = await _AttendRepo.GetSpecified(specification);
             if (Attend == null) return NotFound(new StatusResponse(404));
