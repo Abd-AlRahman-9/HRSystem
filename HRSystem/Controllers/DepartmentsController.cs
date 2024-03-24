@@ -76,12 +76,14 @@ namespace HRSystem.Controllers
 
 
             var dept = mapper.Map<Department>(deptsDTO);
-
+            string lowerName ;
             if (!department.Manager.Name.Equals(deptsDTO.ManagerName))
             {
                 var manger = SetManger(deptsDTO.ManagerName);
             if (manger == null) return NotFound(new StatusResponse(404, $"Please check that {deptsDTO.ManagerName} is exist and isn't a manger of other department."));
-                dept.Manager =  manger;
+                lowerName = manger.Name.ToLower();
+            if ( dept.Manager.Name.ToLower() ==lowerName) return NotFound(new StatusResponse(404, $"{deptsDTO.ManagerName} is the manger of {manger.Department.Manager.Name}."));
+
             }
             else
             {

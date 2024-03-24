@@ -28,10 +28,6 @@ namespace HRSystem.Controllers
             var Data =  _ADOProcedures.GetSalaries(P);
             if(!Data.Any()) return BadRequest(new StatusResponse(404));
             return Ok(Data);
-<<<<<<< HEAD
-
-=======
->>>>>>> f97eb444554126b96f991d1cc1b0139850b4838e
         }
 
         [HttpGet("department")]
@@ -47,10 +43,9 @@ namespace HRSystem.Controllers
         [HttpGet("Absent")]
         public async Task<ActionResult> GetAbsent([FromQuery]SalProcedureParams P)
         {
-            var specification = new EmpIncludeNavPropsSpecification(P.NationalId);
-            var Emp = await _EmpRepo.GetSpecified(specification);
-            if (Emp is null) return NotFound(new StatusResponse(404,$"{P.NationalId} isn't a valid national id"));
-            if (P.Year > DateTime.Now.Year) return NotFound(new StatusResponse(404, $"No absent days for {Emp.Name} at {P.Year}"));
+            var Emp = EmployeeData(P.NationalId);
+            if (Emp is null) return NotFound(new StatusResponse(404, "Uneable to find employee"));
+            if (P.Year > DateTime.Now.Year) return NotFound(new StatusResponse(404, $"No absent days for {Emp.Result.Name} at {P.Year}"));
             var Absents = _ADOProcedures.GetAbsentDays(P);
             return Ok(Absents);
         }
@@ -58,8 +53,28 @@ namespace HRSystem.Controllers
         [HttpGet("Attend")]
         public async Task<ActionResult> GetAttend([FromQuery] SalProcedureParams P)
         {
+            var Emp = EmployeeData(P.NationalId);
+            if (Emp is null) return NotFound(new StatusResponse(404, $"Uneable to find employee"));
+            if (P.Year > DateTime.Now.Year) return NotFound(new StatusResponse(404, $"No data about {Emp.Result.Name} at {P.Year}"));
             var Attend = _ADOProcedures.GetAttendToEmployee(P);
             return Ok(Attend);
+        }
+
+        [HttpGet("late")]
+        public async Task<ActionResult> Late([FromQuery] SalProcedureParams P)
+        {
+            var Emp = EmployeeData(P.NationalId);
+            if (Emp is null) return NotFound(new StatusResponse(404, $"Uneable to find employee"));
+            if (P.Year > DateTime.Now.Year) return NotFound(new StatusResponse(404, $"No data about {Emp.Result.Name} at {P.Year}"));
+            var late = _ADOProcedures.GetLateDays(P);
+            return Ok(late);
+        }
+
+        private async Task<Employee> EmployeeData(string nationalId)
+        {
+            var specification = new EmpIncludeNavPropsSpecification(nationalId);
+            var Emp =  _EmpRepo.GetSpecified(specification);
+            return Emp.Result;
         }
 
     }
