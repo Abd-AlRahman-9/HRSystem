@@ -1,13 +1,15 @@
 ﻿using System.Data;
 using HRDomain.Entities;
+using HRDomain.Entities.DrivenEntities;
 using HRDomain.Repository;
-using HRDomain.Specification;
+using HRDomain.Specification.Params;
 
 namespace HRRepository
 {
     public class ADOProcedures
     {
         private readonly string _ConnectionString;
+        public int SalariesCount;
 
         public ADOProcedures(string ConnectionString) 
         {
@@ -44,6 +46,7 @@ namespace HRRepository
             ADOConnection getData = new ADOConnection(_ConnectionString);
             List<SalaryObj> Salaries = new List<SalaryObj>();
             DataTable DT = getData.ExcuteSalariesProcedure(_Procedure, P.StartMonth,P.Year,P.EndMonth);
+            SalariesCount = DT.Rows.Count;
             DT = DT.AsEnumerable()
                    .Where
                         (row => 
@@ -53,6 +56,8 @@ namespace HRRepository
                             row.Field<string>("DepartmentName").ToLower().Contains($"{P.Search}".ToLower())
                             )
                         )
+                    .Skip(P.PageSize * (P.PageIndex - 1))
+                    .Take(P.PageSize)
                     .CopyToDataTable();
             for (int i = 0; i < DT.Rows.Count; i++)
             {
@@ -74,6 +79,63 @@ namespace HRRepository
                 );
             }
             return Salaries;
+        }
+        public Dictionary<DateOnly, string> GetAbsentDays(SalProcedureParams P)
+        {
+            string _Procedure = "[dbo].[GetAbsentDays]";
+            ADOConnection getData = new ADOConnection(_ConnectionString);
+            DataTable DT = getData.ExcuteSalProcedures(_Procedure, P);
+            Dictionary<DateOnly, string> Data = new Dictionary<DateOnly, string>();
+            for (int i = 0; i < DT.Rows.Count; i++)
+            {
+                string Value = DT.Rows[i][0].ToString();
+                DateOnly Key = DateOnly.Parse(DT.Rows[i][1].ToString());
+
+                Data.Add(Key, Value.ToLower());
+            }
+            return Data;
+        }
+        public List<AttendObj> GetAttendToEmployee(SalProcedureParams P)
+        {
+            string _Procedure = "[dbo].[GetEmployeeAttendance]";
+            ADOConnection getData = new ADOConnection(_ConnectionString);
+            DataTable DT = getData.ExcuteSalProcedures(_Procedure, P);
+            List<AttendObj> EmpAttend = new List<AttendObj>();
+            for (int i = 0; i < DT.Rows.Count; i++)
+            {
+                EmpAttend.Add
+                (new AttendObj()
+                    {
+                        Attendance = TimeSpan.Parse(DT.Rows[i][0].ToString()),
+                        Leave = TimeSpan.Parse(DT.Rows[i][1].ToString()),
+                        Date = DateOnly.Parse(DT.Rows[i][2].ToString()),
+                        Bonus = (decimal)DT.Rows[i][3],
+                        Discount = (decimal)DT.Rows[i][4]
+                    }
+                );
+            }
+            return EmpAttend;
+        }
+        public List<AttendObj> GetLateDays(SalProcedureParams P) 
+        {
+            string _Procedure = "[dbo].[GetEmployeeLateDays]";
+            ADOConnection getData = new ADOConnection(_ConnectionString);
+            DataTable DT = getData.ExcuteSalProcedures(_Procedure, P);
+            List<AttendObj> EmpAttend = new List<AttendObj>();
+            for (int i = 0; i < DT.Rows.Count; i++)
+            {
+                EmpAttend.Add
+                (new AttendObj()
+                {
+                    Attendance = TimeSpan.Parse(DT.Rows[i][0].ToString()),
+                    Leave = TimeSpan.Parse(DT.Rows[i][1].ToString()),
+                    Date = DateOnly.Parse(DT.Rows[i][2].ToString()),
+                    Bonus = (decimal)DT.Rows[i][3],
+                    Discount = (decimal)DT.Rows[i][4]
+                }
+                );
+            }
+            return EmpAttend;
         }
     }
 }

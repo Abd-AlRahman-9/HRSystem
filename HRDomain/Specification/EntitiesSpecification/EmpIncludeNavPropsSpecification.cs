@@ -1,20 +1,21 @@
 ﻿using HRDomain.Entities;
+using HRDomain.Specification.Params;
 
-namespace HRDomain.Specification
+namespace HRDomain.Specification.EntitiesSpecification
 {
-    public class EmpIncludeNavPropsSpecification:GenericSpecification<Employee>
+    public class EmpIncludeNavPropsSpecification : GenericSpecification<Employee>
     {
         public EmpIncludeNavPropsSpecification(GetAllEmpsParams getAllEmpsParams)
-            :base
+            : base
             (
                 E =>
-                    (E.Deleted==false)&&
+                    E.Deleted == false &&
                     (string.IsNullOrEmpty(getAllEmpsParams.Search) || E.Name.ToLower().Contains(getAllEmpsParams.Search)) &&
                     (!getAllEmpsParams.DeptId.HasValue || E.DeptId == getAllEmpsParams.DeptId.Value) &&
                     (!getAllEmpsParams.MngId.HasValue || E.ManagerId == getAllEmpsParams.MngId.Value)
             )
         {
-            Includes.Add(E=>E.Department);
+            Includes.Add(E => E.Department);
             Includes.Add(E => E.manager);
 
             if (getAllEmpsParams == null)
@@ -27,13 +28,13 @@ namespace HRDomain.Specification
                 switch (getAllEmpsParams.sort)
                 {
                     case "hiringAsc":
-                        AddOrderBy(E => E.HireData); 
+                        AddOrderBy(E => E.HireData);
                         break;
                     case "hiringDesc":
                         AddOrderByDescending(E => E.HireData);
                         break;
                     case "salaryAsc":
-                        AddOrderBy(E=>E.Salary);
+                        AddOrderBy(E => E.Salary);
                         break;
                     case "salaryDesc":
                         AddOrderByDescending(E => E.Salary);
@@ -44,17 +45,17 @@ namespace HRDomain.Specification
                 }
             }
         }
-        public EmpIncludeNavPropsSpecification(string NationalId):base(E=>(E.NationalID == NationalId)&&(E.Deleted==false))
+        public EmpIncludeNavPropsSpecification(string NationalId) : base(E => E.NationalID == NationalId && E.Deleted == false)
         {
             Includes.Add(E => E.Department);
             Includes.Add(E => E.manager);
         }
 
-        public EmpIncludeNavPropsSpecification(string name,int id) : base(E => (E.Name == name) && (E.Deleted == false))
+        public EmpIncludeNavPropsSpecification(string name, int id) : base(E => E.Name == name && E.Deleted == false)
         {
             Includes.Add(E => E.Department);
             Includes.Add(E => E.manager);
-            
+
         }
     }
 }

@@ -1,17 +1,18 @@
 ﻿using HRDomain.Entities;
+using HRDomain.Specification.Params;
 
-namespace HRDomain.Specification
+namespace HRDomain.Specification.PaginatioCount
 {
     public class CountDeptSpecification : GenericSpecification<Department>
     {
         public CountDeptSpecification(GetAllDeptsParams _params)
-            :base
+            : base
             (
                 D =>
-                (D.Deleted==false)&&
+                D.Deleted == false &&
                 (string.IsNullOrEmpty(_params.Search) || D.Name.ToLower().Contains(_params.Search)) &&
                 (!_params.MngId.HasValue || D.ManagerId == _params.MngId.Value)
             )
         { }
     }
-} 
+}

@@ -1,15 +1,16 @@
 ﻿using HRDomain.Entities;
+using HRDomain.Specification.Params;
 
-namespace HRDomain.Specification
+namespace HRDomain.Specification.EntitiesSpecification
 {
-    public class DeptIncludeNavPropsSpecification:GenericSpecification<Department>
+    public class DeptIncludeNavPropsSpecification : GenericSpecification<Department>
     {
         public DeptIncludeNavPropsSpecification(GetAllDeptsParams _params) : base
             (
                 D =>
-                (D.Deleted==false) &&
+                D.Deleted == false &&
                 (string.IsNullOrEmpty(_params.Search) || D.Name.ToLower().Contains(_params.Search)) &&
-                (!_params.MngId.HasValue || D.ManagerId == _params.MngId.Value) 
+                (!_params.MngId.HasValue || D.ManagerId == _params.MngId.Value)
             )
         {
             Includes.Add(E => E.Manager);
@@ -30,7 +31,7 @@ namespace HRDomain.Specification
                 }
             }
         }
-        public DeptIncludeNavPropsSpecification(string name) : base(D => (D.Name == name) && (D.Deleted == false))
+        public DeptIncludeNavPropsSpecification(string name) : base(D => D.Name == name && D.Deleted == false)
         {
             Includes.Add(E => E.Manager);
         }

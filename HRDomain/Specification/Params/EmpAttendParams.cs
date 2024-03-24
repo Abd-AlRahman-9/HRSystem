@@ -4,14 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HRDomain.Specification
+namespace HRDomain.Specification.Params
 {
-    public class SalariesParams
+    public class SalProcedureParams
     {
+        public string NationalId { get; set; }
         public int StartMonth { get; set; }
-        public int Year {  get; set; }
+        public int Year { get; set; }
         public int? EndMonth { get; set; }
-        public string? Sort { get; set; }
-        public string? Search { get; set; }
     }
 }

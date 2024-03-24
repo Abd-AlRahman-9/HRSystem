@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HRDomain.Entities
+namespace HRDomain.Entities.DrivenEntities
 {
     public class SalaryObj
     {

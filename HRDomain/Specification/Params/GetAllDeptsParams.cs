@@ -1,4 +1,4 @@
-﻿namespace HRDomain.Specification
+﻿namespace HRDomain.Specification.Params
 {
     public class GetAllDeptsParams
     {
