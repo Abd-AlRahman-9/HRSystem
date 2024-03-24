@@ -28,10 +28,7 @@ namespace HRSystem.Controllers
             var Data =  _ADOProcedures.GetSalaries(P);
             if(!Data.Any()) return BadRequest(new StatusResponse(404));
             return Ok(Data);
-<<<<<<< HEAD
 
-=======
->>>>>>> f97eb444554126b96f991d1cc1b0139850b4838e
         }
 
         [HttpGet("department")]
