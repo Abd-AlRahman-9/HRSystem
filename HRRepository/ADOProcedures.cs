@@ -46,7 +46,6 @@ namespace HRRepository
             ADOConnection getData = new ADOConnection(_ConnectionString);
             List<SalaryObj> Salaries = new List<SalaryObj>();
             DataTable DT = getData.ExcuteSalariesProcedure(_Procedure, P.StartMonth,P.Year,P.EndMonth);
-            SalariesCount = DT.Rows.Count;
             DT = DT.AsEnumerable()
                    .Where
                         (row => 
@@ -56,9 +55,10 @@ namespace HRRepository
                             row.Field<string>("DepartmentName").ToLower().Contains($"{P.Search}".ToLower())
                             )
                         )
-                    .Skip(P.PageSize * (P.PageIndex - 1))
-                    .Take(P.PageSize)
                     .CopyToDataTable();
+            SalariesCount = DT.Rows.Count;
+            DT = DT.AsEnumerable().Skip(P.PageSize * (P.PageIndex - 1))
+                    .Take(P.PageSize).CopyToDataTable();
             for (int i = 0; i < DT.Rows.Count; i++)
             {
                 Salaries.Add
