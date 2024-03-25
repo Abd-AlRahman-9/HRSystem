@@ -1,4 +1,5 @@
-﻿using HRDomain.Entities;
+﻿using System.Linq.Expressions;
+using HRDomain.Entities;
 using HRDomain.Specification.Params;
 
 namespace HRDomain.Specification.EntitiesSpecification
@@ -17,20 +18,31 @@ namespace HRDomain.Specification.EntitiesSpecification
                     )
                     &&
                     ((P.To.HasValue) || (A.Date >= new DateOnly(P.Year, P.From, 1)))
-                    &&
-                    (
-                        string.IsNullOrEmpty(P.Search) ||
-                        (A.Employee.Name.ToLower().Contains($"{P.Search}".ToLower()) ||
-                        A.Employee.Department.Name.ToLower().Contains($"{P.Search}".ToLower()))
-                    )
+                    //&&
+                    //(
+                    //    string.IsNullOrEmpty(P.Search) ||
+                    //    (A.Employee.Name.ToLower().Contains($"{P.Search}".ToLower()) ||
+                    //    A.Employee.Department.Name.ToLower().Contains($"{P.Search}".ToLower()))
+                    //)
             )
         {
             Includes.Add(A => A.Employee);
             Includes.Add(A => A.Employee.Department);
 
+            //Expression<Func<EmployeeAttendace, bool>> newCondition;
+            //newCondition = A => (
+            //                        string.IsNullOrEmpty(P.Search) ||
+            //                        (A.Employee.Name.ToLower().Contains($"{P.Search}".ToLower()) ||
+            //                        A.Employee.Department.Name.ToLower().Contains($"{P.Search}".ToLower()))
+            //                    );
+            //var parameter = Expression.Parameter(typeof(EmployeeAttendace));
+            //var body = Expression.AndAlso(Criteria.Body, 
+            //    Expression.Invoke(newCondition,parameter));
+            //Criteria = Expression.Lambda<Func<EmployeeAttendace, bool>>(body, Criteria.Parameters.Single());
+
             if (P == null)
                 P = new GetAllAttendancesParams() { PageSize = 10, PageIndex = 1 };
-
+            if(P.Search==null)
             ApplyPagination(P.PageSize * (P.PageIndex - 1), P.PageSize);
 
 
