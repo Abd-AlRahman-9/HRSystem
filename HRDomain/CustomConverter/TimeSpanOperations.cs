@@ -24,7 +24,7 @@ namespace HRDomain.CustomConverter
             double bonus = 0.0;
 
             TimeSpan timeToCome = TimeSpan.Parse(employeeAttend);
-            TimeSpan timeToLeave = TimeSpan.Parse(employeeLeave);
+            TimeSpan timeToLeave = TimeSpan.Parse(employeeLeave) + TimeSpan.FromHours(12);
 
             if (departmentAttend > timeToCome)
             {
@@ -45,7 +45,7 @@ namespace HRDomain.CustomConverter
             double discount = 0.00;
 
             TimeSpan timeToCome = TimeSpan.Parse(employeeAttend);
-            TimeSpan timeToLeave = TimeSpan.Parse(employeeLeave);
+            TimeSpan timeToLeave = TimeSpan.Parse(employeeLeave) + TimeSpan.FromHours(12);
 
             if (departmentAttend < timeToCome)
             {

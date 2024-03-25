@@ -58,6 +58,7 @@ namespace HRSystem.Controllers
             attend.Bonus = bonusHour;
             attend.Discount = discountHour;
             attend.Date = DateOnly.FromDateTime(DateTime.Now.Date);
+            attend.Leave += TimeSpan.FromHours(12);
             await _AttendRepo.AddAsync(attend);
             return Ok(new StatusResponse(201,"Created Successfully"));
         }
@@ -86,6 +87,9 @@ namespace HRSystem.Controllers
             var employee = Attendance.Employee;
             if (employee is null) return NotFound(new StatusResponse(404, "Employee can't be found."));
             attend.Employee = employee;
+            var leave = TimeSpan.Parse(attendDTO.LeaveTime);
+            if (Attendance.Leave != leave)
+                Attendance.Leave += TimeSpan.FromHours(12);
             Expression<Func<EmployeeAttendace, bool>> predicate = a => a.Date == DateOnlyOperations.ToDateOnly(Date) && a.Employee.Name == Name;
             await _AttendRepo.UpdateAsync(predicate, Name, attend);
 

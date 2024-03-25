@@ -57,6 +57,7 @@ namespace HRSystem.Controllers
             var manger = SetManger(deptsDTO.ManagerName);
             if(manger is null) return NotFound(new StatusResponse(404, $"Please check that {deptsDTO.ManagerName} is exist and isn't a manger of other department"));
             department.Manager = manger;
+            department.LeaveTime += TimeSpan.FromHours(12);
             
             await _DeptRepo.AddAsync(department);
             string? uri =  Url.Action(nameof(GetOneDept), new { id = department.Id });
@@ -90,8 +91,9 @@ namespace HRSystem.Controllers
                 var employee = new EmpIncludeNavPropsSpecification(name, 0);
                dept.Manager = await _EmpRepo.GetSpecified(employee);
             }
-            
-
+           var leave= TimeSpan.Parse(deptsDTO.TimeToLeave);
+            if(leave != department.LeaveTime)
+            dept.LeaveTime += TimeSpan.FromHours(12);
             Expression<Func<Department, bool>> predicate = d => d.Name == name;
             await _DeptRepo.UpdateAsync(predicate, name, dept);
             return Ok(new StatusResponse(204,"Updated Successfully"));
