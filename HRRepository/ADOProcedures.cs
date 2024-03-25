@@ -42,27 +42,34 @@ namespace HRRepository
         // get salaries
         public List<SalaryObj> GetSalaries(SalariesParams P)
         {
-            string _Procedure = "[dbo].[CalculateSalaries]";
-            ADOConnection getData = new ADOConnection(_ConnectionString);
             List<SalaryObj> Salaries = new List<SalaryObj>();
-            DataTable DT = getData.ExcuteSalariesProcedure(_Procedure, P.StartMonth,P.Year,P.EndMonth);
-            DT = DT.AsEnumerable()
-                   .Where
-                        (row => 
-                            (
-                            string.IsNullOrEmpty(P.Search) ||
-                            row.Field<string>("EmployeeName").ToLower().Contains($"{P.Search}".ToLower()) || 
-                            row.Field<string>("DepartmentName").ToLower().Contains($"{P.Search}".ToLower())
-                            )
-                        )
-                    .CopyToDataTable();
-            SalariesCount = DT.Rows.Count;
-            DT = DT.AsEnumerable().Skip(P.PageSize * (P.PageIndex - 1))
-                    .Take(P.PageSize).CopyToDataTable();
-            for (int i = 0; i < DT.Rows.Count; i++)
+            try
             {
-                Salaries.Add
-                (new SalaryObj()
+                string _Procedure = "[dbo].[CalculateSalaries]";
+                ADOConnection getData = new ADOConnection(_ConnectionString);
+                
+                DataTable DT = getData.ExcuteSalariesProcedure(_Procedure, P.StartMonth, P.Year, P.EndMonth);
+                DT = DT.AsEnumerable()
+                       .Where
+                            (row =>
+                                (
+                                string.IsNullOrEmpty(P.Search) ||
+                                row.Field<string>("EmployeeName").ToLower().Contains($"{P.Search}".ToLower()) ||
+                                row.Field<string>("DepartmentName").ToLower().Contains($"{P.Search}".ToLower())
+                                )
+                            )
+                        .CopyToDataTable();
+
+
+                SalariesCount = DT.Rows.Count;
+                DT = DT.AsEnumerable().Skip(P.PageSize * (P.PageIndex - 1))
+                        .Take(P.PageSize).CopyToDataTable();
+                var count = DT.Rows.Count;
+
+                for (int i = 0; i < count; i++)
+                {
+                    Salaries.Add
+                    (new SalaryObj()
                     {
                         EmployeeName = DT.Rows[i][0].ToString(),
                         NationalID = DT.Rows[i][1].ToString(),
@@ -76,8 +83,15 @@ namespace HRRepository
                         OverallBonus = (decimal)DT.Rows[i][9],
                         NetSalary = (decimal)DT.Rows[i][10]
                     }
-                );
+                    );
+                }
             }
+            catch (Exception ex)
+            {
+
+                return Salaries;
+            }
+         
             return Salaries;
         }
         public Dictionary<DateOnly, string> GetAbsentDays(SalProcedureParams P)
