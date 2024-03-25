@@ -16,7 +16,10 @@ namespace HRDomain.Specification
         public bool IsPaginationEnabled { get; set; }
 
         public GenericSpecification(){}
-        public GenericSpecification(Expression<Func<T,bool>> criteria) { this.Criteria = criteria; }
+        public GenericSpecification(Expression<Func<T,bool>> criteria) 
+        {
+            this.Criteria = criteria; 
+        }
 
         public void AddOrderBy(Expression<Func<T,object>> orderByExpression)
         {

@@ -24,14 +24,19 @@ namespace HRSystem.Controllers
         {
             var specification = new AttendIncludeNavPropsSpecification(P);
             var Attends = await _AttendRepo.GetAllWithSpecificationsAsync(specification);
+            var Data = mapper.Map<IEnumerable<EmployeeAttendace>, IEnumerable<AttendDTO>>(Attends);
+            CountAttendSpecification countSpec = new CountAttendSpecification(P);
+            int count = await _AttendRepo.GetCountAsync(countSpec);
             if (P.Search != null)
             {
-                Attends = Attends.Where(A => A.Employee.Name.ToLower().Contains(P.Search));
-                Attends = Attends.Where(A => A.Employee.Department.Name.ToLower().Contains(P.Search));
+                Data = Data.Where(A=>
+                    (A.EmployeeName.ToLower().Contains($"{P.Search}".ToLower())) ||
+                        (A.DepartmentName.ToLower().Contains($"{P.Search}".ToLower()))
+                                 ).ToList();
+                count = Data.Count();
+                Data = Data.Skip(P.PageSize * (P.PageIndex - 1))
+                    .Take(P.PageSize).ToList();
             }
-            var Data = mapper.Map<IEnumerable<EmployeeAttendace>, IEnumerable<AttendDTO>>(Attends);
-            var countSpec = new CountAttendSpecification(P);
-            var count = await _AttendRepo.GetCountAsync(countSpec);
             return Ok(new Pagination<AttendDTO>(P.PageIndex, P.PageSize, count, Data));
         }
         [HttpPost]
