@@ -25,14 +25,11 @@ namespace HRSystem.Controllers
         [HttpGet]
         public async Task<ActionResult<Pagination<SalaryObj>>> Get([FromQuery]SalariesParams P)
         {
-            if (P.Year != 2024 || P.StartMonth > 03) return NotFound(new StatusResponse(404, $"Uneable to find salaries at {P.StartMonth}/{P.Year}"));
+            if (P.Year != 2024 || P.StartMonth >= 03) return NotFound(new StatusResponse(404, $"Uneable to find salaries at {P.StartMonth}/{P.Year}"));
             if(P.StartMonth > P.EndMonth) return BadRequest(new StatusResponse(400, $"End date can't be before start date!"));
             var Data =  _ADOProcedures.GetSalaries(P);
             if(!Data.Any()) return BadRequest(new StatusResponse(404));
-<<<<<<< HEAD
 
-=======
->>>>>>> f609307b5bf26535d70243f11c3d62e3c0c372aa
             return Ok(new Pagination<SalaryObj>(P.PageIndex, P.PageSize, _ADOProcedures.SalariesCount, Data));
         }
         [HttpGet("department")]
